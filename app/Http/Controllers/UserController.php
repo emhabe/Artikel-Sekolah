@@ -10,4 +10,8 @@ class UserController extends Controller
     {
         return view('demo-1.dashboard');
     }
+    public function calender()
+    {
+        return view('demo-1.calender');
+    }
 }

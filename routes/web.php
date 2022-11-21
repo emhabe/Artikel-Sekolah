@@ -19,3 +19,4 @@ Route::get('/', function () {
 });
 
 Route::get('/dashboard', [UserController::class, 'dashboard']);
+Route::get('/calender', [UserController::class, 'calender']);
