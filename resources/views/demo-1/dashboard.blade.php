@@ -67,7 +67,7 @@
           <li class="menu-item active open">
             <a href="javascript:void(0);" class="menu-link">
               <i class="menu-icon tf-icons bx bx-home-circle"></i>
-              <div>Dashboards</div>
+              <div>Beranda</div>
             </a>
           </li>
 
@@ -78,10 +78,10 @@
 
 
 
-          <li class="menu-item ">
-            <a href="javascript:void(0);" class="menu-link menu-toggle">
-              <i class="menu-icon tf-icons bx bx-layout"></i>
-              <div>Layouts</div>
+          <li class="menu-item">
+            <a href="/artikel" class="menu-link">
+              <i class="menu-icon tf-icons bx bx-collection"></i>
+              <div>Artikel</div>
             </a>
 
 
