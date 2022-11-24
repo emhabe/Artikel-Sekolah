@@ -1,7 +1,7 @@
 <?php
 
-use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,3 +21,6 @@ Route::get('/', function () {
 Route::get('/dashboard', [UserController::class, 'dashboard']);
 Route::get('/artikel', [UserController::class, 'artikel']);
 Route::get('/kategori', [UserController::class, 'kategori']);
+
+//Tampilan//
+Route::get('/index', [UserController::class,'index']);

@@ -1,6 +1,5 @@
 @extends('layouts.master')
 
-
 @section('content')
   <!-- Layout Content -->
   <div class="layout-wrapper layout-content-navbar ">
@@ -65,7 +64,7 @@
 
 
           <li class="menu-item active open">
-            <a href="javascript:void(0);" class="menu-link">
+            <a href="/dashboard" class="menu-link">
               <i class="menu-icon tf-icons bx bx-home-circle"></i>
               <div>Beranda</div>
             </a>
@@ -187,9 +186,9 @@
 
 
           <li class="menu-item ">
-            <a href="javascript:void(0);" class="menu-link menu-toggle">
-              <i class="menu-icon tf-icons bx bxl-php"></i>
-              <div>Laravel Example</div>
+            <a href="/kategori" class="menu-link menu-toggle">
+              <i class="menu-icon tf-icons bx bx-food-menu"></i>
+              <div>Kategori</div>
             </a>
 
 
@@ -2275,19 +2274,7 @@
               <!--/ Total Revenue -->
 
             </div>
-
-
-            <!-- pricingModal -->
-            <!--/ pricingModal -->
-
-          </div>
-          <div class="content-wrapper">
-
-        <!-- Content -->
-                  <div class="container-xxl flex-grow-1 container-p-y">
-            
-            <div class="card app-calendar-wrapper">
-  <div class="row g-0">
+            <div class="row g-0">
     <!-- Calendar Sidebar -->
     <div class="col app-calendar-sidebar" id="app-calendar-sidebar">
       <div class="border-bottom p-4 my-sm-0 mb-3">
@@ -2428,6 +2415,12 @@
     </div>
     <!-- /Calendar & Modal -->
   </div>
+
+
+            <!-- pricingModal -->
+            <!--/ pricingModal -->
+
+          </div>
           <!-- / Content -->
 
           <!-- Footer -->
@@ -2467,10 +2460,4 @@
   <!--/ Layout Content -->
 
 
-  <div class="buy-now">
-    <a href="https://themeselection.com/item/sneat-bootstrap-html-laravel-admin-template/" target="_blank" class="btn btn-danger btn-buy-now">Buy Now</a>
-  </div>
-
-  @endsection
-
-
+@endsection

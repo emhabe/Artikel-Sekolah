@@ -10,6 +10,10 @@ class UserController extends Controller
     {
         return view('demo-1.dashboard');
     }
+    public function index()
+    {
+        return view('tampilan.index');
+    }
     public function artikel()
     {
         return view('demo-1.artikel');
@@ -18,5 +22,4 @@ class UserController extends Controller
     {
         return view('demo-1.kategori');
     }
-
 }
