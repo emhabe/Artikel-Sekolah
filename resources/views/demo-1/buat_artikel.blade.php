@@ -2306,7 +2306,7 @@
                       <label class="form-label" for="basic-default-bio">Deskripsi</label>
                       <textarea class="form-control" id="basic-default-bio" name="deskripsi" rows="3" required></textarea>
                       <label for="defaultFormControlInput" class="form-label">Foto</label>
-                      <input type="file" class="form-control" id="defaultFormControlInput" name="foto[]" aria-describedby="defaultFormControlHelp" />
+                      <input type="file" class="form-control" id="defaultFormControlInput" name="foto" aria-describedby="defaultFormControlHelp" />
                       <div>
                         <button class="btn btn-primary d-grid w-100">
                           Submit

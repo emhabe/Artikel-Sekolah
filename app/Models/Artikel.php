@@ -9,9 +9,4 @@ class Artikel extends Model
 {
     use HasFactory;
     protected $guarded = [];
-
-    public function foto()
-    {
-        return $this->hasMany(Foto::class);
-    }
 }

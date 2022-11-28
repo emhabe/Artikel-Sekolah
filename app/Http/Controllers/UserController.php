@@ -18,7 +18,8 @@ class UserController extends Controller
     }
     public function artikel()
     {
-        return view('demo-1.artikel');
+        $data = Artikel::all();
+        return view('demo-1.artikel', compact('data'));
     }
     public function kategori()
     {
@@ -38,22 +39,13 @@ class UserController extends Controller
             'judul' => $request->judul,
             'detail_singkat' => $request->detail_singkat,
             'deskripsi' => $request->deskripsi,
-        ])->id;
-
-        $images = array();
-        if ($files = $request->file('foto')) {
-            foreach ($files as $file) {
-                $name = $file->getClientOriginalName();
-                $file->move('foto_artikel', $name);
-                $images[] = $name;
-            }
-        }
-        /*Insert your data*/
-
-        Foto::insert([
-            'foto' =>  implode("|", $images),
-            'artikel_id' => $data,
+            'foto' => $request->foto,
         ]);
+        if ($request->hasfile('foto')) {
+            $request->file('foto')->move(public_path('foto_artikel/'), '' . date('YmdHis') . '.' . $request->file('foto')->getClientOriginalExtension());
+            $data->foto = '' . date('YmdHis') . '.' . $request->file('foto')->getClientOriginalExtension();
+            $data->save();
+        }
         return redirect('artikel');
     }
 }
