@@ -22,4 +22,8 @@ class UserController extends Controller
     {
         return view('demo-1.kategori');
     }
+    public function user()
+    {
+        return view('demo-1.user');
+    }
 }

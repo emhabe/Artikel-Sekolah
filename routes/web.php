@@ -21,6 +21,7 @@ Route::get('/', function () {
 Route::get('/dashboard', [UserController::class, 'dashboard']);
 Route::get('/artikel', [UserController::class, 'artikel']);
 Route::get('/kategori', [UserController::class, 'kategori']);
+Route::get('/user', [UserController::class, 'user']);
 
 //Tampilan//
 Route::get('/index', [UserController::class,'index']);

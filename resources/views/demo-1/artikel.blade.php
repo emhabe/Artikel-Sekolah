@@ -220,11 +220,11 @@
     
     
     
-    <li class="menu-item ">
-      <a href="javascript:void(0);" class="menu-link menu-toggle" >
-                <i class="menu-icon tf-icons bx bxl-php"></i>
-                <div>Laravel Example</div>
-      </a>
+          <li class="menu-item ">
+            <a href="/kategori" class="menu-link menu-toggle">
+              <i class="menu-icon tf-icons bx bx-food-menu"></i>
+              <div>Kategori</div>
+            </a>
 
       
             <ul class="menu-sub">

@@ -205,6 +205,11 @@
               </li>
             </ul>
           </li>
+          <li class="menu-item ">
+            <a href="/user" class="menu-link">
+              <i class="menu-icon tf-icons bx bx-user"></i>
+              <div>Users</div>
+            </a>
 
 
 
@@ -294,12 +299,6 @@
 
 
 
-
-          <li class="menu-item ">
-            <a href="javascript:void(0);" class="menu-link menu-toggle">
-              <i class="menu-icon tf-icons bx bx-user"></i>
-              <div>Users</div>
-            </a>
 
 
             <ul class="menu-sub">
