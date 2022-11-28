@@ -30,4 +30,7 @@ class LoginController extends Controller
     public function registrasi(){
         return view('demo-1.registrasi');
     }
+    public function login_admin(){
+        return view('demo-1.login_admin');
+    }
 }

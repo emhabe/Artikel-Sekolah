@@ -20,6 +20,7 @@ Route::get('/', function () {
 });
 //admin//
 Route::get('/registrasi',[LoginController::class,'registrasi']);
+Route::get('/login_admin',[LoginController::class,'login_admin']);
 Route::get('/dashboard', [UserController::class, 'dashboard']);
 Route::get('/artikel', [UserController::class, 'artikel']);
 Route::get('/kategori', [UserController::class, 'kategori']);
