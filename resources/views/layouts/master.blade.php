@@ -217,6 +217,9 @@
 <!-- BEGIN: Resistrasi JS-->
 <script src="{{asset('assets/js/pages-auth.js')}}"></script>
 <!-- END: Resgistrasi JS-->
+<!-- BEGIN: Form JS-->
+<script src="{{asset('assets/js/form-basic-inputs.js')}}"></script>
+<!-- END: Form JS-->
 
 
 </body>

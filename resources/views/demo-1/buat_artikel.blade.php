@@ -1876,8 +1876,7 @@
 </aside>
     
 
-    <!-- Layout page -->
-    <div class="layout-page">
+<div class="layout-page">
       <!-- BEGIN: Navbar-->
             <!-- Navbar -->
 <nav class="layout-navbar container-xxl navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme" id="layout-navbar">
@@ -1906,15 +1905,130 @@
         
         <ul class="navbar-nav flex-row align-items-center ms-auto">
                     <!-- Language -->
+          <li class="nav-item dropdown-language dropdown me-2 me-xl-0">
+            <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
+              <i class='fi fi-us fis rounded-circle fs-3 me-1'></i>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li>
+                <a class="dropdown-item" href="../layouts/content-navbar.html" data-language="en">
+                  <i class="fi fi-us fis rounded-circle fs-4 me-1"></i>
+                  <span class="align-middle">English</span>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="../extended/ui-star-ratings.html" data-language="fr">
+                  <i class="fi fi-fr fis rounded-circle fs-4 me-1"></i>
+                  <span class="align-middle">French</span>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="../extended/ui-sweetalert2.html" data-language="de">
+                  <i class="fi fi-de fis rounded-circle fs-4 me-1"></i>
+                  <span class="align-middle">German</span>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="basic-inputs.html" data-language="pt">
+                  <i class="fi fi-pt fis rounded-circle fs-4 me-1"></i>
+                  <span class="align-middle">Portuguese</span>
+                </a>
+              </li>
+            </ul>
+          </li>
           <!--/ Language -->
           
           
           <!-- Style Switcher -->
+          <li class="nav-item me-2 me-xl-0">
+            <a class="nav-link style-switcher-toggle hide-arrow" href="javascript:void(0);">
+              <i class='bx bx-sm'></i>
+            </a>
+          </li>
           <!--/ Style Switcher -->
 
           <!-- Quick links  -->
+          <li class="nav-item dropdown-shortcuts navbar-dropdown dropdown me-2 me-xl-0">
+            <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+              <i class='bx bx-grid-alt bx-sm'></i>
+            </a>
+            <div class="dropdown-menu dropdown-menu-end py-0">
+              <div class="dropdown-menu-header border-bottom">
+                <div class="dropdown-header d-flex align-items-center py-3">
+                  <h5 class="text-body mb-0 me-auto">Shortcuts</h5>
+                  <a href="javascript:void(0)" class="dropdown-shortcuts-add text-body" data-bs-toggle="tooltip" data-bs-placement="top" title="Add shortcuts"><i class="bx bx-sm bx-plus-circle"></i></a>
+                </div>
+              </div>
+              <div class="dropdown-shortcuts-list scrollable-container">
+                <div class="row row-bordered overflow-visible g-0">
+                  <div class="dropdown-shortcuts-item col">
+                    <span class="dropdown-shortcuts-icon bg-label-secondary rounded-circle mb-2">
+                      <i class="bx bx-calendar fs-4"></i>
+                    </span>
+                    <a href="../app/calendar.html" class="stretched-link">Calendar</a>
+                    <small class="text-muted mb-0">Appointments</small>
+                  </div>
+                  <div class="dropdown-shortcuts-item col">
+                    <span class="dropdown-shortcuts-icon bg-label-secondary rounded-circle mb-2">
+                      <i class="bx bx-food-menu fs-4"></i>
+                    </span>
+                    <a href="../app/invoice/list.html" class="stretched-link">Invoice App</a>
+                    <small class="text-muted mb-0">Manage Accounts</small>
+                  </div>
+                </div>
+                <div class="row row-bordered overflow-visible g-0">
+                  <div class="dropdown-shortcuts-item col">
+                    <span class="dropdown-shortcuts-icon bg-label-secondary rounded-circle mb-2">
+                      <i class="bx bx-user fs-4"></i>
+                    </span>
+                    <a href="../app/user/list.html" class="stretched-link">User App</a>
+                    <small class="text-muted mb-0">Manage Users</small>
+                  </div>
+                  <div class="dropdown-shortcuts-item col">
+                    <span class="dropdown-shortcuts-icon bg-label-secondary rounded-circle mb-2">
+                      <i class="bx bx-check-shield fs-4"></i>
+                    </span>
+                    <a href="../app/access-roles.html" class="stretched-link">Role Management</a>
+                    <small class="text-muted mb-0">Permission</small>
+                  </div>
+                </div>
+                <div class="row row-bordered overflow-visible g-0">
+                  <div class="dropdown-shortcuts-item col">
+                    <span class="dropdown-shortcuts-icon bg-label-secondary rounded-circle mb-2">
+                      <i class="bx bx-pie-chart-alt-2 fs-4"></i>
+                    </span>
+                    <a href="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo-1" class="stretched-link">Dashboard</a>
+                    <small class="text-muted mb-0">User Profile</small>
+                  </div>
+                  <div class="dropdown-shortcuts-item col">
+                    <span class="dropdown-shortcuts-icon bg-label-secondary rounded-circle mb-2">
+                      <i class="bx bx-cog fs-4"></i>
+                    </span>
+                    <a href="../pages/account-settings-account.html" class="stretched-link">Setting</a>
+                    <small class="text-muted mb-0">Account Settings</small>
+                  </div>
+                </div>
+                <div class="row row-bordered overflow-visible g-0">
+                  <div class="dropdown-shortcuts-item col">
+                    <span class="dropdown-shortcuts-icon bg-label-secondary rounded-circle mb-2">
+                      <i class="bx bx-help-circle fs-4"></i>
+                    </span>
+                    <a href="../pages/help-center-landing.html" class="stretched-link">Help Center</a>
+                    <small class="text-muted mb-0">FAQs & Articles</small>
+                  </div>
+                  <div class="dropdown-shortcuts-item col">
+                    <span class="dropdown-shortcuts-icon bg-label-secondary rounded-circle mb-2">
+                      <i class="bx bx-window-open fs-4"></i>
+                    </span>
+                    <a href="../modal-examples.html" class="stretched-link">Modals</a>
+                    <small class="text-muted mb-0">Useful Popups</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
           <!-- Quick links -->
-          <a href="/buat_artikel"><button type="button" class="btn btn-primary">Buat Artikel</button></a>
+
           <!-- Notification -->
           <li class="nav-item dropdown-notifications navbar-dropdown dropdown me-3 me-xl-1">
             <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
@@ -2104,6 +2218,56 @@
           <!--/ Notification -->
 
           <!-- User -->
+          <li class="nav-item navbar-dropdown dropdown-user dropdown">
+            <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
+              <div class="avatar avatar-online">
+                <img src="../../demo/assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle">
+              </div>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li>
+                <a class="dropdown-item" href="../pages/profile-user.html">
+                  <div class="d-flex">
+                    <div class="flex-shrink-0 me-3">
+                      <div class="avatar avatar-online">
+                        <img src="../../demo/assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle">
+                      </div>
+                    </div>
+                    <div class="flex-grow-1">
+                      <span class="fw-semibold d-block">
+                                                John Doe
+                                              </span>
+                      <small class="text-muted">Admin</small>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <div class="dropdown-divider"></div>
+              </li>
+              <li>
+                <a class="dropdown-item" href="../pages/profile-user.html">
+                  <i class="bx bx-user me-2"></i>
+                  <span class="align-middle">My Profile</span>
+                </a>
+              </li>
+                            <li>
+                <a class="dropdown-item" href="../app/invoice/list.html">
+                  <i class="bx bx-credit-card me-2"></i>
+                  <span class="align-middle">Billing</span>
+                </a>
+              </li>
+                            <li>
+                <div class="dropdown-divider"></div>
+              </li>
+                            <li>
+                <a class="dropdown-item" href="javascript:void(0)">
+                  <i class='bx bx-log-in me-2'></i>
+                  <span class="align-middle">Login</span>
+                </a>
+              </li>
+                          </ul>
+          </li>
           <!--/ User -->
         </ul>
       </div>
@@ -2125,23 +2289,27 @@
         <!-- Content -->
                   <div class="container-xxl flex-grow-1 container-p-y">
             
-            <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Artikel /</span> Daftar Artikel</h4>
+            <h4 class="fw-bold py-3 mb-4">
+  <span class="text-muted fw-light">Artikel /</span> Buat Artikel
+</h4>
 
-<!-- Examples -->
-<div class="row mb-5">
-  <div class="col-md-6 col-lg-4 mb-3">
-    <div class="card h-100">
-      <img class="card-img-top" src="{{asset('assets/img/elements/2.jpg')}}" alt="Card image cap" />
+<div class="row">
+  <div class="col-md-9">
+    <div class="card mb-4">
       <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">
-          Some quick example text to build on the card title and make up the bulk of the card's content.
-        </p>
-        <a href="javascript:void(0)" class="btn btn-outline-primary">Go somewhere</a>
+        <div>
+          <label for="defaultFormControlInput" class="form-label">Judul</label>
+          <input type="text" class="form-control" id="defaultFormControlInput" placeholder="John Doe" aria-describedby="defaultFormControlHelp" />
+          <label class="form-label" for="basic-default-bio">Detail Singkat</label>
+            <textarea class="form-control" id="basic-default-bio" name="basic-default-bio" rows="3" required></textarea>
+        </div>
       </div>
     </div>
   </div>
-<!--/ Card layout -->
+
+
+
+</div>
 
             <!-- pricingModal -->
                         <!--/ pricingModal -->

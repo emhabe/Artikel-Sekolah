@@ -25,6 +25,7 @@ Route::get('/dashboard', [UserController::class, 'dashboard']);
 Route::get('/artikel', [UserController::class, 'artikel']);
 Route::get('/kategori', [UserController::class, 'kategori']);
 Route::get('/user', [UserController::class, 'user']);
+Route::get('/buat_artikel', [UserController::class, 'buat_artikel']);
 Route::post('/post_register', [LoginController::class, 'post_register']);
 Route::post('/login', [LoginController::class, 'login']);
 Route::post('/logout', [LoginController::class, 'logout']);

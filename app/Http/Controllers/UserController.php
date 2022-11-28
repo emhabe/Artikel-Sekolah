@@ -26,4 +26,8 @@ class UserController extends Controller
     {
         return view('demo-1.user');
     }
+    public function buat_artikel()
+    {
+        return view('demo-1.buat_artikel');
+    }
 }
