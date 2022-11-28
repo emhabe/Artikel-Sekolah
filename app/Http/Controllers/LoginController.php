@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
 use App\Models\User;
+use Ramsey\Uuid\Type\Integer;
 
 class LoginController extends Controller
 {
@@ -13,24 +14,33 @@ class LoginController extends Controller
     {
         if (Auth::attempt(['email' => $request->email, 'role' => 'admin', 'password' => $request->password])) {
             return redirect('dashboard');
+        } else {
+            return redirect('index');
         }
     }
 
-    public function register(Request $request)
+    public function post_register(Request $request)
     {
         $data =  User::create([
-            'name' => $request->name,
+            'name' => 'Guest' . mt_rand(1000, 9999),
             'email' => $request->email,
             'password' => bcrypt($request->password),
             'role' => 'guest',
-            'remember_token' => Str::random(60),
+            'remember_token' => Str::random(50),
         ]);
-        return redirect('login');
+        return redirect('login_admin');
     }
-    public function registrasi(){
+    public function registrasi()
+    {
         return view('demo-1.registrasi');
     }
-    public function login_admin(){
+    public function login_admin()
+    {
         return view('demo-1.login_admin');
+    }
+
+    public function logout()
+    {
+        Auth::logout();
     }
 }

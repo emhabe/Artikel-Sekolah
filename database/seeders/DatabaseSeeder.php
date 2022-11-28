@@ -16,7 +16,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $data = User::create(
+        $data = [
             [
                 'name' => 'Admin Dhea',
                 'email' => 'dhea@gmail.com',
@@ -31,6 +31,7 @@ class DatabaseSeeder extends Seeder
                 'role' => 'admin',
                 'remember_token' => Str::random(60),
             ]
-        );
+        ];
+        User::insert($data);
     }
 }
