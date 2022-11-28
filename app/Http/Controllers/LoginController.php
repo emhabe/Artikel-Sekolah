@@ -14,8 +14,6 @@ class LoginController extends Controller
     {
         if (Auth::attempt(['email' => $request->email, 'role' => 'admin', 'password' => $request->password])) {
             return redirect('dashboard');
-        } else {
-            return redirect('index');
         }
     }
 

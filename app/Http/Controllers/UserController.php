@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Artikel;
+use App\Models\Foto;
 
 class UserController extends Controller
 {
@@ -29,5 +31,29 @@ class UserController extends Controller
     public function buat_artikel()
     {
         return view('demo-1.buat_artikel');
+    }
+    public function submit_artikel(Request $request)
+    {
+        $data = Artikel::create([
+            'judul' => $request->judul,
+            'detail_singkat' => $request->detail_singkat,
+            'deskripsi' => $request->deskripsi,
+        ])->id;
+
+        $images = array();
+        if ($files = $request->file('foto')) {
+            foreach ($files as $file) {
+                $name = $file->getClientOriginalName();
+                $file->move('foto_artikel', $name);
+                $images[] = $name;
+            }
+        }
+        /*Insert your data*/
+
+        Foto::insert([
+            'foto' =>  implode("|", $images),
+            'artikel_id' => $data,
+        ]);
+        return redirect('artikel');
     }
 }
