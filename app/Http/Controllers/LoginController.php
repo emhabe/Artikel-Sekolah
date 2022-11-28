@@ -27,4 +27,7 @@ class LoginController extends Controller
         ]);
         return redirect('login');
     }
+    public function registrasi(){
+        return view('demo-1.registrasi');
+    }
 }

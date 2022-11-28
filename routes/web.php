@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,7 +18,8 @@ use App\Http\Controllers\UserController;
 Route::get('/', function () {
     return view('welcome');
 });
-
+//admin//
+Route::get('/registrasi',[LoginController::class,'registrasi']);
 Route::get('/dashboard', [UserController::class, 'dashboard']);
 Route::get('/artikel', [UserController::class, 'artikel']);
 Route::get('/kategori', [UserController::class, 'kategori']);
