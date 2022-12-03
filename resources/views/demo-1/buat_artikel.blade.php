@@ -220,8 +220,8 @@
 
 
 
-        <li class="menu-item ">
-          <a href="/kategori" class="menu-link menu-toggle">
+        <li class="menu-item">
+          <a href="#" class="menu-link menu-toggle">
             <i class="menu-icon tf-icons bx bx-food-menu"></i>
             <div>Kategori</div>
           </a>
@@ -231,9 +231,9 @@
 
 
 
-            <li class="menu-item ">
-              <a href="../laravel/user-management.html" class="menu-link">
-                <div>User Management</div>
+            <li class="menu-item">
+              <a href="/kategori" class="menu-link">
+                <div>Event</div>
               </a>
 
 

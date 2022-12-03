@@ -1,7 +1,8 @@
 @extends('layouts.master')
 
 @section('content')
-<!-- Layout Content -->
+
+
 <div class="layout-wrapper layout-content-navbar ">
   <div class="layout-container">
 
@@ -64,9 +65,9 @@
 
 
         <li class="menu-item ">
-          <a href="javascript:void(0);" class="menu-link menu-toggle">
+          <a href="/dashboard" class="menu-link">
             <i class="menu-icon tf-icons bx bx-home-circle"></i>
-            <div>Dashboards</div>
+            <div>Beranda</div>
           </a>
 
 
@@ -111,10 +112,10 @@
 
 
 
-        <li class="menu-item ">
-          <a href="javascript:void(0);" class="menu-link menu-toggle">
-            <i class="menu-icon tf-icons bx bx-layout"></i>
-            <div>Layouts</div>
+        <li class="menu-item active item">
+          <a href="/artikel" class="menu-link">
+            <i class="menu-icon tf-icons bx bx-collection"></i>
+            <div>Artikel</div>
           </a>
 
 
@@ -123,7 +124,7 @@
 
 
             <li class="menu-item ">
-              <a href="../layouts/collapsed-menu.html" class="menu-link">
+              <a href="layouts/collapsed-menu.html" class="menu-link">
                 <div>Collapsed menu</div>
               </a>
 
@@ -133,7 +134,7 @@
 
 
             <li class="menu-item ">
-              <a href="../layouts/content-navbar.html" class="menu-link">
+              <a href="layouts/content-navbar.html" class="menu-link">
                 <div>Content navbar</div>
               </a>
 
@@ -143,7 +144,7 @@
 
 
             <li class="menu-item ">
-              <a href="../layouts/content-nav-sidebar.html" class="menu-link">
+              <a href="layouts/content-nav-sidebar.html" class="menu-link">
                 <div>Content nav + Sidebar</div>
               </a>
 
@@ -153,7 +154,7 @@
 
 
             <li class="menu-item ">
-              <a href="../layouts/horizontal.html" class="menu-link" target="_blank">
+              <a href="layouts/horizontal.html" class="menu-link" target="_blank">
                 <div>Horizontal</div>
               </a>
 
@@ -163,7 +164,7 @@
 
 
             <li class="menu-item ">
-              <a href="../layouts/without-menu.html" class="menu-link">
+              <a href="layouts/without-menu.html" class="menu-link">
                 <div>Without menu</div>
               </a>
 
@@ -173,7 +174,7 @@
 
 
             <li class="menu-item ">
-              <a href="../layouts/without-navbar.html" class="menu-link">
+              <a href="layouts/without-navbar.html" class="menu-link">
                 <div>Without navbar</div>
               </a>
 
@@ -183,7 +184,7 @@
 
 
             <li class="menu-item ">
-              <a href="../layouts/fluid.html" class="menu-link">
+              <a href="layouts/fluid.html" class="menu-link">
                 <div>Fluid</div>
               </a>
 
@@ -193,7 +194,7 @@
 
 
             <li class="menu-item ">
-              <a href="../layouts/container.html" class="menu-link">
+              <a href="layouts/container.html" class="menu-link">
                 <div>Container</div>
               </a>
 
@@ -203,7 +204,7 @@
 
 
             <li class="menu-item ">
-              <a href="../layouts/blank.html" class="menu-link" target="_blank">
+              <a href="layouts/blank.html" class="menu-link" target="_blank">
                 <div>Blank</div>
               </a>
 
@@ -219,10 +220,10 @@
 
 
 
-        <li class="menu-item ">
-          <a href="javascript:void(0);" class="menu-link menu-toggle">
-            <i class="menu-icon tf-icons bx bxl-php"></i>
-            <div>Laravel Example</div>
+        <li class="menu-item">
+          <a href="#" class="menu-link menu-toggle">
+            <i class="menu-icon tf-icons bx bx-food-menu"></i>
+            <div>Kategori</div>
           </a>
 
 
@@ -230,15 +231,20 @@
 
 
 
-            <li class="menu-item ">
-              <a href="../laravel/user-management.html" class="menu-link">
-                <div>User Management</div>
+            <li class="menu-item">
+              <a href="/kategori" class="menu-link">
+                <div>Event</div>
               </a>
 
 
             </li>
           </ul>
         </li>
+        <li class="menu-item ">
+          <a href="/user" class="menu-link">
+            <i class="menu-icon tf-icons bx bx-user"></i>
+            <div>Users</div>
+          </a>
 
 
 
@@ -995,7 +1001,7 @@
 
 
 
-        <li class="menu-item ">
+        <li class="menu-item active open">
           <a href="javascript:void(0);" class="menu-link menu-toggle">
             <i class="menu-icon tf-icons bx bx-collection"></i>
             <div>Cards</div>
@@ -1006,8 +1012,8 @@
 
 
 
-            <li class="menu-item ">
-              <a href="../cards/basic.html" class="menu-link">
+            <li class="menu-item active">
+              <a href="basic.html" class="menu-link">
                 <div>Basic</div>
               </a>
 
@@ -1017,7 +1023,7 @@
 
 
             <li class="menu-item ">
-              <a href="../cards/advance.html" class="menu-link">
+              <a href="advance.html" class="menu-link">
                 <div>Advance</div>
               </a>
 
@@ -1027,7 +1033,7 @@
 
 
             <li class="menu-item ">
-              <a href="../cards/statistics.html" class="menu-link">
+              <a href="statistics.html" class="menu-link">
                 <div>Statistics</div>
               </a>
 
@@ -1037,7 +1043,7 @@
 
 
             <li class="menu-item ">
-              <a href="../cards/analytics.html" class="menu-link">
+              <a href="analytics.html" class="menu-link">
                 <div>Analytics</div>
               </a>
 
@@ -1047,7 +1053,7 @@
 
 
             <li class="menu-item ">
-              <a href="../cards/gamifications.html" class="menu-link">
+              <a href="gamifications.html" class="menu-link">
                 <div>Gamifications</div>
               </a>
 
@@ -1057,7 +1063,7 @@
 
 
             <li class="menu-item ">
-              <a href="../cards/actions.html" class="menu-link">
+              <a href="actions.html" class="menu-link">
                 <div>Actions</div>
               </a>
 
@@ -1708,7 +1714,7 @@
 
 
         <li class="menu-item ">
-          <a href="basic.html" class="menu-link">
+          <a href="../tables/basic.html" class="menu-link">
             <i class="menu-icon tf-icons bx bx-table"></i>
             <div>Tables</div>
           </a>
@@ -1734,8 +1740,8 @@
 
 
 
-            <li class="menu-item active">
-              <a href="datatables-basic.html" class="menu-link">
+            <li class="menu-item ">
+              <a href="../tables/datatables-basic.html" class="menu-link">
                 <div>Basic</div>
               </a>
 
@@ -1745,7 +1751,7 @@
 
 
             <li class="menu-item ">
-              <a href="datatables-advanced.html" class="menu-link">
+              <a href="../tables/datatables-advanced.html" class="menu-link">
                 <div>Advanced</div>
               </a>
 
@@ -1755,7 +1761,7 @@
 
 
             <li class="menu-item ">
-              <a href="datatables-extensions.html" class="menu-link">
+              <a href="../tables/datatables-extensions.html" class="menu-link">
                 <div>Extensions</div>
               </a>
 
@@ -1870,7 +1876,6 @@
     </aside>
 
 
-    <!-- Layout page -->
     <div class="layout-page">
       <!-- BEGIN: Navbar-->
       <!-- Navbar -->
@@ -1924,7 +1929,7 @@
                   </a>
                 </li>
                 <li>
-                  <a class="dropdown-item" href="datatables-basic.html" data-language="pt">
+                  <a class="dropdown-item" href="basic-inputs.html" data-language="pt">
                     <i class="fi fi-pt fis rounded-circle fs-4 me-1"></i>
                     <span class="align-middle">Portuguese</span>
                   </a>
@@ -2285,93 +2290,40 @@
         <div class="container-xxl flex-grow-1 container-p-y">
 
           <h4 class="fw-bold py-3 mb-4">
-            <span class="text-muted fw-light">Beranda /</span> Data User
+            <span class="text-muted fw-light">Artikel /</span> Edit Artikel
           </h4>
+          <form action="/update/{{$data->id}}" method="post" enctype="multipart/form-data">
+            @csrf
+            <div class="row">
+              <div class="col-md-9">
+                <div class="card mb-4">
+                  <div class="card-body">
+                    <div>
+                      <label for="defaultFormControlInput" class="form-label">Judul</label>
+                      <input type="text" class="form-control" id="defaultFormControlInput" name="judul" value="{{$data->judul}}" placeholder="Judul" aria-describedby="defaultFormControlHelp" />
+                      <label class="form-label" for="basic-default-bio">Detail Singkat</label>
+                      <textarea class="form-control" id="basic-default-bio" name="detail_singkat" rows="3" required>{{$data->detail_singkat}}</textarea>
+                      <label class="form-label" for="basic-default-bio">Deskripsi</label>
+                      <textarea class="form-control" id="basic-default-bio" name="deskripsi" rows="3" required>{{$data->deskripsi}}</textarea>
+                      <label for="defaultFormControlInput" class="form-label">Foto</label>
+                      <input type="file" class="form-control mb-2" id="defaultFormControlInput" name="foto" aria-describedby="defaultFormControlHelp">
+                      <img src="{{asset('foto_artikel/'.$data->foto)}}" alt="" style="width: 150px;">
+                      <div class="form-control mb-4">
+                        <button class="btn btn-primary d-grid w-100">
+                          Submit
+                        </button>
+                      </div>
+                    </div>
 
-          <div class="card">
-            <h5 class="card-header">Data User</h5>
-            <div class="table-responsive text-nowrap">
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th>Nama</th>
-                    <th>Email</th>
-                    <th>Tanggal</th>
-                    <th>Actions</th>
-                  </tr>
-                </thead>
-                <tbody class="table-border-bottom-0">
-                  <tr>
-                    <td>Albert Cook</td>
-                    <td>
-                      Albert@gmail.com
-                    </td>
-                    <td><span class="badge bg-label-primary me-1">Active</span></td>
-                    <td>
-                      <a>delete</a>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-          <!-- DataTable with Buttons -->
+          </form>
 
-          <!-- Modal to add new record -->
-          <!-- <div class="offcanvas offcanvas-end" id="add-new-record">
-            <div class="offcanvas-header border-bottom">
-              <h5 class="offcanvas-title" id="exampleModalLabel">New Record</h5>
-              <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body flex-grow-1">
-              <form class="add-new-record pt-0 row g-2" id="form-add-new-record" onsubmit="return false">
-                <div class="col-sm-12">
-                  <label class="form-label" for="basicFullname">Full Name</label>
-                  <div class="input-group input-group-merge">
-                    <span id="basicFullname2" class="input-group-text"><i class="bx bx-user"></i></span>
-                    <input type="text" id="basicFullname" class="form-control dt-full-name" name="basicFullname" placeholder="John Doe" aria-label="John Doe" aria-describedby="basicFullname2" />
-                  </div>
-                </div>
-                <div class="col-sm-12">
-                  <label class="form-label" for="basicPost">Post</label>
-                  <div class="input-group input-group-merge">
-                    <span id="basicPost2" class="input-group-text"><i class='bx bxs-briefcase'></i></span>
-                    <input type="text" id="basicPost" name="basicPost" class="form-control dt-post" placeholder="Web Developer" aria-label="Web Developer" aria-describedby="basicPost2" />
-                  </div>
-                </div>
-                <div class="col-sm-12">
-                  <label class="form-label" for="basicEmail">Email</label>
-                  <div class="input-group input-group-merge">
-                    <span class="input-group-text"><i class="bx bx-envelope"></i></span>
-                    <input type="text" id="basicEmail" name="basicEmail" class="form-control dt-email" placeholder="john.doe@example.com" aria-label="john.doe@example.com" />
-                  </div>
-                  <div class="form-text">
-                    You can use letters, numbers & periods
-                  </div>
-                </div>
-                <div class="col-sm-12">
-                  <label class="form-label" for="basicDate">Joining Date</label>
-                  <div class="input-group input-group-merge">
-                    <span id="basicDate2" class="input-group-text"><i class='bx bx-calendar'></i></span>
-                    <input type="text" class="form-control dt-date" id="basicDate" name="basicDate" aria-describedby="basicDate2" placeholder="MM/DD/YYYY" aria-label="MM/DD/YYYY" />
-                  </div>
-                </div>
-                <div class="col-sm-12">
-                  <label class="form-label" for="basicSalary">Salary</label>
-                  <div class="input-group input-group-merge">
-                    <span id="basicSalary2" class="input-group-text"><i class='bx bx-dollar'></i></span>
-                    <input type="number" id="basicSalary" name="basicSalary" class="form-control dt-salary" placeholder="12000" aria-label="12000" aria-describedby="basicSalary2" />
-                  </div>
-                </div>
-                <div class="col-sm-12">
-                  <button type="submit" class="btn btn-primary data-submit me-sm-3 me-1">Submit</button>
-                  <button type="reset" class="btn btn-outline-secondary" data-bs-dismiss="offcanvas">Cancel</button>
-                </div>
-              </form>
+          <!-- pricingModal -->
+          <!--/ pricingModal -->
 
-            </div>
-          </div> -->
-          <!--/ DataTable with Buttons -->
         </div>
         <!-- / Content -->
 
@@ -2409,5 +2361,7 @@
 </div>
 <!-- / Layout wrapper -->
 <!--/ Layout Content -->
+
+
 
 @endsection

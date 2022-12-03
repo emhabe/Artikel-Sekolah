@@ -220,8 +220,8 @@
 
 
 
-        <li class="menu-item ">
-          <a href="/kategori" class="menu-link menu-toggle">
+        <li class="menu-item">
+          <a href="#" class="menu-link menu-toggle">
             <i class="menu-icon tf-icons bx bx-food-menu"></i>
             <div>Kategori</div>
           </a>
@@ -231,9 +231,9 @@
 
 
 
-            <li class="menu-item ">
-              <a href="../laravel/user-management.html" class="menu-link">
-                <div>User Management</div>
+            <li class="menu-item">
+              <a href="/kategori" class="menu-link">
+                <div>Event</div>
               </a>
 
 
@@ -2128,26 +2128,29 @@
           <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Artikel /</span> Daftar Artikel</h4>
 
           <!-- Examples -->
-          @foreach($data as $d)
+          <div class="container-fluid py-4">
           <div class="row mb-5">
-            <div class="col-md-6 col-lg-4 mb-3">
-              <div class="card h-100">
-                <img class="card-img-top" src="{{asset('foto_artikel/'.$d->foto)}}" alt="Card image cap" />
+          @foreach($data as $d)
+            <div class="col-lg-4 mb-3">
+              <div class="card h-100 p-3">
+                <img class="overflow-hidden position-relative border-radius-lg bg-cover h-100" src="{{asset('foto_artikel/'.$d->foto)}}" alt="Card image cap" />
                 <div class="card-body">
                   <h5 class="card-title">{{$d->judul}}</h5>
                   <p class="card-text">
                     {{$d->detail_singkat}}
                   </p>
-                  <a href="javascript:void(0)" class="btn btn-outline-primary">Go somewhere</a>
+                  <a href="/edit/{{$d->id}}" class="btn btn-outline-success">Edit</a>
+                  <a href="/delete/{{$d->id}}" class="btn btn-outline-danger delete" id="confirm-text" data-id="{{$d->id}}" data-nama="{{$d->judul}}">Delete</a>
                 </div>
               </div>
             </div>
+            @endforeach
             <!--/ Card layout -->
 
           </div>
-          @endforeach
+          </div>
+          
           <!-- / Content -->
-
           <!-- Footer -->
           <!-- Footer-->
           <footer class="content-footer footer bg-footer-theme">

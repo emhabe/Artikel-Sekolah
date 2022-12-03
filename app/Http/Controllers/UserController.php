@@ -23,7 +23,8 @@ class UserController extends Controller
     }
     public function kategori()
     {
-        return view('demo-1.kategori');
+        $data = Artikel::all();
+        return view('demo-1.kategori', compact('data'));
     }
     public function user()
     {
@@ -48,4 +49,30 @@ class UserController extends Controller
         }
         return redirect('artikel');
     }
+    public function edit($id){
+        $data = Artikel::FindOrFail($id);
+        return view('demo-1.edit',compact('data'));
+    }
+    public function update($id,Request $request)
+    {
+        $data = Artikel::FindOrFail($id);
+        $data->update([
+            'judul' => $request->judul,
+            'detail_singkat' => $request->detail_singkat,
+            'deskripsi' => $request->deskripsi,
+            'foto' => $request->foto,
+        ]);
+        if ($request->hasfile('foto')) {
+            $request->file('foto')->move(public_path('foto_artikel/'), '' . date('YmdHis') . '.' . $request->file('foto')->getClientOriginalExtension());
+            $data->foto = '' . date('YmdHis') . '.' . $request->file('foto')->getClientOriginalExtension();
+            $data->save();
+        }
+        return redirect('artikel');
+    }
+    public function delete($id)
+    {
+        $data = Artikel::FindOrFail($id);
+        $data->delete();
+        return redirect('artikel');
+    } 
 }
