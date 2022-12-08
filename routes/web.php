@@ -23,7 +23,7 @@ Route::get('/registrasi', [LoginController::class, 'registrasi']);
 Route::get('/login_admin', [LoginController::class, 'login_admin']);
 Route::get('/dashboard', [UserController::class, 'dashboard']);
 Route::get('/artikel', [UserController::class, 'artikel']);
-Route::get('/kategori', [UserController::class, 'kategori']);
+Route::get('/kategori/{id}', [UserController::class, 'kategori']);
 Route::get('/user', [UserController::class, 'user']);
 Route::get('/buat_artikel', [UserController::class, 'buat_artikel']);
 Route::get('/edit/{id}', [UserController::class, 'edit']);

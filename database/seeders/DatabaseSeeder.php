@@ -6,6 +6,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Str;
 use App\Models\User;
+use App\Models\Kategori;
 
 class DatabaseSeeder extends Seeder
 {
@@ -33,5 +34,15 @@ class DatabaseSeeder extends Seeder
             ]
         ];
         User::insert($data);
+
+        $siu = [
+            [
+                'nama' => 'Acara',
+            ],
+            [
+                'nama' => 'Olahraga',
+            ]
+        ];
+        Kategori::insert($siu);
     }
 }

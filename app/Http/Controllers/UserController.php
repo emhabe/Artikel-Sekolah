@@ -5,12 +5,14 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Artikel;
 use App\Models\Foto;
+use App\Models\Kategori;
 
 class UserController extends Controller
 {
     public function dashboard()
     {
-        return view('demo-1.dashboard');
+        $kategori = Kategori::all();
+        return view('demo-1.dashboard', compact('kategori'));
     }
     public function index()
     {
@@ -21,9 +23,9 @@ class UserController extends Controller
         $data = Artikel::all();
         return view('demo-1.artikel', compact('data'));
     }
-    public function kategori()
+    public function kategori($id)
     {
-        $data = Artikel::all();
+        $data = Artikel::where('kategori_id', '=', $id)->get();
         return view('demo-1.kategori', compact('data'));
     }
     public function user()
@@ -32,12 +34,14 @@ class UserController extends Controller
     }
     public function buat_artikel()
     {
-        return view('demo-1.buat_artikel');
+        $kategori = Kategori::all();
+        return view('demo-1.buat_artikel', compact('kategori'));
     }
     public function submit_artikel(Request $request)
     {
         $data = Artikel::create([
             'judul' => $request->judul,
+            'kategori_id' => $request->kategori,
             'detail_singkat' => $request->detail_singkat,
             'deskripsi' => $request->deskripsi,
             'foto' => $request->foto,
@@ -49,11 +53,12 @@ class UserController extends Controller
         }
         return redirect('artikel');
     }
-    public function edit($id){
+    public function edit($id)
+    {
         $data = Artikel::FindOrFail($id);
-        return view('demo-1.edit',compact('data'));
+        return view('demo-1.edit', compact('data'));
     }
-    public function update($id,Request $request)
+    public function update($id, Request $request)
     {
         $data = Artikel::FindOrFail($id);
         $data->update([
@@ -74,5 +79,5 @@ class UserController extends Controller
         $data = Artikel::FindOrFail($id);
         $data->delete();
         return redirect('artikel');
-    } 
+    }
 }

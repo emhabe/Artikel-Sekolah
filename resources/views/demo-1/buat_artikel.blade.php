@@ -2301,6 +2301,12 @@
                     <div>
                       <label for="defaultFormControlInput" class="form-label">Judul</label>
                       <input type="text" class="form-control" id="defaultFormControlInput" name="judul" placeholder="Judul" aria-describedby="defaultFormControlHelp" />
+                      <label for="defaultFormControlInput" class="form-label">Kategori</label>
+                      <select class="form-control" name="kategori">
+                        @foreach($kategori as $kt)
+                        <option value="{{$kt->id}}">{{$kt->nama}}</option>
+                        @endforeach
+                      </select>
                       <label class="form-label" for="basic-default-bio">Detail Singkat</label>
                       <textarea class="form-control" id="basic-default-bio" name="detail_singkat" rows="3" required></textarea>
                       <label class="form-label" for="basic-default-bio">Deskripsi</label>

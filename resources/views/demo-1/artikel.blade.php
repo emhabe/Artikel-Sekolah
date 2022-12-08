@@ -2129,27 +2129,27 @@
 
           <!-- Examples -->
           <div class="container-fluid py-4">
-          <div class="row mb-5">
-          @foreach($data as $d)
-            <div class="col-lg-4 mb-3">
-              <div class="card h-100 p-3">
-                <img class="overflow-hidden position-relative border-radius-lg bg-cover h-100" src="{{asset('foto_artikel/'.$d->foto)}}" alt="Card image cap" />
-                <div class="card-body">
-                  <h5 class="card-title">{{$d->judul}}</h5>
-                  <p class="card-text">
-                    {{$d->detail_singkat}}
-                  </p>
-                  <a href="/edit/{{$d->id}}" class="btn btn-outline-success">Edit</a>
-                  <a href="/delete/{{$d->id}}" class="btn btn-outline-danger delete" id="confirm-text" data-id="{{$d->id}}" data-nama="{{$d->judul}}">Delete</a>
+            <div class="row mb-5">
+              @foreach($data as $d)
+              <div class="col-lg-4 mb-3">
+                <div class="card h-100 p-3">
+                  <img class="overflow-hidden position-relative border-radius-lg bg-cover h-100" src="{{asset('foto_artikel/'.$d->foto)}}" alt="Card image cap" />
+                  <div class="card-body">
+                    <h5 class="card-title">{{$d->judul}}</h5>
+                    <p class="card-text">
+                      {{$d->detail_singkat}}
+                    </p>
+                    <a href="/edit/{{$d->id}}" class="btn btn-outline-success">Edit</a>
+                    <a href="/delete/{{$d->id}}" class="btn btn-outline-danger delete" id="confirm-text" data-id="{{$d->id}}" data-nama="{{$d->judul}}">Delete</a>
+                  </div>
                 </div>
               </div>
-            </div>
-            @endforeach
-            <!--/ Card layout -->
+              @endforeach
+              <!--/ Card layout -->
 
+            </div>
           </div>
-          </div>
-          
+
           <!-- / Content -->
           <!-- Footer -->
           <!-- Footer-->
