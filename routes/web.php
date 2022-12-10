@@ -35,4 +35,4 @@ Route::post('/logout', [LoginController::class, 'logout']);
 Route::post('/submit_artikel', [UserController::class, 'submit_artikel']);
 
 //Tampilan//
-Route::get('/index', [UserController::class, 'index']);
+Route::get('/', [ArtikelController::class, 'index']);

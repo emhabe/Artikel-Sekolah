@@ -14,10 +14,7 @@ class UserController extends Controller
         $kategori = Kategori::all();
         return view('demo-1.dashboard', compact('kategori'));
     }
-    public function index()
-    {
-        return view('tampilan.index');
-    }
+   
     public function artikel()
     {
         $data = Artikel::all();
