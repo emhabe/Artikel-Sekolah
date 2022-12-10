@@ -2590,6 +2590,25 @@ ul.fact-list > li:not(:first-child) {border-left: 1px solid #d6d6db;}
   background-color: var(--color10);
   color:var(--color28)
 }
+.post-cate2 > a {
+  border: 1px solid var(--color27);
+  font-size: 12px;
+  -webkit-border-radius: 50rem;
+  border-radius: 50rem;
+  font-weight: 600;
+  padding: 8px .9375rem;
+  line-height: initial;
+  display: inline-block;
+  margin-bottom: 5px;
+  background-color: var(--color27);
+  color: var(--color10);
+
+}
+.post-cate2 > a:hover,
+.post-cate2 > a:focus {
+  background-color: var(--color10);
+  color:var(--color27)
+}
 .post-info > span + h3 {margin-top: .9375rem;}
 .container .col-lg-4 .post-info > h3 {font-size: 1.25rem;}
 .col-lg-3 .post-info > h3 {font-size: 1.5rem;}
@@ -2682,7 +2701,7 @@ footer .logo a {
 .widget ul li i {margin-right: 8px;}
 .widget ul li + li {margin-top: 10px;}
 .widget ul li:hover > a,
-.widget ul li a:focus {color: var(--color3);}
+.widget ul li a:focus {color: var(--color27);}
 .newsletter > input {
   height: 3.25rem;
   font-size: 1.0625rem;
@@ -3846,7 +3865,25 @@ form.searchform > button:focus {color: var(--color3);}
   position: absolute;
   left: -1.875rem;
   top: 0;
-  background-color: var(--color3);
+  background-color: var(--color27);
+  width: 3px;
+  bottom: 0;
+}
+.widget.widget2.v2 > h3:before {
+  content: "";
+  position: absolute;
+  left: -1.875rem;
+  top: 0;
+  background-color: var(--color28);
+  width: 3px;
+  bottom: 0;
+}
+.widget.widget3.v2 > h3:before {
+  content: "";
+  position: absolute;
+  left: -1.875rem;
+  top: 0;
+  background-color: var(--color26);
   width: 3px;
   bottom: 0;
 }
@@ -3880,7 +3917,8 @@ form.searchform > button:focus {color: var(--color3);}
 .recentpost-info > h5 a:hover,
 .recentpost-info > h5 a:focus,
 .recentpost-info > span a:hover,
-.recentpost-info > span a:focus {color: var(--color3);}
+.recentpost-info > span a:focus {color: var(--color28);}
+/* .recentpost-info.2 > span a:focus {color: var(--color27);} */
 .myCalendar {min-width: 100%;}
 .myCalendar .month-head div {
   -webkit-border-radius: 50rem;

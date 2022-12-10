@@ -12,10 +12,10 @@
                     </ul>
                     <div class="social-cart d-inline-flex flex-wrap align-items-center">
                         <div class="social-links d-inline-flex flex-wrap">
-                            <a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="flaticon-facebook"></i></a>
-                            <a href="https://twitter.com/" title="Twitter" target="_blank"><i class="flaticon-twitter"></i></a>
-                            <a href="https://youtube.com/" title="Youtube" target="_blank"><i class="flaticon-youtube"></i></a>
-                            <a href="https://linkedin.com/" title="Linkedin" target="_blank"><i class="flaticon-linkedin"></i></a>
+                            <a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="https://www.instagram.com/dokteranime/" title="Instagram" target="_blank"><i class="fa-brands fa-instagram fa-lg"></i></a>
+                            <a href="https://youtube.com/" title="Youtube" target="_blank"><i class="fa-brands fa-youtube fa-lg"></i></a>
+                            <a href="https://linkedin.com/" title="Twitter" target="_blank"><i class="fa-brands fa-twitter"></i></a>
                         </div>
                     </div>
                 </div>
@@ -29,7 +29,7 @@
                     </div><!-- Logo -->
                     <nav>
                         <ul class="d-inline-flex flex-wrap align-items-center mb-0 list-unstyled">
-                            <li class="menu-item"><a href="javascript:void(0);" title="">Beranda</a>
+                            <li class="menu-item active"><a href="javascript:void(0);" title="">Beranda</a>
                             </li>
                             <li class="menu-item-has-children"><a href="javascript:void(0);" title="">Kategori</a>
                                 <ul class="children mb-0 list-unstyled">
@@ -47,7 +47,7 @@
                             </li>
                             <li class="menu-item"><a href="javascript:void(0);" title="">Tentang</a>
                             </li>
-                            <li><a href="contact.html" title="">Contacts</a></li>
+                            <li><a href="#contact" title="">Kontak</a></li>
                         </ul>
                     </nav>
                     <!-- <div class="header-btns d-inline-flex flex-wrap align-items-center mt-5">
@@ -70,7 +70,7 @@
                 </div><!-- Logo -->
                 <nav>
                     <ul class="d-inline-flex flex-wrap align-items-center mb-0 list-unstyled">
-                        <li class="menu-item"><a href="javascript:void(0);" title="">Beranda</a>
+                        <li class="menu-item active"><a href="javascript:void(0);" title="">Beranda</a>
                         </li>
                         <li class="menu-item-has-children"><a href="javascript:void(0);" title="">Kategori</a>
                             <ul class="children mb-0 list-unstyled">
@@ -89,7 +89,7 @@
                         </li>
                         <li class="menu-item"><a href="javascript:void(0);" title="">Tentang</a>
                         </li>
-                        <li><a href="contact.html" title="">Kontak</a></li>
+                        <li><a href="#contact" title="">Kontak</a></li>
                     </ul>
                 </nav>
             </div>
@@ -112,7 +112,7 @@
                 <h1 class="mb-0"><a href="index.html" title="Home"><img class="img-fluid" src="{{asset('landing/assets/images/logo%402x.png')}}" alt="Logo"></a></h1>
             </div><!-- Logo -->
             <ul class="mb-0 list-unstyled w-100">
-                <li class="menu-item"><a href="javascript:void(0);" title="">Beranda</a>
+                <li class="menu-item active"><a href="javascript:void(0);" title="">Beranda</a>
 
                 </li>
                 <li class="menu-item-has-children"><a href="javascript:void(0);" title="">Kategori</a>
@@ -134,7 +134,7 @@
 
                 </li>
 
-                <li><a href="contact.html" title="">Kontak</a></li>
+                <li><a href="#contact" title="">Kontak</a></li>
             </ul>
         </div><!-- Responsive Menu -->
     </div><!-- Responsive Header -->
@@ -157,8 +157,8 @@
                                     <h2 class="mb-0"><span>Selamat Datang di</span> <br> Nama Website</h2>
                                     <i class="btm-ln bg-color14"></i>
                                 </div><!-- Sec Title -->
-                                <p class="mb-0">Di Website ini Kalian Akan Mendapatkan Info atau Berita Terbaru Dari....</p>
-
+                                <p class="mb-0">Jelajahi Seluruh Berita Dan informasi Terbaru Seputar....Disini</p>
+                                <a href="#satu"><button class="thm-btn d-inline-block rounded-pill mt-3">Mulai Jelajah</button></a>
                             </div>
                         </div>
                     </div>
@@ -166,9 +166,9 @@
             </div>
         </div>
     </section>
-    <section id="satu">
+    <section>
         <div class="w-100 pt-120 pb-120 position-relative">
-            <div class="container">
+            <div class="container" id="satu">
                 <div class="sec-title text-center w-100 position-relative">
                     <h2 class="mb-0"><span>Postingan </span> Terbaru</h2>
                     <i class="btm-ln bg-color28"></i>
@@ -182,7 +182,7 @@
                                     <span class="post-date brd-rd15 text-center position-absolute text-uppercase"><i>20</i>May</span>
                                 </div>
                                 <div class="post-info w-100">
-                                    <span class="post-cate d-block text-uppercase"><a href="javascript:void(0);" title="">Marketing</a></span>
+                                    <span class="post-cate2 d-block text-uppercase"><a href="javascript:void(0);" title="">Marketing</a></span>
                                     <h3 class="mb-0">Let's talk test</h3>
                                     <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget orci non nunc iaculis lobortis. Vestibulum pretium, sapien eget fermentum feugiat, ligula turpis viverra enim, eget luctus nisi nunc hendrerit lorem. Mauris vitae nisl sed purus mattis tincidunt vitae eget nisl. Phasellus semper lorem sed porttitor tem...</p>
                                     <div class="post-btm-bar d-flex flex-wrap justify-content-between align-items-center w-100">
@@ -232,28 +232,42 @@
                                                 <button type="submit"><i class="flaticon-magnifying-glass"></i></button>
                                             </form>
                                         </div>
-                                        <div class="widget v2 w-100">
+                                        <div class="widget widget2 v2 w-100">
                                             <h3>Recent Posts</h3>
                                             <div class="recentposts-wrap w-100">
                                                 <div class="recentpost-box d-flex flex-wrap align-items-center w-100">
                                                     <div class="recentpost-img"><a href="blog-detail.html" title=""><img class="img-fluid w-100" src="landing/assets/images/resources/recentpost-img1.jpg" alt="Recent Post Image 1"></a></div>
-                                                    <div class="recentpost-info">
+                                                    <div class="recentpost-info 2">
                                                         <h5 class="mb-0"><a href="blog-detail.html" title="">Expect more</a></h5>
-                                                        <span class="d-block"><a href="javascript:void(0);" title="">July 03 2019</a></span>
+                                                        <span class="d-block">July 03 2019</span>
                                                     </div>
                                                 </div>
                                                 <div class="recentpost-box d-flex flex-wrap align-items-center w-100">
                                                     <div class="recentpost-img"><a href="blog-detail.html" title=""><img class="img-fluid w-100" src="landing/assets/images/resources/recentpost-img2.jpg" alt="Recent Post Image 2"></a></div>
                                                     <div class="recentpost-info">
                                                         <h5 class="mb-0"><a href="blog-detail.html" title="">Ideas that soar</a></h5>
-                                                        <span class="d-block"><a href="javascript:void(0);" title="">June 03 2021</a></span>
+                                                        <span class="d-block">June 03 2021</span>
+                                                    </div>
+                                                </div>
+                                                <div class="recentpost-box d-flex flex-wrap align-items-center w-100">
+                                                    <div class="recentpost-img"><a href="blog-detail.html" title=""><img class="img-fluid w-100" src="landing/assets/images/resources/recentpost-img3.jpg" alt="Recent Post Image 3"></a></div>
+                                                    <div class="recentpost-info">
+                                                        <h5 class="mb-0"><a href="blog-detail.html" title="">Accelerated Mark</a></h5>
+                                                        <span class="d-block">March 23 2020</span>
                                                     </div>
                                                 </div>
                                                 <div class="recentpost-box d-flex flex-wrap align-items-center w-100">
                                                     <div class="recentpost-img"><a href="blog-detail.html" title=""><img class="img-fluid w-100" src="landing/assets/images/resources/recentpost-img3.jpg" alt="Recent Post Image 3"></a></div>
                                                     <div class="recentpost-info">
                                                         <h5 class="mb-0"><a href="blog-detail.html" title="">Accelerated Marketing</a></h5>
-                                                        <span class="d-block"><a href="javascript:void(0);" title="">March 23 2020</a></span>
+                                                        <span class="d-block">March 23 2020</span>
+                                                    </div>
+                                                </div>
+                                                <div class="recentpost-box d-flex flex-wrap align-items-center w-100">
+                                                    <div class="recentpost-img"><a href="blog-detail.html" title=""><img class="img-fluid w-100" src="landing/assets/images/resources/recentpost-img3.jpg" alt="Recent Post Image 3"></a></div>
+                                                    <div class="recentpost-info">
+                                                        <h5 class="mb-0"><a href="blog-detail.html" title="">Accelerated Marketing</a></h5>
+                                                        <span class="d-block">March 23 2020</span>
                                                     </div>
                                                 </div>
                                             </div><!-- Recent Posts Wrap -->
@@ -270,7 +284,7 @@
                                                 <li><a href="javascript:void(0);" title="">Strategy</a></li>
                                             </ul>
                                         </div>
-                                        <div class="widget v2 w-100">
+                                        <div class="widget widget3 v2 w-100">
                                             <h3>Instagram</h3>
                                             <div class="insta-gal-wrap w-100">
                                                 <div class="row mrg10">
@@ -491,7 +505,7 @@
     </section>
     <footer>
         <div class="w-100 pt-40 bg-color11 position-relative">
-            <div class="container">
+            <div class="container" id="contact">
                 <div class="logo text-center w-100">
                     <h1 class="mb-0"><a href="index.html" title="Logo"><img class="img-fluid" src="landing/assets/images/logo%402x-white.png" alt="Logo White" height="89" width="287"></a></h1>
                 </div>

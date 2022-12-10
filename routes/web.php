@@ -38,3 +38,4 @@ Route::get('/lihat_artikel', [UserController::class, 'lihat_artikel']);
 
 //Tampilan//
 Route::get('/', [ArtikelController::class, 'index']);
+Route::get('/detail_berita', [ArtikelController::class, 'detail_berita']);

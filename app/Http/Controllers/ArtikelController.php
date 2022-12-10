@@ -10,4 +10,8 @@ class ArtikelController extends Controller
     
     return view('halaman.index');
    }
+   public function detail_berita(){
+    
+    return view('halaman.detail_berita');
+   }
 }
