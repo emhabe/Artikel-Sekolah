@@ -1531,6 +1531,7 @@ nav > ul > li > a:after {
   background-color: var(--color26);
   z-index: 1;
 }
+/* tanda */
 nav > ul > li.satu > a:after {
   content: "";
   position: absolute;
@@ -1955,6 +1956,7 @@ body.slidein .responsive-menu {
 .responsive-menu > ul li.satu.active > a,
 .responsive-menu > ul li:hover > a,
 .responsive-menu > ul li.satu > a:focus {color: var(--color26);}
+/* tanda */
 .header-btns > a.search-btn,
 .header-btns > a.res-menu-btn,
 .header-btns a.cart-btn {font-size: 1.125rem;}
@@ -4650,3 +4652,46 @@ form.searchform > button:focus {color: var(--color3);}
   opacity: 1;
 }
 .payment-info + button {margin-top: 1.875rem;}
+.menu-sub-dropdown.menu.show, .menu-sub-dropdown.show[data-popper-placement] {
+  display: flex;
+  will-change: transform;
+  animation: menu-sub-dropdown-animation-fade-in 0.3s ease 1, menu-sub-dropdown-animation-move-up 0.3s ease 1;
+}
+.menu-column {
+  flex-direction: column;
+  width: 100%;
+}
+.menu-sub-dropdown {
+  display: none;
+  border-radius: 0.475rem;
+  background-color: var(--kt-menu-dropdown-bg-color);
+  box-shadow: var(--kt-menu-dropdown-box-shadow);
+  z-index: 107;
+}
+.menu-sub {
+  display: none;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  flex-direction: column;
+}
+
+.menu, .menu-wrapper {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.fw-semibold {
+  font-weight: 500 !important;
+}
+.fs-6 {
+  font-size: 1.075rem !important;
+}
+.py-4 {
+  padding-top: 1rem !important;
+  padding-bottom: 1rem !important;
+}
+.w-275px {
+  width: 275px !important;
+}
