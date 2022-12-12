@@ -77,4 +77,8 @@ class UserController extends Controller
         $data->delete();
         return redirect('artikel');
     }
+    public function lihat_artikel()
+    {
+        return view('demo-1.lihat_artikel');
+    }
 }

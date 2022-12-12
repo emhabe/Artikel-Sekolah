@@ -34,6 +34,7 @@ Route::post('/post_register', [LoginController::class, 'post_register']);
 Route::post('/login', [LoginController::class, 'login']);
 Route::post('/logout', [LoginController::class, 'logout']);
 Route::post('/submit_artikel', [UserController::class, 'submit_artikel']);
+Route::get('/lihat_artikel', [UserController::class, 'lihat_artikel']);
 
 //Tampilan//
 Route::get('/', [ArtikelController::class, 'index']);
