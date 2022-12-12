@@ -238,6 +238,17 @@ footer {
   position:relative;
   width:100%;
 }
+@media screen and (min-width :1024px){
+  section.atas{
+    margin-top: 3.125rem;
+  }
+}
+@media screen and (max-width: 900px){
+ .text-box.atas{
+  margin-top: 3.5rem;
+ }
+}
+
 
 /*=== Paddings ===*/
 .pt-10 {padding-top: 0.625rem;}
@@ -1517,10 +1528,43 @@ nav > ul > li > a:after {
   bottom: -1px;
   left: 50%;
   right: 50%;
+  background-color: var(--color26);
+  z-index: 1;
+}
+nav > ul > li.satu > a:after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  bottom: -1px;
+  left: 50%;
+  right: 50%;
+  background-color: var(--color27);
+  z-index: 1;
+}
+nav > ul > li.dua > a:after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  bottom: -1px;
+  left: 50%;
+  right: 50%;
+  background-color: var(--color28);
+  z-index: 1;
+}
+nav > ul > li.tiga > a:after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  bottom: -1px;
+  left: 50%;
+  right: 50%;
   background-color: var(--color3);
   z-index: 1;
 }
 nav > ul > li.active > a:after,
+nav > ul > li.active.satu > a:after,
+nav > ul > li.active.dua > a:after,
+nav > ul > li.active.tiga > a:after,
 nav > ul > li:hover > a:after,
 nav > ul > li > a:focus:after {
   left: 0;
@@ -1908,9 +1952,9 @@ body.slidein .responsive-menu {
   line-height: 1.25rem;
 }
 .responsive-menu > ul ul > li:not(:first-child) {border-top: 1px solid var(--color7);}
-.responsive-menu > ul li.active > a,
+.responsive-menu > ul li.satu.active > a,
 .responsive-menu > ul li:hover > a,
-.responsive-menu > ul li > a:focus {color: var(--color3);}
+.responsive-menu > ul li.satu > a:focus {color: var(--color26);}
 .header-btns > a.search-btn,
 .header-btns > a.res-menu-btn,
 .header-btns a.cart-btn {font-size: 1.125rem;}
@@ -2047,6 +2091,7 @@ body.slidein .responsive-menu {
 }
 .sec-title > span + h2 {margin-top: 10px;}
 .sec-title > h2 {font-size: 2.5rem;}
+.sec-title.tiga > h2 {color:var(--color10);}
 .sec-title > h2 span {font-weight: 400;}
 .btm-ln {
   /*background-color: var(--color3);*/

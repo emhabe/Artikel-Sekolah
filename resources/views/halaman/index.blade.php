@@ -29,7 +29,7 @@
                     </div><!-- Logo -->
                     <nav>
                         <ul class="d-inline-flex flex-wrap align-items-center mb-0 list-unstyled">
-                            <li class="menu-item active"><a href="javascript:void(0);" title="">Beranda</a>
+                            <li class="menu-item active satu"><a href="javascript:void(0);" title="">Beranda</a>
                             </li>
                             <li class="menu-item-has-children"><a href="javascript:void(0);" title="">Kategori</a>
                                 <ul class="children mb-0 list-unstyled">
@@ -43,7 +43,7 @@
                                     <li><a href="pricing-table.html" title="">Pricing Tables</a></li>
                                 </ul>
                             </li>
-                            <li class="menu-item"><a href="javascript:void(0);" title="">Daftar Berita</a>
+                            <li class="menu-item"><a href="#berita" title="">Daftar Berita</a>
                             </li>
                             <li class="menu-item"><a href="javascript:void(0);" title="">Tentang</a>
                             </li>
@@ -70,7 +70,7 @@
                 </div><!-- Logo -->
                 <nav>
                     <ul class="d-inline-flex flex-wrap align-items-center mb-0 list-unstyled">
-                        <li class="menu-item active"><a href="javascript:void(0);" title="">Beranda</a>
+                        <li class="menu-item active satu"><a href="javascript:void(0);" title="">Beranda</a>
                         </li>
                         <li class="menu-item-has-children"><a href="javascript:void(0);" title="">Kategori</a>
                             <ul class="children mb-0 list-unstyled">
@@ -84,7 +84,7 @@
                                 <li><a href="pricing-table.html" title="">Pricing Tables</a></li>
                             </ul>
                         </li>
-                        <li class="menu-item"><a href="javascript:void(0);" title="">Daftar Berita</a>
+                        <li class="menu-item"><a href="#berita" title="">Daftar Berita</a>
 
                         </li>
                         <li class="menu-item"><a href="javascript:void(0);" title="">Tentang</a>
@@ -112,10 +112,10 @@
                 <h1 class="mb-0"><a href="index.html" title="Home"><img class="img-fluid" src="{{asset('landing/assets/images/logo%402x.png')}}" alt="Logo"></a></h1>
             </div><!-- Logo -->
             <ul class="mb-0 list-unstyled w-100">
-                <li class="menu-item active"><a href="javascript:void(0);" title="">Beranda</a>
+                <li class="menu-item active satu"><a href="javascript:void(0);" title="">Beranda</a>
 
                 </li>
-                <li class="menu-item-has-children"><a href="javascript:void(0);" title="">Kategori</a>
+                <li class="menu-item-has-children dua"><a href="javascript:void(0);" title="">Kategori</a>
                     <ul class="children mb-0 list-unstyled">
                         <li><a href="seo-services.html" title="">SEO Services</a></li>
                         <li><a href="ppm-services.html" title="">PPM Services</a></li>
@@ -127,7 +127,7 @@
                         <li><a href="pricing-table.html" title="">Pricing Tables</a></li>
                     </ul>
                 </li>
-                <li class="menu-item"><a href="javascript:void(0);" title="">Daftar Berita</a>
+                <li class="menu-item"><a href="#berita" title="">Daftar Berita</a>
 
                 </li>
                 <li class="menu-item"><a href="javascript:void(0);" title="">Tentang</a>
@@ -138,7 +138,7 @@
             </ul>
         </div><!-- Responsive Menu -->
     </div><!-- Responsive Header -->
-    <section class="mt-5">
+    <section class="atas">
         <div class="w-100 pt-50 pb-90 position-relative">
             <div class="particles-wrap position-absolute w-100">
                 <div id="particle-2" class="particles-js top_left mx-w50 w-100" data-color="#4f66db" data-size="15" data-count="3" data-speed="2" data-hide="767" data-shape="circle" data-mode="bounce">
@@ -149,16 +149,17 @@
                 <div class="best-seo-wrap position-relative w-100">
                     <div class="row align-items-center">
                         <div class="col-md-12 col-sm-12 col-lg-6 order-lg-1">
-                            <div class="mckp-img text-center  w-100" data-max_tilt="10" data-perspective="1000" data-scale="1" data-speed="700"><img class="img-fluid suii" src="landing/assets/images/land.jpg" alt="Best SEO Mockup" height="480" width="516"></div>
+                            <div class="mckp-img text-center  w-100" data-max_tilt="10" data-perspective="1000" data-scale="1" data-speed="700"><img class="img-fluid suii" src="landing/assets/images/kucing anjing.png" alt="Best SEO Mockup" height="480" width="516">
+                        <span class="shadow"></span></div>
                         </div>
                         <div class="col-md-12 col-sm-12 col-lg-6">
-                            <div class="text-box w-100">
+                            <div class="text-box atas w-100">
                                 <div class="sec-title w-100 position-relative">
                                     <h2 class="mb-0"><span>Selamat Datang di</span> <br> Nama Website</h2>
                                     <i class="btm-ln bg-color14"></i>
                                 </div><!-- Sec Title -->
                                 <p class="mb-0">Jelajahi Seluruh Berita Dan informasi Terbaru Seputar....Disini</p>
-                                <a href="#satu"><button class="thm-btn d-inline-block rounded-pill mt-3">Mulai Jelajah</button></a>
+                                <a href="#satu"><button class="thm-btn d-inline-block rounded-pill mt-3">Mulai Menjelajah</button></a>
                             </div>
                         </div>
                     </div>
@@ -328,9 +329,9 @@
         </div>
     </section>
     <section>
-        <div class="w-100 pt-110 pb-120 position-relative">
+        <div class="w-100 pt-110 pb-120 position-relative" >
             <div class="fixed-bg" style="background-image: url(landing/assets/images/bg-shp-18.png);"></div>
-            <div class="particles-wrap position-absolute w-80">
+            <div class="particles-wrap position-absolute w-80"  id="berita">
                 <div id="particle-3" class="particles-js w-80" data-color="#ff4cc9" data-size="5" data-linked="1" data-count="50" data-speed="4" data-hide="500" data-shape="circle" data-mode="out">
                     <canvas></canvas>
                 </div>
@@ -457,121 +458,104 @@
             </div><!-- Blog Wrap -->
         </div>
     </section>
-    <section>
-        <div class="w-100 pt-120 grad-bg1 pb-120 position-relative">
-            <div class="particles-wrap position-absolute w-100">
-                <div id="particle-4" class="particles-js w-100" data-color="#3E4A59" data-size="80" data-count="5" data-speed="2" data-hide="767" data-shape="image" data-mode="bounce" data-image-url="landing/assets/images/particle-3.png" data-image-width="150" data-image-height="150">
-                    <canvas></canvas>
-                </div>
-            </div><!-- Particles Wrap -->
-            <div class="container">
-                <div class="req-mckp-wrap text-center position-relative w-100">
-                    <div class="row align-items-center">
-                        <div class="col-md-12 col-sm-12 col-lg-5">
-                            <div class="mckp-img d-none d-lg-block tilt w-100" data-max_tilt="10" data-perspective="1000" data-scale="1" data-speed="700"><img class="img-fluid" src="landing/assets/images/resources/subm-request-mckp.png" alt="Submit Request Mockup" height="510" width="445"></div>
-                        </div>
-                        <div class="col-md-12 col-sm-12 col-lg-7">
-                            <div class="req-frm-wrap d-flex flex-wrap justify-content-center align-items-center text-center position-relative w-100" style="background-image: url(landing/assets/images/req-frm-mckp.png);">
-                                <div class="req-frm-inner">
-                                    <div class="sec-title text-center w-100 position-relative">
-                                        <h2 class="mb-0"><span>Submit a</span> Request</h2>
-                                        <i class="btm-ln bg-color3"></i>
-                                    </div><!-- Sec Title -->
-                                    <p class="mb-0">We will call you in 20 mins. We answer all questions and tell about our services.</p>
-                                    <form class="w-100" action="#" method="post" id="email-form">
-                                        <div class="form-group w-100">
-                                            <div class="response w-100"></div>
-                                        </div>
-                                        <div class="field-box w-100">
-                                            <input class="fname" type="text" name="fname" placeholder="What is your name" required>
-                                        </div>
-                                        <div class="field-box w-100">
-                                            <input class="phone" type="tel" name="phone" placeholder="Phone number" required>
-                                        </div>
-                                        <div class="field-box w-100">
-                                            <input class="ctime" type="text" name="ctime" placeholder="Best time to call" required>
-                                        </div>
-                                        <div class="field-btn w-100">
-                                            <button class="thm-btn d-inline-block rounded-pill" id="submit" type="submit">Call Me</button>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div><!-- Request & Mockup Wrap -->
-            </div>
-        </div>
-    </section>
     <footer>
         <div class="w-100 pt-40 bg-color11 position-relative">
             <div class="container" id="contact">
-                <div class="logo text-center w-100">
-                    <h1 class="mb-0"><a href="index.html" title="Logo"><img class="img-fluid" src="landing/assets/images/logo%402x-white.png" alt="Logo White" height="89" width="287"></a></h1>
-                </div>
-                <div class="footer-data position-relative w-100">
-                    <div class="row">
-                        <div class="col-md-4 col-sm-6 col-lg-4">
-                            <div class="widget w-100">
-                                <ul class="footer-contact-list list-unstyled mb-0 w-100">
-                                    <li><i class="flaticon-telephone-auricular-with-cable"></i><a href="tel:(305) 222-3333" title="">+(305) 222-3333</a></li>
-                                    <li><i class="flaticon-email"></i><a href="mailto:info@example.com" title="">info@example.com</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-6 col-lg-4">
-                            <div class="widget text-center w-100">
-                                <h4>Get latest SEO tips from us!</h4>
-                                <div class="newsletter-wrap w-100">
-                                    <form class="newsletter position-relative w-100" id="subscribe-form" method="post" action="#">
-                                        <input class="rounded-pill email w-100" type="email" name="email" placeholder="Enter your email" required>
-                                        <button class="thm-btn d-inline-block rounded-pill position-absolute" id="subscribe-button"><i class="flaticon-telegram"></i></button>
-                                        <div class="response w-100"></div>
-                                    </form>
+            <div class="contact-wrap position-relative w-100">
+                    <div class="row mrg30">
+                        <div class="col-md-5 col-sm-12 col-lg-4">
+                            <div class="get-in-touch-wrap bg-color11 brd-rd20 mt-40 position-relative overflow-hidden w-100">
+                                <h2 class="mb-0">Get in Touch</h2>
+                                <p class="mb-0">SEOES is a USA search engine marketing agency, that deliver digital</p>
+                                <div class="contact-info-box mt-40 d-flex flex-wrap w-100">
+                                    <i class="flaticon-facebook-placeholder-for-locate-places-on-maps"></i>
+                                    <div class="contact-info-inner">
+                                        <h5 class="mb-0">Visit Us:</h5>
+                                        <p class="mb-0">27 Division St, New York, NY 10002, USA</p>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-6 col-lg-4">
-                            <div class="widget text-end w-100">
-                                <h4>Subscribe to our social</h4>
-                                <div class="social-links2 d-flex flex-wrap align-items-center justify-content-end w-100">
+                                <div class="contact-info-box mt-20 d-flex flex-wrap w-100">
+                                    <i class="flaticon-message-closed-envelope"></i>
+                                    <div class="contact-info-inner">
+                                        <h5 class="mb-0">Mail Us:</h5>
+                                        <a href="mailto:info@example.com" title="">info@example.com</a>
+                                    </div>
+                                </div>
+                                <div class="contact-info-box mt-20 d-flex flex-wrap w-100">
+                                    <i class="icon-037-smartphone"></i>
+                                    <div class="contact-info-inner">
+                                        <h5 class="mb-0">Phone Us:</h5>
+                                        <a href="tel:(305) 222-3333" title="">+(305) 222-3333</a>
+                                    </div>
+                                </div>
+                                <div class="social-links2 d-flex flex-wrap align-items-center w-100">
                                     <a href="https://www.facebook.com/" title="Facebook" target="_blank">
-                                        <svg class="svg_shape" xmlns="http://www.w3.org/2000/svg">
-                                            <g>
-                                                <path d="M54.8,1.3l35.5,20.3c3,1.7,4.8,4.8,4.8,8.2v40.6c0,3.4-1.8,6.5-4.8,8.2L54.8,98.7c-3,1.7-6.6,1.7-9.5,0 L9.8,78.5c-3-1.7-4.8-4.8-4.8-8.2V29.7c0-3.4,1.8-6.5,4.8-8.2L45.2,1.3C48.2-0.4,51.8-0.4,54.8,1.3z"></path>
-                                            </g>
-                                        </svg>
+                                        <svg class="svg_shape" xmlns="http://www.w3.org/2000/svg"><g><path d="M54.8,1.3l35.5,20.3c3,1.7,4.8,4.8,4.8,8.2v40.6c0,3.4-1.8,6.5-4.8,8.2L54.8,98.7c-3,1.7-6.6,1.7-9.5,0 L9.8,78.5c-3-1.7-4.8-4.8-4.8-8.2V29.7c0-3.4,1.8-6.5,4.8-8.2L45.2,1.3C48.2-0.4,51.8-0.4,54.8,1.3z"></path></g></svg>
                                         <i class="flaticon-facebook"></i>
                                     </a>
                                     <a href="https://twitter.com/" title="Twitter" target="_blank">
-                                        <svg class="svg_shape" xmlns="http://www.w3.org/2000/svg">
-                                            <g>
-                                                <path d="M54.8,1.3l35.5,20.3c3,1.7,4.8,4.8,4.8,8.2v40.6c0,3.4-1.8,6.5-4.8,8.2L54.8,98.7c-3,1.7-6.6,1.7-9.5,0 L9.8,78.5c-3-1.7-4.8-4.8-4.8-8.2V29.7c0-3.4,1.8-6.5,4.8-8.2L45.2,1.3C48.2-0.4,51.8-0.4,54.8,1.3z"></path>
-                                            </g>
-                                        </svg>
+                                        <svg class="svg_shape" xmlns="http://www.w3.org/2000/svg"><g><path d="M54.8,1.3l35.5,20.3c3,1.7,4.8,4.8,4.8,8.2v40.6c0,3.4-1.8,6.5-4.8,8.2L54.8,98.7c-3,1.7-6.6,1.7-9.5,0 L9.8,78.5c-3-1.7-4.8-4.8-4.8-8.2V29.7c0-3.4,1.8-6.5,4.8-8.2L45.2,1.3C48.2-0.4,51.8-0.4,54.8,1.3z"></path></g></svg>
                                         <i class="flaticon-twitter"></i>
                                     </a>
                                     <a href="https://youtube.com/" title="Youtube" target="_blank">
-                                        <svg class="svg_shape" xmlns="http://www.w3.org/2000/svg">
-                                            <g>
-                                                <path d="M54.8,1.3l35.5,20.3c3,1.7,4.8,4.8,4.8,8.2v40.6c0,3.4-1.8,6.5-4.8,8.2L54.8,98.7c-3,1.7-6.6,1.7-9.5,0 L9.8,78.5c-3-1.7-4.8-4.8-4.8-8.2V29.7c0-3.4,1.8-6.5,4.8-8.2L45.2,1.3C48.2-0.4,51.8-0.4,54.8,1.3z"></path>
-                                            </g>
-                                        </svg>
+                                        <svg class="svg_shape" xmlns="http://www.w3.org/2000/svg"><g><path d="M54.8,1.3l35.5,20.3c3,1.7,4.8,4.8,4.8,8.2v40.6c0,3.4-1.8,6.5-4.8,8.2L54.8,98.7c-3,1.7-6.6,1.7-9.5,0 L9.8,78.5c-3-1.7-4.8-4.8-4.8-8.2V29.7c0-3.4,1.8-6.5,4.8-8.2L45.2,1.3C48.2-0.4,51.8-0.4,54.8,1.3z"></path></g></svg>
                                         <i class="flaticon-youtube"></i>
                                     </a>
                                     <a href="https://linkedin.com/" title="Linkedin" target="_blank">
-                                        <svg class="svg_shape" xmlns="http://www.w3.org/2000/svg">
-                                            <g>
-                                                <path d="M54.8,1.3l35.5,20.3c3,1.7,4.8,4.8,4.8,8.2v40.6c0,3.4-1.8,6.5-4.8,8.2L54.8,98.7c-3,1.7-6.6,1.7-9.5,0 L9.8,78.5c-3-1.7-4.8-4.8-4.8-8.2V29.7c0-3.4,1.8-6.5,4.8-8.2L45.2,1.3C48.2-0.4,51.8-0.4,54.8,1.3z"></path>
-                                            </g>
-                                        </svg>
+                                        <svg class="svg_shape" xmlns="http://www.w3.org/2000/svg"><g><path d="M54.8,1.3l35.5,20.3c3,1.7,4.8,4.8,4.8,8.2v40.6c0,3.4-1.8,6.5-4.8,8.2L54.8,98.7c-3,1.7-6.6,1.7-9.5,0 L9.8,78.5c-3-1.7-4.8-4.8-4.8-8.2V29.7c0-3.4,1.8-6.5,4.8-8.2L45.2,1.3C48.2-0.4,51.8-0.4,54.8,1.3z"></path></g></svg>
                                         <i class="flaticon-linkedin"></i>
                                     </a>
                                 </div>
                             </div>
                         </div>
+                        <div class="col-md-7 col-sm-12 col-lg-8">
+                            <div class="contact-form-wrap mt-40 w-100">
+                                <div class="sec-title tiga w-100 position-relative">
+                                    <h2 class="mb-0 ">Send a Message</h2>
+                                    <i class="btm-ln bg-color3"></i>
+                                </div><!-- Sec Title -->
+                                <form action="#" method="post" id="email-form">
+                                    <div class="form-group w-100">
+                                        <div class="response w-100"></div>
+                                    </div>
+                                    <div class="row mrg10">
+                                        <div class="col-md-6 col-sm-6 col-lg-6">
+                                            <div class="field-box w-100">
+                                                <input class="fname" type="text" name="fname" placeholder="First Name *" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-lg-6">
+                                            <div class="field-box w-100">
+                                                <input class="lname" type="text" name="lname" placeholder="Last Name *" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-lg-6">
+                                            <div class="field-box w-100">
+                                                <input class="email" type="email" name="email" placeholder="Email *" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-lg-6">
+                                            <div class="field-box w-100">
+                                                <input class="phone" type="tel" name="phone" placeholder="Phone" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 col-sm-12 col-lg-12">
+                                            <div class="field-box w-100">
+                                                <textarea class="contact_message" name="contact_message" placeholder="Message" required></textarea>
+                                            </div>
+                                            <div class="field-btn w-100">
+                                                <button class="thm-btn d-inline-block rounded-pill" id="submit" type="submit">Send A Message</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
                     </div>
-                </div><!-- Footer Data -->
+                </div><!-- Contact Wrap -->
+                <div class="contact-map w-100 overflow-hidden mt-50 brd-rd20">
+                    <iframe src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=Smk pgri singosari&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+                </div>
             </div>
         </div>
     </footer><!-- Footer -->
@@ -585,3 +569,5 @@
     </div><!-- Bottom Bar -->
 </main><!-- Main Wrapper -->
 @endsection
+
+

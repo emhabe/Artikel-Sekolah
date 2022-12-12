@@ -3152,3 +3152,25 @@
   transform: translate(0, 22px);
   }
 }
+/* .shadow {
+    position: absolute;
+    height:20px;
+    top: 90%;
+    left: 80%;
+    transform:translate(-50%,-50%);
+    border-radius: 50%;
+    background-color: rgb(211, 211, 211);
+    filter: blur(4px);
+    animation: shrink 4s ease-out infinite;
+  }
+  @keyframes shrink {
+    0% {
+    width: 50%;
+    }
+    50% {
+    width: 30%;
+    }
+    100% {
+    width: 50%;
+    }
+  }  */
