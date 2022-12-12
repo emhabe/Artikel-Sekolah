@@ -12,13 +12,15 @@ class UserController extends Controller
     public function dashboard()
     {
         $kategori = Kategori::all();
-        return view('demo-1.dashboard', compact('kategori'));
+        $artikel = Artikel::latest('created_at')->first();
+        return view('demo-1.dashboard', compact('kategori', 'artikel'));
     }
-   
+
     public function artikel()
     {
         $data = Artikel::all();
-        return view('demo-1.artikel', compact('data'));
+        $kategori = Kategori::all();
+        return view('demo-1.artikel', compact('data', 'kategori'));
     }
     public function kategori($id)
     {
@@ -62,7 +64,6 @@ class UserController extends Controller
             'judul' => $request->judul,
             'detail_singkat' => $request->detail_singkat,
             'deskripsi' => $request->deskripsi,
-            'foto' => $request->foto,
         ]);
         if ($request->hasfile('foto')) {
             $request->file('foto')->move(public_path('foto_artikel/'), '' . date('YmdHis') . '.' . $request->file('foto')->getClientOriginalExtension());
@@ -77,8 +78,9 @@ class UserController extends Controller
         $data->delete();
         return redirect('artikel');
     }
-    public function lihat_artikel()
+    public function lihat_artikel($id)
     {
-        return view('demo-1.lihat_artikel');
+        $data = Artikel::findOrFail($id);
+        return view('demo-1.lihat_artikel', compact('data'));
     }
 }

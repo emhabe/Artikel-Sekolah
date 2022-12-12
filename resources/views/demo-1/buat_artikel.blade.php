@@ -2303,6 +2303,7 @@
                       <input type="text" class="form-control" id="defaultFormControlInput" name="judul" placeholder="Judul" aria-describedby="defaultFormControlHelp" />
                       <label for="defaultFormControlInput" class="form-label">Kategori</label>
                       <select class="form-control" name="kategori">
+                        <option value="" disabled selected>Pilih Kategori</option>
                         @foreach($kategori as $kt)
                         <option value="{{$kt->id}}">{{$kt->nama}}</option>
                         @endforeach
@@ -2310,7 +2311,20 @@
                       <label class="form-label" for="basic-default-bio">Detail Singkat</label>
                       <textarea class="form-control" id="basic-default-bio" name="detail_singkat" rows="3" required></textarea>
                       <label class="form-label" for="basic-default-bio">Deskripsi</label>
-                      <textarea class="form-control" id="basic-default-bio" name="deskripsi" rows="3" required></textarea>
+                      <textarea id="editor" class="form-control" name="deskripsi" rows="3"></textarea>
+                      <script>
+                        window.addEventListener("load", (e) => {
+                          ClassicEditor.create(document.querySelector('#editor'))
+                            .then(editor => {
+                              console.log(editor);
+                            })
+                            .catch(error => {
+                              console.error(error);
+                            });
+                        });
+                      </script>
+
+                      <script src="https://cdn.ckeditor.com/ckeditor5/35.3.2/classic/ckeditor.js"></script>
                       <label for="defaultFormControlInput" class="form-label">Foto</label>
                       <input type="file" class="form-control" id="defaultFormControlInput" name="foto" aria-describedby="defaultFormControlHelp" />
                       <div>
@@ -2358,6 +2372,7 @@
     </div>
     <!-- / Layout page -->
   </div>
+
 
   <!-- Overlay -->
   <div class="layout-overlay layout-menu-toggle"></div>

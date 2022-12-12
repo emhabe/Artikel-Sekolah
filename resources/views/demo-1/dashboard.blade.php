@@ -2196,35 +2196,19 @@
                       </div>
                       <div class="flex-grow-1">
                         <span class="fw-semibold d-block">
-                          John Doe
+                          {{auth()->user()->name}}
                         </span>
                         <small class="text-muted">Admin</small>
                       </div>
                     </div>
                   </a>
                 </li>
+
+
                 <li>
-                  <div class="dropdown-divider"></div>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="pages/profile-user.html">
-                    <i class="bx bx-user me-2"></i>
-                    <span class="align-middle">My Profile</span>
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="app/invoice/list.html">
-                    <i class="bx bx-credit-card me-2"></i>
-                    <span class="align-middle">Billing</span>
-                  </a>
-                </li>
-                <li>
-                  <div class="dropdown-divider"></div>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="javascript:void(0)">
+                  <a class="dropdown-item" href="#">
                     <i class='bx bx-log-in me-2'></i>
-                    <span class="align-middle">Login</span>
+                    <span class="align-middle">Logout</span>
                   </a>
                 </li>
               </ul>
@@ -2249,31 +2233,31 @@
 
         <!-- Content -->
         <div class="col-11">
-    <h6 class="text-muted mt-3">Artikel Terkini</h6>
-    <div id="swiper-gallery">
-      <div class="swiper-container gallery-top">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide" style="background-image:url(&quot;https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/img/backgrounds/6.jpg&quot;)">judul</div>
-          <div class="swiper-slide" style="background-image:url(&quot;https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/img/backgrounds/5.jpg&quot;)">Judul</div>
-          <div class="swiper-slide" style="background-image:url(&quot;https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/img/backgrounds/7.jpg&quot;)">judul</div>
-          <div class="swiper-slide" style="background-image:url(&quot;https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/img/backgrounds/10.jpg&quot;)">judul</div>
-          <div class="swiper-slide" style="background-image:url(&quot;https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/img/backgrounds/16.jpg&quot;)">judul</div>
+          <h6 class="text-muted mt-3">Artikel Terkini</h6>
+          <div id="swiper-gallery">
+            <div class="swiper-container gallery-top">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide" style="background-image:url(&quot;https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/img/backgrounds/6.jpg&quot;)">judul</div>
+                <div class="swiper-slide" style="background-image:url(&quot;https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/img/backgrounds/5.jpg&quot;)">Judul</div>
+                <div class="swiper-slide" style="background-image:url(&quot;https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/img/backgrounds/7.jpg&quot;)">judul</div>
+                <div class="swiper-slide" style="background-image:url(&quot;https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/img/backgrounds/10.jpg&quot;)">judul</div>
+                <div class="swiper-slide" style="background-image:url(&quot;https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/img/backgrounds/16.jpg&quot;)">judul</div>
+              </div>
+              <!-- Add Arrows -->
+              <div class="swiper-button-next swiper-button-white"></div>
+              <div class="swiper-button-prev swiper-button-white"></div>
+            </div>
+            <div class="swiper-container gallery-thumbs">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide" style="background-image:url(&quot;https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/img/backgrounds/6.jpg&quot;)">Judul</div>
+                <div class="swiper-slide" style="background-image:url(&quot;https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/img/backgrounds/5.jpg&quot;)">Judul</div>
+                <div class="swiper-slide" style="background-image:url(&quot;https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/img/backgrounds/7.jpg&quot;">judul</div>
+                <div class="swiper-slide" style="background-image:url(&quot;https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/img/backgrounds/10.jpg&quot;)">judul</div>
+                <div class="swiper-slide" style="background-image:url(&quot;https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/img/backgrounds/16.jpg&quot;)">judul</div>
+              </div>
+            </div>
+          </div>
         </div>
-        <!-- Add Arrows -->
-        <div class="swiper-button-next swiper-button-white"></div>
-        <div class="swiper-button-prev swiper-button-white"></div>
-      </div>
-      <div class="swiper-container gallery-thumbs">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide" style="background-image:url(&quot;https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/img/backgrounds/6.jpg&quot;)">Judul</div>
-          <div class="swiper-slide" style="background-image:url(&quot;https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/img/backgrounds/5.jpg&quot;)">Judul</div>
-          <div class="swiper-slide" style="background-image:url(&quot;https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/img/backgrounds/7.jpg&quot;">judul</div>
-          <div class="swiper-slide" style="background-image:url(&quot;https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/img/backgrounds/10.jpg&quot;)">judul</div>
-          <div class="swiper-slide" style="background-image:url(&quot;https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/img/backgrounds/16.jpg&quot;)">judul</div>
-        </div>
-      </div>
-    </div>
-  </div>
         <!-- / Content -->
 
         <!-- Footer -->

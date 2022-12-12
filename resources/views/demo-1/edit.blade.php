@@ -2304,7 +2304,20 @@
                       <label class="form-label" for="basic-default-bio">Detail Singkat</label>
                       <textarea class="form-control" id="basic-default-bio" name="detail_singkat" rows="3" required>{{$data->detail_singkat}}</textarea>
                       <label class="form-label" for="basic-default-bio">Deskripsi</label>
-                      <textarea class="form-control" id="basic-default-bio" name="deskripsi" rows="3" required>{{$data->deskripsi}}</textarea>
+                      <textarea class="form-control" id="editor" name="deskripsi" rows="3">{{ $data->deskripsi }}</textarea>
+                      <script>
+                        window.addEventListener("load", (e) => {
+                          ClassicEditor.create(document.querySelector('#editor'))
+                            .then(editor => {
+                              console.log(editor);
+                            })
+                            .catch(error => {
+                              console.error(error);
+                            });
+                        });
+                      </script>
+
+                      <script src="https://cdn.ckeditor.com/ckeditor5/35.3.2/classic/ckeditor.js"></script>
                       <label for="defaultFormControlInput" class="form-label">Foto</label>
                       <input type="file" class="form-control mb-2" id="defaultFormControlInput" name="foto" aria-describedby="defaultFormControlHelp">
                       <img src="{{asset('foto_artikel/'.$data->foto)}}" alt="" style="width: 150px;">

@@ -1,6 +1,5 @@
 @extends('layouts.masterlanding')
 @section('content')
-@vite(['resource/css/app.css','resource/js/app.js'])
 <main>
     <header class="style1 w-100">
         <div class="topbar bg-color4 w-100">
@@ -184,71 +183,71 @@
 
                     </div><!-- Post Detail Wrap -->
                     <div class="col-md-6 col-sm-12 col-lg-3">
-                            <div class="leftside">
-                                <div class="theiaStickySidebar">
-                                    <aside class="sidebar-wrap w-100 position-relative">
-                                        <div class="widget w-100">
-                                            <form class="searchform position-relative w-100">
-                                                <input type="text" placeholder="Search...">
-                                                <button type="submit"><i class="flaticon-magnifying-glass"></i></button>
-                                            </form>
-                                        </div>
-                                        <div class="widget widget2 v2 w-100">
-                                            <h3>Recent Posts</h3>
-                                            <div class="recentposts-wrap w-100">
-                                                <div class="recentpost-box d-flex flex-wrap align-items-center w-100">
-                                                    <div class="recentpost-img"><a href="blog-detail.html" title=""><img class="img-fluid w-100" src="landing/assets/images/resources/recentpost-img1.jpg" alt="Recent Post Image 1"></a></div>
-                                                    <div class="recentpost-info 2">
-                                                        <h5 class="mb-0"><a href="blog-detail.html" title="">Expect more</a></h5>
-                                                        <span class="d-block">July 03 2019</span>
-                                                    </div>
+                        <div class="leftside">
+                            <div class="theiaStickySidebar">
+                                <aside class="sidebar-wrap w-100 position-relative">
+                                    <div class="widget w-100">
+                                        <form class="searchform position-relative w-100">
+                                            <input type="text" placeholder="Search...">
+                                            <button type="submit"><i class="flaticon-magnifying-glass"></i></button>
+                                        </form>
+                                    </div>
+                                    <div class="widget widget2 v2 w-100">
+                                        <h3>Recent Posts</h3>
+                                        <div class="recentposts-wrap w-100">
+                                            <div class="recentpost-box d-flex flex-wrap align-items-center w-100">
+                                                <div class="recentpost-img"><a href="blog-detail.html" title=""><img class="img-fluid w-100" src="landing/assets/images/resources/recentpost-img1.jpg" alt="Recent Post Image 1"></a></div>
+                                                <div class="recentpost-info 2">
+                                                    <h5 class="mb-0"><a href="blog-detail.html" title="">Expect more</a></h5>
+                                                    <span class="d-block">July 03 2019</span>
                                                 </div>
-                                                <div class="recentpost-box d-flex flex-wrap align-items-center w-100">
-                                                    <div class="recentpost-img"><a href="blog-detail.html" title=""><img class="img-fluid w-100" src="landing/assets/images/resources/recentpost-img2.jpg" alt="Recent Post Image 2"></a></div>
-                                                    <div class="recentpost-info">
-                                                        <h5 class="mb-0"><a href="blog-detail.html" title="">Ideas that soar</a></h5>
-                                                        <span class="d-block">June 03 2021</span>
-                                                    </div>
+                                            </div>
+                                            <div class="recentpost-box d-flex flex-wrap align-items-center w-100">
+                                                <div class="recentpost-img"><a href="blog-detail.html" title=""><img class="img-fluid w-100" src="landing/assets/images/resources/recentpost-img2.jpg" alt="Recent Post Image 2"></a></div>
+                                                <div class="recentpost-info">
+                                                    <h5 class="mb-0"><a href="blog-detail.html" title="">Ideas that soar</a></h5>
+                                                    <span class="d-block">June 03 2021</span>
                                                 </div>
-                                                <div class="recentpost-box d-flex flex-wrap align-items-center w-100">
-                                                    <div class="recentpost-img"><a href="blog-detail.html" title=""><img class="img-fluid w-100" src="landing/assets/images/resources/recentpost-img3.jpg" alt="Recent Post Image 3"></a></div>
-                                                    <div class="recentpost-info">
-                                                        <h5 class="mb-0"><a href="blog-detail.html" title="">Accelerated Mark</a></h5>
-                                                        <span class="d-block">March 23 2020</span>
-                                                    </div>
+                                            </div>
+                                            <div class="recentpost-box d-flex flex-wrap align-items-center w-100">
+                                                <div class="recentpost-img"><a href="blog-detail.html" title=""><img class="img-fluid w-100" src="landing/assets/images/resources/recentpost-img3.jpg" alt="Recent Post Image 3"></a></div>
+                                                <div class="recentpost-info">
+                                                    <h5 class="mb-0"><a href="blog-detail.html" title="">Accelerated Mark</a></h5>
+                                                    <span class="d-block">March 23 2020</span>
                                                 </div>
-                                                <div class="recentpost-box d-flex flex-wrap align-items-center w-100">
-                                                    <div class="recentpost-img"><a href="blog-detail.html" title=""><img class="img-fluid w-100" src="landing/assets/images/resources/recentpost-img3.jpg" alt="Recent Post Image 3"></a></div>
-                                                    <div class="recentpost-info">
-                                                        <h5 class="mb-0"><a href="blog-detail.html" title="">Accelerated Marketing</a></h5>
-                                                        <span class="d-block">March 23 2020</span>
-                                                    </div>
+                                            </div>
+                                            <div class="recentpost-box d-flex flex-wrap align-items-center w-100">
+                                                <div class="recentpost-img"><a href="blog-detail.html" title=""><img class="img-fluid w-100" src="landing/assets/images/resources/recentpost-img3.jpg" alt="Recent Post Image 3"></a></div>
+                                                <div class="recentpost-info">
+                                                    <h5 class="mb-0"><a href="blog-detail.html" title="">Accelerated Marketing</a></h5>
+                                                    <span class="d-block">March 23 2020</span>
                                                 </div>
-                                                <div class="recentpost-box d-flex flex-wrap align-items-center w-100">
-                                                    <div class="recentpost-img"><a href="blog-detail.html" title=""><img class="img-fluid w-100" src="landing/assets/images/resources/recentpost-img3.jpg" alt="Recent Post Image 3"></a></div>
-                                                    <div class="recentpost-info">
-                                                        <h5 class="mb-0"><a href="blog-detail.html" title="">Accelerated Marketing</a></h5>
-                                                        <span class="d-block">March 23 2020</span>
-                                                    </div>
+                                            </div>
+                                            <div class="recentpost-box d-flex flex-wrap align-items-center w-100">
+                                                <div class="recentpost-img"><a href="blog-detail.html" title=""><img class="img-fluid w-100" src="landing/assets/images/resources/recentpost-img3.jpg" alt="Recent Post Image 3"></a></div>
+                                                <div class="recentpost-info">
+                                                    <h5 class="mb-0"><a href="blog-detail.html" title="">Accelerated Marketing</a></h5>
+                                                    <span class="d-block">March 23 2020</span>
                                                 </div>
-                                            </div><!-- Recent Posts Wrap -->
-                                        </div>
-                                        <div class="widget v2 w-100">
-                                            <h3>Kategori</h3>
-                                            <ul class="mb-0 list-unstyled w-100">
-                                                <li><a href="javascript:void(0);" title="">Creativity</a></li>
-                                                <li><a href="javascript:void(0);" title="">Footer</a></li>
-                                                <li><a href="javascript:void(0);" title="">Marketing</a></li>
-                                                <li><a href="javascript:void(0);" title="">Masonry</a></li>
-                                                <li><a href="javascript:void(0);" title="">Post Formats</a></li>
-                                                <li><a href="javascript:void(0);" title="">SEO</a></li>
-                                                <li><a href="javascript:void(0);" title="">Strategy</a></li>
-                                            </ul>
-                                        </div>
-                                    </aside><!-- Sidebar Wrap -->
-                                </div>
+                                            </div>
+                                        </div><!-- Recent Posts Wrap -->
+                                    </div>
+                                    <div class="widget v2 w-100">
+                                        <h3>Kategori</h3>
+                                        <ul class="mb-0 list-unstyled w-100">
+                                            <li><a href="javascript:void(0);" title="">Creativity</a></li>
+                                            <li><a href="javascript:void(0);" title="">Footer</a></li>
+                                            <li><a href="javascript:void(0);" title="">Marketing</a></li>
+                                            <li><a href="javascript:void(0);" title="">Masonry</a></li>
+                                            <li><a href="javascript:void(0);" title="">Post Formats</a></li>
+                                            <li><a href="javascript:void(0);" title="">SEO</a></li>
+                                            <li><a href="javascript:void(0);" title="">Strategy</a></li>
+                                        </ul>
+                                    </div>
+                                </aside><!-- Sidebar Wrap -->
                             </div>
                         </div>
+                    </div>
                 </div>
 
             </div>
