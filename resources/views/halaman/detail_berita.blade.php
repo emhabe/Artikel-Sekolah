@@ -1,6 +1,5 @@
 @extends('layouts.masterlanding')
 @section('content')
-@vite(['resource/css/app.css','resource/js/app.js'])
 <main>
     <div class="instagram"></div>
     <header class="style1 w-100">

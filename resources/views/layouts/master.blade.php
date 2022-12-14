@@ -11,7 +11,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 
-  <title>Dashboard - Analytics 
+  <title>Dashboard - Analytics
     Sneat -
     Bootstrap 5 HTML Admin Template - Pro</title>
   <meta name="description" content="Most Powerful &amp; Comprehensive Bootstrap 5 HTML Admin Dashboard Template built for developers!" />
@@ -46,27 +46,27 @@
   <!-- Vendor Styles -->
   <link rel="stylesheet" href="{{asset('assets/vendor/libs/apex-charts/apex-charts.css')}}">
   <link rel="stylesheet" href="{{asset('assets/vendor/libs/fullcalendar/fullcalendar.css')}}" />
-<link rel="stylesheet" href="{{asset('assets/vendor/libs/flatpickr/flatpickr.css')}}" />
-<link rel="stylesheet" href="{{asset('assets/vendor/libs/select2/select2.css')}}" />
-<link rel="stylesheet" href="{{asset('assets/vendor/libs/quill/editor.css')}}" />
-<link rel="stylesheet" href="{{asset('assets/vendor/libs/formvalidation/dist/css/formValidation.min.css')}}" />
-<link rel="stylesheet" href="{{asset('assets/vendor/libs/datatables-bs5/datatables.bootstrap5.css')}}">
-<link rel="stylesheet" href="{{asset('assets/vendor/libs/datatables-responsive-bs5/responsive.bootstrap5.css')}}">
-<link rel="stylesheet" href="{{asset('assets/vendor/libs/datatables-buttons-bs5/buttons.bootstrap5.css')}}">
-<link rel="stylesheet" href="{{asset('assets/vendor/libs/select2/select2.css')}}" />
-<link rel="stylesheet" href="{{asset('assets/vendor/libs/formvalidation/dist/css/formValidation.min.css')}}" />
-<link rel="stylesheet" href="{{asset('assets/vendor/libs/animate-css/animate.css')}}" />
-<link rel="stylesheet" href="{{asset('assets/vendor/libs/sweetalert2/sweetalert2.css')}}" />
-<link rel="stylesheet" href="{{asset('assets/vendor/libs/select2/select2.css')}}" />
-<link rel="stylesheet" href="{{asset('assets/vendor/libs/formvalidation/dist/css/formValidation.min.css')}}" />
-<link rel="stylesheet" href="{{asset('assets/vendor/libs/swiper/swiper.css')}}" />
+  <link rel="stylesheet" href="{{asset('assets/vendor/libs/flatpickr/flatpickr.css')}}" />
+  <link rel="stylesheet" href="{{asset('assets/vendor/libs/select2/select2.css')}}" />
+  <link rel="stylesheet" href="{{asset('assets/vendor/libs/quill/editor.css')}}" />
+  <link rel="stylesheet" href="{{asset('assets/vendor/libs/formvalidation/dist/css/formValidation.min.css')}}" />
+  <link rel="stylesheet" href="{{asset('assets/vendor/libs/datatables-bs5/datatables.bootstrap5.css')}}">
+  <link rel="stylesheet" href="{{asset('assets/vendor/libs/datatables-responsive-bs5/responsive.bootstrap5.css')}}">
+  <link rel="stylesheet" href="{{asset('assets/vendor/libs/datatables-buttons-bs5/buttons.bootstrap5.css')}}">
+  <link rel="stylesheet" href="{{asset('assets/vendor/libs/select2/select2.css')}}" />
+  <link rel="stylesheet" href="{{asset('assets/vendor/libs/formvalidation/dist/css/formValidation.min.css')}}" />
+  <link rel="stylesheet" href="{{asset('assets/vendor/libs/animate-css/animate.css')}}" />
+  <link rel="stylesheet" href="{{asset('assets/vendor/libs/sweetalert2/sweetalert2.css')}}" />
+  <link rel="stylesheet" href="{{asset('assets/vendor/libs/select2/select2.css')}}" />
+  <link rel="stylesheet" href="{{asset('assets/vendor/libs/formvalidation/dist/css/formValidation.min.css')}}" />
+  <link rel="stylesheet" href="{{asset('assets/vendor/libs/swiper/swiper.css')}}" />
 
 
   <!-- Page Styles -->
   <link rel="stylesheet" href="{{asset('assets/vendor/css/pages/app-calendar.css')}}" />
-<link rel="stylesheet" href="{{asset('assets/vendor/css/pages/page-auth.css')}}">
-<link rel="stylesheet" href="{{asset('assets/vendor/css/pages/app-invoice.css')}}" />
-<link rel="stylesheet" href="{{asset('assets/vendor/css/pages/ui-carousel.css')}}" />
+  <link rel="stylesheet" href="{{asset('assets/vendor/css/pages/page-auth.css')}}">
+  <link rel="stylesheet" href="{{asset('assets/vendor/css/pages/app-invoice.css')}}" />
+  <link rel="stylesheet" href="{{asset('assets/vendor/css/pages/ui-carousel.css')}}" />
 
   <!-- Include Scripts for customizer, helper, analytics, config -->
   <!-- laravel style -->
@@ -124,7 +124,7 @@
 </head>
 
 <body>
-@yield('content')
+  @yield('content')
   <!-- Include Scripts -->
   <!-- BEGIN: Vendor JS-->
   <script src="{{asset('assets/vendor/libs/jquery/jquery40f4.js?id=96645acf88116df9c36bef6153b3a51a')}}"></script>
@@ -139,125 +139,126 @@
   <!-- END: Page Vendor JS-->
   <!--BEGIN: Calender-->
   <script src="{{asset('assets/vendor/libs/jquery/jquery40f4.js?id=96645acf88116df9c36bef6153b3a51a')}}"></script>
-<script src="{{asset('assets/vendor/libs/popper/popper885d.js?id=c8510634b3d8cded74bbe30a2b593d87')}}"></script>
-<script src="{{asset('assets/vendor/js/bootstrap0983.js?id=1f50b74ded465d298b282b4562bdaf8c')}}"></script>
-<script src="{{asset('assets/vendor/libs/perfect-scrollbar/perfect-scrollbar4d5e.js?id=9d86308b7c41e76a7dc8472907865b83')}}"></script>
-<script src="{{asset('assets/vendor/libs/hammer/hammerc38e.js?id=2a80ebd1aa77a9e33ec54b68ee8de5e0')}}"></script>
-<script src="{{asset('assets/vendor/libs/i18n/i18n5fec.js?id=5dd0894a4cb5357ba8a20df3187b6d9b')}}"></script>
-<script src="{{asset('assets/vendor/libs/typeahead-js/typeaheada766.js?id=8c315d7e2e7b09a04d8e8efead923241')}}"></script>
-<script src="{{asset('assets/vendor/js/menu7d39.js?id=f45ec38086f86335b91fc2fdcaaadab8')}}"></script>
-<script src="{{asset('assets/vendor/libs/fullcalendar/fullcalendar.js')}}"></script>
-<script src="{{asset('assets/vendor/libs/formvalidation/dist/js/FormValidation.min.js')}}"></script>
-<script src="{{asset('assets/vendor/libs/formvalidation/dist/js/plugins/Bootstrap5.min.js')}}"></script>
-<script src="{{asset('assets/vendor/libs/formvalidation/dist/js/plugins/AutoFocus.min.js')}}"></script>
-<script src="{{asset('assets/vendor/libs/select2/select2.js')}}"></script>
-<script src="{{asset('assets/vendor/libs/flatpickr/flatpickr.js')}}"></script>
-<script src="{{asset('assets/vendor/libs/moment/moment.js')}}"></script>
-<!--END: Calender-->
+  <script src="{{asset('assets/vendor/libs/popper/popper885d.js?id=c8510634b3d8cded74bbe30a2b593d87')}}"></script>
+  <script src="{{asset('assets/vendor/js/bootstrap0983.js?id=1f50b74ded465d298b282b4562bdaf8c')}}"></script>
+  <script src="{{asset('assets/vendor/libs/perfect-scrollbar/perfect-scrollbar4d5e.js?id=9d86308b7c41e76a7dc8472907865b83')}}"></script>
+  <script src="{{asset('assets/vendor/libs/hammer/hammerc38e.js?id=2a80ebd1aa77a9e33ec54b68ee8de5e0')}}"></script>
+  <script src="{{asset('assets/vendor/libs/i18n/i18n5fec.js?id=5dd0894a4cb5357ba8a20df3187b6d9b')}}"></script>
+  <script src="{{asset('assets/vendor/libs/typeahead-js/typeaheada766.js?id=8c315d7e2e7b09a04d8e8efead923241')}}"></script>
+  <script src="{{asset('assets/vendor/js/menu7d39.js?id=f45ec38086f86335b91fc2fdcaaadab8')}}"></script>
+  <script src="{{asset('assets/vendor/libs/fullcalendar/fullcalendar.js')}}"></script>
+  <script src="{{asset('assets/vendor/libs/formvalidation/dist/js/FormValidation.min.js')}}"></script>
+  <script src="{{asset('assets/vendor/libs/formvalidation/dist/js/plugins/Bootstrap5.min.js')}}"></script>
+  <script src="{{asset('assets/vendor/libs/formvalidation/dist/js/plugins/AutoFocus.min.js')}}"></script>
+  <script src="{{asset('assets/vendor/libs/select2/select2.js')}}"></script>
+  <script src="{{asset('assets/vendor/libs/flatpickr/flatpickr.js')}}"></script>
+  <script src="{{asset('assets/vendor/libs/moment/moment.js')}}"></script>
+  <!--END: Calender-->
   <!-- BEGIN: Card JS-->
   <script src="{{asset('assets/vendor/libs/jquery/jquery40f4.js?id=96645acf88116df9c36bef6153b3a51a')}}"></script>
-<script src="{{asset('assets/vendor/libs/popper/popper885d.js?id=c8510634b3d8cded74bbe30a2b593d87')}}"></script>
-<script src="{{asset('assets/vendor/js/bootstrap0983.js?id=1f50b74ded465d298b282b4562bdaf8c')}}"></script>
-<script src="{{asset('assets/vendor/libs/perfect-scrollbar/perfect-scrollbar4d5e.js?id=9d86308b7c41e76a7dc8472907865b83')}}"></script>
-<script src="{{asset('assets/vendor/libs/hammer/hammerc38e.js?id=2a80ebd1aa77a9e33ec54b68ee8de5e0')}}"></script>
-<script src="{{asset('assets/vendor/libs/i18n/i18n5fec.js?id=5dd0894a4cb5357ba8a20df3187b6d9b')}}"></script>
-<script src="{{asset('assets/vendor/libs/typeahead-js/typeaheada766.js?id=8c315d7e2e7b09a04d8e8efead923241')}}"></script>
-<script src="{{asset('assets/vendor/js/menu7d39.js?id=f45ec38086f86335b91fc2fdcaaadab8')}}"></script>
-<script src="{{asset('assets/vendor/libs/masonry/masonry.js')}}"></script>
-<!-- END: Card Vendor JS-->
+  <script src="{{asset('assets/vendor/libs/popper/popper885d.js?id=c8510634b3d8cded74bbe30a2b593d87')}}"></script>
+  <script src="{{asset('assets/vendor/js/bootstrap0983.js?id=1f50b74ded465d298b282b4562bdaf8c')}}"></script>
+  <script src="{{asset('assets/vendor/libs/perfect-scrollbar/perfect-scrollbar4d5e.js?id=9d86308b7c41e76a7dc8472907865b83')}}"></script>
+  <script src="{{asset('assets/vendor/libs/hammer/hammerc38e.js?id=2a80ebd1aa77a9e33ec54b68ee8de5e0')}}"></script>
+  <script src="{{asset('assets/vendor/libs/i18n/i18n5fec.js?id=5dd0894a4cb5357ba8a20df3187b6d9b')}}"></script>
+  <script src="{{asset('assets/vendor/libs/typeahead-js/typeaheada766.js?id=8c315d7e2e7b09a04d8e8efead923241')}}"></script>
+  <script src="{{asset('assets/vendor/js/menu7d39.js?id=f45ec38086f86335b91fc2fdcaaadab8')}}"></script>
+  <script src="{{asset('assets/vendor/libs/masonry/masonry.js')}}"></script>
+  <!-- END: Card Vendor JS-->
   <!-- BEGIN: Datatable JS-->
   <script src="{{asset('assets/vendor/libs/jquery/jquery40f4.js?id=96645acf88116df9c36bef6153b3a51a')}}"></script>
-<script src="{{asset('assets/vendor/libs/popper/popper885d.js?id=c8510634b3d8cded74bbe30a2b593d87')}}"></script>
-<script src="{{asset('assets/vendor/js/bootstrap0983.js?id=1f50b74ded465d298b282b4562bdaf8c')}}"></script>
-<script src="{{asset('assets/vendor/libs/perfect-scrollbar/perfect-scrollbar4d5e.js?id=9d86308b7c41e76a7dc8472907865b83')}}"></script>
-<script src="{{asset('assets/vendor/libs/hammer/hammerc38e.js?id=2a80ebd1aa77a9e33ec54b68ee8de5e0')}}"></script>
-<script src="{{asset('assets/vendor/libs/i18n/i18n5fec.js?id=5dd0894a4cb5357ba8a20df3187b6d9b')}}"></script>
-<script src="{{asset('assets/vendor/libs/typeahead-js/typeaheada766.js?id=8c315d7e2e7b09a04d8e8efead923241')}}"></script>
-<script src="{{asset('assets/vendor/js/menu7d39.js?id=f45ec38086f86335b91fc2fdcaaadab8')}}"></script>
-<script src="{{asset('assets/vendor/libs/moment/moment.js')}}"></script>
-<script src="{{asset('assets/vendor/libs/datatables/jquery.dataTables.js')}}"></script>
-<script src="{{asset('assets/vendor/libs/datatables-bs5/datatables-bootstrap5.js')}}"></script>
-<script src="{{asset('assets/vendor/libs/datatables-responsive/datatables.responsive.js')}}"></script>
-<script src="{{asset('assets/vendor/libs/datatables-responsive-bs5/responsive.bootstrap5.js')}}"></script>
-<script src="{{asset('assets/vendor/libs/datatables-buttons/datatables-buttons.js')}}"></script>
-<script src="{{asset('assets/vendor/libs/datatables-buttons-bs5/buttons.bootstrap5.js')}}"></script>
-<script src="{{asset('assets/vendor/libs/jszip/jszip.js')}}"></script>
-<script src="{{asset('assets/vendor/libs/pdfmake/pdfmake.js')}}"></script>
-<script src="{{asset('assets/vendor/libs/datatables-buttons/buttons.html5.js')}}"></script>
-<script src="{{asset('assets/vendor/libs/datatables-buttons/buttons.print.js')}}"></script>
-<script src="{{asset('assets/vendor/libs/select2/select2.js')}}"></script>
-<script src="{{asset('assets/vendor/libs/formvalidation/dist/js/FormValidation.min.js')}}"></script>
-<script src="{{asset('assets/vendor/libs/formvalidation/dist/js/plugins/Bootstrap5.min.js')}}"></script>
-<script src="{{asset('assets/vendor/libs/formvalidation/dist/js/plugins/AutoFocus.min.js')}}"></script>
-<script src="{{asset('assets/vendor/libs/cleavejs/cleave.js')}}"></script>
-<script src="{{asset('assets/vendor/libs/cleavejs/cleave-phone.js')}}"></script>
-<!-- END: DataTable JS-->
+  <script src="{{asset('assets/vendor/libs/popper/popper885d.js?id=c8510634b3d8cded74bbe30a2b593d87')}}"></script>
+  <script src="{{asset('assets/vendor/js/bootstrap0983.js?id=1f50b74ded465d298b282b4562bdaf8c')}}"></script>
+  <script src="{{asset('assets/vendor/libs/perfect-scrollbar/perfect-scrollbar4d5e.js?id=9d86308b7c41e76a7dc8472907865b83')}}"></script>
+  <script src="{{asset('assets/vendor/libs/hammer/hammerc38e.js?id=2a80ebd1aa77a9e33ec54b68ee8de5e0')}}"></script>
+  <script src="{{asset('assets/vendor/libs/i18n/i18n5fec.js?id=5dd0894a4cb5357ba8a20df3187b6d9b')}}"></script>
+  <script src="{{asset('assets/vendor/libs/typeahead-js/typeaheada766.js?id=8c315d7e2e7b09a04d8e8efead923241')}}"></script>
+  <script src="{{asset('assets/vendor/js/menu7d39.js?id=f45ec38086f86335b91fc2fdcaaadab8')}}"></script>
+  <script src="{{asset('assets/vendor/libs/moment/moment.js')}}"></script>
+  <script src="{{asset('assets/vendor/libs/datatables/jquery.dataTables.js')}}"></script>
+  <script src="{{asset('assets/vendor/libs/datatables-bs5/datatables-bootstrap5.js')}}"></script>
+  <script src="{{asset('assets/vendor/libs/datatables-responsive/datatables.responsive.js')}}"></script>
+  <script src="{{asset('assets/vendor/libs/datatables-responsive-bs5/responsive.bootstrap5.js')}}"></script>
+  <script src="{{asset('assets/vendor/libs/datatables-buttons/datatables-buttons.js')}}"></script>
+  <script src="{{asset('assets/vendor/libs/datatables-buttons-bs5/buttons.bootstrap5.js')}}"></script>
+  <script src="{{asset('assets/vendor/libs/jszip/jszip.js')}}"></script>
+  <script src="{{asset('assets/vendor/libs/pdfmake/pdfmake.js')}}"></script>
+  <script src="{{asset('assets/vendor/libs/datatables-buttons/buttons.html5.js')}}"></script>
+  <script src="{{asset('assets/vendor/libs/datatables-buttons/buttons.print.js')}}"></script>
+  <script src="{{asset('assets/vendor/libs/select2/select2.js')}}"></script>
+  <script src="{{asset('assets/vendor/libs/formvalidation/dist/js/FormValidation.min.js')}}"></script>
+  <script src="{{asset('assets/vendor/libs/formvalidation/dist/js/plugins/Bootstrap5.min.js')}}"></script>
+  <script src="{{asset('assets/vendor/libs/formvalidation/dist/js/plugins/AutoFocus.min.js')}}"></script>
+  <script src="{{asset('assets/vendor/libs/cleavejs/cleave.js')}}"></script>
+  <script src="{{asset('assets/vendor/libs/cleavejs/cleave-phone.js')}}"></script>
+  <!-- END: DataTable JS-->
   <!-- BEGIN: Registrasi dan Login JS-->
   <script src="{{asset('assets/vendor/libs/jquery/jquery40f4.js?id=96645acf88116df9c36bef6153b3a51a')}}"></script>
-<script src="{{asset('assets/vendor/libs/popper/popper885d.js?id=c8510634b3d8cded74bbe30a2b593d87')}}"></script>
-<script src="{{asset('assets/vendor/js/bootstrap0983.js?id=1f50b74ded465d298b282b4562bdaf8c')}}"></script>
-<script src="{{asset('assets/vendor/libs/perfect-scrollbar/perfect-scrollbar4d5e.js?id=9d86308b7c41e76a7dc8472907865b83')}}"></script>
-<script src="{{asset('assets/vendor/libs/hammer/hammerc38e.js?id=2a80ebd1aa77a9e33ec54b68ee8de5e0')}}"></script>
-<script src="{{asset('assets/vendor/libs/i18n/i18n5fec.js?id=5dd0894a4cb5357ba8a20df3187b6d9b')}}"></script>
-<script src="{{asset('assets/vendor/libs/typeahead-js/typeaheada766.js?id=8c315d7e2e7b09a04d8e8efead923241')}}"></script>
-<script src="{{asset('assets/vendor/js/menu7d39.js?id=f45ec38086f86335b91fc2fdcaaadab8')}}"></script>
-<script src="{{asset('assets/vendor/libs/formvalidation/dist/js/FormValidation.min.js')}}"></script>
-<script src="{{asset('assets/vendor/libs/formvalidation/dist/js/plugins/Bootstrap5.min.js')}}"></script>
-<script src="{{asset('assets/vendor/libs/formvalidation/dist/js/plugins/AutoFocus.min.js')}}"></script>
-<!-- END: Page Registrasi dan Login JS-->
-<!-- BEGIN: Profil JS-->
-<script src="{{asset('assets/vendor/libs/jquery/jquery40f4.js?id=96645acf88116df9c36bef6153b3a51a')}}"></script>
-<script src="{{asset('assets/vendor/libs/popper/popper885d.js?id=c8510634b3d8cded74bbe30a2b593d87')}}"></script>
-<script src="{{asset('assets/vendor/js/bootstrap0983.js?id=1f50b74ded465d298b282b4562bdaf8c')}}"></script>
-<script src="{{asset('assets/vendor/libs/perfect-scrollbar/perfect-scrollbar4d5e.js?id=9d86308b7c41e76a7dc8472907865b83')}}"></script>
-<script src="{{asset('assets/vendor/libs/hammer/hammerc38e.js?id=2a80ebd1aa77a9e33ec54b68ee8de5e0')}}"></script>
-<script src="{{asset('assets/vendor/libs/i18n/i18n5fec.js?id=5dd0894a4cb5357ba8a20df3187b6d9b')}}"></script>
-<script src="{{asset('assets/vendor/libs/typeahead-js/typeaheada766.js?id=8c315d7e2e7b09a04d8e8efead923241')}}"></script>
-<script src="{{asset('assets/vendor/js/menu7d39.js?id=f45ec38086f86335b91fc2fdcaaadab8')}}"></script>
-<script src="{{asset('assets/vendor/libs/sweetalert2/sweetalert2.js')}}"></script>
-<script src="{{asset('assets/vendor/libs/cleavejs/cleave.js')}}"></script>
-<script src="{{asset('assets/vendor/libs/cleavejs/cleave-phone.js')}}"></script>
-<script src="{{asset('assets/vendor/libs/select2/select2.js')}}"></script>
-<script src="{{asset('assets/vendor/libs/formvalidation/dist/js/FormValidation.min.js')}}"></script>
-<script src="{{asset('assets/vendor/libs/formvalidation/dist/js/plugins/Bootstrap5.min.js')}}"></script>
-<script src="{{asset('assets/vendor/libs/formvalidation/dist/js/plugins/AutoFocus.min.js')}}"></script>
-<!-- END: Page Profil JS-->
+  <script src="{{asset('assets/vendor/libs/popper/popper885d.js?id=c8510634b3d8cded74bbe30a2b593d87')}}"></script>
+  <script src="{{asset('assets/vendor/js/bootstrap0983.js?id=1f50b74ded465d298b282b4562bdaf8c')}}"></script>
+  <script src="{{asset('assets/vendor/libs/perfect-scrollbar/perfect-scrollbar4d5e.js?id=9d86308b7c41e76a7dc8472907865b83')}}"></script>
+  <script src="{{asset('assets/vendor/libs/hammer/hammerc38e.js?id=2a80ebd1aa77a9e33ec54b68ee8de5e0')}}"></script>
+  <script src="{{asset('assets/vendor/libs/i18n/i18n5fec.js?id=5dd0894a4cb5357ba8a20df3187b6d9b')}}"></script>
+  <script src="{{asset('assets/vendor/libs/typeahead-js/typeaheada766.js?id=8c315d7e2e7b09a04d8e8efead923241')}}"></script>
+  <script src="{{asset('assets/vendor/js/menu7d39.js?id=f45ec38086f86335b91fc2fdcaaadab8')}}"></script>
+  <script src="{{asset('assets/vendor/libs/formvalidation/dist/js/FormValidation.min.js')}}"></script>
+  <script src="{{asset('assets/vendor/libs/formvalidation/dist/js/plugins/Bootstrap5.min.js')}}"></script>
+  <script src="{{asset('assets/vendor/libs/formvalidation/dist/js/plugins/AutoFocus.min.js')}}"></script>
+  <!-- END: Page Registrasi dan Login JS-->
+  <!-- BEGIN: Profil JS-->
+  <script src="{{asset('assets/vendor/libs/jquery/jquery40f4.js?id=96645acf88116df9c36bef6153b3a51a')}}"></script>
+  <script src="{{asset('assets/vendor/libs/popper/popper885d.js?id=c8510634b3d8cded74bbe30a2b593d87')}}"></script>
+  <script src="{{asset('assets/vendor/js/bootstrap0983.js?id=1f50b74ded465d298b282b4562bdaf8c')}}"></script>
+  <script src="{{asset('assets/vendor/libs/perfect-scrollbar/perfect-scrollbar4d5e.js?id=9d86308b7c41e76a7dc8472907865b83')}}"></script>
+  <script src="{{asset('assets/vendor/libs/hammer/hammerc38e.js?id=2a80ebd1aa77a9e33ec54b68ee8de5e0')}}"></script>
+  <script src="{{asset('assets/vendor/libs/i18n/i18n5fec.js?id=5dd0894a4cb5357ba8a20df3187b6d9b')}}"></script>
+  <script src="{{asset('assets/vendor/libs/typeahead-js/typeaheada766.js?id=8c315d7e2e7b09a04d8e8efead923241')}}"></script>
+  <script src="{{asset('assets/vendor/js/menu7d39.js?id=f45ec38086f86335b91fc2fdcaaadab8')}}"></script>
+  <script src="{{asset('assets/vendor/libs/sweetalert2/sweetalert2.js')}}"></script>
+  <script src="{{asset('assets/vendor/libs/cleavejs/cleave.js')}}"></script>
+  <script src="{{asset('assets/vendor/libs/cleavejs/cleave-phone.js')}}"></script>
+  <script src="{{asset('assets/vendor/libs/select2/select2.js')}}"></script>
+  <script src="{{asset('assets/vendor/libs/formvalidation/dist/js/FormValidation.min.js')}}"></script>
+  <script src="{{asset('assets/vendor/libs/formvalidation/dist/js/plugins/Bootstrap5.min.js')}}"></script>
+  <script src="{{asset('assets/vendor/libs/formvalidation/dist/js/plugins/AutoFocus.min.js')}}"></script>
+  <!-- END: Page Profil JS-->
   <!-- BEGIN: Sweetalert JS-->
   <script src="{{asset('assets/vendor/libs/jquery/jquery40f4.js?id=96645acf88116df9c36bef6153b3a51a')}}"></script>
-<script src="{{asset('assets/vendor/libs/popper/popper885d.js?id=c8510634b3d8cded74bbe30a2b593d87')}}"></script>
-<script src="{{asset('assets/vendor/js/bootstrap0983.js?id=1f50b74ded465d298b282b4562bdaf8c')}}"></script>
-<script src="{{asset('assets/vendor/libs/perfect-scrollbar/perfect-scrollbar4d5e.js?id=9d86308b7c41e76a7dc8472907865b83')}}"></script>
-<script src="{{asset('assets/vendor/libs/hammer/hammerc38e.js?id=2a80ebd1aa77a9e33ec54b68ee8de5e0')}}"></script>
-<script src="{{asset('assets/vendor/libs/i18n/i18n5fec.js?id=5dd0894a4cb5357ba8a20df3187b6d9b')}}"></script>
-<script src="{{asset('assets/vendor/libs/typeahead-js/typeaheada766.js?id=8c315d7e2e7b09a04d8e8efead923241')}}"></script>
-<script src="{{asset('assets/vendor/js/menu7d39.js?id=f45ec38086f86335b91fc2fdcaaadab8')}}"></script>
-<script src="{{asset('assets/vendor/libs/sweetalert2/sweetalert2.js')}}"></script>
-<!-- END: Page Sweetalert JS-->
+  <script src="{{asset('assets/vendor/libs/popper/popper885d.js?id=c8510634b3d8cded74bbe30a2b593d87')}}"></script>
+  <script src="{{asset('assets/vendor/js/bootstrap0983.js?id=1f50b74ded465d298b282b4562bdaf8c')}}"></script>
+  <script src="{{asset('assets/vendor/libs/perfect-scrollbar/perfect-scrollbar4d5e.js?id=9d86308b7c41e76a7dc8472907865b83')}}"></script>
+  <script src="{{asset('assets/vendor/libs/hammer/hammerc38e.js?id=2a80ebd1aa77a9e33ec54b68ee8de5e0')}}"></script>
+  <script src="{{asset('assets/vendor/libs/i18n/i18n5fec.js?id=5dd0894a4cb5357ba8a20df3187b6d9b')}}"></script>
+  <script src="{{asset('assets/vendor/libs/typeahead-js/typeaheada766.js?id=8c315d7e2e7b09a04d8e8efead923241')}}"></script>
+  <script src="{{asset('assets/vendor/js/menu7d39.js?id=f45ec38086f86335b91fc2fdcaaadab8')}}"></script>
+  <script src="{{asset('assets/vendor/libs/sweetalert2/sweetalert2.js')}}"></script>
+  <!-- END: Page Sweetalert JS-->
   <!-- BEGIN: Lihat Artikel JS-->
+  <script src="https://cdn.ckeditor.com/ckeditor5/35.3.2/classic/ckeditor.js"></script>
   <script src="{{asset('assets/vendor/libs/jquery/jquery40f4.js?id=96645acf88116df9c36bef6153b3a51a')}}"></script>
-<script src="{{asset('assets/vendor/libs/popper/popper885d.js?id=c8510634b3d8cded74bbe30a2b593d87')}}"></script>
-<script src="{{asset('assets/vendor/js/bootstrap0983.js?id=1f50b74ded465d298b282b4562bdaf8c')}}"></script>
-<script src="{{asset('assets/vendor/libs/perfect-scrollbar/perfect-scrollbar4d5e.js?id=9d86308b7c41e76a7dc8472907865b83')}}"></script>
-<script src="{{asset('assets/vendor/libs/hammer/hammerc38e.js?id=2a80ebd1aa77a9e33ec54b68ee8de5e0')}}"></script>
-<script src="{{asset('assets/vendor/libs/i18n/i18n5fec.js?id=5dd0894a4cb5357ba8a20df3187b6d9b')}}"></script>
-<script src="{{asset('assets/vendor/libs/typeahead-js/typeaheada766.js?id=8c315d7e2e7b09a04d8e8efead923241')}}"></script>
-<script src="{{asset('assets/vendor/js/menu7d39.js?id=f45ec38086f86335b91fc2fdcaaadab8')}}"></script>
-<script src="{{asset('assets/vendor/libs/moment/moment.js')}}"></script>
-<script src="{{asset('assets/vendor/libs/flatpickr/flatpickr.js')}}"></script>
-<script src="{{asset('assets/vendor/libs/cleavejs/cleave.js')}}"></script>
-<script src="{{asset('assets/vendor/libs/cleavejs/cleave-phone.js')}}"></script>
-<!-- END: Page Lihat Artikel JS-->
+  <script src="{{asset('assets/vendor/libs/popper/popper885d.js?id=c8510634b3d8cded74bbe30a2b593d87')}}"></script>
+  <script src="{{asset('assets/vendor/js/bootstrap0983.js?id=1f50b74ded465d298b282b4562bdaf8c')}}"></script>
+  <script src="{{asset('assets/vendor/libs/perfect-scrollbar/perfect-scrollbar4d5e.js?id=9d86308b7c41e76a7dc8472907865b83')}}"></script>
+  <script src="{{asset('assets/vendor/libs/hammer/hammerc38e.js?id=2a80ebd1aa77a9e33ec54b68ee8de5e0')}}"></script>
+  <script src="{{asset('assets/vendor/libs/i18n/i18n5fec.js?id=5dd0894a4cb5357ba8a20df3187b6d9b')}}"></script>
+  <script src="{{asset('assets/vendor/libs/typeahead-js/typeaheada766.js?id=8c315d7e2e7b09a04d8e8efead923241')}}"></script>
+  <script src="{{asset('assets/vendor/js/menu7d39.js?id=f45ec38086f86335b91fc2fdcaaadab8')}}"></script>
+  <script src="{{asset('assets/vendor/libs/moment/moment.js')}}"></script>
+  <script src="{{asset('assets/vendor/libs/flatpickr/flatpickr.js')}}"></script>
+  <script src="{{asset('assets/vendor/libs/cleavejs/cleave.js')}}"></script>
+  <script src="{{asset('assets/vendor/libs/cleavejs/cleave-phone.js')}}"></script>
+  <!-- END: Page Lihat Artikel JS-->
   <!-- BEGIN: Carousel JS-->
   <script src="{{asset('assets/vendor/libs/jquery/jquery40f4.js?id=96645acf88116df9c36bef6153b3a51a')}}"></script>
-<script src="{{asset('assets/vendor/libs/popper/popper885d.js?id=c8510634b3d8cded74bbe30a2b593d87')}}"></script>
-<script src="{{asset('assets/vendor/js/bootstrap0983.js?id=1f50b74ded465d298b282b4562bdaf8c')}}"></script>
-<script src="{{asset('assets/vendor/libs/perfect-scrollbar/perfect-scrollbar4d5e.js?id=9d86308b7c41e76a7dc8472907865b83')}}"></script>
-<script src="{{asset('assets/vendor/libs/hammer/hammerc38e.js?id=2a80ebd1aa77a9e33ec54b68ee8de5e0')}}"></script>
-<script src="{{asset('assets/vendor/libs/i18n/i18n5fec.js?id=5dd0894a4cb5357ba8a20df3187b6d9b')}}"></script>
-<script src="{{asset('assets/vendor/libs/typeahead-js/typeaheada766.js?id=8c315d7e2e7b09a04d8e8efead923241')}}"></script>
-<script src="{{asset('assets/vendor/js/menu7d39.js?id=f45ec38086f86335b91fc2fdcaaadab8')}}"></script>
-<script src="{{asset('assets/vendor/libs/swiper/swiper.js')}}"></script>
-<!-- END: Page Carousel JS-->
+  <script src="{{asset('assets/vendor/libs/popper/popper885d.js?id=c8510634b3d8cded74bbe30a2b593d87')}}"></script>
+  <script src="{{asset('assets/vendor/js/bootstrap0983.js?id=1f50b74ded465d298b282b4562bdaf8c')}}"></script>
+  <script src="{{asset('assets/vendor/libs/perfect-scrollbar/perfect-scrollbar4d5e.js?id=9d86308b7c41e76a7dc8472907865b83')}}"></script>
+  <script src="{{asset('assets/vendor/libs/hammer/hammerc38e.js?id=2a80ebd1aa77a9e33ec54b68ee8de5e0')}}"></script>
+  <script src="{{asset('assets/vendor/libs/i18n/i18n5fec.js?id=5dd0894a4cb5357ba8a20df3187b6d9b')}}"></script>
+  <script src="{{asset('assets/vendor/libs/typeahead-js/typeaheada766.js?id=8c315d7e2e7b09a04d8e8efead923241')}}"></script>
+  <script src="{{asset('assets/vendor/js/menu7d39.js?id=f45ec38086f86335b91fc2fdcaaadab8')}}"></script>
+  <script src="{{asset('assets/vendor/libs/swiper/swiper.js')}}"></script>
+  <!-- END: Page Carousel JS-->
   <!-- BEGIN: Theme JS-->
   <script src="{{asset('assets/js/mainc3d7.js?id=3c628e87a9befaa350e1f822744b8142')}}"></script>
 
@@ -272,32 +273,411 @@
   <!-- END: Datatable JS-->
   <!-- BEGIN: Calender JS-->
   <script src="{{asset('assets/js/app-calendar-events.js')}}"></script>
-<script src="{{asset('assets/js/app-calendar.js')}}"></script>
-<!-- END: Calender JS-->
-<!-- BEGIN: Resistrasi JS-->
-<script src="{{asset('assets/js/pages-auth.js')}}"></script>
-<!-- END: Resgistrasi JS-->
-<!-- BEGIN: Form JS-->
-<script src="{{asset('assets/js/form-basic-inputs.js')}}"></script>
-<!-- END: Form JS-->
-<!-- BEGIN: Page JS-->
-<script src="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/js/modal-edit-user.js"></script>
-<script src="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/js/app-user-view.js"></script>
-<!-- END: Page JS-->
-<!-- BEGIN: Sweetalert JS-->
-<script src="{{asset('assets/js/extended-ui-sweetalert2.js')}}"></script>
-<!-- END: Sweetalert JS-->
-<!-- BEGIN: Lihat Artikel JS-->
-<script src="{{asset('assets/js/offcanvas-add-payment.js')}}"></script>
-<script src="{{asset('assets/js/offcanvas-send-invoice.js')}}"></script>
-<!-- END: Lihat Artikel JS-->
-<!-- BEGIN: Carousel JS-->
-<script src="{{asset('assets/js/ui-carousel.js')}}"></script>
-<!-- END: Carousel JS-->
-<script>
-  "use strict";!function(){const t=document.querySelector("#basic-alert"),n=document.querySelector("#with-title"),o=document.querySelector("#footer-alert"),e=document.querySelector("#html-alert"),i=document.querySelector("#position-top-start"),c=document.querySelector("#position-top-end"),s=document.querySelector("#position-bottom-start"),r=document.querySelector("#position-bottom-end"),a=document.querySelector("#bounce-in-animation"),u=document.querySelector("#fade-in-animation"),l=document.querySelector("#flip-x-animation"),m=document.querySelector("#tada-animation"),f=document.querySelector("#shake-animation"),b=document.querySelector("#type-success"),d=document.querySelector("#type-info"),S=document.querySelector("#type-warning"),y=document.querySelector("#type-error"),p=document.querySelector("#type-question"),w=document.querySelector("#custom-image"),h=document.querySelector("#auto-close"),g=document.querySelector("#outside-click"),C=document.querySelector("#progress-steps"),B=document.querySelector("#ajax-request"),k=document.querySelector("#confirm-text"),x=document.querySelector("#confirm-color");t&&(t.onclick=function(){Swal.fire({title:"Any fool can use a computer",customClass:{confirmButton:"btn btn-primary"},buttonsStyling:!1})}),n&&(n.onclick=function(){Swal.fire({title:"The Internet?,",text:"That thing is still around?",customClass:{confirmButton:"btn btn-primary"},buttonsStyling:!1})}),o&&(o.onclick=function(){Swal.fire({icon:"error",title:"Oops...",text:"Something went wrong!",footer:"<a href>Why do I have this issue?</a>",customClass:{confirmButton:"btn btn-primary"},buttonsStyling:!1})}),e&&(e.onclick=function(){Swal.fire({title:"<strong>HTML <u>example</u></strong>",icon:"info",html:'You can use <b>bold text</b>, <a href="https://pixinvent.com/" target="_blank">links</a> and other HTML tags',showCloseButton:!0,showCancelButton:!0,focusConfirm:!1,confirmButtonText:'<i class="fa fa-thumbs-up"></i> Great!',confirmButtonAriaLabel:"Thumbs up, great!",cancelButtonText:'<i class="fa fa-thumbs-down"></i>',cancelButtonAriaLabel:"Thumbs down",customClass:{confirmButton:"btn btn-primary me-3",cancelButton:"btn btn-label-secondary"},buttonsStyling:!1})}),i&&(i.onclick=function(){Swal.fire({position:"top-start",icon:"success",title:"Your work has been saved",showConfirmButton:!1,timer:1500,customClass:{confirmButton:"btn btn-primary"},buttonsStyling:!1})}),c&&(c.onclick=function(){Swal.fire({position:"top-end",icon:"success",title:"Your work has been saved",showConfirmButton:!1,timer:1500,customClass:{confirmButton:"btn btn-primary"},buttonsStyling:!1})}),s&&(s.onclick=function(){Swal.fire({position:"bottom-start",icon:"success",title:"Your work has been saved",showConfirmButton:!1,timer:1500,customClass:{confirmButton:"btn btn-primary"},buttonsStyling:!1})}),r&&(r.onclick=function(){Swal.fire({position:"bottom-end",icon:"success",title:"Your work has been saved",showConfirmButton:!1,timer:1500,customClass:{confirmButton:"btn btn-primary"},buttonsStyling:!1})}),a&&(a.onclick=function(){Swal.fire({title:"Bounce In Animation",showClass:{popup:"animate__animated animate__bounceIn"},customClass:{confirmButton:"btn btn-primary"},buttonsStyling:!1})}),u&&(u.onclick=function(){Swal.fire({title:"Fade In Animation",showClass:{popup:"animate__animated animate__fadeIn"},customClass:{confirmButton:"btn btn-primary"},buttonsStyling:!1})}),l&&(l.onclick=function(){Swal.fire({title:"Flip In Animation",showClass:{popup:"animate__animated animate__flipInX"},customClass:{confirmButton:"btn btn-primary"},buttonsStyling:!1})}),m&&(m.onclick=function(){Swal.fire({title:"Tada Animation",showClass:{popup:"animate__animated animate__tada"},customClass:{confirmButton:"btn btn-primary"},buttonsStyling:!1})}),f&&(f.onclick=function(){Swal.fire({title:"Shake Animation",showClass:{popup:"animate__animated animate__shakeX"},customClass:{confirmButton:"btn btn-primary"},buttonsStyling:!1})}),b&&(b.onclick=function(){Swal.fire({title:"Good job!",text:"You clicked the button!",icon:"success",customClass:{confirmButton:"btn btn-primary"},buttonsStyling:!1})}),d&&(d.onclick=function(){Swal.fire({title:"Info!",text:"You clicked the button!",icon:"info",customClass:{confirmButton:"btn btn-primary"},buttonsStyling:!1})}),S&&(S.onclick=function(){Swal.fire({title:"Warning!",text:" You clicked the button!",icon:"warning",customClass:{confirmButton:"btn btn-primary"},buttonsStyling:!1})}),y&&(y.onclick=function(){Swal.fire({title:"Error!",text:" You clicked the button!",icon:"error",customClass:{confirmButton:"btn btn-primary"},buttonsStyling:!1})}),p&&(p.onclick=function(){Swal.fire({title:"Question!",text:" You clicked the button!",icon:"question",customClass:{confirmButton:"btn btn-primary"},buttonsStyling:!1})}),w&&(w.onclick=function(){Swal.fire({title:"Sweet!",text:"Modal with a custom image.",imageUrl:assetsPath+"img/backgrounds/15.jpg",imageWidth:400,imageAlt:"Custom image",customClass:{confirmButton:"btn btn-primary"},buttonsStyling:!1})}),h&&(h.onclick=function(){var t;Swal.fire({title:"Auto close alert!",html:"I will close in <strong></strong> seconds.",timer:2e3,customClass:{confirmButton:"btn btn-primary"},buttonsStyling:!1,willOpen:function(){Swal.showLoading(),t=setInterval((function(){Swal.getHtmlContainer().querySelector("strong").textContent=Swal.getTimerLeft()}),100)},willClose:function(){clearInterval(t)}}).then((function(t){t.dismiss===Swal.DismissReason.timer&&console.log("I was closed by the timer")}))}),g&&(g.onclick=function(){Swal.fire({title:"Click outside to close!",text:"This is a cool message!",backdrop:!0,allowOutsideClick:!0,customClass:{confirmButton:"btn btn-primary"},buttonsStyling:!1})}),C&&(C.onclick=function(){const t=["1","2","3"],n=Swal.mixin({confirmButtonText:"Forward",cancelButtonText:"Back",progressSteps:t,input:"text",inputAttributes:{required:!0},validationMessage:"This field is required"});!async function(){const o=[];let e;for(e=0;e<t.length;){const i=await new n({title:"Question "+t[e],showCancelButton:e>0,currentProgressStep:e});i.value?(o[e]=i.value,e++):"cancel"===i.dismiss&&e--}Swal.fire(JSON.stringify(o))}()}),B&&(B.onclick=function(){Swal.fire({title:"Submit your Github username",input:"text",inputAttributes:{autocapitalize:"off"},showCancelButton:!0,confirmButtonText:"Look up",showLoaderOnConfirm:!0,customClass:{confirmButton:"btn btn-primary me-3",cancelButton:"btn btn-label-danger"},preConfirm:t=>fetch("//api.github.com/users/"+t).then((t=>{if(!t.ok)throw new Error(t.statusText);return t.json()})).catch((t=>{Swal.showValidationMessage("Request failed:"+t)})),backdrop:!0,allowOutsideClick:()=>!Swal.isLoading()}).then((t=>{t.isConfirmed&&Swal.fire({title:t.value.login+"'s avatar",imageUrl:t.value.avatar_url,customClass:{confirmButtonText:"Close me!",confirmButton:"btn btn-primary"}})}))}),k&&(k.onclick=function(){Swal.fire({title:"Are you sure?",text:"You won't be able to revert this!",icon:"warning",showCancelButton:!0,confirmButtonText:"Yes, delete it!",customClass:{confirmButton:"btn btn-primary me-3",cancelButton:"btn btn-label-secondary"},buttonsStyling:!1}).then((function(t){t.value&&Swal.fire({icon:"success",title:"Deleted!",text:"Your file has been deleted.",customClass:{confirmButton:"btn btn-success"}})}))}),x&&(x.onclick=function(){Swal.fire({title:"Are you sure?",text:"You won't be able to revert this!",icon:"warning",showCancelButton:!0,confirmButtonText:"Yes, delete it!",customClass:{confirmButton:"btn btn-primary me-3",cancelButton:"btn btn-label-secondary"},buttonsStyling:!1}).then((function(t){t.value?Swal.fire({icon:"success",title:"Deleted!",text:"Your file has been deleted.",customClass:{confirmButton:"btn btn-success"}}):t.dismiss===Swal.DismissReason.cancel&&Swal.fire({title:"Cancelled",text:"Your imaginary file is safe :)",icon:"error",customClass:{confirmButton:"btn btn-success"}})}))})}();
-</script>
-<script>
+  <script src="{{asset('assets/js/app-calendar.js')}}"></script>
+  <!-- END: Calender JS-->
+  <!-- BEGIN: Resistrasi JS-->
+  <script src="{{asset('assets/js/pages-auth.js')}}"></script>
+  <!-- END: Resgistrasi JS-->
+  <!-- BEGIN: Form JS-->
+  <script src="{{asset('assets/js/form-basic-inputs.js')}}"></script>
+  <!-- END: Form JS-->
+  <!-- BEGIN: Page JS-->
+  <script src="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/js/modal-edit-user.js"></script>
+  <script src="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/js/app-user-view.js"></script>
+  <!-- END: Page JS-->
+  <!-- BEGIN: Sweetalert JS-->
+  <script src="{{asset('assets/js/extended-ui-sweetalert2.js')}}"></script>
+  <!-- END: Sweetalert JS-->
+  <!-- BEGIN: Lihat Artikel JS-->
+  <script src="{{asset('assets/js/offcanvas-add-payment.js')}}"></script>
+  <script src="{{asset('assets/js/offcanvas-send-invoice.js')}}"></script>
+  <!-- END: Lihat Artikel JS-->
+  <!-- BEGIN: Carousel JS-->
+  <script src="{{asset('assets/js/ui-carousel.js')}}"></script>
+  <!-- END: Carousel JS-->
+  <script>
+    "use strict";
+    ! function() {
+      const t = document.querySelector("#basic-alert"),
+        n = document.querySelector("#with-title"),
+        o = document.querySelector("#footer-alert"),
+        e = document.querySelector("#html-alert"),
+        i = document.querySelector("#position-top-start"),
+        c = document.querySelector("#position-top-end"),
+        s = document.querySelector("#position-bottom-start"),
+        r = document.querySelector("#position-bottom-end"),
+        a = document.querySelector("#bounce-in-animation"),
+        u = document.querySelector("#fade-in-animation"),
+        l = document.querySelector("#flip-x-animation"),
+        m = document.querySelector("#tada-animation"),
+        f = document.querySelector("#shake-animation"),
+        b = document.querySelector("#type-success"),
+        d = document.querySelector("#type-info"),
+        S = document.querySelector("#type-warning"),
+        y = document.querySelector("#type-error"),
+        p = document.querySelector("#type-question"),
+        w = document.querySelector("#custom-image"),
+        h = document.querySelector("#auto-close"),
+        g = document.querySelector("#outside-click"),
+        C = document.querySelector("#progress-steps"),
+        B = document.querySelector("#ajax-request"),
+        k = document.querySelector("#confirm-text"),
+        x = document.querySelector("#confirm-color");
+      t && (t.onclick = function() {
+        Swal.fire({
+          title: "Any fool can use a computer",
+          customClass: {
+            confirmButton: "btn btn-primary"
+          },
+          buttonsStyling: !1
+        })
+      }), n && (n.onclick = function() {
+        Swal.fire({
+          title: "The Internet?,",
+          text: "That thing is still around?",
+          customClass: {
+            confirmButton: "btn btn-primary"
+          },
+          buttonsStyling: !1
+        })
+      }), o && (o.onclick = function() {
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Something went wrong!",
+          footer: "<a href>Why do I have this issue?</a>",
+          customClass: {
+            confirmButton: "btn btn-primary"
+          },
+          buttonsStyling: !1
+        })
+      }), e && (e.onclick = function() {
+        Swal.fire({
+          title: "<strong>HTML <u>example</u></strong>",
+          icon: "info",
+          html: 'You can use <b>bold text</b>, <a href="https://pixinvent.com/" target="_blank">links</a> and other HTML tags',
+          showCloseButton: !0,
+          showCancelButton: !0,
+          focusConfirm: !1,
+          confirmButtonText: '<i class="fa fa-thumbs-up"></i> Great!',
+          confirmButtonAriaLabel: "Thumbs up, great!",
+          cancelButtonText: '<i class="fa fa-thumbs-down"></i>',
+          cancelButtonAriaLabel: "Thumbs down",
+          customClass: {
+            confirmButton: "btn btn-primary me-3",
+            cancelButton: "btn btn-label-secondary"
+          },
+          buttonsStyling: !1
+        })
+      }), i && (i.onclick = function() {
+        Swal.fire({
+          position: "top-start",
+          icon: "success",
+          title: "Your work has been saved",
+          showConfirmButton: !1,
+          timer: 1500,
+          customClass: {
+            confirmButton: "btn btn-primary"
+          },
+          buttonsStyling: !1
+        })
+      }), c && (c.onclick = function() {
+        Swal.fire({
+          position: "top-end",
+          icon: "success",
+          title: "Your work has been saved",
+          showConfirmButton: !1,
+          timer: 1500,
+          customClass: {
+            confirmButton: "btn btn-primary"
+          },
+          buttonsStyling: !1
+        })
+      }), s && (s.onclick = function() {
+        Swal.fire({
+          position: "bottom-start",
+          icon: "success",
+          title: "Your work has been saved",
+          showConfirmButton: !1,
+          timer: 1500,
+          customClass: {
+            confirmButton: "btn btn-primary"
+          },
+          buttonsStyling: !1
+        })
+      }), r && (r.onclick = function() {
+        Swal.fire({
+          position: "bottom-end",
+          icon: "success",
+          title: "Your work has been saved",
+          showConfirmButton: !1,
+          timer: 1500,
+          customClass: {
+            confirmButton: "btn btn-primary"
+          },
+          buttonsStyling: !1
+        })
+      }), a && (a.onclick = function() {
+        Swal.fire({
+          title: "Bounce In Animation",
+          showClass: {
+            popup: "animate__animated animate__bounceIn"
+          },
+          customClass: {
+            confirmButton: "btn btn-primary"
+          },
+          buttonsStyling: !1
+        })
+      }), u && (u.onclick = function() {
+        Swal.fire({
+          title: "Fade In Animation",
+          showClass: {
+            popup: "animate__animated animate__fadeIn"
+          },
+          customClass: {
+            confirmButton: "btn btn-primary"
+          },
+          buttonsStyling: !1
+        })
+      }), l && (l.onclick = function() {
+        Swal.fire({
+          title: "Flip In Animation",
+          showClass: {
+            popup: "animate__animated animate__flipInX"
+          },
+          customClass: {
+            confirmButton: "btn btn-primary"
+          },
+          buttonsStyling: !1
+        })
+      }), m && (m.onclick = function() {
+        Swal.fire({
+          title: "Tada Animation",
+          showClass: {
+            popup: "animate__animated animate__tada"
+          },
+          customClass: {
+            confirmButton: "btn btn-primary"
+          },
+          buttonsStyling: !1
+        })
+      }), f && (f.onclick = function() {
+        Swal.fire({
+          title: "Shake Animation",
+          showClass: {
+            popup: "animate__animated animate__shakeX"
+          },
+          customClass: {
+            confirmButton: "btn btn-primary"
+          },
+          buttonsStyling: !1
+        })
+      }), b && (b.onclick = function() {
+        Swal.fire({
+          title: "Good job!",
+          text: "You clicked the button!",
+          icon: "success",
+          customClass: {
+            confirmButton: "btn btn-primary"
+          },
+          buttonsStyling: !1
+        })
+      }), d && (d.onclick = function() {
+        Swal.fire({
+          title: "Info!",
+          text: "You clicked the button!",
+          icon: "info",
+          customClass: {
+            confirmButton: "btn btn-primary"
+          },
+          buttonsStyling: !1
+        })
+      }), S && (S.onclick = function() {
+        Swal.fire({
+          title: "Warning!",
+          text: " You clicked the button!",
+          icon: "warning",
+          customClass: {
+            confirmButton: "btn btn-primary"
+          },
+          buttonsStyling: !1
+        })
+      }), y && (y.onclick = function() {
+        Swal.fire({
+          title: "Error!",
+          text: " You clicked the button!",
+          icon: "error",
+          customClass: {
+            confirmButton: "btn btn-primary"
+          },
+          buttonsStyling: !1
+        })
+      }), p && (p.onclick = function() {
+        Swal.fire({
+          title: "Question!",
+          text: " You clicked the button!",
+          icon: "question",
+          customClass: {
+            confirmButton: "btn btn-primary"
+          },
+          buttonsStyling: !1
+        })
+      }), w && (w.onclick = function() {
+        Swal.fire({
+          title: "Sweet!",
+          text: "Modal with a custom image.",
+          imageUrl: assetsPath + "img/backgrounds/15.jpg",
+          imageWidth: 400,
+          imageAlt: "Custom image",
+          customClass: {
+            confirmButton: "btn btn-primary"
+          },
+          buttonsStyling: !1
+        })
+      }), h && (h.onclick = function() {
+        var t;
+        Swal.fire({
+          title: "Auto close alert!",
+          html: "I will close in <strong></strong> seconds.",
+          timer: 2e3,
+          customClass: {
+            confirmButton: "btn btn-primary"
+          },
+          buttonsStyling: !1,
+          willOpen: function() {
+            Swal.showLoading(), t = setInterval((function() {
+              Swal.getHtmlContainer().querySelector("strong").textContent = Swal.getTimerLeft()
+            }), 100)
+          },
+          willClose: function() {
+            clearInterval(t)
+          }
+        }).then((function(t) {
+          t.dismiss === Swal.DismissReason.timer && console.log("I was closed by the timer")
+        }))
+      }), g && (g.onclick = function() {
+        Swal.fire({
+          title: "Click outside to close!",
+          text: "This is a cool message!",
+          backdrop: !0,
+          allowOutsideClick: !0,
+          customClass: {
+            confirmButton: "btn btn-primary"
+          },
+          buttonsStyling: !1
+        })
+      }), C && (C.onclick = function() {
+        const t = ["1", "2", "3"],
+          n = Swal.mixin({
+            confirmButtonText: "Forward",
+            cancelButtonText: "Back",
+            progressSteps: t,
+            input: "text",
+            inputAttributes: {
+              required: !0
+            },
+            validationMessage: "This field is required"
+          });
+        !async function() {
+          const o = [];
+          let e;
+          for (e = 0; e < t.length;) {
+            const i = await new n({
+              title: "Question " + t[e],
+              showCancelButton: e > 0,
+              currentProgressStep: e
+            });
+            i.value ? (o[e] = i.value, e++) : "cancel" === i.dismiss && e--
+          }
+          Swal.fire(JSON.stringify(o))
+        }()
+      }), B && (B.onclick = function() {
+        Swal.fire({
+          title: "Submit your Github username",
+          input: "text",
+          inputAttributes: {
+            autocapitalize: "off"
+          },
+          showCancelButton: !0,
+          confirmButtonText: "Look up",
+          showLoaderOnConfirm: !0,
+          customClass: {
+            confirmButton: "btn btn-primary me-3",
+            cancelButton: "btn btn-label-danger"
+          },
+          preConfirm: t => fetch("//api.github.com/users/" + t).then((t => {
+            if (!t.ok) throw new Error(t.statusText);
+            return t.json()
+          })).catch((t => {
+            Swal.showValidationMessage("Request failed:" + t)
+          })),
+          backdrop: !0,
+          allowOutsideClick: () => !Swal.isLoading()
+        }).then((t => {
+          t.isConfirmed && Swal.fire({
+            title: t.value.login + "'s avatar",
+            imageUrl: t.value.avatar_url,
+            customClass: {
+              confirmButtonText: "Close me!",
+              confirmButton: "btn btn-primary"
+            }
+          })
+        }))
+      }), k && (k.onclick = function() {
+        Swal.fire({
+          title: "Are you sure?",
+          text: "You won't be able to revert this!",
+          icon: "warning",
+          showCancelButton: !0,
+          confirmButtonText: "Yes, delete it!",
+          customClass: {
+            confirmButton: "btn btn-primary me-3",
+            cancelButton: "btn btn-label-secondary"
+          },
+          buttonsStyling: !1
+        }).then((function(t) {
+          t.value && Swal.fire({
+            icon: "success",
+            title: "Deleted!",
+            text: "Your file has been deleted.",
+            customClass: {
+              confirmButton: "btn btn-success"
+            }
+          })
+        }))
+      }), x && (x.onclick = function() {
+        Swal.fire({
+          title: "Are you sure?",
+          text: "You won't be able to revert this!",
+          icon: "warning",
+          showCancelButton: !0,
+          confirmButtonText: "Yes, delete it!",
+          customClass: {
+            confirmButton: "btn btn-primary me-3",
+            cancelButton: "btn btn-label-secondary"
+          },
+          buttonsStyling: !1
+        }).then((function(t) {
+          t.value ? Swal.fire({
+            icon: "success",
+            title: "Deleted!",
+            text: "Your file has been deleted.",
+            customClass: {
+              confirmButton: "btn btn-success"
+            }
+          }) : t.dismiss === Swal.DismissReason.cancel && Swal.fire({
+            title: "Cancelled",
+            text: "Your imaginary file is safe :)",
+            icon: "error",
+            customClass: {
+              confirmButton: "btn btn-success"
+            }
+          })
+        }))
+      })
+    }();
+  </script>
+  <script>
     $('.delete').click(function() {
       var id = $(this).attr('data-id');
       var judul = $(this).attr('data-nama');

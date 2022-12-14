@@ -10,10 +10,12 @@ use Ramsey\Uuid\Type\Integer;
 
 class LoginController extends Controller
 {
-    public function login(Request $request)
+    public function postlogin(Request $request)
     {
         if (Auth::attempt(['email' => $request->email, 'role' => 'admin', 'password' => $request->password])) {
             return redirect('dashboard');
+        } else {
+            return redirect('login');
         }
     }
 
@@ -32,7 +34,7 @@ class LoginController extends Controller
     {
         return view('demo-1.registrasi');
     }
-    public function login_admin()
+    public function login()
     {
         return view('demo-1.login_admin');
     }

@@ -13,13 +13,8 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('artikels', function (Blueprint $table) {
-            $table->id();
-            $table->string('judul');
-            $table->string('detail_singkat');
-            $table->string('foto');
-            $table->text('deskripsi');
-            $table->timestamps();
+        Schema::table('artikels', function (Blueprint $table) {
+            $table->foreignId('kategori_id')->after('judul')->constrained();
         });
     }
 
@@ -30,6 +25,8 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('artikels');
+        Schema::table('artikels', function (Blueprint $table) {
+            $table->dropColumn('kategori_id');
+        });
     }
 };
