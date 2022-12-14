@@ -189,7 +189,7 @@
         </div>
     </section>
     <section>
-        <div class="w-100 pt-120 pb-90 position-relative">
+        <div class="w-100 pt-120 pb-80 position-relative">
             <div class="container" id="satu">
                 <div class="sec-title text-center w-100 position-relative">
                     <h2 class="mb-0"><span>Postingan </span> Terbaru</h2>

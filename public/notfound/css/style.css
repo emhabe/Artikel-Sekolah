@@ -208,7 +208,7 @@ img{
 /* ------------------
     Animationload
 --------------------*/
-.animationload {
+/* .animationload {
     position: fixed;
     top: 0;
     left: 0;
@@ -227,4 +227,4 @@ img{
     background-image: url("../img/load1.gif");
     background-position: center;
     background-repeat: no-repeat;
-}
+} */
