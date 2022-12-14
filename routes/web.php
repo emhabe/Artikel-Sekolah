@@ -21,7 +21,7 @@ Route::get('/', function () {
 });
 //proses admin//
 Route::get('/registrasi', [LoginController::class, 'registrasi']);
-Route::get('/login', [LoginController::class, 'login']);
+Route::get('/login', [LoginController::class, 'login'])->name('login');
 
 Route::post('/post_register', [LoginController::class, 'post_register']);
 Route::post('/postlogin', [LoginController::class, 'postlogin']);

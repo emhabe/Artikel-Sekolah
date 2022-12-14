@@ -53,14 +53,10 @@
                             </li>
                             <li class="menu-item-has-children"><a href="javascript:void(0);" title="">Kategori</a>
                                 <ul class="children mb-0 list-unstyled">
-                                    <li><a href="seo-services.html" title="">SEO Services</a></li>
-                                    <li><a href="ppm-services.html" title="">PPM Services</a></li>
-                                    <li><a href="digital-marketing.html" title="">Digital Marketing</a></li>
-                                    <li><a href="about.html" title="">About Us</a></li>
-                                    <li><a href="our-story.html" title="">Our Story</a></li>
-                                    <li><a href="team.html" title="">Our Team</a></li>
-                                    <li><a href="content-elements.html" title="">Content Elements</a></li>
-                                    <li><a href="pricing-table.html" title="">Pricing Tables</a></li>
+                                    @foreach($kategori as $kt)
+                                    <li><a href="seo-services.html" title="">{{$kt->nama}}</a></li>
+                                    @endforeach
+
                                 </ul>
                             </li>
                             <li class="menu-item"><a href="#berita" title="">Daftar Berita</a>
@@ -94,14 +90,9 @@
                         </li>
                         <li class="menu-item-has-children"><a href="javascript:void(0);" title="">Kategori</a>
                             <ul class="children mb-0 list-unstyled">
-                                <li><a href="seo-services.html" title="">SEO Services</a></li>
-                                <li><a href="ppm-services.html" title="">PPM Services</a></li>
-                                <li><a href="digital-marketing.html" title="">Digital Marketing</a></li>
-                                <li><a href="about.html" title="">About Us</a></li>
-                                <li><a href="our-story.html" title="">Our Story</a></li>
-                                <li><a href="team.html" title="">Our Team</a></li>
-                                <li><a href="content-elements.html" title="">Content Elements</a></li>
-                                <li><a href="pricing-table.html" title="">Pricing Tables</a></li>
+                                @foreach($kategori as $kt1)
+                                <li><a href="seo-services.html" title="">{{$kt1->nama}}</a></li>
+                                @endforeach
                             </ul>
                         </li>
                         <li class="menu-item"><a href="#berita" title="">Daftar Berita</a>
@@ -138,14 +129,10 @@
                 </li>
                 <li class="menu-item-has-children dua"><a href="javascript:void(0);" title="">Kategori</a>
                     <ul class="children mb-0 list-unstyled">
-                        <li><a href="seo-services.html" title="">SEO Services</a></li>
-                        <li><a href="ppm-services.html" title="">PPM Services</a></li>
-                        <li><a href="digital-marketing.html" title="">Digital Marketing</a></li>
-                        <li><a href="about.html" title="">About Us</a></li>
-                        <li><a href="our-story.html" title="">Our Story</a></li>
-                        <li><a href="team.html" title="">Our Team</a></li>
-                        <li><a href="content-elements.html" title="">Content Elements</a></li>
-                        <li><a href="pricing-table.html" title="">Pricing Tables</a></li>
+                        @foreach($kategori as $kt3)
+                        <li><a href="seo-services.html" title="">{{$kt3->nama}}</a></li>
+                        @endforeach
+
                     </ul>
                 </li>
                 <li class="menu-item"><a href="#berita" title="">Daftar Berita</a>
@@ -166,17 +153,15 @@
                     <div class="col-md-12 col-sm-12 col-lg-9">
                         <div class="post-img overflow-hidden position-relative w-100">
                             <div class="post-detail-img w-100">
-                                <img class="img-fluid w-100" src="landing/assets/images/resources/blog-detail-img.jpg" alt="Blog Detail Image" height="576" width="1024">
+                                <img class="img-fluid w-100" src="{{asset('foto_artikel/'.$data->foto)}}" alt="Blog Detail Image" height="576" width="1024">
                             </div>
                             <div class="post-detail-desc w-100">
 
-                                <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget orci non nunc iaculis lobortis. Vestibulum pretium, sapien eget fermentum feugiat, ligula turpis viverra enim, eget luctus nisi nunc hendrerit lorem. Mauris vitae nisl sed purus mattis tincidunt vitae eget nisl. Phasellus semper lorem sed porttitor tempor. Vestibulum blandit at tortor non faucibus. Cras sit amet lorem convallis, scelerisque purus et, elementum ligula.</p>
+
                                 <blockquote>
-                                    <p class="mb-0">Maecenas diam dolor, lacinia in leo a, elementum tempus orci. Vivamus aliquet ex vel erat feugiat efficitur. Quisque lacinia imperdiet nunc, sit amet blandit mauris semper et. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur semper dignissim leo, ac malesuada velit tincidunt vel. Donec quam nunc, congue quis magna vitae, interdum sagittis lorem. Proin in faucibus metus.</p>
+                                    <p class="mb-0">INTI</p>
                                 </blockquote>
-                                <p class="mb-0">Sed laoreet pharetra magna eu gravida. Nullam massa magna, hendrerit id consequat vitae, semper in sapien. Vivamus sodales dolor quis ipsum imperdiet, nec tempor orci interdum. Nunc facilisis neque id semper ullamcorper. Nam ac faucibus arcu, facilisis finibus urna. Integer pulvinar nulla sit amet ipsum facilisis, sit amet placerat orci pretium. Fusce eget enim maximus, mollis quam vel, sagittis augue.</p>
-                                <p class="mb-0">Nullam massa magna, hendrerit id consequat vitae, semper in sapien. Vivamus sodales dolor quis ipsum imperdiet, nec tempor orci interdum. Nunc facilisis neque id semper ullamcorper. Nam ac faucibus arcu, facilisis finibus urna. Integer pulvinar nulla sit amet ipsum facilisis, sit amet placerat orci pretium. Fusce eget enim maximus, mollis quam vel, sagittis augue.</p>
-                                <p class="mb-0">Pellentesque venenatis quis elit id maximus. In ligula tellus, placerat ut lobortis ut, tempus commodo felis. Quisque porttitor accumsan neque, accumsan bibendum risus maximus vel. Donec a congue sem. Phasellus venenatis gravida lectus, sed pharetra ex laoreet vel.</p>
+                                {!!$data->deskripsi!!}
                             </div>
                         </div>
                     </div><!-- Post Detail Wrap -->
@@ -193,53 +178,27 @@
                                     <div class="widget widget2 v2 w-100">
                                         <h3>Recent Posts</h3>
                                         <div class="recentposts-wrap w-100">
+
+
+
+                                            @foreach($artikel as $ar1)
                                             <div class="recentpost-box d-flex flex-wrap align-items-center w-100">
-                                                <div class="recentpost-img"><a href="blog-detail.html" title=""><img class="img-fluid w-100" src="landing/assets/images/resources/recentpost-img1.jpg" alt="Recent Post Image 1"></a></div>
-                                                <div class="recentpost-info 2">
-                                                    <h5 class="mb-0"><a href="blog-detail.html" title="">Expect more</a></h5>
-                                                    <span class="d-block">July 03 2019</span>
-                                                </div>
-                                            </div>
-                                            <div class="recentpost-box d-flex flex-wrap align-items-center w-100">
-                                                <div class="recentpost-img"><a href="blog-detail.html" title=""><img class="img-fluid w-100" src="landing/assets/images/resources/recentpost-img2.jpg" alt="Recent Post Image 2"></a></div>
+                                                <div class="recentpost-img"><a href="/detail_berita/{{$ar1->id}}" title=""><img class="img-fluid w-100" src="{{asset('foto_artikel/'.$ar1->foto)}}" alt="Recent Post Image 3"></a></div>
                                                 <div class="recentpost-info">
-                                                    <h5 class="mb-0"><a href="blog-detail.html" title="">Ideas that soar</a></h5>
-                                                    <span class="d-block">June 03 2021</span>
+                                                    <h5 class="mb-0"><a href="/detail_berita/{{$ar1->id}}" title=""> {{$ar1->judul}}</a></h5>
+                                                    <span class="d-block">{{Carbon\Carbon::parse($ar1->created_at)->isoformat('D / MMMM /Y')}}</span>
                                                 </div>
                                             </div>
-                                            <div class="recentpost-box d-flex flex-wrap align-items-center w-100">
-                                                <div class="recentpost-img"><a href="blog-detail.html" title=""><img class="img-fluid w-100" src="landing/assets/images/resources/recentpost-img3.jpg" alt="Recent Post Image 3"></a></div>
-                                                <div class="recentpost-info">
-                                                    <h5 class="mb-0"><a href="blog-detail.html" title="">Accelerated Mark</a></h5>
-                                                    <span class="d-block">March 23 2020</span>
-                                                </div>
-                                            </div>
-                                            <div class="recentpost-box d-flex flex-wrap align-items-center w-100">
-                                                <div class="recentpost-img"><a href="blog-detail.html" title=""><img class="img-fluid w-100" src="landing/assets/images/resources/recentpost-img3.jpg" alt="Recent Post Image 3"></a></div>
-                                                <div class="recentpost-info">
-                                                    <h5 class="mb-0"><a href="blog-detail.html" title="">Accelerated Marketing</a></h5>
-                                                    <span class="d-block">March 23 2020</span>
-                                                </div>
-                                            </div>
-                                            <div class="recentpost-box d-flex flex-wrap align-items-center w-100">
-                                                <div class="recentpost-img"><a href="blog-detail.html" title=""><img class="img-fluid w-100" src="landing/assets/images/resources/recentpost-img3.jpg" alt="Recent Post Image 3"></a></div>
-                                                <div class="recentpost-info">
-                                                    <h5 class="mb-0"><a href="blog-detail.html" title="">Accelerated Marketing</a></h5>
-                                                    <span class="d-block">March 23 2020</span>
-                                                </div>
-                                            </div>
+                                            @endforeach
                                         </div><!-- Recent Posts Wrap -->
                                     </div>
                                     <div class="widget v2 w-100">
                                         <h3>Kategori</h3>
                                         <ul class="mb-0 list-unstyled w-100">
-                                            <li><a href="javascript:void(0);" title="">Creativity</a></li>
-                                            <li><a href="javascript:void(0);" title="">Footer</a></li>
-                                            <li><a href="javascript:void(0);" title="">Marketing</a></li>
-                                            <li><a href="javascript:void(0);" title="">Masonry</a></li>
-                                            <li><a href="javascript:void(0);" title="">Post Formats</a></li>
-                                            <li><a href="javascript:void(0);" title="">SEO</a></li>
-                                            <li><a href="javascript:void(0);" title="">Strategy</a></li>
+                                            @foreach($kategori as $kate)
+                                            <li><a href="javascript:void(0);" title="">{{$kate->nama }}</a></li>
+                                            @endforeach
+
                                         </ul>
                                     </div>
                                 </aside><!-- Sidebar Wrap -->
@@ -264,118 +223,23 @@
             </div>
             <div class="blog-wrap blog-spac px-3 position-relative w-100">
                 <div class="row mrg30">
+                    @foreach($artikel as $ar2)
                     <div class="col-md-6 col-sm-12 col-lg-3">
                         <div class="post-box brd-rd15 w-100">
                             <div class="post-img overflow-hidden position-relative w-100">
-                                <a href="blog-detail.html" title=""><img class="img-fluid w-100" src="landing/assets/images/resources/post-img1-1.jpg" alt="Post Image 1" height="576" width="1024"></a>
-                                <span class="post-date brd-rd15 text-center position-absolute text-uppercase"><i>30</i>May</span>
+                                <a href="/detail_berita/{{$ar2->id}}" title=""><img class="img-fluid w-100" src="{{asset('foto_artikel/'.$ar2->foto)}}" alt="Post Image 1" height="576" width="1024"></a>
+                                <span class="post-date brd-rd15 text-center position-absolute text-uppercase"><i>{{Carbon\Carbon::parse($ar2->created_at)->isoformat('D / MMMM /Y')}}</i></span>
                             </div>
                             <div class="post-info w-100">
-                                <span class="post-cate d-block text-uppercase"><a href="javascript:void(0);" title="">Strategy</a></span>
-                                <h3 class="mb-0"><a href="blog-detail.html" title="">Great team</a></h3>
-                                <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget orci non nun...</p>
-                                <a class="simple-link d-inline-block text-uppercase" href="blog-detail.html" title="">Read More<i class="flaticon-right-arrow text-color3"></i></a>
+                                <span class="post-cate d-block text-uppercase"><a href="javascript:void(0);" title="">{{$ar2->kategori->nama}}</a></span>
+                                <h3 class="mb-0"><a href="/detail_berita/{{$ar2->id}}" title="">{{$ar2->judul}}</a></h3>
+                                <p class="mb-0">{{$ar2->detail_singkat}}</p>
+                                <a class="simple-link d-inline-block text-uppercase" href="/detail_berita/{{$ar2->id}}" title="">Read More<i class="flaticon-right-arrow text-color3"></i></a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 col-sm-12 col-lg-3">
-                        <div class="post-box brd-rd15 w-100">
-                            <div class="post-img overflow-hidden position-relative w-100">
-                                <a href="blog-detail.html" title=""><img class="img-fluid w-100" src="landing/assets/images/resources/post-img1-2.jpg" alt="Post Image 2" height="576" width="1024"></a>
-                                <span class="post-date brd-rd15 text-center position-absolute text-uppercase"><i>20</i>May</span>
-                            </div>
-                            <div class="post-info w-100">
-                                <span class="post-cate d-block text-uppercase"><a href="javascript:void(0);" title="">Strategy</a></span>
-                                <h3 class="mb-0"><a href="blog-detail.html" title="">Amazing support</a></h3>
-                                <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget orci non nun...</p>
-                                <a class="simple-link d-inline-block text-uppercase" href="blog-detail.html" title="">Read More<i class="flaticon-right-arrow text-color3"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-sm-12 col-lg-3">
-                        <div class="post-box brd-rd15 w-100">
-                            <div class="post-img overflow-hidden position-relative w-100">
-                                <a href="blog-detail.html" title=""><img class="img-fluid w-100" src="landing/assets/images/resources/post-img1-3.jpg" alt="Post Image 3" height="576" width="1024"></a>
-                                <span class="post-date brd-rd15 text-center position-absolute text-uppercase"><i>18</i>Mar</span>
-                            </div>
-                            <div class="post-info w-100">
-                                <span class="post-cate d-block text-uppercase"><a href="javascript:void(0);" title="">Strategy</a></span>
-                                <h3 class="mb-0"><a href="blog-detail.html" title="">New team</a></h3>
-                                <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget orci non nun...</p>
-                                <a class="simple-link d-inline-block text-uppercase" href="blog-detail.html" title="">Read More<i class="flaticon-right-arrow text-color3"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-sm-12 col-lg-3">
-                        <div class="post-box brd-rd15 w-100">
-                            <div class="post-img overflow-hidden position-relative w-100">
-                                <a href="blog-detail.html" title=""><img class="img-fluid w-100" src="landing/assets/images/resources/post-img1-4.jpg" alt="Post Image 4" height="576" width="1024"></a>
-                                <span class="post-date brd-rd15 text-center position-absolute text-uppercase"><i>05</i>Jan</span>
-                            </div>
-                            <div class="post-info w-100">
-                                <span class="post-cate d-block text-uppercase"><a href="javascript:void(0);" title="">Strategy</a></span>
-                                <h3 class="mb-0"><a href="blog-detail.html" title="">Better style</a></h3>
-                                <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget orci non nun...</p>
-                                <a class="simple-link d-inline-block text-uppercase" href="blog-detail.html" title="">Read More<i class="flaticon-right-arrow text-color3"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-sm-12 col-lg-3">
-                        <div class="post-box brd-rd15 w-100">
-                            <div class="post-img overflow-hidden position-relative w-100">
-                                <a href="blog-detail.html" title=""><img class="img-fluid w-100" src="landing/assets/images/resources/post-img1-5.jpg" alt="Post Image 5" height="576" width="1024"></a>
-                                <span class="post-date brd-rd15 text-center position-absolute text-uppercase"><i>30</i>May</span>
-                            </div>
-                            <div class="post-info w-100">
-                                <span class="post-cate d-block text-uppercase"><a href="javascript:void(0);" title="">Marketing</a></span>
-                                <h3 class="mb-0"><a href="blog-detail.html" title="">Specialists in team</a></h3>
-                                <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget orci non nun...</p>
-                                <a class="simple-link d-inline-block text-uppercase" href="blog-detail.html" title="">Read More<i class="flaticon-right-arrow text-color3"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-sm-12 col-lg-3">
-                        <div class="post-box brd-rd15 w-100">
-                            <div class="post-img overflow-hidden position-relative w-100">
-                                <a href="blog-detail.html" title=""><img class="img-fluid w-100" src="landing/assets/images/resources/post-img1-6.jpg" alt="Post Image 6" height="576" width="1024"></a>
-                                <span class="post-date brd-rd15 text-center position-absolute text-uppercase"><i>20</i>May</span>
-                            </div>
-                            <div class="post-info w-100">
-                                <span class="post-cate d-block text-uppercase"><a href="javascript:void(0);" title="">Marketing</a></span>
-                                <h3 class="mb-0"><a href="blog-detail.html" title="">Elegant style</a></h3>
-                                <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget orci non nun...</p>
-                                <a class="simple-link d-inline-block text-uppercase" href="blog-detail.html" title="">Read More<i class="flaticon-right-arrow text-color3"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-sm-12 col-lg-3">
-                        <div class="post-box brd-rd15 w-100">
-                            <div class="post-img overflow-hidden position-relative w-100">
-                                <a href="blog-detail.html" title=""><img class="img-fluid w-100" src="landing/assets/images/resources/post-img1-7.jpg" alt="Post Image 7" height="576" width="1024"></a>
-                                <span class="post-date brd-rd15 text-center position-absolute text-uppercase"><i>18</i>Mar</span>
-                            </div>
-                            <div class="post-info w-100">
-                                <span class="post-cate d-block text-uppercase"><a href="javascript:void(0);" title="">Marketing</a></span>
-                                <h3 class="mb-0"><a href="blog-detail.html" title="">We know trends</a></h3>
-                                <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget orci non nun...</p>
-                                <a class="simple-link d-inline-block text-uppercase" href="blog-detail.html" title="">Read More<i class="flaticon-right-arrow text-color3"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-sm-12 col-lg-3">
-                        <div class="post-box brd-rd15 w-100">
-                            <div class="post-img overflow-hidden position-relative w-100">
-                                <a href="blog-detail.html" title=""><img class="img-fluid w-100" src="landing/assets/images/resources/post-img1-8.jpg" alt="Post Image 8" height="576" width="1024"></a>
-                                <span class="post-date brd-rd15 text-center position-absolute text-uppercase"><i>05</i>Jan</span>
-                            </div>
-                            <div class="post-info w-100">
-                                <span class="post-cate d-block text-uppercase"><a href="javascript:void(0);" title="">Marketing</a></span>
-                                <h3 class="mb-0"><a href="blog-detail.html" title="">Let’s talk test</a></h3>
-                                <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget orci non nun...</p>
-                                <a class="simple-link d-inline-block text-uppercase" href="blog-detail.html" title="">Read More<i class="flaticon-right-arrow text-color3"></i></a>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
+
                 </div>
             </div><!-- Blog Wrap -->
         </div>
