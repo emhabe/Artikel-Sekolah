@@ -31,6 +31,7 @@ Route::post('/logout', [LoginController::class, 'logout']);
 //Tampilan//
 Route::get('/', [ArtikelController::class, 'index']);
 Route::get('/detail_berita/{id}', [ArtikelController::class, 'detail_berita']);
+Route::get('/kategori_berita/{id}', [ArtikelController::class, 'kategori_berita']);
 Route::get('/test', [ArtikelController::class, 'test']);
 //tampilan admin//
 Route::group(['middleware' => ['auth']], function () {

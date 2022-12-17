@@ -704,7 +704,7 @@ iframe {
 
 /*=== Image ===*/
 img {
-  height: auto;
+
   max-width: 100%;
   vertical-align: middle;
 }
@@ -2000,6 +2000,45 @@ body.slidein .responsive-menu {
   transform: scale(.6);
 }
 
+
+.thm-btnbiru {
+  border: 2px solid var(--color27) !important;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 10.5px 2.1875rem;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  color: #fff;
+  -webkit-box-shadow: 0 6px 1rem 0px rgba(16, 1, 148, .18);
+  box-shadow: 0 6px 1rem 0px rgba(16, 1, 148, .18);
+}
+.thm-btnbiru i {margin-right: 10px;}
+.thm-btnbiru:hover,
+.thm-btnbiru:focus,
+.thm-btnbiru.brd-btn {color: var(--color27);}
+.thm-btnbiru::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+  background-color: var(--color27);
+  -webkit-border-radius: inherit;
+  border-radius: inherit;
+  z-index: -1;
+}
+.thm-btnbiru.brd-btn:before,
+.thm-btnbiru:hover:before,
+.thm-btnbiru:focus:before {
+  opacity: 0;
+  -webkit-transform: scale(.6);
+  transform: scale(.6);
+}
+
 /*== Inverse ==*/
 .thm-btn.invr {
   border-color: #fff !important;
@@ -2787,7 +2826,7 @@ footer .logo a {
 }
 .social-links2 > a:not(:first-child) {margin-left: 8px;}
 .social-links2 > a:hover,
-.social-links2 > a:focus {color: var(--color3);}
+.social-links2 > a:focus {color: var(--color10);}
 .bottom-bar {padding: 12.5px 0;}
 .bottom-inner > p {
   opacity: 1;
@@ -4356,7 +4395,7 @@ form.searchform > button:focus {color: var(--color3);}
   text-align: center;
   line-height: 3.125rem;
   background-color: rgba(255,255,255,.06);
-  color: var(--color3);
+  color: var(--color27);
   font-size: 1.25rem;
   -webkit-border-radius: var(--curve10);
   border-radius: var(--curve10);

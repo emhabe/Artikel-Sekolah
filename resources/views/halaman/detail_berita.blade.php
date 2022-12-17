@@ -49,7 +49,7 @@
                     </div><!-- Logo -->
                     <nav>
                         <ul class="d-inline-flex flex-wrap align-items-center mb-0 list-unstyled">
-                            <li class="menu-item active satu"><a href="javascript:void(0);" title="">Beranda</a>
+                            <li class="menu-item"><a href="/" title="">Beranda</a>
                             </li>
                             <li class="menu-item-has-children"><a href="javascript:void(0);" title="">Kategori</a>
                                 <ul class="children mb-0 list-unstyled">
@@ -64,6 +64,7 @@
                             <li class="menu-item"><a href="javascript:void(0);" title="">Tentang</a>
                             </li>
                             <li><a href="#contact" title="">Kontak</a></li>
+                            <li class="menu-item active satu"><a href="javascript:void(0);" title="">Detail Berita</a>
                         </ul>
                     </nav>
                     <!-- <div class="header-btns d-inline-flex flex-wrap align-items-center mt-5">
@@ -86,7 +87,7 @@
                 </div><!-- Logo -->
                 <nav>
                     <ul class="d-inline-flex flex-wrap align-items-center mb-0 list-unstyled">
-                        <li class="menu-item active satu"><a href="javascript:void(0);" title="">Beranda</a>
+                        <li class="menu-item"><a href="/" title="">Beranda</a>
                         </li>
                         <li class="menu-item-has-children"><a href="javascript:void(0);" title="">Kategori</a>
                             <ul class="children mb-0 list-unstyled">
@@ -101,6 +102,7 @@
                         <li class="menu-item"><a href="javascript:void(0);" title="">Tentang</a>
                         </li>
                         <li><a href="#contact" title="">Kontak</a></li>
+                        <li class="menu-item active satu"><a href="javascript:void(0);" title="">Detail Berita</a>
                     </ul>
                 </nav>
             </div>
@@ -124,7 +126,7 @@
                 <h1 class="mb-0"><a href="index.html" title="Home"><img class="img-fluid" src="{{asset('landing/assets/images/logo%402x.png')}}" alt="Logo"></a></h1>
             </div><!-- Logo -->
             <ul class="mb-0 list-unstyled w-100">
-                <li class="menu-item active satu"><a href="javascript:void(0);" title="">Beranda</a>
+                <li class="menu-item"><a href="/" title="">Beranda</a>
 
                 </li>
                 <li class="menu-item-has-children dua"><a href="javascript:void(0);" title="">Kategori</a>
@@ -143,6 +145,7 @@
                 </li>
 
                 <li><a href="#contact" title="">Kontak</a></li>
+                <li class="menu-item active satu"><a href="javascript:void(0);" title="">Detail Berita</a>
             </ul>
         </div><!-- Responsive Menu -->
     </div><!-- Responsive Header -->
@@ -153,7 +156,7 @@
                     <div class="col-md-12 col-sm-12 col-lg-9">
                         <div class="post-img overflow-hidden position-relative w-100">
                             <div class="post-detail-img w-100">
-                                <img class="img-fluid w-100" src="{{asset('foto_artikel/'.$data->foto)}}" alt="Blog Detail Image" height="576" width="1024">
+                                <img class="img-fluid w-100" src="{{asset('foto_artikel/'.$data->foto)}}" alt="Blog Detail Image">
                             </div>
                             <div class="post-detail-desc w-100">
 
@@ -223,23 +226,44 @@
             </div>
             <div class="blog-wrap blog-spac px-3 position-relative w-100">
                 <div class="row mrg30">
-                    @foreach($artikel as $ar2)
+                    @foreach($artikel as $ar5)
                     <div class="col-md-6 col-sm-12 col-lg-3">
                         <div class="post-box brd-rd15 w-100">
                             <div class="post-img overflow-hidden position-relative w-100">
-                                <a href="/detail_berita/{{$ar2->id}}" title=""><img class="img-fluid w-100" src="{{asset('foto_artikel/'.$ar2->foto)}}" alt="Post Image 1" height="576" width="1024"></a>
-                                <span class="post-date brd-rd15 text-center position-absolute text-uppercase"><i>{{Carbon\Carbon::parse($ar2->created_at)->isoformat('D / MMMM /Y')}}</i></span>
+                                <a href="/detail_berita/{{$ar5->id}}" title=""><img class="img-fluid w-100" src="{{asset('foto_artikel/'.$ar5->foto)}}" alt="Post Image 1" height="200"></a>
+                                <span class="post-date brd-rd15 text-center position-absolute text-uppercase"><i></i></span>
+                                <span class="post-date brd-rd15 text-center position-absolute text-uppercase"><i>{{Carbon\Carbon::parse($ar5->created_at)->isoformat('D')}}</i>{{Carbon\Carbon::parse($ar5->created_at)->isoformat('MMM')}}</span>
                             </div>
                             <div class="post-info w-100">
-                                <span class="post-cate d-block text-uppercase"><a href="javascript:void(0);" title="">{{$ar2->kategori->nama}}</a></span>
-                                <h3 class="mb-0"><a href="/detail_berita/{{$ar2->id}}" title="">{{$ar2->judul}}</a></h3>
-                                <p class="mb-0">{{$ar2->detail_singkat}}</p>
-                                <a class="simple-link d-inline-block text-uppercase" href="/detail_berita/{{$ar2->id}}" title="">Read More<i class="flaticon-right-arrow text-color3"></i></a>
+                                @if($ar5->kategori_id=1)
+                                <span class="post-cate2 d-block text-uppercase">
+                                    @elseif($artikelbesar->kategori_id=2)
+                                    <span class="post-cate1 d-block text-uppercase">
+                                        @endif<a href="javascript:void(0);" title="">{{$ar5->kategori->nama}}</a></span>
+                                    <h3 class="mb-0"><a href="/detail_berita/{{$ar5->id}}" title="">{{$ar5->judul}}</a></h3>
+                                    <p class="mb-0">{{$ar5->detail_singkat}}</p>
+                                    <a class="simple-link d-inline-block text-uppercase" href="/detail_berita/{{$ar5->id}}" title="">Read More<i class="flaticon-right-arrow text-color3"></i></a>
                             </div>
                         </div>
                     </div>
                     @endforeach
 
+                </div>
+                <div class="scl-anlys-wrap position-relative w-100">
+                    <div class="row align-items-center" id="about">
+                        <div class="col-md-12 col-sm-12 col-lg-6 order-lg-1">
+                            <div class="mckp-img text-center tilt w-100" data-max_tilt="10" data-perspective="1000" data-scale="1" data-speed="700"><img class="img-fluid" src="../landing/assets/images/resources/tentang.png" alt="Social Media Analysis Mockup"></div>
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-lg-6">
+                            <div class="text-box w-100">
+                                <div class="sec-title w-100 position-relative">
+                                    <h2 class="mb-0"> <span>Website </span>RadarPgriKu</h2>
+                                    <i class="btm-ln bg-color28"></i>
+                                </div><!-- Sec Title -->
+                                <p class="mb-0">Adalah Sebuah Website Yang Dibuat dengan maksud dan Tujuan agar Kalian Mendapatkan Informasi atau Berita Terupdate Seputar Kegiatan,Acara yang dilakukan oleh Siswa Siswi SMK PGRI Singosari.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div><!-- Blog Wrap -->
         </div>
@@ -251,26 +275,27 @@
                     <div class="row mrg30">
                         <div class="col-md-5 col-sm-12 col-lg-4">
                             <div class="get-in-touch-wrap bg-color11 brd-rd20 mt-40 position-relative overflow-hidden w-100">
-                                <h2 class="mb-0">Get in Touch</h2>
-                                <p class="mb-0">SEOES is a USA search engine marketing agency, that deliver digital</p>
+                                <h2 class="mb-0">RadarPgriKu</h2>
+                                <p class="mb-0">Jelajahi Informasimu Disini...</p>
                                 <div class="contact-info-box mt-40 d-flex flex-wrap w-100">
                                     <i class="flaticon-facebook-placeholder-for-locate-places-on-maps"></i>
                                     <div class="contact-info-inner">
-                                        <h5 class="mb-0">Visit Us:</h5>
-                                        <p class="mb-0">27 Division St, New York, NY 10002, USA</p>
+                                        <h5 class="mb-0">Alamat :</h5>
+                                        <p class="mb-0">SMK PGRI Singosari
+                                            Jl. Morotanjek No.206, Pangetan, Pagentan, Kec. Singosari, Kabupaten Malang, Jawa Timur</p>
                                     </div>
                                 </div>
                                 <div class="contact-info-box mt-20 d-flex flex-wrap w-100">
                                     <i class="flaticon-message-closed-envelope"></i>
                                     <div class="contact-info-inner">
-                                        <h5 class="mb-0">Mail Us:</h5>
+                                        <h5 class="mb-0">Email :</h5>
                                         <a href="mailto:info@example.com" title="">info@example.com</a>
                                     </div>
                                 </div>
                                 <div class="contact-info-box mt-20 d-flex flex-wrap w-100">
                                     <i class="icon-037-smartphone"></i>
                                     <div class="contact-info-inner">
-                                        <h5 class="mb-0">Phone Us:</h5>
+                                        <h5 class="mb-0">No Telfon :</h5>
                                         <a href="tel:(305) 222-3333" title="">+(305) 222-3333</a>
                                     </div>
                                 </div>
@@ -305,7 +330,7 @@
                                                 <path d="M54.8,1.3l35.5,20.3c3,1.7,4.8,4.8,4.8,8.2v40.6c0,3.4-1.8,6.5-4.8,8.2L54.8,98.7c-3,1.7-6.6,1.7-9.5,0 L9.8,78.5c-3-1.7-4.8-4.8-4.8-8.2V29.7c0-3.4,1.8-6.5,4.8-8.2L45.2,1.3C48.2-0.4,51.8-0.4,54.8,1.3z"></path>
                                             </g>
                                         </svg>
-                                        <i class="flaticon-linkedin"></i>
+                                        <i class="fa-brands fa-instagram fa-lg"></i>
                                     </a>
                                 </div>
                             </div>
@@ -313,8 +338,8 @@
                         <div class="col-md-7 col-sm-12 col-lg-8">
                             <div class="contact-form-wrap mt-40 w-100">
                                 <div class="sec-title tiga w-100 position-relative">
-                                    <h2 class="mb-0 ">Send a Message</h2>
-                                    <i class="btm-ln bg-color3"></i>
+                                    <h2 class="mb-0 ">Kirim Sebuah Pesan</h2>
+                                    <i class="btm-ln bg-color27"></i>
                                 </div><!-- Sec Title -->
                                 <form action="#" method="post" id="email-form">
                                     <div class="form-group w-100">
@@ -346,7 +371,7 @@
                                                 <textarea class="contact_message" name="contact_message" placeholder="Message" required></textarea>
                                             </div>
                                             <div class="field-btn w-100">
-                                                <button class="thm-btn d-inline-block rounded-pill" id="submit" type="submit">Send A Message</button>
+                                                <button class="thm-btnbiru d-inline-block rounded-pill" id="submit" type="submit">Kirimkan</button>
                                             </div>
                                         </div>
                                     </div>

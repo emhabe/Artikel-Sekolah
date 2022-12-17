@@ -55,153 +55,29 @@
       <div class="menu-inner-shadow"></div>
 
       <ul class="menu-inner py-1">
-
-
-
-
-
-
-
-
         <li class="menu-item active open">
           <a href="/dashboard" class="menu-link">
             <i class="menu-icon tf-icons bx bx-home-circle"></i>
             <div>Beranda</div>
           </a>
         </li>
-
-
-
-
-
-
-
-
         <li class="menu-item">
           <a href="/artikel" class="menu-link">
             <i class="menu-icon tf-icons bx bx-collection"></i>
             <div>Artikel</div>
           </a>
-
-
-          <ul class="menu-sub">
-
-
-
-            <li class="menu-item ">
-              <a href="layouts/collapsed-menu.html" class="menu-link">
-                <div>Collapsed menu</div>
-              </a>
-
-
-            </li>
-
-
-
-            <li class="menu-item ">
-              <a href="layouts/content-navbar.html" class="menu-link">
-                <div>Content navbar</div>
-              </a>
-
-
-            </li>
-
-
-
-            <li class="menu-item ">
-              <a href="layouts/content-nav-sidebar.html" class="menu-link">
-                <div>Content nav + Sidebar</div>
-              </a>
-
-
-            </li>
-
-
-
-            <li class="menu-item ">
-              <a href="layouts/horizontal.html" class="menu-link" target="_blank">
-                <div>Horizontal</div>
-              </a>
-
-
-            </li>
-
-
-
-            <li class="menu-item ">
-              <a href="layouts/without-menu.html" class="menu-link">
-                <div>Without menu</div>
-              </a>
-
-
-            </li>
-
-
-
-            <li class="menu-item ">
-              <a href="layouts/without-navbar.html" class="menu-link">
-                <div>Without navbar</div>
-              </a>
-
-
-            </li>
-
-
-
-            <li class="menu-item ">
-              <a href="layouts/fluid.html" class="menu-link">
-                <div>Fluid</div>
-              </a>
-
-
-            </li>
-
-
-
-            <li class="menu-item ">
-              <a href="layouts/container.html" class="menu-link">
-                <div>Container</div>
-              </a>
-
-
-            </li>
-
-
-
-            <li class="menu-item ">
-              <a href="layouts/blank.html" class="menu-link" target="_blank">
-                <div>Blank</div>
-              </a>
-
-
-            </li>
-          </ul>
         </li>
-
-
-
-
-
-
-
-
         <li class="menu-item">
           <a href="#" class="menu-link menu-toggle">
             <i class="menu-icon tf-icons bx bx-food-menu"></i>
             <div>Kategori</div>
           </a>
-
-
           <ul class="menu-sub">
-
-
             @foreach($kategori as $kt)
             <li class="menu-item">
               <a href="/kategori/{{$kt->id}}" class="menu-link">
                 <div>{{$kt->nama}}</div>
               </a>
-
-
             </li>
             @endforeach
           </ul>
@@ -211,9 +87,7 @@
             <i class="menu-icon tf-icons bx bx-user"></i>
             <div>Users</div>
           </a>
-
       </ul>
-
     </aside>
 
 
@@ -266,8 +140,6 @@
                     </div>
                   </a>
                 </li>
-
-
                 <li>
                   <a class="dropdown-item" href="#">
                     <i class='bx bx-log-in me-2'></i>
@@ -288,31 +160,35 @@
 
 
       <!-- Content wrapper -->
-      <div class="content-wrapper">
+      <div class="container">
+        <div class="row">
+          <div class="content-wrapper">
 
-        <!-- Content -->
-        <div class="col-11">
-          <h6 class="text-muted mt-3">Artikel Terkini</h6>
-          <div id="swiper-gallery">
-            <div class="swiper-container gallery-top">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide" style="background-image:url(&quot;https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/img/backgrounds/6.jpg&quot;)">judul</div>
-                <div class="swiper-slide" style="background-image:url(&quot;https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/img/backgrounds/5.jpg&quot;)">Judul</div>
-                <div class="swiper-slide" style="background-image:url(&quot;https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/img/backgrounds/7.jpg&quot;)">judul</div>
-                <div class="swiper-slide" style="background-image:url(&quot;https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/img/backgrounds/10.jpg&quot;)">judul</div>
-                <div class="swiper-slide" style="background-image:url(&quot;https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/img/backgrounds/16.jpg&quot;)">judul</div>
-              </div>
-              <!-- Add Arrows -->
-              <div class="swiper-button-next swiper-button-white"></div>
-              <div class="swiper-button-prev swiper-button-white"></div>
-            </div>
-            <div class="swiper-container gallery-thumbs">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide" style="background-image:url(&quot;https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/img/backgrounds/6.jpg&quot;)">Judul</div>
-                <div class="swiper-slide" style="background-image:url(&quot;https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/img/backgrounds/5.jpg&quot;)">Judul</div>
-                <div class="swiper-slide" style="background-image:url(&quot;https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/img/backgrounds/7.jpg&quot;">judul</div>
-                <div class="swiper-slide" style="background-image:url(&quot;https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/img/backgrounds/10.jpg&quot;)">judul</div>
-                <div class="swiper-slide" style="background-image:url(&quot;https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/img/backgrounds/16.jpg&quot;)">judul</div>
+            <!-- Content -->
+            <div class="col-11">
+              <h6 class="text-muted mt-3">Artikel Terkini</h6>
+              <div id="swiper-gallery">
+                <div class="swiper-container gallery-top">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide" style="background-image:url(&quot;https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/img/backgrounds/6.jpg&quot;)">judul</div>
+                    <div class="swiper-slide" style="background-image:url(&quot;https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/img/backgrounds/5.jpg&quot;)">Judul</div>
+                    <div class="swiper-slide" style="background-image:url(&quot;https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/img/backgrounds/7.jpg&quot;)">judul</div>
+                    <div class="swiper-slide" style="background-image:url(&quot;https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/img/backgrounds/10.jpg&quot;)">judul</div>
+                    <div class="swiper-slide" style="background-image:url(&quot;https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/img/backgrounds/16.jpg&quot;)">judul</div>
+                  </div>
+                  <!-- Add Arrows -->
+                  <div class="swiper-button-next swiper-button-white"></div>
+                  <div class="swiper-button-prev swiper-button-white"></div>
+                </div>
+                <div class="swiper-container gallery-thumbs">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide" style="background-image:url(&quot;https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/img/backgrounds/6.jpg&quot;)">Judul</div>
+                    <div class="swiper-slide" style="background-image:url(&quot;https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/img/backgrounds/5.jpg&quot;)">Judul</div>
+                    <div class="swiper-slide" style="background-image:url(&quot;https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/img/backgrounds/7.jpg&quot;">judul</div>
+                    <div class="swiper-slide" style="background-image:url(&quot;https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/img/backgrounds/10.jpg&quot;)">judul</div>
+                    <div class="swiper-slide" style="background-image:url(&quot;https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/img/backgrounds/16.jpg&quot;)">judul</div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

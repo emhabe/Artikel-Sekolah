@@ -53,189 +53,30 @@
       </div>
 
       <div class="menu-inner-shadow"></div>
-
       <ul class="menu-inner py-1">
-
-
-
-
-
-
-
-
         <li class="menu-item ">
           <a href="/dashboard" class="menu-link">
             <i class="menu-icon tf-icons bx bx-home-circle"></i>
             <div>Beranda</div>
           </a>
-
-
-          <ul class="menu-sub">
-
-
-
-            <li class="menu-item ">
-              <a href="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo-1" class="menu-link">
-                <div>Analytics</div>
-              </a>
-
-
-            </li>
-
-
-
-            <li class="menu-item ">
-              <a href="../dashboard/crm.html" class="menu-link">
-                <div>CRM</div>
-              </a>
-
-
-            </li>
-
-
-
-            <li class="menu-item ">
-              <a href="../dashboard/ecommerce.html" class="menu-link">
-                <div>eCommerce</div>
-              </a>
-
-
-            </li>
-          </ul>
         </li>
-
-
-
-
-
-
-
-
         <li class="menu-item">
           <a href="/artikel" class="menu-link">
             <i class="menu-icon tf-icons bx bx-collection"></i>
             <div>Artikel</div>
           </a>
-
-
-          <ul class="menu-sub">
-
-
-
-            <li class="menu-item ">
-              <a href="layouts/collapsed-menu.html" class="menu-link">
-                <div>Collapsed menu</div>
-              </a>
-
-
-            </li>
-
-
-
-            <li class="menu-item ">
-              <a href="layouts/content-navbar.html" class="menu-link">
-                <div>Content navbar</div>
-              </a>
-
-
-            </li>
-
-
-
-            <li class="menu-item ">
-              <a href="layouts/content-nav-sidebar.html" class="menu-link">
-                <div>Content nav + Sidebar</div>
-              </a>
-
-
-            </li>
-
-
-
-            <li class="menu-item ">
-              <a href="layouts/horizontal.html" class="menu-link" target="_blank">
-                <div>Horizontal</div>
-              </a>
-
-
-            </li>
-
-
-
-            <li class="menu-item ">
-              <a href="layouts/without-menu.html" class="menu-link">
-                <div>Without menu</div>
-              </a>
-
-
-            </li>
-
-
-
-            <li class="menu-item ">
-              <a href="layouts/without-navbar.html" class="menu-link">
-                <div>Without navbar</div>
-              </a>
-
-
-            </li>
-
-
-
-            <li class="menu-item ">
-              <a href="layouts/fluid.html" class="menu-link">
-                <div>Fluid</div>
-              </a>
-
-
-            </li>
-
-
-
-            <li class="menu-item ">
-              <a href="layouts/container.html" class="menu-link">
-                <div>Container</div>
-              </a>
-
-
-            </li>
-
-
-
-            <li class="menu-item ">
-              <a href="layouts/blank.html" class="menu-link" target="_blank">
-                <div>Blank</div>
-              </a>
-
-
-            </li>
-          </ul>
         </li>
-
-
-
-
-
-
-
-
         <li class="menu-item active open">
           <a href="#" class="menu-link menu-toggle">
             <i class="menu-icon tf-icons bx bx-food-menu"></i>
             <div>Kategori</div>
           </a>
-
-
           <ul class="menu-sub">
-
-
             @foreach($kategori as $kt)
             <li class="menu-item">
               <a href="/kategori/{{$kt->id}}" class="menu-link">
                 <div>{{$kt->nama}}</div>
               </a>
-
-
             </li>
             @endforeach
           </ul>
@@ -245,11 +86,7 @@
             <i class="menu-icon tf-icons bx bx-user"></i>
             <div>Users</div>
           </a>
-
-
-
       </ul>
-
     </aside>
 
 

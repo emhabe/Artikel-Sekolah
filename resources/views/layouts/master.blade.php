@@ -294,6 +294,8 @@
   <!-- END: Lihat Artikel JS-->
   <!-- BEGIN: Carousel JS-->
   <script src="{{asset('assets/js/ui-carousel.js')}}"></script>
+
+<!-- END: Page JS-->
   <!-- END: Carousel JS-->
   <script>
     "use strict";
@@ -645,65 +647,51 @@
             }
           })
         }))
-      }), x && (x.onclick = function() {
-        Swal.fire({
-          title: "Are you sure?",
-          text: "You won't be able to revert this!",
-          icon: "warning",
-          showCancelButton: !0,
-          confirmButtonText: "Yes, delete it!",
-          customClass: {
-            confirmButton: "btn btn-primary me-3",
-            cancelButton: "btn btn-label-secondary"
-          },
-          buttonsStyling: !1
-        }).then((function(t) {
-          t.value ? Swal.fire({
-            icon: "success",
-            title: "Deleted!",
-            text: "Your file has been deleted.",
-            customClass: {
-              confirmButton: "btn btn-success"
-            }
-          }) : t.dismiss === Swal.DismissReason.cancel && Swal.fire({
-            title: "Cancelled",
-            text: "Your imaginary file is safe :)",
-            icon: "error",
-            customClass: {
-              confirmButton: "btn btn-success"
-            }
-          })
-        }))
       })
     }();
   </script>
-  <script>
-    $('.delete').click(function() {
-      var id = $(this).attr('data-id');
-      var judul = $(this).attr('data-nama');
-      swal({
-          title: "Apakah Anda Yakin ?",
-          text: "Anda Akan Menghapus Artikel : " + judul + " !!",
-          icon: "info",
-          buttons: true,
-          dangerMode: true,
-        })
-        .then((willDelete) => {
-          if (willDelete) {
-            window.location = "/delete/" + $id
-            swal("Data Berhasil Dihapus !", {
-              icon: "success",
-            });
-          } else {
-            swal({
-              title: "Penghapusan Data Di Batalkan !?",
-              icon: "error",
+ <script>
+		$('.delete').click(function() {
+			var idberita = $(this).attr('data-id');
+			var judul = $(this).attr('data-judul');
 
-            });
-          }
-        });
-    });
-  </script>
+			const swalWithBootstrapButtons = Swal.mixin({
+				customClass: {
+					confirmButton: 'btn btn-success',
+					cancelButton: 'btn btn-danger'
+				},
+				buttonsStyling: false
+			})
+
+			swalWithBootstrapButtons.fire({
+				title: "Apakah Anda Yakin ?",
+				text: "Anda akan Menghapus Berita Berjudul : " + judul + " !!",
+				icon: 'warning',
+				showCancelButton: true,
+				confirmButtonText: 'Yes, delete it!',
+				cancelButtonText: 'No, cancel!',
+				reverseButtons: true
+			}).then((result) => {
+				if (result.isConfirmed) {
+					window.location = "/delete/" + idberita + "/",
+						swalWithBootstrapButtons.fire(
+							'Terhapus!',
+							'Data Berita Telah Berhasil Dihapus',
+							'success'
+						)
+				} else if (
+					/* Read more about handling dismissals below */
+					result.dismiss === Swal.DismissReason.cancel
+				) {
+					swalWithBootstrapButtons.fire(
+						'Penghapusan Data Dibatalkan',
+						'Data Berita Anda Aman  :)',
+						'error'
+					)
+				}
+			})
+		});
+	</script>
 
 
 </body>

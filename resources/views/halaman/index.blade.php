@@ -17,7 +17,7 @@
                             <a href="https://linkedin.com/" title="Twitter" target="_blank"><i class="fa-brands fa-twitter"></i></a>
                         </div>
                         <div class="header-cart-box position-relative d-inline-block">
-                            <a class="cart-btn position-relative" href="javascript:void(0);" title="" data-kt-menu-trigger="click" data-kt-menu-attach="parent" data-kt-menu-placement="bottom-end"><b>Login</b> <i class="flaticon-user"></i></a>
+                            <a class="cart-btn position-relative" href="/login" title="" data-kt-menu-trigger="click" data-kt-menu-attach="parent" data-kt-menu-placement="bottom-end"><b>Login</b> <i class="flaticon-user"></i></a>
                             <div class="minicart-dropdown">
                                 <ul class="mb-0 list-unstyled w-100">
                                     <li>
@@ -53,13 +53,13 @@
                             <li class="menu-item-has-children"><a href="javascript:void(0);" title="">Kategori</a>
                                 <ul class="children mb-0 list-unstyled">
                                     @foreach($kategori as $kate)
-                                    <li><a href="seo-services.html" title="">{{$kate->nama}}</a></li>
+                                    <li><a href="/kategori_berita/{{$kate->id}}" title="">{{$kate->nama}}</a></li>
                                     @endforeach
                                 </ul>
                             </li>
                             <li class="menu-item"><a href="#berita" title="">Daftar Berita</a>
                             </li>
-                            <li class="menu-item"><a href="javascript:void(0);" title="">Tentang</a>
+                            <li class="menu-item"><a href="#about" title="">Tentang</a>
                             </li>
                             <li><a href="#contact" title="">Kontak</a></li>
                         </ul>
@@ -90,14 +90,14 @@
                             <ul class="children mb-0 list-unstyled">
                                 @foreach($kategori as $kate2)
 
-                                <li><a href="seo-services.html" title="">{{$kate2->nama}}</a></li>
+                                <li><a href="/kategori_berita/{{$kate2->id}}" title="">{{$kate2->nama}}</a></li>
                                 @endforeach
                             </ul>
                         </li>
                         <li class="menu-item"><a href="#berita" title="">Daftar Berita</a>
 
                         </li>
-                        <li class="menu-item"><a href="javascript:void(0);" title="">Tentang</a>
+                        <li class="menu-item"><a href="#about" title="">Tentang</a>
                         </li>
                         <li><a href="#contact" title="">Kontak</a></li>
                     </ul>
@@ -114,7 +114,7 @@
                 </div><!-- Logo -->
                 <div class="header-btns d-inline-flex flex-wrap align-items-center">
                     <a class="res-menu-btn d-inline-block" href="javascript:void(0);" title=""><i class="fas fa-align-justify"></i></a>
-                    <a class="cart-btn position-relative" href="javascript:void(0);" title=""><i class="flaticon-user"></i></a>
+                    <a class="cart-btn position-relative" href="/login" title=""><i class="flaticon-user"></i></a>
                 </div>
             </div>
         </div><!-- Responsive Topbar -->
@@ -129,7 +129,7 @@
                 <li class="menu-item-has-children dua"><a href="javascript:void(0);" title="">Kategori</a>
                     <ul class="children mb-0 list-unstyled">
                         @foreach($kategori as $kate4)
-                        <li><a href="seo-services.html" title="">{{$kate4->nama}}</a></li>
+                        <li><a href="/kategori_berita/{{$kate4->id}}" title="">{{$kate4->nama}}</a></li>
                         @endforeach
 
                     </ul>
@@ -137,7 +137,7 @@
                 <li class="menu-item"><a href="#berita" title="">Daftar Berita</a>
 
                 </li>
-                <li class="menu-item"><a href="javascript:void(0);" title="">Tentang</a>
+                <li class="menu-item"><a href="#about" title="">Tentang</a>
 
                 </li>
 
@@ -156,7 +156,7 @@
                 <div class="best-seo-wrap position-relative w-100">
                     <div class="row align-items-center">
                         <div class="col-md-12 col-sm-12 col-lg-6 order-lg-1">
-                            <div class="mckp-img text-center  w-100" data-max_tilt="10" data-perspective="1000" data-scale="1" data-speed="700"><img class="img-fluid suii" src="landing/assets/images/kucing anjing.png" alt="Best SEO Mockup" height="480" width="516">
+                            <div class="mckp-img text-center  w-100" data-max_tilt="10" data-perspective="1000" data-scale="1" data-speed="700"><img class="img-fluid suii" src="landing/assets/images/kucing anjing.png" alt="Best SEO Mockup">
                                 <span class="shadow"></span>
                             </div>
                         </div>
@@ -164,9 +164,11 @@
                             <div class="text-box atas w-100">
                                 <div class="sec-title w-100 position-relative">
                                     <h2 class="mb-0"><span>Selamat Datang di</span> <br> Nama Website</h2>
-                                    <i class="btm-ln bg-color14"></i>
+                                    <i class="btm-ln bg-color26"></i>
                                 </div><!-- Sec Title -->
-                                <p class="mb-0">Jelajahi Seluruh Berita Dan informasi Terbaru Seputar....Disini</p>
+                                <b>
+                                    <p class="mb-0">Jelajahi Seluruh Berita Dan informasi Terbaru SMK PGRI Singosari Disini</p>
+                                </b>
                                 <a href="#satu"><button class="thm-btn d-inline-block rounded-pill mt-3">Mulai Menjelajah</button></a>
                             </div>
                         </div>
@@ -187,49 +189,58 @@
                         <div class="col-md-12 col-sm-12 col-lg-9">
                             <div class="post-box brd-rd15 w-100">
                                 <div class="post-img overflow-hidden position-relative w-100">
-                                    <a href="/detail_berita/{{$artikelbesar->id}}" title=""><img class="img-fluid w-100" src="{{asset('foto_artikel/'.$artikelbesar->foto)}}" alt="Post Image 8" height="576" width="1024"></a>
-                                    <span class="post-date brd-rd15 text-center position-absolute text-uppercase"><i>{{Carbon\Carbon::parse($artikelbesar->created_at)->isoformat('D / MMMM /Y')}}</i></span>
+                                    <a href="/detail_berita/{{$artikelbesar->id}}" title=""><img class="img-fluid w-100" src="{{asset('foto_artikel/'.$artikelbesar->foto)}}" alt="Post Image 8"></a>
+                                    <span class="post-date brd-rd15 text-center position-absolute text-uppercase"><i>{{Carbon\Carbon::parse($artikelbesar->created_at)->isoformat('D')}}</i>{{Carbon\Carbon::parse($artikelbesar->created_at)->isoformat('MMM')}}</span>
                                 </div>
                                 <div class="post-info w-100">
-                                    <span class="post-cate2 d-block text-uppercase"><a href="javascript:void(0);" title="">{{$artikelbesar->kategori->nama}}</a></span>
-                                    <h3 class="mb-0">{{$artikelbesar->judul}}</h3>
-                                    <p class="mb-0">{{$artikelbesar->detail_singkat}}</p>
-                                    <div class="post-btm-bar d-flex flex-wrap justify-content-between align-items-center w-100">
-                                        <a class="simple-link d-inline-block text-uppercase" href="blog-detail.html" title="">Read More<i class="flaticon-right-arrow text-color27"></i></a>
-                                        <span class="post-athr d-block position-relative">By <a href="javascript:void(0);" title="">Admin</a></span>
-                                    </div>
+                                    @if($artikelbesar->kategori_id==1)
+                                    <span class="post-cate2 d-block text-uppercase">
+                                        @elseif($artikelbesar->kategori_id==2)
+                                        <span class="post-cate d-block text-uppercase">
+                                            @endif
+                                            <a href="javascript:void(0);" title="">{{$artikelbesar->kategori->nama}}</a></span>
+                                        <h3 class="mb-0">{{$artikelbesar->judul}}</h3>
+                                        <p class="mb-0">{{$artikelbesar->detail_singkat}}</p>
+                                        <div class="post-btm-bar d-flex flex-wrap justify-content-between align-items-center w-100">
+                                            <a class="simple-link d-inline-block text-uppercase" href="/detail_berita/{{$artikelbesar->id}}" title="">Read More<i class="flaticon-right-arrow text-color27"></i></a>
+
+                                        </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-6 col-lg-6 col-lg-3">
-
-
                                     <div class="post-box brd-rd15 w-100">
                                         <div class="post-img overflow-hidden position-relative w-100">
-                                            <a href="/detail_berita/{{$artikelkecil1->id}}" title=""><img class="img-fluid w-100" src="{{asset('foto_artikel/'.$artikelkecil1->foto)}}" alt="Post Image 1" height="576" width="1024"></a>
-                                            <span class="post-date brd-rd15 text-center position-absolute text-uppercase"><i>{{Carbon\Carbon::parse($artikelkecil1->created_at)->isoformat('D / MMMM /Y')}}</i></span>
+                                            <a href="/detail_berita/{{$artikelkecil1->id}}" title=""><img class="img-fluid w-100" src="{{asset('foto_artikel/'.$artikelkecil1->foto)}}" alt="Post Image 1" height="250"></a>
+                                            <span class="post-date brd-rd15 text-center position-absolute text-uppercase"><i>{{Carbon\Carbon::parse($artikelkecil1->created_at)->isoformat('D')}}</i>{{Carbon\Carbon::parse($artikelkecil1->created_at)->isoformat('MMM')}}</span>
                                         </div>
                                         <div class="post-info w-100">
-                                            <span class="post-cate d-block text-uppercase"><a href="javascript:void(0);" title="">{{$artikelkecil1->kategori->nama}}</a></span>
-                                            <h3 class="mb-0"><a href="/detail_berita/{{$artikelkecil1->id}}" title="">{{$artikelkecil1->judul}}</a></h3>
-                                            <p class="mb-0">{{$artikelkecil1->detail_singkat}}</p>
-                                            <a class="simple-link d-inline-block text-uppercase" href="/detail_berita/{{$artikelkecil1->id}}" title="">Read More<i class="flaticon-right-arrow text-color3"></i></a>
+                                            @if($artikelkecil1->kategori_id==1)
+                                            <span class="post-cate2 d-block text-uppercase">
+                                                @elseif($artikellecil1->kategori_id==2)
+                                                <span class="post-cate d-block text-uppercase">
+                                                    @endif<a href="javascript:void(0);" title="">{{$artikelkecil1->kategori->nama}}</a></span>
+                                                <h3 class="mb-0"><a href="/detail_berita/{{$artikelkecil1->id}}" title="">{{$artikelkecil1->judul}}</a></h3>
+                                                <p class="mb-0">{{$artikelkecil1->detail_singkat}}</p>
+                                                <a class="simple-link d-inline-block text-uppercase" href="/detail_berita/{{$artikelkecil1->id}}" title="">Read More<i class="flaticon-right-arrow text-color3"></i></a>
                                         </div>
                                     </div>
-
-
                                 </div>
                                 <div class="col-md-6 col-lg-6 col-lg-3">
                                     <div class="post-box brd-rd15 w-100">
                                         <div class="post-img overflow-hidden position-relative w-100">
-                                            <a href="/detail_berita/{{$artikelkecil2->id}}" title=""><img class="img-fluid w-100" src="{{asset('foto_artikel/'.$artikelkecil2->foto)}}" alt="Post Image 1" height="576" width="1024"></a>
-                                            <span class="post-date brd-rd15 text-center position-absolute text-uppercase"><i>{{Carbon\Carbon::parse($artikelkecil2->created_at)->isoformat('D / MMMM /Y')}}</i>May</span>
+                                            <a href="/detail_berita/{{$artikelkecil2->id}}" title=""><img class="img-fluid w-100" src="{{asset('foto_artikel/'.$artikelkecil2->foto)}}" alt="Post Image 1" height="250"></a>
+                                            <span class="post-date brd-rd15 text-center position-absolute text-uppercase"><i>{{Carbon\Carbon::parse($artikelkecil2->created_at)->isoformat('D')}}</i>{{Carbon\Carbon::parse($artikelkecil2->created_at)->isoformat('MMM')}}</span>
                                         </div>
                                         <div class="post-info w-100">
-                                            <span class="post-cate d-block text-uppercase"><a href="javascript:void(0);" title="">{{$artikelkecil2->kategori->nama}}</a></span>
-                                            <h3 class="mb-0"><a href="/detail_berita/{{$artikelkecil2->id}}" title="">{{$artikelkecil2->judul}}</a></h3>
-                                            <p class="mb-0">{{$artikelkecil2->detail_singkat}}</p>
-                                            <a class="simple-link d-inline-block text-uppercase" href="/detail_berita/{{$artikelkecil2->id}}" title="">Read More<i class="flaticon-right-arrow text-color3"></i></a>
+                                            @if($artikelkecil2->kategori_id==1)
+                                            <span class="post-cate2 d-block text-uppercase">
+                                                @elseif($artikelkecil2->kategori_id==2)
+                                                <span class="post-cate d-block text-uppercase">
+                                                    @endif<a href="javascript:void(0);" title="">{{$artikelkecil2->kategori->nama}}</a></span>
+                                                <h3 class="mb-0"><a href="/detail_berita/{{$artikelkecil2->id}}" title="">{{$artikelkecil2->judul}}</a></h3>
+                                                <p class="mb-0">{{$artikelkecil2->detail_singkat}}</p>
+                                                <a class="simple-link d-inline-block text-uppercase" href="/detail_berita/{{$artikelkecil2->id}}" title="">Read More<i class="flaticon-right-arrow text-color3"></i></a>
                                         </div>
                                     </div>
                                 </div>
@@ -246,11 +257,11 @@
                                             </form>
                                         </div>
                                         <div class="widget widget2 v2 w-100">
-                                            <h3>Recent Posts</h3>
+                                            <h3>Terbaru</h3>
                                             <div class="recentposts-wrap w-100">
-                                                @foreach($artikel as $ar1)
+                                                @foreach($artikel2 as $ar1)
                                                 <div class="recentpost-box d-flex flex-wrap align-items-center w-100">
-                                                    <div class="recentpost-img"><a href="/detail_berita/{{$ar1->id}}" title=""><img class="img-fluid w-100" src="{{asset('foto_artikel/'.$ar1->foto)}}" alt="Recent Post Image 1"></a></div>
+                                                    <div class="recentpost-img"><a href="/detail_berita/{{$ar1->id}}" title=""><img class="img-fluid w-100" src="{{asset('foto_artikel/'.$ar1->foto)}}" alt="Recent Post Image 1" height="50"></a></div>
                                                     <div class="recentpost-info 2">
                                                         <h5 class="mb-0"><a href="/detail_berita/{{$ar1->id}}" title="">{{$ar1->judul}}</a></h5>
                                                         <span class="d-block">{{Carbon\Carbon::parse($ar1->created_at)->isoformat('D / MMMM /Y')}}</span>
@@ -264,41 +275,19 @@
                                             <h3>Kategori</h3>
                                             <ul class="mb-0 list-unstyled w-100">
                                                 @foreach($kategori as $kate3)
-                                                <li><a href="javascript:void(0);" title="">{{$kate3->nama}}</a></li>
+                                                <li><a href="/kategori_berita/{{$kate3->id}}" title="">{{$kate3->nama}}</a></li>
                                                 @endforeach
                                             </ul>
                                         </div>
                                         <div class="widget widget3 v2 w-100">
-                                            <h3>Instagram</h3>
+                                            <h3>Media Berita</h3>
                                             <div class="insta-gal-wrap w-100">
                                                 <div class="row mrg10">
+                                                    @foreach($artikel as $ar6)
                                                     <div class="col-md-4 col-sm-4 col-lg-4">
-                                                        <div class="insta-gal-item overflow-hidden position-relative w-100"><a class="d-block" href="landing/assets/images/resources/insta-img1.jpg" data-fancybox="gal" title=""><img class="img-fluid w-100" src="landing/assets/images/resources/insta-img1.jpg" alt="Instagram Image 1"></a></div>
+                                                        <div class="insta-gal-item overflow-hidden position-relative w-100"><a class="d-block" href="{{asset('foto_artikel/'.$ar6->foto)}}" data-fancybox="gal" title=""><img class="img-fluid w-100" src="{{asset('foto_artikel/'.$ar6->foto)}}" alt="Instagram Image {{$ar6->id}}" height="50"></a></div>
                                                     </div>
-                                                    <div class="col-md-4 col-sm-4 col-lg-4">
-                                                        <div class="insta-gal-item overflow-hidden position-relative w-100"><a class="d-block" href="landing/assets/images/resources/insta-img2.jpg" data-fancybox="gal" title=""><img class="img-fluid w-100" src="landing/assets/images/resources/insta-img2.jpg" alt="Instagram Image 2"></a></div>
-                                                    </div>
-                                                    <div class="col-md-4 col-sm-4 col-lg-4">
-                                                        <div class="insta-gal-item overflow-hidden position-relative w-100"><a class="d-block" href="landing/assets/images/resources/insta-img3.jpg" data-fancybox="gal" title=""><img class="img-fluid w-100" src="landing/assets/images/resources/insta-img3.jpg" alt="Instagram Image 3"></a></div>
-                                                    </div>
-                                                    <div class="col-md-4 col-sm-4 col-lg-4">
-                                                        <div class="insta-gal-item overflow-hidden position-relative w-100"><a class="d-block" href="landing/assets/images/resources/insta-img4.jpg" data-fancybox="gal" title=""><img class="img-fluid w-100" src="landing/assets/images/resources/insta-img4.jpg" alt="Instagram Image 4"></a></div>
-                                                    </div>
-                                                    <div class="col-md-4 col-sm-4 col-lg-4">
-                                                        <div class="insta-gal-item overflow-hidden position-relative w-100"><a class="d-block" href="landing/assets/images/resources/insta-img5.jpg" data-fancybox="gal" title=""><img class="img-fluid w-100" src="landing/assets/images/resources/insta-img5.jpg" alt="Instagram Image 5"></a></div>
-                                                    </div>
-                                                    <div class="col-md-4 col-sm-4 col-lg-4">
-                                                        <div class="insta-gal-item overflow-hidden position-relative w-100"><a class="d-block" href="landing/assets/images/resources/insta-img6.jpg" data-fancybox="gal" title=""><img class="img-fluid w-100" src="landing/assets/images/resources/insta-img6.jpg" alt="Instagram Image 6"></a></div>
-                                                    </div>
-                                                    <div class="col-md-4 col-sm-4 col-lg-4">
-                                                        <div class="insta-gal-item overflow-hidden position-relative w-100"><a class="d-block" href="landing/assets/images/resources/insta-img7.jpg" data-fancybox="gal" title=""><img class="img-fluid w-100" src="landing/assets/images/resources/insta-img7.jpg" alt="Instagram Image 7"></a></div>
-                                                    </div>
-                                                    <div class="col-md-4 col-sm-4 col-lg-4">
-                                                        <div class="insta-gal-item overflow-hidden position-relative w-100"><a class="d-block" href="landing/assets/images/resources/insta-img8.jpg" data-fancybox="gal" title=""><img class="img-fluid w-100" src="landing/assets/images/resources/insta-img8.jpg" alt="Instagram Image 8"></a></div>
-                                                    </div>
-                                                    <div class="col-md-4 col-sm-4 col-lg-4">
-                                                        <div class="insta-gal-item overflow-hidden position-relative w-100"><a class="d-block" href="landing/assets/images/resources/insta-img9.jpg" data-fancybox="gal" title=""><img class="img-fluid w-100" src="landing/assets/images/resources/insta-img9.jpg" alt="Instagram Image 9"></a></div>
-                                                    </div>
+                                                    @endforeach
                                                 </div>
                                             </div>
                                         </div>
@@ -320,28 +309,49 @@
                 </div>
             </div>
             <div class="sec-title text-center w-100 position-relative mb-4">
-                <h2 class="mb-0"><span>Postingan </span> Terbaru</h2>
+                <h2 class="mb-0"><span>Semua </span> Berita</h2>
                 <i class="btm-ln bg-color28"></i>
             </div>
             <div class="blog-wrap blog-spac px-3 position-relative w-100">
                 <div class="row mrg30">
                     @foreach($artikel as $ar5)
-                    <div class="col-md-6 col-sm-12 col-lg-3">
+                    <div class="col-md-6 col-sm-12 col-lg-3 mb-3">
                         <div class="post-box brd-rd15 w-100">
                             <div class="post-img overflow-hidden position-relative w-100">
-                                <a href="/detail_berita/{{$ar5->id}}" title=""><img class="img-fluid w-100" src="{{asset('foto_artikel/'.$ar5->foto)}}" alt="Post Image 1" height="576" width="1024"></a>
-                                <span class="post-date brd-rd15 text-center position-absolute text-uppercase"><i>{{Carbon\Carbon::parse($ar5->created_at)->isoformat('D / MMMM /Y')}}</i></span>
+                                <a href="/detail_berita/{{$ar5->id}}" title=""><img class="img-fluid w-100" src="{{asset('foto_artikel/'.$ar5->foto)}}" alt="Post Image 1" height="200"></a>
+                                <span class="post-date brd-rd15 text-center position-absolute text-uppercase"><i></i></span>
+                                <span class="post-date brd-rd15 text-center position-absolute text-uppercase"><i>{{Carbon\Carbon::parse($ar5->created_at)->isoformat('D')}}</i>{{Carbon\Carbon::parse($ar5->created_at)->isoformat('MMM')}}</span>
                             </div>
                             <div class="post-info w-100">
-                                <span class="post-cate d-block text-uppercase"><a href="javascript:void(0);" title="">{{$ar5->kategori->nama}}</a></span>
-                                <h3 class="mb-0"><a href="/detail_berita/{{$ar5->id}}" title="">{{$ar5->judul}}</a></h3>
-                                <p class="mb-0">{{$ar5->detail_singkat}}</p>
-                                <a class="simple-link d-inline-block text-uppercase" href="/detail_berita/{{$ar5->id}}" title="">Read More<i class="flaticon-right-arrow text-color3"></i></a>
+                                @if($ar5->kategori_id==1)
+                                <span class="post-cate2 d-block text-uppercase">
+                                    @elseif($ar5->kategori_id==2)
+                                    <span class="post-cate d-block text-uppercase">
+                                        @endif<a href="javascript:void(0);" title="">{{$ar5->kategori->nama}}</a></span>
+                                    <h3 class="mb-0"><a href="/detail_berita/{{$ar5->id}}" title="">{{$ar5->judul}}</a></h3>
+                                    <p class="mb-0">{{$ar5->detail_singkat}}</p>
+                                    <a class="simple-link d-inline-block text-uppercase" href="/detail_berita/{{$ar5->id}}" title="">Read More<i class="flaticon-right-arrow text-color3"></i></a>
                             </div>
                         </div>
                     </div>
                     @endforeach
 
+                </div>
+                <div class="scl-anlys-wrap position-relative w-100">
+                    <div class="row align-items-center" id="about">
+                        <div class="col-md-12 col-sm-12 col-lg-6 order-lg-1">
+                            <div class="mckp-img text-center tilt w-100" data-max_tilt="10" data-perspective="1000" data-scale="1" data-speed="700"><img class="img-fluid" src="landing/assets/images/resources/tentang.png" alt="Social Media Analysis Mockup"></div>
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-lg-6">
+                            <div class="text-box w-100">
+                                <div class="sec-title w-100 position-relative">
+                                    <h2 class="mb-0"> <span>Website </span>RadarPgriKu</h2>
+                                    <i class="btm-ln bg-color28"></i>
+                                </div><!-- Sec Title -->
+                                <p class="mb-0">Adalah Sebuah Website Yang Dibuat dengan maksud dan Tujuan agar Kalian Mendapatkan Informasi atau Berita Terupdate Seputar Kegiatan,Acara yang dilakukan oleh Siswa Siswi SMK PGRI Singosari.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div><!-- Blog Wrap -->
         </div>
@@ -350,29 +360,30 @@
         <div class="w-100 pt-40 bg-color11 position-relative">
             <div class="container" id="contact">
                 <div class="contact-wrap position-relative w-100">
-                    <div class="row mrg30">
+                <div class="row mrg30">
                         <div class="col-md-5 col-sm-12 col-lg-4">
                             <div class="get-in-touch-wrap bg-color11 brd-rd20 mt-40 position-relative overflow-hidden w-100">
-                                <h2 class="mb-0">Get in Touch</h2>
-                                <p class="mb-0">SEOES is a USA search engine marketing agency, that deliver digital</p>
+                                <h2 class="mb-0">RadarPgriKu</h2>
+                                <p class="mb-0">Jelajahi Informasimu Disini...</p>
                                 <div class="contact-info-box mt-40 d-flex flex-wrap w-100">
                                     <i class="flaticon-facebook-placeholder-for-locate-places-on-maps"></i>
                                     <div class="contact-info-inner">
-                                        <h5 class="mb-0">Visit Us:</h5>
-                                        <p class="mb-0">27 Division St, New York, NY 10002, USA</p>
+                                        <h5 class="mb-0">Alamat :</h5>
+                                        <p class="mb-0">SMK PGRI Singosari
+                                            Jl. Morotanjek No.206, Pangetan, Pagentan, Kec. Singosari, Kabupaten Malang, Jawa Timur</p>
                                     </div>
                                 </div>
                                 <div class="contact-info-box mt-20 d-flex flex-wrap w-100">
                                     <i class="flaticon-message-closed-envelope"></i>
                                     <div class="contact-info-inner">
-                                        <h5 class="mb-0">Mail Us:</h5>
+                                        <h5 class="mb-0">Email :</h5>
                                         <a href="mailto:info@example.com" title="">info@example.com</a>
                                     </div>
                                 </div>
                                 <div class="contact-info-box mt-20 d-flex flex-wrap w-100">
                                     <i class="icon-037-smartphone"></i>
                                     <div class="contact-info-inner">
-                                        <h5 class="mb-0">Phone Us:</h5>
+                                        <h5 class="mb-0">No Telfon :</h5>
                                         <a href="tel:(305) 222-3333" title="">+(305) 222-3333</a>
                                     </div>
                                 </div>
@@ -407,7 +418,7 @@
                                                 <path d="M54.8,1.3l35.5,20.3c3,1.7,4.8,4.8,4.8,8.2v40.6c0,3.4-1.8,6.5-4.8,8.2L54.8,98.7c-3,1.7-6.6,1.7-9.5,0 L9.8,78.5c-3-1.7-4.8-4.8-4.8-8.2V29.7c0-3.4,1.8-6.5,4.8-8.2L45.2,1.3C48.2-0.4,51.8-0.4,54.8,1.3z"></path>
                                             </g>
                                         </svg>
-                                        <i class="flaticon-linkedin"></i>
+                                        <i class="fa-brands fa-instagram fa-lg"></i>
                                     </a>
                                 </div>
                             </div>
@@ -415,8 +426,8 @@
                         <div class="col-md-7 col-sm-12 col-lg-8">
                             <div class="contact-form-wrap mt-40 w-100">
                                 <div class="sec-title tiga w-100 position-relative">
-                                    <h2 class="mb-0 ">Send a Message</h2>
-                                    <i class="btm-ln bg-color3"></i>
+                                    <h2 class="mb-0 ">Kirim Sebuah Pesan</h2>
+                                    <i class="btm-ln bg-color27"></i>
                                 </div><!-- Sec Title -->
                                 <form action="#" method="post" id="email-form">
                                     <div class="form-group w-100">
@@ -448,7 +459,7 @@
                                                 <textarea class="contact_message" name="contact_message" placeholder="Message" required></textarea>
                                             </div>
                                             <div class="field-btn w-100">
-                                                <button class="thm-btn d-inline-block rounded-pill" id="submit" type="submit">Send A Message</button>
+                                                <button class="thm-btnbiru d-inline-block rounded-pill" id="submit" type="submit">Kirimkan</button>
                                             </div>
                                         </div>
                                     </div>

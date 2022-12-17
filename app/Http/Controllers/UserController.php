@@ -52,7 +52,7 @@ class UserController extends Controller
             $data->foto = '' . date('YmdHis') . '.' . $request->file('foto')->getClientOriginalExtension();
             $data->save();
         }
-        return redirect('artikel');
+        return redirect('artikel')->with('success','Data Berhasil Dimasukkan');;
     }
     public function edit($id)
     {

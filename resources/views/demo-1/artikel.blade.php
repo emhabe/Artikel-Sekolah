@@ -56,188 +56,29 @@
       <div class="menu-inner-shadow"></div>
 
       <ul class="menu-inner py-1">
-
-
-
-
-
-
-
-
         <li class="menu-item ">
           <a href="/dashboard" class="menu-link">
             <i class="menu-icon tf-icons bx bx-home-circle"></i>
             <div>Beranda</div>
           </a>
-
-
-          <ul class="menu-sub">
-
-
-
-            <li class="menu-item ">
-              <a href="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo-1" class="menu-link">
-                <div>Analytics</div>
-              </a>
-
-
-            </li>
-
-
-
-            <li class="menu-item ">
-              <a href="../dashboard/crm.html" class="menu-link">
-                <div>CRM</div>
-              </a>
-
-
-            </li>
-
-
-
-            <li class="menu-item ">
-              <a href="../dashboard/ecommerce.html" class="menu-link">
-                <div>eCommerce</div>
-              </a>
-
-
-            </li>
-          </ul>
         </li>
-
-
-
-
-
-
-
-
         <li class="menu-item active item">
           <a href="/artikel" class="menu-link">
             <i class="menu-icon tf-icons bx bx-collection"></i>
             <div>Artikel</div>
           </a>
-
-
-          <ul class="menu-sub">
-
-
-
-            <li class="menu-item ">
-              <a href="layouts/collapsed-menu.html" class="menu-link">
-                <div>Collapsed menu</div>
-              </a>
-
-
-            </li>
-
-
-
-            <li class="menu-item ">
-              <a href="layouts/content-navbar.html" class="menu-link">
-                <div>Content navbar</div>
-              </a>
-
-
-            </li>
-
-
-
-            <li class="menu-item ">
-              <a href="layouts/content-nav-sidebar.html" class="menu-link">
-                <div>Content nav + Sidebar</div>
-              </a>
-
-
-            </li>
-
-
-
-            <li class="menu-item ">
-              <a href="layouts/horizontal.html" class="menu-link" target="_blank">
-                <div>Horizontal</div>
-              </a>
-
-
-            </li>
-
-
-
-            <li class="menu-item ">
-              <a href="layouts/without-menu.html" class="menu-link">
-                <div>Without menu</div>
-              </a>
-
-
-            </li>
-
-
-
-            <li class="menu-item ">
-              <a href="layouts/without-navbar.html" class="menu-link">
-                <div>Without navbar</div>
-              </a>
-
-
-            </li>
-
-
-
-            <li class="menu-item ">
-              <a href="layouts/fluid.html" class="menu-link">
-                <div>Fluid</div>
-              </a>
-
-
-            </li>
-
-
-
-            <li class="menu-item ">
-              <a href="layouts/container.html" class="menu-link">
-                <div>Container</div>
-              </a>
-
-
-            </li>
-
-
-
-            <li class="menu-item ">
-              <a href="layouts/blank.html" class="menu-link" target="_blank">
-                <div>Blank</div>
-              </a>
-
-
-            </li>
-          </ul>
         </li>
-
-
-
-
-
-
-
-
         <li class="menu-item">
           <a href="#" class="menu-link menu-toggle">
             <i class="menu-icon tf-icons bx bx-food-menu"></i>
             <div>Kategori</div>
           </a>
-
-
           <ul class="menu-sub">
-
-
-
             @foreach($kategori as $kt)
             <li class="menu-item">
               <a href="/kategori/{{$kt->id}}" class="menu-link">
                 <div>{{$kt->nama}}</div>
               </a>
-
-
             </li>
             @endforeach
           </ul>
@@ -247,13 +88,7 @@
             <i class="menu-icon tf-icons bx bx-user"></i>
             <div>Users</div>
           </a>
-
-
-
-
-
       </ul>
-
     </aside>
 
 
@@ -275,6 +110,14 @@
         <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
 
           <!-- Search -->
+          <div class="navbar-nav align-items-center">
+            <div class="nav-item navbar-search-wrapper mb-0">
+              <a class="nav-item nav-link search-toggler px-0" href="javascript:void(0);">
+                <i class="bx bx-search bx-sm"></i>
+                <span class="d-none d-md-inline-block text-muted">Search (Ctrl+/)</span>
+              </a>
+            </div>
+          </div>
           <!-- /Search -->
 
           <ul class="navbar-nav flex-row align-items-center ms-auto">
@@ -287,7 +130,7 @@
 
             <!-- Quick links  -->
             <!-- Quick links -->
-            <a href="/buat_artikel"><button type="button" class="btn btn-primary">Buat Artikel</button></a>
+
             <!-- Notification -->
             <!--/ Notification -->
 
@@ -328,6 +171,7 @@
             </li>
             <!--/ User -->
           </ul>
+
         </div>
 
         <!-- Search Small Screens -->
@@ -337,6 +181,20 @@
         </div>
 
       </nav>
+      @if(Session::has('success'))
+      <div class="bs-toast toast toast-ex animate__animated my-2 fade bg-primary animate__tada show" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+          <i class="bx bx-bell me-2"></i>
+          <div class="me-auto fw-semibold">Bootstrap</div>
+          <small>11 mins ago</small>
+          <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+          {{Session::get('success')}}
+        </div>
+      </div>
+      @endif
+
       <!-- / Navbar -->
       <!-- END: Navbar-->
 
@@ -347,67 +205,124 @@
         <!-- Content -->
         <div class="container-xxl flex-grow-1 container-p-y">
 
-          <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Artikel /</span> Daftar Artikel</h4>
-
-          <!-- Examples -->
-          <div class="container-fluid py-4">
-            <div class="row mb-5">
-              @foreach($data as $d)
-              <div class="col-lg-4 mb-3">
-                <div class="card h-100 p-3">
-                  <img class="overflow-hidden position-relative border-radius-lg bg-cover h-100" src="{{asset('foto_artikel/'.$d->foto)}}" alt="" />
-                  <div class="card-body">
-                    <h5 class="card-title">{{$d->judul}}</h5>
-                    <p class="card-text">
-                      {{$d->detail_singkat}}
-                    </p>
-                    <a href="/edit/{{$d->id}}" class="btn btn-outline-success">Edit</a>
-                    <a href="/delete/{{$d->id}}" class="btn btn-outline-danger delete" id="confirm-text" data-id="{{$d->id}}" data-nama="{{$d->judul}}">Delete</a>
+          <h4 class="fw-bold py-3 mb-2">
+            <span class="text-muted fw-light">Artikel /</span> Daftar Artikel
+          </h4>
+          <a href="/buat_artikel"><button type="button" class="btn btn-primary mb-3">Buat Artikel</button></a>
+          <!-- Basic Bootstrap Table -->
+          <div class="row mb-4">
+            @foreach($data as $d)
+            <div class="col-lg-4 mb-3">
+              <div class="card h-100">
+                <img class="overflow-hidden position-relative border-radius-lg bg-cover card-img-top" height="200" src="{{asset('foto_artikel/'.$d->foto)}}" alt="" />
+                <div class="card-body">
+                  <h5 class="card-title">{{$d->judul}}</h5>
+                  <div class="card-text mb-4">
+                    {{$d->detail_singkat}}
                   </div>
+                  <div class="row ms-2">
+                    <a href="/edit/{{$d->id}}" class="btn btn-info w-40">Edit</a>
+                    <button type="button" class="btn btn-danger delete w-40 ms-4" data-id="{{$d->id}}" data-judul="{{$d->judul}}">
+                      Delete
+                    </button>
+                  </div>
+                  <button class="btn btn-primary d-grid w-100 mt-3" data-bs-toggle="offcanvas" data-bs-target="#sendInvoiceOffcanvas">
+                    <span class="d-flex align-items-center justify-content-center text-nowrap"><i class="bx bx-paper-plane bx-xs me-3"></i>Publish</span>
+                  </button>
+
                 </div>
               </div>
-              @endforeach
-              <!--/ Card layout -->
+            </div>
+            @endforeach
+            <!--/ Card layout -->
+          </div>
+          @if(count($data))
+          @else
+          <img src="../assets/img/backgrounds/kosong.png" width="350" height="300" class="kosong">
+          @endif
+          <!--/ Basic Bootstrap Table -->
 
+          <hr class="my-5">
+        </div>
+        <!-- / Content -->
+
+        <!-- Footer -->
+        <!-- Footer-->
+        <footer class="content-footer footer bg-footer-theme">
+          <div class="container-xxl d-flex flex-wrap justify-content-between py-2 flex-md-row flex-column">
+            <div class="mb-2 mb-md-0">
+              © <script>
+                document.write(new Date().getFullYear())
+              </script>2022
+              , made with ❤️ by <a href="https://themeselection.com/" target="_blank" class="footer-link fw-bolder">ThemeSelection</a>
+            </div>
+            <div>
+              <a href="https://themeselection.com/license/" class="footer-link me-4" target="_blank">License</a>
+              <a href="https://themeselection.com/" target="_blank" class="footer-link me-4">More Themes</a>
+              <a href="https://themeselection.com/demo/sneat-bootstrap-html-admin-template/documentation/laravel-introduction.html" target="_blank" class="footer-link me-4">Documentation</a>
+              <a href="https://themeselection.com/support/" target="_blank" class="footer-link d-none d-sm-inline-block">Support</a>
             </div>
           </div>
-
-          <!-- / Content -->
-          <!-- Footer -->
-          <!-- Footer-->
-          <footer class="content-footer footer bg-footer-theme">
-            <div class="container-xxl d-flex flex-wrap justify-content-between py-2 flex-md-row flex-column">
-              <div class="mb-2 mb-md-0">
-                © <script>
-                  document.write(new Date().getFullYear())
-                </script>
-                , made with ❤️ by <a href="https://themeselection.com/" target="_blank" class="footer-link fw-bolder">ThemeSelection</a>
-              </div>
-              <div>
-                <a href="https://themeselection.com/license/" class="footer-link me-4" target="_blank">License</a>
-                <a href="https://themeselection.com/" target="_blank" class="footer-link me-4">More Themes</a>
-                <a href="https://themeselection.com/demo/sneat-bootstrap-html-admin-template/documentation/laravel-introduction.html" target="_blank" class="footer-link me-4">Documentation</a>
-                <a href="https://themeselection.com/support/" target="_blank" class="footer-link d-none d-sm-inline-block">Support</a>
-              </div>
-            </div>
-          </footer>
-          <!--/ Footer-->
-          <!-- / Footer -->
-          <div class="content-backdrop fade"></div>
-        </div>
-        <!--/ Content wrapper -->
+        </footer>
+        <!--/ Footer-->
+        <!-- / Footer -->
+        <div class="content-backdrop fade"></div>
       </div>
-      <!-- / Layout page -->
+      <!--/ Content wrapper -->
     </div>
-
-    <!-- Overlay -->
-    <div class="layout-overlay layout-menu-toggle"></div>
-    <!-- Drag Target Area To SlideIn Menu On Small Screens -->
-    <div class="drag-target"></div>
+    <!-- / Layout page -->
   </div>
-  <!-- / Layout wrapper -->
-  <!--/ Layout Content -->
+
+  <!-- Overlay -->
+  <div class="layout-overlay layout-menu-toggle"></div>
+  <!-- Drag Target Area To SlideIn Menu On Small Screens -->
+  <div class="drag-target"></div>
+</div>
+<script>
+  $('.delete').click(function() {
+    var idsiswa = $(this).attr('data-id');
+    var nama = $(this).attr('data-nama');
+
+    const swalWithBootstrapButtons = Swal.mixin({
+      customClass: {
+        confirmButton: 'btn btn-success',
+        cancelButton: 'btn btn-danger'
+      },
+      buttonsStyling: false
+    })
+
+    swalWithBootstrapButtons.fire({
+      title: "Apakah Anda Yakin ?",
+      text: "Anda akan Menghapus Siswa Dengan Nama : " + nama + " !!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonText: 'Yes, delete it!',
+      cancelButtonText: 'No, cancel!',
+      reverseButtons: true
+    }).then((result) => {
+      if (result.isConfirmed) {
+        window.location = "/delete_siswa/" + idsiswa + "/",
+          swalWithBootstrapButtons.fire(
+            'Deleted!',
+            'Your Data has been deleted.',
+            'success'
+          )
+      } else if (
+        /* Read more about handling dismissals below */
+        result.dismiss === Swal.DismissReason.cancel
+      ) {
+        swalWithBootstrapButtons.fire(
+          'Cancelled',
+          'Your Data file is safe :)',
+          'error'
+        )
+      }
+    })
+  });
+</script>
+<!-- / Layout wrapper -->
+<!--/ Layout Content -->
 
 
 
-  @endsection
+@endsection
