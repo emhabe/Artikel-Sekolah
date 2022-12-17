@@ -24,12 +24,14 @@ class UserController extends Controller
     }
     public function kategori($id)
     {
+        $kategori = Kategori::all();
         $data = Artikel::where('kategori_id', '=', $id)->get();
-        return view('demo-1.kategori', compact('data'));
+        return view('demo-1.kategori', compact('data','kategori'));
     }
     public function user()
     {
-        return view('demo-1.user');
+        $kategori = Kategori::all();
+        return view('demo-1.user',compact('kategori'));
     }
     public function buat_artikel()
     {
@@ -55,7 +57,8 @@ class UserController extends Controller
     public function edit($id)
     {
         $data = Artikel::FindOrFail($id);
-        return view('demo-1.edit', compact('data'));
+        $kategori = Kategori::all();
+        return view('demo-1.edit', compact('data','kategori'));
     }
     public function update($id, Request $request)
     {
@@ -80,7 +83,8 @@ class UserController extends Controller
     }
     public function lihat_artikel($id)
     {
+        $kategori = Kategori::all();
         $data = Artikel::findOrFail($id);
-        return view('demo-1.lihat_artikel', compact('data'));
+        return view('demo-1.lihat_artikel', compact('data','kategori'));
     }
 }

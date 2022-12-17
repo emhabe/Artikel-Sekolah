@@ -230,14 +230,15 @@
           <ul class="menu-sub">
 
 
-
+            @foreach($kategori as $kt)
             <li class="menu-item">
-              <a href="/kategori" class="menu-link">
-                <div>Event</div>
+              <a href="/kategori/{{$kt->id}}" class="menu-link">
+                <div>{{$kt->nama}}</div>
               </a>
 
 
             </li>
+            @endforeach
           </ul>
         </li>
         <li class="menu-item ">
