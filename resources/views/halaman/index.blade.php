@@ -100,6 +100,7 @@
                         <li class="menu-item"><a href="#about" title="">Tentang</a>
                         </li>
                         <li><a href="#contact" title="">Kontak</a></li>
+                        
                     </ul>
                 </nav>
             </div>
@@ -142,6 +143,7 @@
                 </li>
 
                 <li><a href="#contact" title="">Kontak</a></li>
+                <li><a href="#contact" title=""><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a></li>
             </ul>
         </div><!-- Responsive Menu -->
     </div><!-- Responsive Header -->
@@ -156,7 +158,7 @@
                 <div class="best-seo-wrap position-relative w-100">
                     <div class="row align-items-center">
                         <div class="col-md-12 col-sm-12 col-lg-6 order-lg-1">
-                            <div class="mckp-img text-center  w-100" data-max_tilt="10" data-perspective="1000" data-scale="1" data-speed="700"><img class="img-fluid suii" src="landing/assets/images/kucing anjing.png" alt="Best SEO Mockup">
+                            <div class="mckp-img text-center  w-100" data-max_tilt="10" data-perspective="1000" data-scale="1" data-speed="700"><img class="img-fluid suii" src="landing/assets/images/landing.png" alt="Best SEO Mockup" width="650">
                                 <span class="shadow"></span>
                             </div>
                         </div>
@@ -217,7 +219,7 @@
                                         <div class="post-info w-100">
                                             @if($artikelkecil1->kategori_id==1)
                                             <span class="post-cate2 d-block text-uppercase">
-                                                @elseif($artikellecil1->kategori_id==2)
+                                                @elseif($artikelkecil1->kategori_id==2)
                                                 <span class="post-cate d-block text-uppercase">
                                                     @endif<a href="javascript:void(0);" title="">{{$artikelkecil1->kategori->nama}}</a></span>
                                                 <h3 class="mb-0"><a href="/detail_berita/{{$artikelkecil1->id}}" title="">{{$artikelkecil1->judul}}</a></h3>
@@ -268,8 +270,8 @@
                                                     </div>
                                                 </div>
                                                 @endforeach
-
                                             </div><!-- Recent Posts Wrap -->
+                                                
                                         </div>
                                         <div class="widget v2 w-100">
                                             <h3>Kategori</h3>
@@ -335,7 +337,7 @@
                         </div>
                     </div>
                     @endforeach
-
+                    {{$artikel->links()}}  
                 </div>
                 <div class="scl-anlys-wrap position-relative w-100">
                     <div class="row align-items-center" id="about">

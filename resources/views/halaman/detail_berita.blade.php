@@ -169,44 +169,53 @@
                         </div>
                     </div><!-- Post Detail Wrap -->
                     <div class="col-md-6 col-sm-12 col-lg-3">
-                        <div class="leftside mt-3">
-                            <div class="theiaStickySidebar">
-                                <aside class="sidebar-wrap w-100 position-relative">
-                                    <div class="widget w-100">
-                                        <form class="searchform position-relative w-100">
-                                            <input type="text" placeholder="Search...">
-                                            <button type="submit"><i class="flaticon-magnifying-glass"></i></button>
-                                        </form>
-                                    </div>
-                                    <div class="widget widget2 v2 w-100">
-                                        <h3>Recent Posts</h3>
-                                        <div class="recentposts-wrap w-100">
+                    <div class="leftside mt-3">
+                                <div class="theiaStickySidebar">
+                                    <aside class="sidebar-wrap w-100 position-relative">
+                                        <div class="widget w-100">
+                                            <form class="searchform position-relative w-100">
+                                                <input type="text" placeholder="Search...">
+                                                <button type="submit"><i class="flaticon-magnifying-glass"></i></button>
+                                            </form>
+                                        </div>
+                                        <div class="widget widget2 v2 w-100">
+                                            <h3>Terbaru</h3>
+                                            <div class="recentposts-wrap w-100">
+                                                @foreach($artikel2 as $ar1)
+                                                <div class="recentpost-box d-flex flex-wrap align-items-center w-100">
+                                                    <div class="recentpost-img"><a href="/detail_berita/{{$ar1->id}}" title=""><img class="img-fluid w-100" src="{{asset('foto_artikel/'.$ar1->foto)}}" alt="Recent Post Image 1" height="50"></a></div>
+                                                    <div class="recentpost-info 2">
+                                                        <h5 class="mb-0"><a href="/detail_berita/{{$ar1->id}}" title="">{{$ar1->judul}}</a></h5>
+                                                        <span class="d-block">{{Carbon\Carbon::parse($ar1->created_at)->isoformat('D / MMMM /Y')}}</span>
+                                                    </div>
+                                                </div>
+                                                @endforeach
 
-
-
-                                            @foreach($artikel as $ar1)
-                                            <div class="recentpost-box d-flex flex-wrap align-items-center w-100">
-                                                <div class="recentpost-img"><a href="/detail_berita/{{$ar1->id}}" title=""><img class="img-fluid w-100" src="{{asset('foto_artikel/'.$ar1->foto)}}" alt="Recent Post Image 3"></a></div>
-                                                <div class="recentpost-info">
-                                                    <h5 class="mb-0"><a href="/detail_berita/{{$ar1->id}}" title=""> {{$ar1->judul}}</a></h5>
-                                                    <span class="d-block">{{Carbon\Carbon::parse($ar1->created_at)->isoformat('D / MMMM /Y')}}</span>
+                                            </div><!-- Recent Posts Wrap -->
+                                        </div>
+                                        <div class="widget v2 w-100">
+                                            <h3>Kategori</h3>
+                                            <ul class="mb-0 list-unstyled w-100">
+                                                @foreach($kategori as $kate3)
+                                                <li><a href="/kategori_berita/{{$kate3->id}}" title="">{{$kate3->nama}}</a></li>
+                                                @endforeach
+                                            </ul>
+                                        </div>
+                                        <div class="widget widget3 v2 w-100">
+                                            <h3>Media Berita</h3>
+                                            <div class="insta-gal-wrap w-100">
+                                                <div class="row mrg10">
+                                                    @foreach($artikel as $ar6)
+                                                    <div class="col-md-4 col-sm-4 col-lg-4">
+                                                        <div class="insta-gal-item overflow-hidden position-relative w-100"><a class="d-block" href="{{asset('foto_artikel/'.$ar6->foto)}}" data-fancybox="gal" title=""><img class="img-fluid w-100" src="{{asset('foto_artikel/'.$ar6->foto)}}" alt="Instagram Image {{$ar6->id}}" height="50"></a></div>
+                                                    </div>
+                                                    @endforeach
                                                 </div>
                                             </div>
-                                            @endforeach
-                                        </div><!-- Recent Posts Wrap -->
-                                    </div>
-                                    <div class="widget v2 w-100">
-                                        <h3>Kategori</h3>
-                                        <ul class="mb-0 list-unstyled w-100">
-                                            @foreach($kategori as $kate)
-                                            <li><a href="javascript:void(0);" title="">{{$kate->nama }}</a></li>
-                                            @endforeach
-
-                                        </ul>
-                                    </div>
-                                </aside><!-- Sidebar Wrap -->
+                                        </div>
+                                    </aside><!-- Sidebar Wrap -->
+                                </div>
                             </div>
-                        </div>
                     </div>
                 </div>
             </div>

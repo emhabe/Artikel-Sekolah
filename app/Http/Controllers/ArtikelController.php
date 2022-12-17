@@ -11,7 +11,7 @@ class ArtikelController extends Controller
    public function index()
    {
       $kategori = Kategori::all();
-      $artikel = Artikel::with('kategori')->latest('created_at')->get();
+      $artikel = Artikel::with('kategori')->latest('created_at')->paginate(8);
       $artikel2 = Artikel::with('kategori')->paginate(5);
       $artikelbesar = Artikel::with('kategori')->latest('created_at')->first();
       $artikelkecil1 = Artikel::with('kategori')->latest('created_at')->skip(1)->take(1)->first();
@@ -22,9 +22,9 @@ class ArtikelController extends Controller
    {
       $data = Artikel::findOrFail($id);
       $kategori = Kategori::all();
-
+     $artikel2 = Artikel::with('kategori')->paginate(5);
       $artikel = Artikel::with('kategori')->latest('created_at')->get();
-      return view('halaman.detail_berita', compact('data', 'artikel', 'kategori'));
+      return view('halaman.detail_berita', compact('data', 'artikel', 'artikel2', 'kategori'));
    }
    public function kategori_berita($id)
    {
