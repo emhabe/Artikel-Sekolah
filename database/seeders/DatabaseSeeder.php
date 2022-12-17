@@ -7,6 +7,7 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Str;
 use App\Models\User;
 use App\Models\Kategori;
+use App\Models\Artikel;
 
 class DatabaseSeeder extends Seeder
 {
@@ -44,5 +45,15 @@ class DatabaseSeeder extends Seeder
             ]
         ];
         Kategori::insert($siu);
+
+        $artikel = [
+            'judul' => 'Web RadarPgriKu',
+            'kategori_id' => '1',
+            'detail_singkat' => 'Web RadarPgriKu adalah web yang dikembangkan oleh 3 siswa SMK PGRI SINGOSARI',
+            'deskripsi' => 'Web RadarPgriKu adalah web tentang artikel,berita,dan acara dari siswa/siswi SMK PGRI SINGOSARI',
+            'foto' => 'null',
+
+        ];
+        Artikel::insert($artikel);
     }
 }
