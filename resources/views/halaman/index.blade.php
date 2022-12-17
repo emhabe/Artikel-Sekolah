@@ -202,6 +202,8 @@
                             </div>
                             <div class="row">
                                 <div class="col-md-6 col-lg-6 col-lg-3">
+
+
                                     <div class="post-box brd-rd15 w-100">
                                         <div class="post-img overflow-hidden position-relative w-100">
                                             <a href="/detail_berita/{{$artikelkecil1->id}}" title=""><img class="img-fluid w-100" src="{{asset('foto_artikel/'.$artikelkecil1->foto)}}" alt="Post Image 1" height="576" width="1024"></a>
@@ -214,6 +216,8 @@
                                             <a class="simple-link d-inline-block text-uppercase" href="/detail_berita/{{$artikelkecil1->id}}" title="">Read More<i class="flaticon-right-arrow text-color3"></i></a>
                                         </div>
                                     </div>
+
+
                                 </div>
                                 <div class="col-md-6 col-lg-6 col-lg-3">
                                     <div class="post-box brd-rd15 w-100">

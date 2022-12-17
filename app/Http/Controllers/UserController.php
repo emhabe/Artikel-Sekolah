@@ -26,12 +26,12 @@ class UserController extends Controller
     {
         $kategori = Kategori::all();
         $data = Artikel::where('kategori_id', '=', $id)->get();
-        return view('demo-1.kategori', compact('data','kategori'));
+        return view('demo-1.kategori', compact('data', 'kategori'));
     }
     public function user()
     {
         $kategori = Kategori::all();
-        return view('demo-1.user',compact('kategori'));
+        return view('demo-1.user', compact('kategori'));
     }
     public function buat_artikel()
     {
@@ -58,7 +58,7 @@ class UserController extends Controller
     {
         $data = Artikel::FindOrFail($id);
         $kategori = Kategori::all();
-        return view('demo-1.edit', compact('data','kategori'));
+        return view('demo-1.edit', compact('data', 'kategori'));
     }
     public function update($id, Request $request)
     {
@@ -78,6 +78,10 @@ class UserController extends Controller
     public function delete($id)
     {
         $data = Artikel::FindOrFail($id);
+        $file = public_path('/foto_artikel/') . $data->foto;
+        if (file_exists($file)) {
+            @unlink($file);
+        }
         $data->delete();
         return redirect('artikel');
     }
@@ -85,6 +89,6 @@ class UserController extends Controller
     {
         $kategori = Kategori::all();
         $data = Artikel::findOrFail($id);
-        return view('demo-1.lihat_artikel', compact('data','kategori'));
+        return view('demo-1.lihat_artikel', compact('data', 'kategori'));
     }
 }
