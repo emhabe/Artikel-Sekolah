@@ -19,10 +19,12 @@ class UserController extends Controller
     public function artikel(Request $request)
     {
         if ($request->has('search')) {
-            $data = Artikel::where('status', '=', 1)->where('judul', 'LIKE', '%' . $request->search . '%');
+            $data = Artikel::where('judul', 'LIKE', '%' . $request->search . '%')->paginate(6);
+            $kategori = Kategori::all();
+        } else {
+            $data = Artikel::all();
+            $kategori = Kategori::all();
         }
-        $data = Artikel::all();
-        $kategori = Kategori::all();
         return view('demo-1.artikel', compact('data', 'kategori'));
     }
     public function kategori($id)
