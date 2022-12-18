@@ -26,8 +26,8 @@ class RedirectIfAuthenticated
         //         return redirect(RouteServiceProvider::HOME);
         //     }
         // }
-        if ($this->auth->check()) {
-            return redirect('/dashboard');
+        if (Auth::check()) {
+            return redirect('/');
         }
 
         return $next($request);

@@ -39,11 +39,26 @@ class DatabaseSeeder extends Seeder
 
         $siu = [
             [
-                'nama' => 'Acara',
+                'nama' => 'Event',
             ],
             [
-                'nama' => 'Olahraga',
-            ]
+                'nama' => 'RPL',
+            ],
+            [
+                'nama' => 'TKJ',
+            ],
+            [
+                'nama' => 'TOI',
+            ],
+            [
+                'nama' => 'TEI',
+            ],
+            [
+                'nama' => 'TKR',
+            ],
+            [
+                'nama' => 'TBSM',
+            ],
         ];
         Kategori::insert($siu);
 
@@ -54,7 +69,7 @@ class DatabaseSeeder extends Seeder
                 'status' => '1',
                 'detail_singkat' => 'Web RadarPgriKu adalah web yang dikembangkan oleh 3 siswa SMK PGRI SINGOSARI',
                 'deskripsi' => 'Web RadarPgriKu adalah web tentang artikel,berita,dan acara dari siswa/siswi SMK PGRI SINGOSARI',
-                'foto' => '20200730_134035.jpg',
+                'foto' => 'logo.png',
                 'created_at' =>  Carbon::now(),
 
             ], [
@@ -63,7 +78,7 @@ class DatabaseSeeder extends Seeder
                 'status' => '1',
                 'detail_singkat' => 'Web RadarPgriKu adalah web yang dikembangkan oleh 3 siswa SMK PGRI SINGOSARI',
                 'deskripsi' => 'Web RadarPgriKu adalah web tentang artikel,berita,dan acara dari siswa/siswi SMK PGRI SINGOSARI',
-                'foto' => '20200730_134035.jpg',
+                'foto' => 'logo.png',
                 'created_at' =>  Carbon::now(),
 
             ],
@@ -73,7 +88,7 @@ class DatabaseSeeder extends Seeder
                 'status' => '1',
                 'detail_singkat' => 'Web RadarPgriKu adalah web yang dikembangkan oleh 3 siswa SMK PGRI SINGOSARI',
                 'deskripsi' => 'Web RadarPgriKu adalah web tentang artikel,berita,dan acara dari siswa/siswi SMK PGRI SINGOSARI',
-                'foto' => '20200730_134035.jpg',
+                'foto' => 'logo.png',
 
                 'created_at' =>  Carbon::now(),
 

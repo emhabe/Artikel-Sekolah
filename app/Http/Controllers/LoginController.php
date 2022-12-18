@@ -24,7 +24,7 @@ class LoginController extends Controller
     public function post_register(Request $request)
     {
         $data =  User::create([
-            'name' => 'Guest' . mt_rand(1000, 9999),
+            'name' => $request->name,
             'email' => $request->email,
             'password' => bcrypt($request->password),
             'role' => 'guest',

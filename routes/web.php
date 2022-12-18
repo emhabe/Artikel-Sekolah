@@ -20,14 +20,16 @@ Route::get('/', function () {
     return view('welcome');
 });
 //proses admin//
-Route::get('/registrasi', [LoginController::class, 'registrasi']);
-Route::get('/login', [LoginController::class, 'login'])->name('login');
 
 Route::post('/post_register', [LoginController::class, 'post_register']);
 Route::post('/postlogin', [LoginController::class, 'postlogin']);
 Route::get('/logout', [LoginController::class, 'logout']);
 Route::post('/komen', [UserController::class, 'komen']);
 
+Route::group(['middleware' => ['guest']], function () {
+    Route::get('/registrasi', [LoginController::class, 'registrasi']);
+    Route::get('/login', [LoginController::class, 'login'])->name('login');
+});
 
 //Tampilan//
 Route::get('/', [ArtikelController::class, 'index']);
@@ -35,7 +37,7 @@ Route::get('/detail_berita/{id}', [ArtikelController::class, 'detail_berita']);
 Route::get('/kategori_berita/{id}', [ArtikelController::class, 'kategori_berita']);
 Route::get('/test', [ArtikelController::class, 'test']);
 //tampilan admin//
-Route::group(['middleware' => ['auth:web']], function () {
+Route::group(['middleware' => ['auth']], function () {
     Route::get('/dashboard', [UserController::class, 'dashboard']);
     Route::get('/artikel', [UserController::class, 'artikel']);
     Route::get('/kategori/{id}', [UserController::class, 'kategori']);
