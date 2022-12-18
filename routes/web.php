@@ -36,6 +36,7 @@ Route::get('/', [ArtikelController::class, 'index']);
 Route::get('/detail_berita/{id}', [ArtikelController::class, 'detail_berita']);
 Route::get('/kategori_berita/{id}', [ArtikelController::class, 'kategori_berita']);
 Route::get('/test', [ArtikelController::class, 'test']);
+Route::get('/lisensi_tim', [ArtikelController::class, 'lisensi_tim']);
 //tampilan admin//
 Route::group(['middleware' => ['auth']], function () {
     Route::get('/dashboard', [UserController::class, 'dashboard']);

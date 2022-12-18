@@ -33,10 +33,11 @@
                                 </ul>
                                 <div class="d-block btns-total w-100">
                                     <div class="btns-wrap d-flex flex-wrap w-100">
-                                    <a class="thm-btn sml-btn brd-btn d-inline-block rounded-pill logout" href="javascript:void(0);" title="" data-id="{{$user->id}}" data-nama="{{$user->name}}">Logout</a>
-                                    @if (Auth::user()->role=='admin')
+                                        <a class="thm-btn sml-btn brd-btn d-inline-block rounded-pill logout" href="javascript:void(0);" title="" data-id="{{$user->id}}" data-nama="{{$user->name}}">Logout</a>
+                                        @if (Auth::user()->role=='admin')
                                     <a class="thm-btn sml-btn brd-btn d-inline-block rounded-pill" href="/dashboard" title="">Dashboard</a>
                                     @endif
+                                    </div>
                                     </div>
                                 </div>
                             </div>
@@ -47,7 +48,6 @@
                     </div>
                 </div>
             </div>
-        </div>
         </div><!-- Topbar -->
         <div class="menubar w-100">
             <div class="container">
@@ -59,7 +59,7 @@
                         <ul class="d-inline-flex flex-wrap align-items-center mb-0 list-unstyled">
                             <li class="menu-item"><a href="/" title="">Beranda</a>
                             </li>
-                            <li class="menu-item-has-children active satu"><a href="javascript:void(0);" title="">Kategori</a>
+                            <li class="menu-item-has-children"><a href="javascript:void(0);" title="">Kategori</a>
                                 <ul class="children mb-0 list-unstyled">
                                     @foreach($kategori as $kt)
                                     <li><a href="/kategori_berita/{{$kt->id}}" title="">{{$kt->nama}}</a></li>
@@ -67,11 +67,12 @@
 
                                 </ul>
                             </li>
-                            <li class="menu-item"><a href="/#berita" title="">Daftar Berita</a>
+                            <li class="menu-item"><a href="#berita" title="">Daftar Berita</a>
                             </li>
-                            <li class="menu-item"><a href="javascript:void(0);" title="">Tentang</a>
+                            <li class="menu-item"><a href="#about" title="">Tentang</a>
                             </li>
                             <li><a href="#contact" title="">Kontak</a></li>
+                            <li class="menu-item active satu"><a href="javascript:void(0);" title="">Detail Berita</a>
                         </ul>
                     </nav>
                     <!-- <div class="header-btns d-inline-flex flex-wrap align-items-center mt-5">
@@ -96,19 +97,20 @@
                     <ul class="d-inline-flex flex-wrap align-items-center mb-0 list-unstyled">
                         <li class="menu-item"><a href="/" title="">Beranda</a>
                         </li>
-                        <li class="menu-item-has-children active satu"><a href="javascript:void(0);" title="">Kategori</a>
+                        <li class="menu-item-has-children"><a href="javascript:void(0);" title="">Kategori</a>
                             <ul class="children mb-0 list-unstyled">
                                 @foreach($kategori as $kt1)
-                                <li><a href="seo-services.html" title="">{{$kt1->nama}}</a></li>
+                                <li><a href="/kategori_berita/{{$kt1->id}}" title="">{{$kt1->nama}}</a></li>
                                 @endforeach
                             </ul>
                         </li>
-                        <li class="menu-item"><a href="/#berita" title="">Daftar Berita</a>
+                        <li class="menu-item"><a href="#berita" title="">Daftar Berita</a>
 
                         </li>
-                        <li class="menu-item"><a href="javascript:void(0);" title="">Tentang</a>
+                        <li class="menu-item"><a href="#about" title="">Tentang</a>
                         </li>
                         <li><a href="#contact" title="">Kontak</a></li>
+                        <li class="menu-item active satu"><a href="javascript:void(0);" title="">Detail Berita</a>
                     </ul>
                 </nav>
             </div>
@@ -119,7 +121,7 @@
         <div class="responsive-topbar w-100">
             <div class="container d-flex flex-wrap align-items-center justify-content-between">
                 <div class="logo">
-                    <h1 class="mb-0"><a href="index.html" title="Home"><img class="img-fluid" src="{{asset('landing/assets/images/logo.png')}}" alt="Logo"></a></h1>
+                    <h1 class="mb-0"><a href="index.html" title="Home"><img class="img-fluid" src="{{asset('landing/assets/images/logo%402x.png')}}" alt="Logo"></a></h1>
                 </div><!-- Logo -->
                 <div class="header-btns d-inline-flex flex-wrap align-items-center">
                     <a class="res-menu-btn d-inline-block" href="javascript:void(0);" title=""><i class="fas fa-align-justify"></i></a>
@@ -159,15 +161,15 @@
                 <li class="menu-item"><a href="/" title="">Beranda</a>
 
                 </li>
-                <li class="menu-item-has-children active satu"><a href="javascript:void(0);" title="">Kategori</a>
+                <li class="menu-item-has-children dua"><a href="javascript:void(0);" title="">Kategori</a>
                     <ul class="children mb-0 list-unstyled">
                         @foreach($kategori as $kt3)
-                        <li><a href="seo-services.html" title="">{{$kt3->nama}}</a></li>
+                        <li><a href="/kategori_berita/{{$kt3->id}}" title="">{{$kt3->nama}}</a></li>
                         @endforeach
 
                     </ul>
                 </li>
-                <li class="menu-item"><a href="/#berita" title="">Daftar Berita</a>
+                <li class="menu-item"><a href="#berita" title="">Daftar Berita</a>
 
                 </li>
                 <li class="menu-item"><a href="#about" title="">Tentang</a>
@@ -179,11 +181,66 @@
                 <li><a href="javascript:void(0);" class="logout" title="" data-id="{{$user->id}}" data-nama="{{$user->name}}"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a></li>
                 @else
                 @endif
+                <li class="menu-item active satu"><a href="javascript:void(0);" title="">Detail Berita</a>
             </ul>
         </div><!-- Responsive Menu -->
     </div><!-- Responsive Header -->
     <section class="atas">
         <div class="w-100 pt-110 pb-90 position-relative">
+            <div class="container">
+                <div class="sec-title text-center w-100 position-relative">
+                    <h2 class="mb-0">Tim Pengembang</h2>
+                    <i class="btm-ln bg-color3"></i>
+                </div><!-- Sec Title -->
+                <div class="row g-4">
+                <div class="col-xl-4 col-lg-6 col-md-6">
+    <div class="card">
+      <div class="card-body text-center">
+        <div class="mx-auto mb-3">
+          <img src="{{asset('landing/assets/images/team/ivran.jpg')}}" alt="Avatar Image" class="rounded-circle w-px-100" />
+        </div>
+        <h5 class="mb-1 card-title">Achmad Ivran Santoso</h5>
+        <div class="social-links v2 d-inline-flex flex-wrap">
+                                        <a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="flaticon-facebook"></i></a>
+                                        <a href="https://www.instagram.com/" title="Instagram" target="_blank"><i class="fa-brands fa-instagram fa-lg"></i></a>
+                                    </div>
+      </div>
+    </div>
+  </div><!-- Team Wrap -->
+                <div class="col-xl-4 col-lg-6 col-md-6">
+    <div class="card">
+      <div class="card-body text-center">
+        <div class="mx-auto mb-3">
+          <img src="{{asset('landing/assets/images/team/agung.jpg')}}" alt="Avatar Image" class="rounded-circle w-px-100" />
+        </div>
+        <h5 class="mb-1 card-title">Agung Prasetyo</h5>
+        <div class="social-links v2 d-inline-flex flex-wrap">
+                                        <a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="flaticon-facebook"></i></a>
+                                        <a href="https://www.instagram.com/" title="Instagram" target="_blank"><i class="fa-brands fa-instagram fa-lg"></i></a>
+                                    </div>
+      </div>
+    </div>
+  </div><!-- Team Wrap -->
+                <div class="col-xl-4 col-lg-6 col-md-6">
+    <div class="card">
+      <div class="card-body text-center">
+        <div class="mx-auto mb-3">
+          <img src="{{asset('landing/assets/images/team/hafil.jpg')}}" alt="Avatar Image" class="rounded-circle w-px-100" />
+        </div>
+        <h5 class="mb-1 card-title">Mochammad Hafill Birbiq</h5>
+        <div class="social-links v2 d-inline-flex flex-wrap">
+                                        <a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="flaticon-facebook"></i></a>
+                                        <a href="https://www.instagram.com/" title="Instagram" target="_blank"><i class="fa-brands fa-instagram fa-lg"></i></a>
+                                    </div>
+      </div>
+    </div>
+  </div>
+</div><!-- Team Wrap -->
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="w-100 pt-110 pb-120 position-relative">
             <div class="fixed-bg" style="background-image: url(landing/assets/images/bg-shp-18.png);"></div>
             <div class="particles-wrap position-absolute w-80" id="berita">
                 <div id="particle-3" class="particles-js w-80" data-color="#ff4cc9" data-size="5" data-linked="1" data-count="50" data-speed="4" data-hide="500" data-shape="circle" data-mode="out">
@@ -191,16 +248,8 @@
                 </div>
             </div>
             <div class="sec-title text-center w-100 position-relative mb-4">
-                <h2 class="mb-0"><span>Postingan </span> Terbaru {{$namakategori->nama}}</h2>
+                <h2 class="mb-0"><span>Postingan </span> Terbaru</h2>
                 <i class="btm-ln bg-color28"></i>
-            </div>
-            <div class="col-lg-3 position-relative justify-content-between ">
-                <div class="widget w-90 ms-3">
-                    <form action="/kategori_berita/{{$namakategori->id}}" class="searchform position-relative w-100" method="get">
-                        <input type="search" name="search" placeholder="Search...">
-                        <button type="submit"><i class="flaticon-magnifying-glass"></i></button>
-                    </form>
-                </div>
             </div>
             <div class="blog-wrap blog-spac px-3 position-relative w-100">
                 <div class="row mrg30">
@@ -228,10 +277,9 @@
                     {{$artikel->links()}}
                     @if(count($artikel))
                     @else
-                    <h4 class="kosong2">Maaf Data Tidak Ada :)</h4>
-                    <h5 class="kosong2 mb-12 mt-3">👉 <a href="/kategori_berita/{{$namakategori->id}}">Refresh Page !! </a></h5>
+                    <h4 class="kosong mt-2">Maaf Data Yang Anda Cari Tidak Ada :)</h4>
+                    <h5 class="kosong mb-12 mt-3">👉 <a href="/detail_berita/{{$data->id}}">Refresh Page !! </a></h5>
                     @endif
-
                 </div>
                 <div class="scl-anlys-wrap position-relative w-100">
                     <div class="row align-items-center" id="about">
@@ -251,8 +299,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <!-- Bl
             </div><!-- Blog Wrap -->
         </div>
     </section>
@@ -263,26 +309,27 @@
                     <div class="row mrg30">
                         <div class="col-md-5 col-sm-12 col-lg-4">
                             <div class="get-in-touch-wrap bg-color11 brd-rd20 mt-40 position-relative overflow-hidden w-100">
-                                <h2 class="mb-0">Get in Touch</h2>
-                                <p class="mb-0">SEOES is a USA search engine marketing agency, that deliver digital</p>
+                                <h2 class="mb-0">RadarPgriKu</h2>
+                                <p class="mb-0">Jelajahi Informasimu Disini...</p>
                                 <div class="contact-info-box mt-40 d-flex flex-wrap w-100">
                                     <i class="flaticon-facebook-placeholder-for-locate-places-on-maps"></i>
                                     <div class="contact-info-inner">
-                                        <h5 class="mb-0">Visit Us:</h5>
-                                        <p class="mb-0">27 Division St, New York, NY 10002, USA</p>
+                                        <h5 class="mb-0">Alamat :</h5>
+                                        <p class="mb-0">SMK PGRI Singosari
+                                            Jl. Morotanjek No.206, Pangetan, Pagentan, Kec. Singosari, Kabupaten Malang, Jawa Timur</p>
                                     </div>
                                 </div>
                                 <div class="contact-info-box mt-20 d-flex flex-wrap w-100">
                                     <i class="flaticon-message-closed-envelope"></i>
                                     <div class="contact-info-inner">
-                                        <h5 class="mb-0">Mail Us:</h5>
+                                        <h5 class="mb-0">Email :</h5>
                                         <a href="mailto:info@example.com" title="">info@example.com</a>
                                     </div>
                                 </div>
                                 <div class="contact-info-box mt-20 d-flex flex-wrap w-100">
                                     <i class="icon-037-smartphone"></i>
                                     <div class="contact-info-inner">
-                                        <h5 class="mb-0">Phone Us:</h5>
+                                        <h5 class="mb-0">No Telfon :</h5>
                                         <a href="tel:(305) 222-3333" title="">+(305) 222-3333</a>
                                     </div>
                                 </div>
@@ -361,5 +408,5 @@
             </div>
         </div>
     </div><!-- Bottom Bar -->
-</main><!-- Main Wrapper -->
+</main>
 @endsection

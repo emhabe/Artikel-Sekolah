@@ -62,4 +62,19 @@ class ArtikelController extends Controller
    {
       return view('demo-1.test');
    }
+   public function lisensi_tim(Request $request)
+   {
+      $user = auth()->user();
+      if ($request->has('search')) {
+         $kategori = Kategori::all();
+         $artikel2 = Artikel::with('kategori')->where('status', '=', '1')->paginate(5);
+         $artikel = Artikel::with('kategori')->where('judul', 'LIKE', '%' . $request->search . '%')->where('status', '=', '1')->latest('created_at')->paginate(8);
+      } else {
+         $kategori = Kategori::all();
+         $artikel2 = Artikel::with('kategori')->where('status', '=', '1')->paginate(5);
+         $artikel = Artikel::with('kategori')->where('status', '=', '1')->latest('created_at')->paginate(8);
+      }
+      return view('halaman.lisensi_tim', compact('artikel', 'artikel2', 'kategori', 'user'));
+   }
+
 }

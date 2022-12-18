@@ -505,7 +505,7 @@
         <div class="container">
             <div class="bottom-inner d-flex flex-wrap align-items-center justify-content-between w-100">
                 <p class="mb-0">Copyright &copy; 2022 — SMK PGRI Singosari</p>
-                <p class="mb-0">Dibuat Oleh TIM</p>
+                <p class="mb-0">Dibuat Oleh TIM <a href="/lisensi_tim">Siuu</a></p>
             </div>
         </div>
     </div><!-- Bottom Bar -->

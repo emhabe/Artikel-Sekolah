@@ -424,8 +424,8 @@
     <div class="bottom-bar bg-color12 w-100">
         <div class="container">
             <div class="bottom-inner d-flex flex-wrap align-items-center justify-content-between w-100">
-                <p class="mb-0">Copyright &copy; 2021 — All rights reserved</p>
-                <p class="mb-0">We on a mission to build a better future where technology creates good jobs for everyone.</p>
+                <p class="mb-0">Copyright &copy; 2022 — SMK PGRI Singosari</p>
+                <p class="mb-0">Dibuat Oleh TIM <a href="/lisensi_tim">Siuu</a></p>
             </div>
         </div>
     </div><!-- Bottom Bar -->
