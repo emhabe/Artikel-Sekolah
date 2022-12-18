@@ -13,19 +13,26 @@ use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
-    public function dashboard()
+    public function dashboard(Request $request)
     {
         $terkirim = Artikel::where('status', '=', 1)->count();
         $belum = Artikel::where('status', '=', 0)->count();
         $pengguna = User::where('role', '=', 'guest')->count();
         $user = auth()->user();
+        if ($request->has('search')) {
         $kategori = Kategori::all();
-        $artikel = Artikel::where('status', '=', 0)->with('kategori')->latest('created_at')->get();
+        $artikel = Artikel::where('status', '=', 0)->where('judul', 'LIKE', '%' . $request->search . '%')->with('kategori')->latest('created_at')->paginate(6);
+        }else{
+            $kategori = Kategori::all();
+        $artikel = Artikel::where('status', '=', 0)->with('kategori')->latest('created_at')->paginate(6); 
+        }
+
         return view('demo-1.dashboard', compact('kategori', 'artikel', 'user', 'terkirim', 'belum', 'pengguna'));
     }
 
     public function artikel(Request $request)
     {
+        $user = auth()->user();
         if ($request->has('search')) {
             $data = Artikel::where('judul', 'LIKE', '%' . $request->search . '%')->paginate(6);
             $kategori = Kategori::all();
@@ -33,24 +40,34 @@ class UserController extends Controller
             $data = Artikel::all();
             $kategori = Kategori::all();
         }
-        return view('demo-1.artikel', compact('data', 'kategori'));
+        return view('demo-1.artikel', compact('data', 'kategori','user'));
     }
-    public function kategori($id)
+    public function kategori(Request $request,$id)
     {
-        $kategori = Kategori::all();
-        $data = Artikel::where('kategori_id', '=', $id)->get();
-        return view('demo-1.kategori', compact('data', 'kategori'));
+        $user = auth()->user();
+        $kategori2 = Kategori::all();
+        $kategori = Kategori::findorFail($id);
+        if($request->has('search')){
+            $data = Artikel::where('kategori_id', '=', $id)->where('judul', 'LIKE', '%' . $request->search . '%')->get();
+
+        }else{
+            $data = Artikel::where('kategori_id', '=', $id)->get();
+
+        }
+        return view('demo-1.kategori', compact('data', 'kategori', 'kategori2','user'));
     }
     public function user()
     {
+        $user = auth()->user();
         $kategori = Kategori::all();
         $komentar = Komentar::with('user')->get();
-        return view('demo-1.user', compact('kategori', 'komentar'));
+        return view('demo-1.user', compact('kategori', 'komentar','user'));
     }
     public function buat_artikel()
     {
+        $user = auth()->user();
         $kategori = Kategori::all();
-        return view('demo-1.buat_artikel', compact('kategori'));
+        return view('demo-1.buat_artikel', compact('kategori','user'));
     }
     public function submit_artikel(Request $request)
     {
@@ -77,9 +94,10 @@ class UserController extends Controller
     }
     public function edit($id)
     {
+        $user = auth()->user();
         $data = Artikel::FindOrFail($id);
         $kategori = Kategori::all();
-        return view('demo-1.edit', compact('data', 'kategori'));
+        return view('demo-1.edit', compact('data', 'kategori','user'));
     }
     public function update($id, Request $request)
     {
@@ -114,9 +132,10 @@ class UserController extends Controller
     }
     public function lihat_artikel($id)
     {
+        $user = auth()->user();
         $kategori = Kategori::all();
         $data = Artikel::findOrFail($id);
-        return view('demo-1.lihat_artikel', compact('data', 'kategori'));
+        return view('demo-1.lihat_artikel', compact('data', 'kategori','user'));
     }
 
     public function publish(Request $request)

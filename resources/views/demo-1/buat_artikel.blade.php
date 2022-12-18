@@ -130,7 +130,7 @@
 
 
                 <li>
-                  <a class="dropdown-item" href="#">
+                <a class="dropdown-item logout" href="#"  data-id="{{$user->id}}" data-nama="{{$user->name}}">
                     <i class='bx bx-log-in me-2'></i>
                     <span class="align-middle">Logout</span>
                   </a>
@@ -143,8 +143,10 @@
 
         <!-- Search Small Screens -->
         <div class="navbar-search-wrapper search-input-wrapper  d-none">
-          <input type="text" class="form-control search-input container-xxl border-0" placeholder="Search..." aria-label="Search...">
-          <i class="bx bx-x bx-sm search-toggler cursor-pointer"></i>
+          <form action="/artikel" method="get">
+            <input type="search" name="search" class="form-control search-input container-xxl border-0" placeholder="Search..." aria-label="Search...">
+            <i class="bx bx-x bx-sm search-toggler cursor-pointer"></i>
+          </form>
         </div>
 
       </nav>

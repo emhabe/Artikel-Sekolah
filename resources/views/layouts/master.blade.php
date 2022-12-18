@@ -719,18 +719,18 @@
 
       swalWithBootstrapButtons.fire({
         title: "Apakah Anda Yakin ?",
-        text: "Anda akan Menghapus Berita Berjudul : " + nama + " !!",
+        text: "Hai " + nama + " Kamu Yakin Akan Logout Dari Wesbite ini ??",
         icon: 'warning',
         showCancelButton: true,
-        confirmButtonText: 'Yes, delete it!',
-        cancelButtonText: 'No, cancel!',
+        confirmButtonText: 'Iya,Logout!',
+        cancelButtonText: 'Tidak,Batalkan!',
         reverseButtons: true
       }).then((result) => {
         if (result.isConfirmed) {
           window.location = "/logout/" + "",
             swalWithBootstrapButtons.fire(
-              'Terhapus!',
-              'Data Berita Telah Berhasil Dihapus',
+              'Terlogout :)',
+              'Anda Berhasil Logout',
               'success'
             )
         } else if (
@@ -738,8 +738,8 @@
           result.dismiss === Swal.DismissReason.cancel
         ) {
           swalWithBootstrapButtons.fire(
-            'Penghapusan Data Dibatalkan',
-            'Data Berita Anda Aman  :)',
+            'Logout Dibatalkan',
+            '',
             'error'
           )
         }

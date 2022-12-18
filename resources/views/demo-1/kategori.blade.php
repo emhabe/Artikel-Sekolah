@@ -40,7 +40,7 @@
             <div>Kategori</div>
           </a>
           <ul class="menu-sub">
-            @foreach($kategori as $kt)
+            @foreach($kategori2 as $kt)
             <li class="menu-item">
               <a href="/kategori/{{$kt->id}}" class="menu-link">
                 <div>{{$kt->nama}}</div>
@@ -76,6 +76,14 @@
         <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
 
           <!-- Search -->
+          <div class="navbar-nav align-items-center">
+            <div class="nav-item navbar-search-wrapper mb-0">
+              <a class="nav-item nav-link search-toggler px-0" href="javascript:void(0);">
+                <i class="bx bx-search bx-sm"></i>
+                <span class="d-none d-md-inline-block text-muted">Search (Ctrl+/)</span>
+              </a>
+            </div>
+          </div>
           <!-- /Search -->
 
           <ul class="navbar-nav flex-row align-items-center ms-auto">
@@ -125,7 +133,7 @@
 
 
                 <li>
-                  <a class="dropdown-item" href="#">
+                <a class="dropdown-item logout" href="#"  data-id="{{$user->id}}" data-nama="{{$user->name}}">
                     <i class='bx bx-log-in me-2'></i>
                     <span class="align-middle">Logout</span>
                   </a>
@@ -138,8 +146,10 @@
 
         <!-- Search Small Screens -->
         <div class="navbar-search-wrapper search-input-wrapper  d-none">
-          <input type="text" class="form-control search-input container-xxl border-0" placeholder="Search..." aria-label="Search...">
-          <i class="bx bx-x bx-sm search-toggler cursor-pointer"></i>
+          <form action="/kategori/{{$kategori->id}}" method="get">
+            <input type="search" name="search" class="form-control search-input container-xxl border-0" placeholder="Search..." aria-label="Search...">
+            <i class="bx bx-x bx-sm search-toggler cursor-pointer"></i>
+          </form>
         </div>
 
       </nav>
@@ -153,7 +163,7 @@
         <!-- Content -->
         <div class="container-xxl flex-grow-1 container-p-y">
 
-          <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Artikel /</span> Daftar Artikel</h4>
+          <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Artikel /</span> Daftar Artikel {{$kategori->nama}}</h4>
 
           <!-- Examples -->
           <div class="container-fluid py-4">
@@ -183,6 +193,10 @@
               <!--/ Card layout -->
 
             </div>
+            @if(count($data))
+          @else
+          <img src="../assets/img/backgrounds/kosong.png" width="350" height="300" class="kosong2">
+          @endif
           </div>
 
           <!-- / Content -->

@@ -152,7 +152,7 @@
 
 
                 <li>
-                  <a class="dropdown-item" href="#">
+                <a class="dropdown-item logout" href="#"  data-id="{{$user->id}}" data-nama="{{$user->name}}">
                     <i class='bx bx-log-in me-2'></i>
                     <span class="align-middle">Logout</span>
                   </a>

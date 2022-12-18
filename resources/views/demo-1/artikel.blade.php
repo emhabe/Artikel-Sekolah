@@ -131,7 +131,7 @@
 
 
                 <li>
-                  <a class="dropdown-item logout" data-id="{{auth()->user()->id}}" data-nama="{{auth()->user()->id}}">
+                  <a class="dropdown-item logout" href="#" data-id="{{$user->id}}" data-nama="{{$user->name}}">
                     <i class='bx bx-log-in me-2'></i>
                     <span class="align-middle">Logout</span>
                   </a>
@@ -145,13 +145,12 @@
 
         <!-- Search Small Screens -->
         <div class="navbar-search-wrapper search-input-wrapper  d-none">
-          @foreach ($data as $ow)
           <form action="/artikel" method="get">
-            @endforeach
             <input type="search" name="search" class="form-control search-input container-xxl border-0" placeholder="Search..." aria-label="Search...">
             <i class="bx bx-x bx-sm search-toggler cursor-pointer"></i>
+          </form>
         </div>
-        </form>
+
       </nav>
       @if(Session::has('success'))
       <div class="bs-toast toast toast-ex animate__animated my-2 fade bg-primary animate__tada show" role="alert" aria-live="assertive" aria-atomic="true">

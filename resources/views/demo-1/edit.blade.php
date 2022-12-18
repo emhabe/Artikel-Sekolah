@@ -38,40 +38,6 @@
             <i class="menu-icon tf-icons bx bx-home-circle"></i>
             <div>Beranda</div>
           </a>
-
-
-          <ul class="menu-sub">
-
-
-
-            <li class="menu-item ">
-              <a href="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo-1" class="menu-link">
-                <div>Analytics</div>
-              </a>
-
-
-            </li>
-
-
-
-            <li class="menu-item ">
-              <a href="../dashboard/crm.html" class="menu-link">
-                <div>CRM</div>
-              </a>
-
-
-            </li>
-
-
-
-            <li class="menu-item ">
-              <a href="../dashboard/ecommerce.html" class="menu-link">
-                <div>eCommerce</div>
-              </a>
-
-
-            </li>
-          </ul>
         </li>
 
 
@@ -86,100 +52,6 @@
             <i class="menu-icon tf-icons bx bx-collection"></i>
             <div>Artikel</div>
           </a>
-
-
-          <ul class="menu-sub">
-
-
-
-            <li class="menu-item ">
-              <a href="layouts/collapsed-menu.html" class="menu-link">
-                <div>Collapsed menu</div>
-              </a>
-
-
-            </li>
-
-
-
-            <li class="menu-item ">
-              <a href="layouts/content-navbar.html" class="menu-link">
-                <div>Content navbar</div>
-              </a>
-
-
-            </li>
-
-
-
-            <li class="menu-item ">
-              <a href="layouts/content-nav-sidebar.html" class="menu-link">
-                <div>Content nav + Sidebar</div>
-              </a>
-
-
-            </li>
-
-
-
-            <li class="menu-item ">
-              <a href="layouts/horizontal.html" class="menu-link" target="_blank">
-                <div>Horizontal</div>
-              </a>
-
-
-            </li>
-
-
-
-            <li class="menu-item ">
-              <a href="layouts/without-menu.html" class="menu-link">
-                <div>Without menu</div>
-              </a>
-
-
-            </li>
-
-
-
-            <li class="menu-item ">
-              <a href="layouts/without-navbar.html" class="menu-link">
-                <div>Without navbar</div>
-              </a>
-
-
-            </li>
-
-
-
-            <li class="menu-item ">
-              <a href="layouts/fluid.html" class="menu-link">
-                <div>Fluid</div>
-              </a>
-
-
-            </li>
-
-
-
-            <li class="menu-item ">
-              <a href="layouts/container.html" class="menu-link">
-                <div>Container</div>
-              </a>
-
-
-            </li>
-
-
-
-            <li class="menu-item ">
-              <a href="layouts/blank.html" class="menu-link" target="_blank">
-                <div>Blank</div>
-              </a>
-
-
-            </li>
-          </ul>
         </li>
 
 
@@ -240,6 +112,14 @@
         <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
 
           <!-- Search -->
+          <div class="navbar-nav align-items-center">
+            <div class="nav-item navbar-search-wrapper mb-0">
+              <a class="nav-item nav-link search-toggler px-0" href="javascript:void(0);">
+                <i class="bx bx-search bx-sm"></i>
+                <span class="d-none d-md-inline-block text-muted">Search (Ctrl+/)</span>
+              </a>
+            </div>
+          </div>
           <!-- /Search -->
 
           <ul class="navbar-nav flex-row align-items-center ms-auto">
@@ -289,7 +169,7 @@
 
 
                 <li>
-                  <a class="dropdown-item" href="#">
+                <a class="dropdown-item logout" href="#"  data-id="{{$user->id}}" data-nama="{{$user->name}}">
                     <i class='bx bx-log-in me-2'></i>
                     <span class="align-middle">Logout</span>
                   </a>
@@ -302,8 +182,10 @@
 
         <!-- Search Small Screens -->
         <div class="navbar-search-wrapper search-input-wrapper  d-none">
-          <input type="text" class="form-control search-input container-xxl border-0" placeholder="Search..." aria-label="Search...">
-          <i class="bx bx-x bx-sm search-toggler cursor-pointer"></i>
+          <form action="/artikel" method="get">
+            <input type="search" name="search" class="form-control search-input container-xxl border-0" placeholder="Search..." aria-label="Search...">
+            <i class="bx bx-x bx-sm search-toggler cursor-pointer"></i>
+          </form>
         </div>
 
       </nav>
