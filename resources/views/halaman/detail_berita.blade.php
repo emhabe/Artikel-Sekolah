@@ -18,24 +18,32 @@
                             <a href="https://linkedin.com/" title="Twitter" target="_blank"><i class="fa-brands fa-twitter"></i></a>
                         </div>
                         <div class="header-cart-box position-relative d-inline-block">
-                            <a class="cart-btn position-relative" href="javascript:void(0);" title="" data-kt-menu-trigger="click" data-kt-menu-attach="parent" data-kt-menu-placement="bottom-end"><b>Login</b> <i class="flaticon-user"></i></a>
+                            @if(Auth::check())
+                            <a class="cart-btn position-relative" href="/login" title="" data-kt-menu-trigger="click" data-kt-menu-attach="parent" data-kt-menu-placement="bottom-end"><b>{{Auth::user()->name}}</b> <i class="flaticon-user"></i></a>
                             <div class="minicart-dropdown">
                                 <ul class="mb-0 list-unstyled w-100">
                                     <li>
                                         <div class="minicart-item d-flex flex-wrap w-60">
                                             <div class="minicart-info">
-                                                <h6 class="mb-0"><a href="shop-detail.html" title="">Guest1234</a></h6>
-                                                <span class="price">$254.00</span>
+                                                <h6 class="mb-0"><a href="shop-detail.html" title="">{{Auth::user()->name}}</a></h6>
+                                                <span class="price">{{Auth::user()->email}}</span>
                                             </div>
                                         </div>
                                     </li>
                                 </ul>
                                 <div class="d-block btns-total w-100">
                                     <div class="btns-wrap d-flex flex-wrap w-100">
-                                        <a class="thm-btn sml-btn brd-btn d-inline-block rounded-pill" href="checkout.html" title="">Logout</a>
+                                        <a class="thm-btn sml-btn brd-btn d-inline-block rounded-pill logout" href="javascript:void(0);" title="" data-id="{{$user->id}}" data-nama="{{$user->name}}">Logout</a>
+                                        @if (Auth::user()->role=='admin')
+                                    <a class="thm-btn sml-btn brd-btn d-inline-block rounded-pill" href="/dashboard" title="">Dashboard</a>
+                                    @endif
+                                    </div>
                                     </div>
                                 </div>
                             </div>
+                            @else
+                            <a class="cart-btn position-relative" href="/login" title=""><b>Login</b> <i class="flaticon-user"></i></a>
+                            @endif
                         </div>
                     </div>
                 </div>
@@ -117,7 +125,31 @@
                 </div><!-- Logo -->
                 <div class="header-btns d-inline-flex flex-wrap align-items-center">
                     <a class="res-menu-btn d-inline-block" href="javascript:void(0);" title=""><i class="fas fa-align-justify"></i></a>
-                    <a class="cart-btn position-relative" href="javascript:void(0);" title=""><i class="flaticon-user"></i></a>
+                    <div class="header-cart-box position-relative d-inline-block">
+                        @if(Auth::check())
+                        <a class="cart-btn position-relative" href="javascript:void(0);" title=""></b> <i class="flaticon-user"></i></a>
+                        <div class="minicart-dropdown">
+                            <ul class="mb-0 list-unstyled w-100">
+                                <li>
+                                    <div class="minicart-item d-flex flex-wrap w-60">
+                                        <div class="minicart-info">
+                                            <h6 class="mb-0"><a href="shop-detail.html" title="">{{Auth::user()->name}}</a></h6>
+                                            <span class="price">{{Auth::user()->email}}</span>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="d-block btns-total w-100">
+                                <div class="btns-wrap d-flex flex-wrap w-100">
+                                    <a class="thm-btn sml-btn brd-btn d-inline-block rounded-pill logout" href="javascript:void(0);" title="" data-id="{{$user->id}}" data-nama="{{$user->name}}">Logout</a>
+                                    @if (Auth::user()->role=='admin')
+                                    <a class="thm-btn sml-btn brd-btn d-inline-block rounded-pill" href="/dashboard" title="">Dashboard</a>
+                                    @endif
+                                </div>
+                            </div>
+                        </div>
+                        @endif
+                    </div>
                 </div>
             </div>
         </div><!-- Responsive Topbar -->
@@ -145,6 +177,10 @@
                 </li>
 
                 <li><a href="#contact" title="">Kontak</a></li>
+                @if(Auth::check())
+                <li><a href="javascript:void(0);" class="logout" title="" data-id="{{$user->id}}" data-nama="{{$user->name}}"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a></li>
+                @else
+                @endif
                 <li class="menu-item active satu"><a href="javascript:void(0);" title="">Detail Berita</a>
             </ul>
         </div><!-- Responsive Menu -->
@@ -162,7 +198,10 @@
 
 
                                 <blockquote>
-                                    <p class="mb-0"><h3>{{$data->judul}}<h3></p>
+                                    <p class="mb-0">
+                                    <h3>{{$data->judul}}
+                                        <h3>
+                                            </p>
                                 </blockquote>
                                 {!!$data->deskripsi!!}
                             </div>
@@ -173,10 +212,10 @@
                             <div class="theiaStickySidebar">
                                 <aside class="sidebar-wrap w-100 position-relative">
                                     <div class="widget w-100">
-                                            <form action="/detail_berita/{{$data->id}}" class="searchform position-relative w-100" method="get">
-                                                <input type="search" name="search" placeholder="Search...">
-                                                <button type="submit"><i class="flaticon-magnifying-glass"></i></button>
-                                            </form>
+                                        <form action="/detail_berita/{{$data->id}}" class="searchform position-relative w-100" method="get">
+                                            <input type="search" name="search" placeholder="Search...">
+                                            <button type="submit"><i class="flaticon-magnifying-glass"></i></button>
+                                        </form>
                                     </div>
                                     <div class="widget widget2 v2 w-100">
                                         <h3>Terbaru</h3>
@@ -256,11 +295,12 @@
                         </div>
                     </div>
                     @endforeach
-                    {{$artikel->links()}}  
+                    {{$artikel->links()}}
                     @if(count($artikel))
-          @else
-           <h4 class="kosong mb-12 mt-2">Maaf Data Yang Anda Cari Tidak Ada :)</h4>
-          @endif
+                    @else
+                    <h4 class="kosong mt-2">Maaf Data Yang Anda Cari Tidak Ada :)</h4>
+                    <h5 class="kosong mb-12 mt-3">👉 <a href="/detail_berita/{{$data->id}}">Refresh Page !! </a></h5>
+                    @endif
                 </div>
                 <div class="scl-anlys-wrap position-relative w-100">
                     <div class="row align-items-center" id="about">
@@ -273,7 +313,9 @@
                                     <h2 class="mb-0"> <span>Website </span>RadarPgriKu</h2>
                                     <i class="btm-ln bg-color28"></i>
                                 </div><!-- Sec Title -->
-                                <p class="mb-0"><h6>Adalah Sebuah Website Yang Dibuat dengan maksud dan Tujuan agar Kalian Mendapatkan Informasi atau Berita Terupdate Seputar Kegiatan,Acara yang dilakukan oleh Siswa Siswi SMK PGRI Singosari.</h6></p>
+                                <p class="mb-0">
+                                <h6>Adalah Sebuah Website Yang Dibuat dengan maksud dan Tujuan agar Kalian Mendapatkan Informasi atau Berita Terupdate Seputar Kegiatan,Acara yang dilakukan oleh Siswa Siswi SMK PGRI Singosari.</h6>
+                                </p>
                             </div>
                         </div>
                     </div>

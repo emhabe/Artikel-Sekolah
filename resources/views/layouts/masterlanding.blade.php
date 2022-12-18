@@ -20,6 +20,8 @@
     <link rel="stylesheet" href="{{asset('landing/assets/css/slick.css')}}">
     <link rel="stylesheet" href="{{asset('landing/assets/css/style.css')}}">
     <link rel="stylesheet" href="{{asset('landing/assets/css/responsive.css')}}">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Revolution Style Sheets -->
     <link rel="stylesheet" href="{{asset('landing/assets/css/revolution/settings.css')}}">
@@ -62,7 +64,33 @@
 <script src="{{asset('landing/assets/js/revolution/extensions/revolution.extension.slideanims.min.js')}}"></script>
 <script src="{{asset('landing/assets/js/revolution/extensions/revolution.extension.video.min.js')}}"></script>
 <script src="{{asset('landing/assets/js/revolution/revolution-init.js')}}"></script>
+<script>
+    $('.logout').click(function() {
+      var userid = $(this).attr('data-id');
+      var nama = $(this).attr('data-nama');
+      swal({
+          title: "Apakah Anda Yakin ?",
+          text: "Hai " + nama + " Kamu Yakin Akan Logout Dari Wesbite ini ?",
+          icon: "info",
+          buttons: true,
+          dangerMode: true,
+        })
+        .then((willDelete) => {
+          if (willDelete) {
+            window.location = "/logout/" + ""
+            swal("Anda Berhasil Log out !", {
+              icon: "success",
+            });
+          } else {
+            swal({
+              title: "Log Out Di Batalkan !?",
+              icon: "error",
 
+            });
+          }
+        });
+    });
+  </script>
 
 </body>
 
