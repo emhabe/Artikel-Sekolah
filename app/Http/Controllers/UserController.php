@@ -60,10 +60,10 @@ class UserController extends Controller
         $user = auth()->user();
         if ($request->has('search')) {
             $kategori = Kategori::all();
-            $komentar = Komentar::with('user')->where('nama', 'LIKE', '%' . $request->search . '%')->paginate(10);
+            $komentar = Komentar::with('user')->where('nama', 'LIKE', '%' . $request->search . '%')->paginate(1000);
         } else {
             $kategori = Kategori::all();
-            $komentar = Komentar::with('user')->paginate(10);
+            $komentar = Komentar::with('user')->paginate(1000);
         }
 
         return view('demo-1.user', compact('kategori', 'komentar', 'user'));

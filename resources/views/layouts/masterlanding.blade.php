@@ -91,7 +91,7 @@
         });
     });
   </script>
-  <style>
+  <!-- <style>
 body {
 	text-align: center;
 	font-family: Arial;
@@ -177,7 +177,7 @@ body {
   text-decoration: none;
   border-bottom:1px dashed #cdcdcd;
 }
-</style>
+</style> -->
 
 </body>
 

@@ -191,7 +191,7 @@
         <div class="container-xxl flex-grow-1 container-p-y">
           <div class="card">
             <h5 class="card-header">Data user Komentar</h5>
-            <div class="table-responsive pt-0">
+            <div class="card-datatable table-responsive pt-0">
               <table class="table border-top data">
                 <thead>
                   <tr>
@@ -216,7 +216,6 @@
                 </tbody>
               </table>
             </div>
-            {{$komentar->links()}}
           </div>
 
         </div>

@@ -58,6 +58,7 @@
   <link rel="stylesheet" href="{{asset('assets/vendor/libs/select2/select2.css')}}" />
   <link rel="stylesheet" href="{{asset('assets/vendor/libs/formvalidation/dist/css/formValidation.min.css')}}" />
   <link rel="stylesheet" href="{{asset('assets/vendor/libs/swiper/swiper.css')}}" />
+  <link rel="stylesheet" href="{{asset('assets/css/datatables.bundle.css')}}" />
 
 
   <!-- Page Styles -->
@@ -65,16 +66,7 @@
   <link rel="stylesheet" href="{{asset('assets/vendor/css/pages/page-auth.css')}}">
   <link rel="stylesheet" href="{{asset('assets/vendor/css/pages/app-invoice.css')}}" />
   <link rel="stylesheet" href="{{asset('assets/vendor/css/pages/ui-carousel.css')}}" />
-
-  <!-- Include Scripts for customizer, helper, analytics, config -->
-  <!-- laravel style -->
   <script src="{{asset('assets/vendor/js/helpers.js')}}"></script>
-  <!-- beautify ignore:start -->
-  <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
-  <!--? Template customizer: To hide customizer set displayCustomizer value false in config.js.  -->
-  <!-- <script src="{{asset('assets/vendor/js/template-customizer.js')}}"></script> -->
-
-  <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
   <script src="{{asset('assets/js/config.js')}}"></script>
 
   <script>
@@ -123,8 +115,6 @@
 
 <body>
   @yield('content')
-  <!-- Include Scripts -->
-  <!-- BEGIN: Vendor JS-->
   <script src="{{asset('assets/vendor/libs/jquery/jquery40f4.js?id=96645acf88116df9c36bef6153b3a51a')}}"></script>
   <script src="{{asset('assets/vendor/libs/popper/popper885d.js?id=c8510634b3d8cded74bbe30a2b593d87')}}"></script>
   <script src="{{asset('assets/vendor/js/bootstrap0983.js?id=1f50b74ded465d298b282b4562bdaf8c')}}"></script>
@@ -134,45 +124,14 @@
   <script src="{{asset('assets/vendor/libs/typeahead-js/typeaheada766.js?id=8c315d7e2e7b09a04d8e8efead923241')}}"></script>
   <script src="{{asset('assets/vendor/js/menu7d39.js?id=f45ec38086f86335b91fc2fdcaaadab8')}}"></script>
   <script src="{{asset('assets/vendor/libs/apex-charts/apexcharts.js')}}"></script>
-  <!-- END: Page Vendor JS-->
-  <!--BEGIN: Calender-->
-  <script src="{{asset('assets/vendor/libs/jquery/jquery40f4.js?id=96645acf88116df9c36bef6153b3a51a')}}"></script>
-  <script src="{{asset('assets/vendor/libs/popper/popper885d.js?id=c8510634b3d8cded74bbe30a2b593d87')}}"></script>
-  <script src="{{asset('assets/vendor/js/bootstrap0983.js?id=1f50b74ded465d298b282b4562bdaf8c')}}"></script>
-  <script src="{{asset('assets/vendor/libs/perfect-scrollbar/perfect-scrollbar4d5e.js?id=9d86308b7c41e76a7dc8472907865b83')}}"></script>
-  <script src="{{asset('assets/vendor/libs/hammer/hammerc38e.js?id=2a80ebd1aa77a9e33ec54b68ee8de5e0')}}"></script>
-  <script src="{{asset('assets/vendor/libs/i18n/i18n5fec.js?id=5dd0894a4cb5357ba8a20df3187b6d9b')}}"></script>
-  <script src="{{asset('assets/vendor/libs/typeahead-js/typeaheada766.js?id=8c315d7e2e7b09a04d8e8efead923241')}}"></script>
-  <script src="{{asset('assets/vendor/js/menu7d39.js?id=f45ec38086f86335b91fc2fdcaaadab8')}}"></script>
   <script src="{{asset('assets/vendor/libs/fullcalendar/fullcalendar.js')}}"></script>
-  <script src="{{asset('assets/vendor/libs/formvalidation/dist/js/FormValidation.min.js')}}"></script>
+  <script src="{{asset('assets/vendor/js/menu7d39.js?id=f45ec38086f86335b91fc2fdcaaadab8')}}"></script>
   <script src="{{asset('assets/vendor/libs/formvalidation/dist/js/plugins/Bootstrap5.min.js')}}"></script>
   <script src="{{asset('assets/vendor/libs/formvalidation/dist/js/plugins/AutoFocus.min.js')}}"></script>
   <script src="{{asset('assets/vendor/libs/select2/select2.js')}}"></script>
   <script src="{{asset('assets/vendor/libs/flatpickr/flatpickr.js')}}"></script>
   <script src="{{asset('assets/vendor/libs/moment/moment.js')}}"></script>
-  <!--END: Calender-->
-  <!-- BEGIN: Card JS-->
-  <script src="{{asset('assets/vendor/libs/jquery/jquery40f4.js?id=96645acf88116df9c36bef6153b3a51a')}}"></script>
-  <script src="{{asset('assets/vendor/libs/popper/popper885d.js?id=c8510634b3d8cded74bbe30a2b593d87')}}"></script>
-  <script src="{{asset('assets/vendor/js/bootstrap0983.js?id=1f50b74ded465d298b282b4562bdaf8c')}}"></script>
-  <script src="{{asset('assets/vendor/libs/perfect-scrollbar/perfect-scrollbar4d5e.js?id=9d86308b7c41e76a7dc8472907865b83')}}"></script>
-  <script src="{{asset('assets/vendor/libs/hammer/hammerc38e.js?id=2a80ebd1aa77a9e33ec54b68ee8de5e0')}}"></script>
-  <script src="{{asset('assets/vendor/libs/i18n/i18n5fec.js?id=5dd0894a4cb5357ba8a20df3187b6d9b')}}"></script>
-  <script src="{{asset('assets/vendor/libs/typeahead-js/typeaheada766.js?id=8c315d7e2e7b09a04d8e8efead923241')}}"></script>
-  <script src="{{asset('assets/vendor/js/menu7d39.js?id=f45ec38086f86335b91fc2fdcaaadab8')}}"></script>
   <script src="{{asset('assets/vendor/libs/masonry/masonry.js')}}"></script>
-  <!-- END: Card Vendor JS-->
-  <!-- BEGIN: Datatable JS-->
-  <script src="{{asset('assets/vendor/libs/jquery/jquery40f4.js?id=96645acf88116df9c36bef6153b3a51a')}}"></script>
-  <script src="{{asset('assets/vendor/libs/popper/popper885d.js?id=c8510634b3d8cded74bbe30a2b593d87')}}"></script>
-  <script src="{{asset('assets/vendor/js/bootstrap0983.js?id=1f50b74ded465d298b282b4562bdaf8c')}}"></script>
-  <script src="{{asset('assets/vendor/libs/perfect-scrollbar/perfect-scrollbar4d5e.js?id=9d86308b7c41e76a7dc8472907865b83')}}"></script>
-  <script src="{{asset('assets/vendor/libs/hammer/hammerc38e.js?id=2a80ebd1aa77a9e33ec54b68ee8de5e0')}}"></script>
-  <script src="{{asset('assets/vendor/libs/i18n/i18n5fec.js?id=5dd0894a4cb5357ba8a20df3187b6d9b')}}"></script>
-  <script src="{{asset('assets/vendor/libs/typeahead-js/typeaheada766.js?id=8c315d7e2e7b09a04d8e8efead923241')}}"></script>
-  <script src="{{asset('assets/vendor/js/menu7d39.js?id=f45ec38086f86335b91fc2fdcaaadab8')}}"></script>
-  <script src="{{asset('assets/vendor/libs/moment/moment.js')}}"></script>
   <script src="{{asset('assets/vendor/libs/datatables/jquery.dataTables.js')}}"></script>
   <script src="{{asset('assets/vendor/libs/datatables-bs5/datatables-bootstrap5.js')}}"></script>
   <script src="{{asset('assets/vendor/libs/datatables-responsive/datatables.responsive.js')}}"></script>
@@ -182,121 +141,33 @@
   <script src="{{asset('assets/vendor/libs/jszip/jszip.js')}}"></script>
   <script src="{{asset('assets/vendor/libs/pdfmake/pdfmake.js')}}"></script>
   <script src="{{asset('assets/vendor/libs/datatables-buttons/buttons.html5.js')}}"></script>
-  <script src="{{asset('assets/vendor/libs/datatables-buttons/buttons.print.js')}}"></script>
-  <script src="{{asset('assets/vendor/libs/select2/select2.js')}}"></script>
-  <script src="{{asset('assets/vendor/libs/formvalidation/dist/js/FormValidation.min.js')}}"></script>
-  <script src="{{asset('assets/vendor/libs/formvalidation/dist/js/plugins/Bootstrap5.min.js')}}"></script>
-  <script src="{{asset('assets/vendor/libs/formvalidation/dist/js/plugins/AutoFocus.min.js')}}"></script>
+  <script src="{{asset('assets/vendor/libs/datatables-buttons/buttons.print.js')}}"></script>  
   <script src="{{asset('assets/vendor/libs/cleavejs/cleave.js')}}"></script>
-  <script src="{{asset('assets/vendor/libs/cleavejs/cleave-phone.js')}}"></script>
-  <!-- END: DataTable JS-->
-  <!-- BEGIN: Registrasi dan Login JS-->
-  <script src="{{asset('assets/vendor/libs/jquery/jquery40f4.js?id=96645acf88116df9c36bef6153b3a51a')}}"></script>
-  <script src="{{asset('assets/vendor/libs/popper/popper885d.js?id=c8510634b3d8cded74bbe30a2b593d87')}}"></script>
-  <script src="{{asset('assets/vendor/js/bootstrap0983.js?id=1f50b74ded465d298b282b4562bdaf8c')}}"></script>
-  <script src="{{asset('assets/vendor/libs/perfect-scrollbar/perfect-scrollbar4d5e.js?id=9d86308b7c41e76a7dc8472907865b83')}}"></script>
-  <script src="{{asset('assets/vendor/libs/hammer/hammerc38e.js?id=2a80ebd1aa77a9e33ec54b68ee8de5e0')}}"></script>
-  <script src="{{asset('assets/vendor/libs/i18n/i18n5fec.js?id=5dd0894a4cb5357ba8a20df3187b6d9b')}}"></script>
-  <script src="{{asset('assets/vendor/libs/typeahead-js/typeaheada766.js?id=8c315d7e2e7b09a04d8e8efead923241')}}"></script>
-  <script src="{{asset('assets/vendor/js/menu7d39.js?id=f45ec38086f86335b91fc2fdcaaadab8')}}"></script>
-  <script src="{{asset('assets/vendor/libs/formvalidation/dist/js/FormValidation.min.js')}}"></script>
-  <script src="{{asset('assets/vendor/libs/formvalidation/dist/js/plugins/Bootstrap5.min.js')}}"></script>
-  <script src="{{asset('assets/vendor/libs/formvalidation/dist/js/plugins/AutoFocus.min.js')}}"></script>
-  <!-- END: Page Registrasi dan Login JS-->
-  <!-- BEGIN: Profil JS-->
-  <script src="{{asset('assets/vendor/libs/jquery/jquery40f4.js?id=96645acf88116df9c36bef6153b3a51a')}}"></script>
-  <script src="{{asset('assets/vendor/libs/popper/popper885d.js?id=c8510634b3d8cded74bbe30a2b593d87')}}"></script>
-  <script src="{{asset('assets/vendor/js/bootstrap0983.js?id=1f50b74ded465d298b282b4562bdaf8c')}}"></script>
-  <script src="{{asset('assets/vendor/libs/perfect-scrollbar/perfect-scrollbar4d5e.js?id=9d86308b7c41e76a7dc8472907865b83')}}"></script>
-  <script src="{{asset('assets/vendor/libs/hammer/hammerc38e.js?id=2a80ebd1aa77a9e33ec54b68ee8de5e0')}}"></script>
-  <script src="{{asset('assets/vendor/libs/i18n/i18n5fec.js?id=5dd0894a4cb5357ba8a20df3187b6d9b')}}"></script>
-  <script src="{{asset('assets/vendor/libs/typeahead-js/typeaheada766.js?id=8c315d7e2e7b09a04d8e8efead923241')}}"></script>
-  <script src="{{asset('assets/vendor/js/menu7d39.js?id=f45ec38086f86335b91fc2fdcaaadab8')}}"></script>
+  <script src="{{asset('assets/vendor/libs/cleavejs/cleave-phone.js')}}"></script> 
   <script src="{{asset('assets/vendor/libs/sweetalert2/sweetalert2.js')}}"></script>
   <script src="{{asset('assets/vendor/libs/cleavejs/cleave.js')}}"></script>
   <script src="{{asset('assets/vendor/libs/cleavejs/cleave-phone.js')}}"></script>
-  <script src="{{asset('assets/vendor/libs/select2/select2.js')}}"></script>
-  <script src="{{asset('assets/vendor/libs/formvalidation/dist/js/FormValidation.min.js')}}"></script>
-  <script src="{{asset('assets/vendor/libs/formvalidation/dist/js/plugins/Bootstrap5.min.js')}}"></script>
-  <script src="{{asset('assets/vendor/libs/formvalidation/dist/js/plugins/AutoFocus.min.js')}}"></script>
-  <!-- END: Page Profil JS-->
-  <!-- BEGIN: Sweetalert JS-->
-  <script src="{{asset('assets/vendor/libs/jquery/jquery40f4.js?id=96645acf88116df9c36bef6153b3a51a')}}"></script>
-  <script src="{{asset('assets/vendor/libs/popper/popper885d.js?id=c8510634b3d8cded74bbe30a2b593d87')}}"></script>
-  <script src="{{asset('assets/vendor/js/bootstrap0983.js?id=1f50b74ded465d298b282b4562bdaf8c')}}"></script>
-  <script src="{{asset('assets/vendor/libs/perfect-scrollbar/perfect-scrollbar4d5e.js?id=9d86308b7c41e76a7dc8472907865b83')}}"></script>
-  <script src="{{asset('assets/vendor/libs/hammer/hammerc38e.js?id=2a80ebd1aa77a9e33ec54b68ee8de5e0')}}"></script>
-  <script src="{{asset('assets/vendor/libs/i18n/i18n5fec.js?id=5dd0894a4cb5357ba8a20df3187b6d9b')}}"></script>
-  <script src="{{asset('assets/vendor/libs/typeahead-js/typeaheada766.js?id=8c315d7e2e7b09a04d8e8efead923241')}}"></script>
-  <script src="{{asset('assets/vendor/js/menu7d39.js?id=f45ec38086f86335b91fc2fdcaaadab8')}}"></script>
   <script src="{{asset('assets/vendor/libs/sweetalert2/sweetalert2.js')}}"></script>
-  <!-- END: Page Sweetalert JS-->
-  <!-- BEGIN: Lihat Artikel JS-->
-  <script src="https://cdn.ckeditor.com/ckeditor5/35.3.2/classic/ckeditor.js"></script>
-  <script src="{{asset('assets/vendor/libs/jquery/jquery40f4.js?id=96645acf88116df9c36bef6153b3a51a')}}"></script>
-  <script src="{{asset('assets/vendor/libs/popper/popper885d.js?id=c8510634b3d8cded74bbe30a2b593d87')}}"></script>
-  <script src="{{asset('assets/vendor/js/bootstrap0983.js?id=1f50b74ded465d298b282b4562bdaf8c')}}"></script>
-  <script src="{{asset('assets/vendor/libs/perfect-scrollbar/perfect-scrollbar4d5e.js?id=9d86308b7c41e76a7dc8472907865b83')}}"></script>
-  <script src="{{asset('assets/vendor/libs/hammer/hammerc38e.js?id=2a80ebd1aa77a9e33ec54b68ee8de5e0')}}"></script>
-  <script src="{{asset('assets/vendor/libs/i18n/i18n5fec.js?id=5dd0894a4cb5357ba8a20df3187b6d9b')}}"></script>
-  <script src="{{asset('assets/vendor/libs/typeahead-js/typeaheada766.js?id=8c315d7e2e7b09a04d8e8efead923241')}}"></script>
-  <script src="{{asset('assets/vendor/js/menu7d39.js?id=f45ec38086f86335b91fc2fdcaaadab8')}}"></script>
-  <script src="{{asset('assets/vendor/libs/moment/moment.js')}}"></script>
-  <script src="{{asset('assets/vendor/libs/flatpickr/flatpickr.js')}}"></script>
+  <script src="https://cdn.ckeditor.com/ckeditor5/35.3.2/classic/ckeditor.js"></script> 
   <script src="{{asset('assets/vendor/libs/cleavejs/cleave.js')}}"></script>
   <script src="{{asset('assets/vendor/libs/cleavejs/cleave-phone.js')}}"></script>
-  <!-- END: Page Lihat Artikel JS-->
-  <!-- BEGIN: Carousel JS-->
-  <script src="{{asset('assets/vendor/libs/jquery/jquery40f4.js?id=96645acf88116df9c36bef6153b3a51a')}}"></script>
-  <script src="{{asset('assets/vendor/libs/popper/popper885d.js?id=c8510634b3d8cded74bbe30a2b593d87')}}"></script>
-  <script src="{{asset('assets/vendor/js/bootstrap0983.js?id=1f50b74ded465d298b282b4562bdaf8c')}}"></script>
-  <script src="{{asset('assets/vendor/libs/perfect-scrollbar/perfect-scrollbar4d5e.js?id=9d86308b7c41e76a7dc8472907865b83')}}"></script>
-  <script src="{{asset('assets/vendor/libs/hammer/hammerc38e.js?id=2a80ebd1aa77a9e33ec54b68ee8de5e0')}}"></script>
-  <script src="{{asset('assets/vendor/libs/i18n/i18n5fec.js?id=5dd0894a4cb5357ba8a20df3187b6d9b')}}"></script>
-  <script src="{{asset('assets/vendor/libs/typeahead-js/typeaheada766.js?id=8c315d7e2e7b09a04d8e8efead923241')}}"></script>
-  <script src="{{asset('assets/vendor/js/menu7d39.js?id=f45ec38086f86335b91fc2fdcaaadab8')}}"></script>
   <script src="{{asset('assets/vendor/libs/swiper/swiper.js')}}"></script>
-  <!-- END: Page Carousel JS-->
-  <!-- BEGIN: Theme JS-->
   <script src="{{asset('assets/js/mainc3d7.js?id=3c628e87a9befaa350e1f822744b8142')}}"></script>
-  <!-- ALERT VALIDASI -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" integrity="sha512-3pIirOrwegjM6erE5gPSwkUzO+3cTjpnV9lexlNZqvupR64iZBnOOTiiLPb9M36zpMScbmUNIcHUqKD47M719g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-  <!-- AKHIR ALERT VALIDASI -->
-  <!-- END: Theme JS-->
-  <!-- Pricing Modal JS-->
-  <!-- END: Pricing Modal JS-->
-  <!-- BEGIN: Page JS-->
   <script src="{{asset('assets/js/dashboards-analytics.js')}}"></script>
-  <!-- END: Page JS-->
-  <!-- BEGIN: DataTable JS-->
   <script src="{{asset('assets/js/app-user-list.js')}}"></script>
-  <!-- END: Datatable JS-->
-  <!-- BEGIN: Calender JS-->
   <script src="{{asset('assets/js/app-calendar-events.js')}}"></script>
   <script src="{{asset('assets/js/app-calendar.js')}}"></script>
-  <!-- END: Calender JS-->
-  <!-- BEGIN: Resistrasi JS-->
   <script src="{{asset('assets/js/pages-auth.js')}}"></script>
-  <!-- END: Resgistrasi JS-->
-  <!-- BEGIN: Form JS-->
   <script src="{{asset('assets/js/form-basic-inputs.js')}}"></script>
-  <!-- END: Form JS-->
-  <!-- BEGIN: Page JS-->
   <script src="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/js/modal-edit-user.js"></script>
   <script src="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/assets/js/app-user-view.js"></script>
-  <!-- END: Page JS-->
-  <!-- BEGIN: Sweetalert JS-->
   <script src="{{asset('assets/js/extended-ui-sweetalert2.js')}}"></script>
-  <!-- END: Sweetalert JS-->
-  <!-- BEGIN: Lihat Artikel JS-->
   <script src="{{asset('assets/js/offcanvas-add-payment.js')}}"></script>
   <script src="{{asset('assets/js/offcanvas-send-invoice.js')}}"></script>
-  <script src="{{asset('assets/js/datatable.js')}}"></script>
-  <script src="https://cdn.datatables.net/1.13.1/js/dataTables.bootstrap5.min.js"></script>
-  <script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
+  <script src="{{asset('assets/js/datatables.js')}}"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
   <!-- END: Lihat Artikel JS-->
   <!-- BEGIN: Carousel JS-->
@@ -746,7 +617,7 @@
       })
     });
   </script>
-  <script>
+  <!-- <script>
     $(function() {
       'use strict';
 
@@ -1017,7 +888,7 @@
         $('div.head-label').html('<h5 class="card-title mb-0">DataTable with Buttons</h5>');
       }
     });
-  </script>
+  </script> -->
 
 </body>
 
