@@ -59,7 +59,7 @@
 
                                 </ul>
                             </li>
-                            <li class="menu-item"><a href="#berita" title="">Daftar Berita</a>
+                            <li class="menu-item"><a href="/#berita" title="">Daftar Berita</a>
                             </li>
                             <li class="menu-item"><a href="javascript:void(0);" title="">Tentang</a>
                             </li>
@@ -95,7 +95,7 @@
                                 @endforeach
                             </ul>
                         </li>
-                        <li class="menu-item"><a href="#berita" title="">Daftar Berita</a>
+                        <li class="menu-item"><a href="/#berita" title="">Daftar Berita</a>
 
                         </li>
                         <li class="menu-item"><a href="javascript:void(0);" title="">Tentang</a>
@@ -135,10 +135,10 @@
 
                     </ul>
                 </li>
-                <li class="menu-item"><a href="#berita" title="">Daftar Berita</a>
+                <li class="menu-item"><a href="/#berita" title="">Daftar Berita</a>
 
                 </li>
-                <li class="menu-item"><a href="javascript:void(0);" title="">Tentang</a>
+                <li class="menu-item"><a href="#about" title="">Tentang</a>
 
                 </li>
 
@@ -160,10 +160,10 @@
             </div>
             <div class="col-lg-3 position-relative justify-content-between ">
                 <div class="widget w-90 ms-3">
-                    <form class="searchform position-relative w-100">
-                        <input type="text" placeholder="Search...">
-                        <button type="submit"><i class="flaticon-magnifying-glass"></i></button>
-                    </form>
+                <form action="/kategori_berita/{{$namakategori->id}}" class="searchform position-relative w-100" method="get">
+                                                <input type="search" name="search" placeholder="Search...">
+                                                <button type="submit"><i class="flaticon-magnifying-glass"></i></button>
+                                            </form>
                 </div>
             </div>
             <div class="blog-wrap blog-spac px-3 position-relative w-100">
@@ -189,6 +189,11 @@
                         </div>
                     </div>
                     @endforeach
+                    {{$artikel->links()}}
+                    @if(count($artikel))
+                    @else
+                    <h4 class="kosong2 mb-9">Maaf Data Tidak Ada :)</h4>
+                    @endif
 
                 </div>
                 <div class="scl-anlys-wrap position-relative w-100">
@@ -202,11 +207,12 @@
                                     <h2 class="mb-0"> <span>Website </span>RadarPgriKu</h2>
                                     <i class="btm-ln bg-color28"></i>
                                 </div><!-- Sec Title -->
-                                <p class="mb-0">Adalah Sebuah Website Yang Dibuat dengan maksud dan Tujuan agar Kalian Mendapatkan Informasi atau Berita Terupdate Seputar Kegiatan,Acara yang dilakukan oleh Siswa Siswi SMK PGRI Singosari.</p>
+                                <p class="mb-0"><h6>Adalah Sebuah Website Yang Dibuat dengan maksud dan Tujuan agar Kalian Mendapatkan Informasi atau Berita Terupdate Seputar Kegiatan,Acara yang dilakukan oleh Siswa Siswi SMK PGRI Singosari.</h6></p>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div><!-- Bl
             </div><!-- Blog Wrap -->
         </div>
     </section>
@@ -279,7 +285,7 @@
                         <div class="col-md-7 col-sm-12 col-lg-8">
                             <div class="contact-form-wrap mt-40 w-100">
                                 <div class="sec-title tiga w-100 position-relative">
-                                    <h2 class="mb-0 ">Send a Message</h2>
+                                    <h2 class="mb-0 ">Kirim Sebuah Pesan</h2>
                                     <i class="btm-ln bg-color27"></i>
                                 </div><!-- Sec Title -->
                                 <form action="#" method="post" id="email-form">
@@ -287,32 +293,12 @@
                                         <div class="response w-100"></div>
                                     </div>
                                     <div class="row mrg10">
-                                        <div class="col-md-6 col-sm-6 col-lg-6">
-                                            <div class="field-box w-100">
-                                                <input class="fname" type="text" name="fname" placeholder="First Name *" required>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 col-sm-6 col-lg-6">
-                                            <div class="field-box w-100">
-                                                <input class="lname" type="text" name="lname" placeholder="Last Name *" required>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 col-sm-6 col-lg-6">
-                                            <div class="field-box w-100">
-                                                <input class="email" type="email" name="email" placeholder="Email *" required>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 col-sm-6 col-lg-6">
-                                            <div class="field-box w-100">
-                                                <input class="phone" type="tel" name="phone" placeholder="Phone" required>
-                                            </div>
-                                        </div>
                                         <div class="col-md-12 col-sm-12 col-lg-12">
                                             <div class="field-box w-100">
                                                 <textarea class="contact_message" name="contact_message" placeholder="Message" required></textarea>
                                             </div>
                                             <div class="field-btn w-100">
-                                                <button class="thm-btnbiru d-inline-block rounded-pill" id="submit" type="submit">Send A Message</button>
+                                                <button class="thm-btnbiru d-inline-block rounded-pill" id="submit" type="submit">Kirimkan</button>
                                             </div>
                                         </div>
                                     </div>

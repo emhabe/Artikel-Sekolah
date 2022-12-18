@@ -24864,7 +24864,13 @@ a.bg-vimeo:hover {
 @media screen and (min-width: 1024px) {
     .kosong {
       
-      margin-left: 350px;
+      margin-left: 370px;
     }
    
+  }
+  @media screen and (max-width: 768px){
+    .kosong {
+      
+        margin-left: 20px;
+      }
   }

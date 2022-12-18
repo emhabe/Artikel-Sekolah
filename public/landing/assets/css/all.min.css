@@ -4647,3 +4647,24 @@
 .fas {
     font-weight: 900;
 }
+@media screen and (min-width: 1024px) {
+    .kosong {
+      
+      margin-left: 450px;
+    }
+    .kosong2 {
+      
+      margin-left: 550px;
+    }
+   
+  }
+  @media screen and (max-width: 768px){
+    .kosong {
+      
+        margin-left: 20px;
+      }
+    .kosong2 {
+      
+        margin-left: 70px;
+      }
+  }

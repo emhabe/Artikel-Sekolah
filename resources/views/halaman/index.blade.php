@@ -44,7 +44,7 @@
             <div class="container">
                 <div class="menubar-inner d-flex flex-wrap align-items-center justify-content-between w-100">
                     <div class="logo">
-                        <h1 class="mb-0"><a href="index.html" title="Home"><img width="185" src="{{asset('landing/assets/images/logo%402x.png')}}" alt="Logo"></a></h1>
+                        <h1 class="mb-0"><a href="index.html" title="Home"><img width="185" src="{{asset('landing/assets/images/logo.png')}}" alt="Logo"></a></h1>
                     </div><!-- Logo -->
                     <nav>
                         <ul class="d-inline-flex flex-wrap align-items-center mb-0 list-unstyled">
@@ -80,7 +80,7 @@
         <div class="container">
             <div class="menubar-inner d-flex flex-wrap align-items-center justify-content-between w-100">
                 <div class="logo">
-                    <h1 class="mb-0"><a href="index.html" title="Home"><img width="185" src="{{asset('landing/assets/images/logo%402x.png')}}" alt="Logo"></a></h1>
+                    <h1 class="mb-0"><a href="index.html" title="Home"><img width="185" src="{{asset('landing/assets/images/logo.png')}}" alt="Logo"></a></h1>
                 </div><!-- Logo -->
                 <nav>
                     <ul class="d-inline-flex flex-wrap align-items-center mb-0 list-unstyled">
@@ -111,7 +111,7 @@
         <div class="responsive-topbar w-100">
             <div class="container d-flex flex-wrap align-items-center justify-content-between">
                 <div class="logo">
-                    <h1 class="mb-0"><a href="index.html" title="Home"><img class="img-fluid" src="{{asset('landing/assets/images/logo%402x.png')}}" alt="Logo"></a></h1>
+                    <h1 class="mb-0"><a href="index.html" title="Home"><img class="img-fluid" src="{{asset('landing/assets/images/logo.png')}}" alt="Logo"></a></h1>
                 </div><!-- Logo -->
                 <div class="header-btns d-inline-flex flex-wrap align-items-center">
                     <a class="res-menu-btn d-inline-block" href="javascript:void(0);" title=""><i class="fas fa-align-justify"></i></a>
@@ -121,7 +121,7 @@
         </div><!-- Responsive Topbar -->
         <div class="responsive-menu w-100">
             <div class="logo">
-                <h1 class="mb-0"><a href="index.html" title="Home"><img class="img-fluid" src="{{asset('landing/assets/images/logo%402x.png')}}" alt="Logo"></a></h1>
+                <h1 class="mb-0"><a href="index.html" title="Home"><img class="img-fluid" src="{{asset('landing/assets/images/logo.png')}}" alt="Logo"></a></h1>
             </div><!-- Logo -->
             <ul class="mb-0 list-unstyled w-100">
                 <li class="menu-item active satu"><a href="javascript:void(0);" title="">Beranda</a>
@@ -165,7 +165,7 @@
                         <div class="col-md-12 col-sm-12 col-lg-6">
                             <div class="text-box atas w-100">
                                 <div class="sec-title w-100 position-relative">
-                                    <h2 class="mb-0"><span>Selamat Datang di</span> <br> Nama Website</h2>
+                                    <h2 class="mb-0"><span>Selamat Datang di</span> <br> RadarPgriKu</h2>
                                     <i class="btm-ln bg-color26"></i>
                                 </div><!-- Sec Title -->
                                 <b>
@@ -253,9 +253,7 @@
                                 <div class="theiaStickySidebar">
                                     <aside class="sidebar-wrap w-100 position-relative">
                                         <div class="widget w-100">
-                                            @foreach ($artikel as $ow)
-                                            <form action="/" class="searchform position-relative w-100" method="get">
-                                                @endforeach
+                                              <form action="/#berita" class="searchform position-relative w-100" method="get">
                                                 <input type="search" name="search" placeholder="Search...">
                                                 <button type="submit"><i class="flaticon-magnifying-glass"></i></button>
                                             </form>
@@ -342,7 +340,7 @@
                     {{$artikel->links()}}
                     @if(count($artikel))
                     @else
-                    <h4 class="kosong">Maaf Data Yang Anda Cari Tidak Ada :)</h4>
+                    <h4 class="kosong mb-12 mt-3">Maaf Data Yang Anda Cari Tidak Ada :)</h4>
                     @endif
                 </div>
                 <div class="scl-anlys-wrap position-relative w-100">
@@ -467,8 +465,8 @@
     <div class="bottom-bar bg-color12 w-100">
         <div class="container">
             <div class="bottom-inner d-flex flex-wrap align-items-center justify-content-between w-100">
-                <p class="mb-0">Copyright &copy; 2021 — All rights reserved</p>
-                <p class="mb-0">We on a mission to build a better future where technology creates good jobs for everyone.</p>
+                <p class="mb-0">Copyright &copy; 2022 — SMK PGRI Singosari</p>
+                <p class="mb-0">Dibuat Oleh TIM</p>
             </div>
         </div>
     </div><!-- Bottom Bar -->

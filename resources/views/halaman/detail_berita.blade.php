@@ -54,14 +54,14 @@
                             <li class="menu-item-has-children"><a href="javascript:void(0);" title="">Kategori</a>
                                 <ul class="children mb-0 list-unstyled">
                                     @foreach($kategori as $kt)
-                                    <li><a href="seo-services.html" title="">{{$kt->nama}}</a></li>
+                                    <li><a href="/kategori_berita/{{$kt->id}}" title="">{{$kt->nama}}</a></li>
                                     @endforeach
 
                                 </ul>
                             </li>
                             <li class="menu-item"><a href="#berita" title="">Daftar Berita</a>
                             </li>
-                            <li class="menu-item"><a href="javascript:void(0);" title="">Tentang</a>
+                            <li class="menu-item"><a href="#about" title="">Tentang</a>
                             </li>
                             <li><a href="#contact" title="">Kontak</a></li>
                             <li class="menu-item active satu"><a href="javascript:void(0);" title="">Detail Berita</a>
@@ -92,14 +92,14 @@
                         <li class="menu-item-has-children"><a href="javascript:void(0);" title="">Kategori</a>
                             <ul class="children mb-0 list-unstyled">
                                 @foreach($kategori as $kt1)
-                                <li><a href="seo-services.html" title="">{{$kt1->nama}}</a></li>
+                                <li><a href="/kategori_berita/{{$kt1->id}}" title="">{{$kt1->nama}}</a></li>
                                 @endforeach
                             </ul>
                         </li>
                         <li class="menu-item"><a href="#berita" title="">Daftar Berita</a>
 
                         </li>
-                        <li class="menu-item"><a href="javascript:void(0);" title="">Tentang</a>
+                        <li class="menu-item"><a href="#about" title="">Tentang</a>
                         </li>
                         <li><a href="#contact" title="">Kontak</a></li>
                         <li class="menu-item active satu"><a href="javascript:void(0);" title="">Detail Berita</a>
@@ -132,7 +132,7 @@
                 <li class="menu-item-has-children dua"><a href="javascript:void(0);" title="">Kategori</a>
                     <ul class="children mb-0 list-unstyled">
                         @foreach($kategori as $kt3)
-                        <li><a href="seo-services.html" title="">{{$kt3->nama}}</a></li>
+                        <li><a href="/kategori_berita/{{$kt3->id}}" title="">{{$kt3->nama}}</a></li>
                         @endforeach
 
                     </ul>
@@ -140,7 +140,7 @@
                 <li class="menu-item"><a href="#berita" title="">Daftar Berita</a>
 
                 </li>
-                <li class="menu-item"><a href="javascript:void(0);" title="">Tentang</a>
+                <li class="menu-item"><a href="#about" title="">Tentang</a>
 
                 </li>
 
@@ -162,60 +162,60 @@
 
 
                                 <blockquote>
-                                    <p class="mb-0">INTI</p>
+                                    <p class="mb-0"><h3>{{$data->judul}}<h3></p>
                                 </blockquote>
                                 {!!$data->deskripsi!!}
                             </div>
                         </div>
                     </div><!-- Post Detail Wrap -->
                     <div class="col-md-6 col-sm-12 col-lg-3">
-                    <div class="leftside mt-3">
-                                <div class="theiaStickySidebar">
-                                    <aside class="sidebar-wrap w-100 position-relative">
-                                        <div class="widget w-100">
-                                            <form class="searchform position-relative w-100">
-                                                <input type="text" placeholder="Search...">
+                        <div class="leftside mt-3">
+                            <div class="theiaStickySidebar">
+                                <aside class="sidebar-wrap w-100 position-relative">
+                                    <div class="widget w-100">
+                                            <form action="/detail_berita/{{$data->id}}" class="searchform position-relative w-100" method="get">
+                                                <input type="search" name="search" placeholder="Search...">
                                                 <button type="submit"><i class="flaticon-magnifying-glass"></i></button>
                                             </form>
-                                        </div>
-                                        <div class="widget widget2 v2 w-100">
-                                            <h3>Terbaru</h3>
-                                            <div class="recentposts-wrap w-100">
-                                                @foreach($artikel2 as $ar1)
-                                                <div class="recentpost-box d-flex flex-wrap align-items-center w-100">
-                                                    <div class="recentpost-img"><a href="/detail_berita/{{$ar1->id}}" title=""><img class="img-fluid w-100" src="{{asset('foto_artikel/'.$ar1->foto)}}" alt="Recent Post Image 1" height="50"></a></div>
-                                                    <div class="recentpost-info 2">
-                                                        <h5 class="mb-0"><a href="/detail_berita/{{$ar1->id}}" title="">{{$ar1->judul}}</a></h5>
-                                                        <span class="d-block">{{Carbon\Carbon::parse($ar1->created_at)->isoformat('D / MMMM /Y')}}</span>
-                                                    </div>
-                                                </div>
-                                                @endforeach
-
-                                            </div><!-- Recent Posts Wrap -->
-                                        </div>
-                                        <div class="widget v2 w-100">
-                                            <h3>Kategori</h3>
-                                            <ul class="mb-0 list-unstyled w-100">
-                                                @foreach($kategori as $kate3)
-                                                <li><a href="/kategori_berita/{{$kate3->id}}" title="">{{$kate3->nama}}</a></li>
-                                                @endforeach
-                                            </ul>
-                                        </div>
-                                        <div class="widget widget3 v2 w-100">
-                                            <h3>Media Berita</h3>
-                                            <div class="insta-gal-wrap w-100">
-                                                <div class="row mrg10">
-                                                    @foreach($artikel as $ar6)
-                                                    <div class="col-md-4 col-sm-4 col-lg-4">
-                                                        <div class="insta-gal-item overflow-hidden position-relative w-100"><a class="d-block" href="{{asset('foto_artikel/'.$ar6->foto)}}" data-fancybox="gal" title=""><img class="img-fluid w-100" src="{{asset('foto_artikel/'.$ar6->foto)}}" alt="Instagram Image {{$ar6->id}}" height="50"></a></div>
-                                                    </div>
-                                                    @endforeach
+                                    </div>
+                                    <div class="widget widget2 v2 w-100">
+                                        <h3>Terbaru</h3>
+                                        <div class="recentposts-wrap w-100">
+                                            @foreach($artikel2 as $ar1)
+                                            <div class="recentpost-box d-flex flex-wrap align-items-center w-100">
+                                                <div class="recentpost-img"><a href="/detail_berita/{{$ar1->id}}" title=""><img class="img-fluid w-100" src="{{asset('foto_artikel/'.$ar1->foto)}}" alt="Recent Post Image 1" height="50"></a></div>
+                                                <div class="recentpost-info 2">
+                                                    <h5 class="mb-0"><a href="/detail_berita/{{$ar1->id}}" title="">{{$ar1->judul}}</a></h5>
+                                                    <span class="d-block">{{Carbon\Carbon::parse($ar1->created_at)->isoformat('D / MMMM /Y')}}</span>
                                                 </div>
                                             </div>
+                                            @endforeach
+
+                                        </div><!-- Recent Posts Wrap -->
+                                    </div>
+                                    <div class="widget v2 w-100">
+                                        <h3>Kategori</h3>
+                                        <ul class="mb-0 list-unstyled w-100">
+                                            @foreach($kategori as $kate3)
+                                            <li><a href="/kategori_berita/{{$kate3->id}}" title="">{{$kate3->nama}}</a></li>
+                                            @endforeach
+                                        </ul>
+                                    </div>
+                                    <div class="widget widget3 v2 w-100">
+                                        <h3>Media Berita</h3>
+                                        <div class="insta-gal-wrap w-100">
+                                            <div class="row mrg10">
+                                                @foreach($artikel as $ar6)
+                                                <div class="col-md-4 col-sm-4 col-lg-4">
+                                                    <div class="insta-gal-item overflow-hidden position-relative w-100"><a class="d-block" href="{{asset('foto_artikel/'.$ar6->foto)}}" data-fancybox="gal" title=""><img class="img-fluid w-100" src="{{asset('foto_artikel/'.$ar6->foto)}}" alt="Instagram Image {{$ar6->id}}" height="50"></a></div>
+                                                </div>
+                                                @endforeach
+                                            </div>
                                         </div>
-                                    </aside><!-- Sidebar Wrap -->
-                                </div>
+                                    </div>
+                                </aside><!-- Sidebar Wrap -->
                             </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -256,7 +256,11 @@
                         </div>
                     </div>
                     @endforeach
-
+                    {{$artikel->links()}}  
+                    @if(count($artikel))
+          @else
+           <h4 class="kosong mb-12 mt-2">Maaf Data Yang Anda Cari Tidak Ada :)</h4>
+          @endif
                 </div>
                 <div class="scl-anlys-wrap position-relative w-100">
                     <div class="row align-items-center" id="about">
@@ -269,7 +273,7 @@
                                     <h2 class="mb-0"> <span>Website </span>RadarPgriKu</h2>
                                     <i class="btm-ln bg-color28"></i>
                                 </div><!-- Sec Title -->
-                                <p class="mb-0">Adalah Sebuah Website Yang Dibuat dengan maksud dan Tujuan agar Kalian Mendapatkan Informasi atau Berita Terupdate Seputar Kegiatan,Acara yang dilakukan oleh Siswa Siswi SMK PGRI Singosari.</p>
+                                <p class="mb-0"><h6>Adalah Sebuah Website Yang Dibuat dengan maksud dan Tujuan agar Kalian Mendapatkan Informasi atau Berita Terupdate Seputar Kegiatan,Acara yang dilakukan oleh Siswa Siswi SMK PGRI Singosari.</h6></p>
                             </div>
                         </div>
                     </div>
@@ -355,26 +359,6 @@
                                         <div class="response w-100"></div>
                                     </div>
                                     <div class="row mrg10">
-                                        <div class="col-md-6 col-sm-6 col-lg-6">
-                                            <div class="field-box w-100">
-                                                <input class="fname" type="text" name="fname" placeholder="First Name *" required>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 col-sm-6 col-lg-6">
-                                            <div class="field-box w-100">
-                                                <input class="lname" type="text" name="lname" placeholder="Last Name *" required>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 col-sm-6 col-lg-6">
-                                            <div class="field-box w-100">
-                                                <input class="email" type="email" name="email" placeholder="Email *" required>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 col-sm-6 col-lg-6">
-                                            <div class="field-box w-100">
-                                                <input class="phone" type="tel" name="phone" placeholder="Phone" required>
-                                            </div>
-                                        </div>
                                         <div class="col-md-12 col-sm-12 col-lg-12">
                                             <div class="field-box w-100">
                                                 <textarea class="contact_message" name="contact_message" placeholder="Message" required></textarea>

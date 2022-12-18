@@ -30,6 +30,7 @@ class ArtikelController extends Controller
    }
    public function detail_berita(Request $request, $id)
    {
+      $data= Artikel::findOrFail($id);
       if ($request->has('search')) {
          $kategori = Kategori::all();
          $artikel2 = Artikel::with('kategori')->where('status', '=', '1')->paginate(5);
@@ -41,11 +42,18 @@ class ArtikelController extends Controller
       }
       return view('halaman.detail_berita', compact('data', 'artikel', 'artikel2', 'kategori'));
    }
-   public function kategori_berita($id)
+   public function kategori_berita(Request $request,$id)
    {
+    if($request->has('search')){
       $kategori = Kategori::all();
       $namakategori = Kategori::where('id', '=', $id)->first();
-      $artikel = Artikel::with('kategori')->where('status', '=', 1)->where('kategori_id', '=', $id)->latest('created_at')->get();
+      $artikel = Artikel::with('kategori')->where('judul', 'LIKE', '%' . $request->search . '%')->where('status', '=', 1)->where('kategori_id', '=', $id)->latest('created_at')->paginate(8);
+    }
+    else{
+      $kategori = Kategori::all();
+      $namakategori = Kategori::where('id', '=', $id)->first();
+      $artikel = Artikel::with('kategori')->where('status', '=', 1)->where('kategori_id', '=', $id)->latest('created_at')->paginate(8);
+    }
       return view('halaman.kategori_berita', compact('artikel', 'kategori', 'namakategori'));
    }
    public function test()

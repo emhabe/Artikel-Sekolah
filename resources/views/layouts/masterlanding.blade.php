@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content=""/>
     <meta name="keywords" content=""/>
-    <link rel="icon" href="{{asset('landing/assets/images/favicon.png')}}" sizes="32x32" type="image/png">
-    <title>SeoEs &#8211; SEO &amp; Marketing Agency HTML5 Template</title>
+    <link rel="icon" href="{{asset('landing/assets/images/logo1.png')}}" sizes="32x32" type="image/png">
+    <title>RadarPgriKu Website Artikel</title>
     
     <link rel="stylesheet" href="{{asset('landing/assets/css/all.min.css')}}">
     <link rel="stylesheet" href="{{asset('landing/assets/css/flaticon.css')}}">
