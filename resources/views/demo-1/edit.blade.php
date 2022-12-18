@@ -12,7 +12,7 @@
       <div class="app-brand demo">
         <a href="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo-1" class="app-brand-link">
           <span class="app-brand-logo demo">
-          <img src="{{asset('assets/img/illustrations/logo1.png')}}" width="40" height="40">
+            <img src="{{asset('assets/img/illustrations/logo1.png')}}" width="40" height="40">
           </span>
           <span class="app-brand-text demo menu-text fw-bold ms-2"><img src="{{asset('assets/img/illustrations/logo2.png')}}" width="120" height="100"></span>
         </a>
@@ -329,8 +329,14 @@
                     <div>
                       <label for="defaultFormControlInput" class="form-label">Judul</label>
                       <input type="text" class="form-control" id="defaultFormControlInput" name="judul" value="{{$data->judul}}" placeholder="Judul" aria-describedby="defaultFormControlHelp" />
+                      @error('judul')
+                      <div class="error">{{ $message }}</div>
+                      @enderror
                       <label class="form-label" for="basic-default-bio">Detail Singkat</label>
                       <textarea class="form-control" id="basic-default-bio" name="detail_singkat" rows="3" required>{{$data->detail_singkat}}</textarea>
+                      @error('detail_singkat')
+                      <div class="error">{{ $message }}</div>
+                      @enderror
                       <label class="form-label" for="basic-default-bio">Deskripsi</label>
                       <textarea class="form-control" id="editor" name="deskripsi" rows="3">{{ $data->deskripsi }}</textarea>
                       <script>
@@ -346,8 +352,14 @@
                       </script>
 
                       <script src="https://cdn.ckeditor.com/ckeditor5/35.3.2/classic/ckeditor.js"></script>
+                      @error('deskripsi')
+                      <div class="error">{{ $message }}</div>
+                      @enderror
                       <label for="defaultFormControlInput" class="form-label">Foto</label>
                       <input type="file" class="form-control mb-2" id="defaultFormControlInput" name="foto" aria-describedby="defaultFormControlHelp">
+                      @error('foto')
+                      <div class="error">{{ $message }}</div>
+                      @enderror
                       <img src="{{asset('foto_artikel/'.$data->foto)}}" alt="" style="width: 150px;">
                       <div class="form-control mb-4">
                         <button class="btn btn-primary d-grid w-100">

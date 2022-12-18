@@ -12,7 +12,7 @@
       <div class="app-brand demo">
         <a href="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo-1" class="app-brand-link">
           <span class="app-brand-logo demo">
-          <img src="{{asset('assets/img/illustrations/logo1.png')}}" width="40" height="40">
+            <img src="{{asset('assets/img/illustrations/logo1.png')}}" width="40" height="40">
           </span>
           <span class="app-brand-text demo menu-text fw-bold ms-2"><img src="{{asset('assets/img/illustrations/logo2.png')}}" width="120" height="100"></span>
         </a>
@@ -172,6 +172,9 @@
                       <label for="defaultFormControlInput" class="form-label">Judul :</label>
                       <input type="text" class="form-control" id="defaultFormControlInput" name="judul" placeholder="Masukkan Judul Berita" aria-describedby="defaultFormControlHelp" />
                     </div>
+                    @error('judul')
+                    <div class="error">{{ $message }}</div>
+                    @enderror
                     <div class="input-gropup mb-3">
                       <label for="defaultFormControlInput" class="form-label">Kategori :</label>
                       <select class="form-control" name="kategori">
@@ -181,10 +184,14 @@
                         @endforeach
                       </select>
                     </div>
+
                     <div class="input-gropup mb-3">
                       <label class="form-label" for="basic-default-bio">Deskripsi Singkat :</label>
                       <textarea class="form-control" id="basic-default-bio" name="detail_singkat" rows="3" placeholder="Masukkan Deskripsi Singkat Berita" required></textarea>
                     </div>
+                    @error('detail_singkat')
+                    <div class="error">{{ $message }}</div>
+                    @enderror
                     <div class="input-gropup mb-3">
                       <label class="form-label" for="basic-default-bio">Deskripsi :</label>
                       <textarea id="editor" class="form-control" name="deskripsi" rows="3"></textarea>
@@ -202,10 +209,16 @@
 
                       <script src="https://cdn.ckeditor.com/ckeditor5/35.3.2/classic/ckeditor.js"></script>
                     </div>
+                    @error('deskripsi')
+                    <div class="error">{{ $message }}</div>
+                    @enderror
                     <div class="input-gropup mb-3">
                       <label for="defaultFormControlInput" class="form-label">Foto :</label>
                       <input type="file" class="form-control" id="defaultFormControlInput" name="foto" aria-describedby="defaultFormControlHelp" />
                     </div>
+                    @error('foto')
+                    <div class="error">{{ $message }}</div>
+                    @enderror
                     <div>
                       <button class="btn btn-primary d-grid w-100">
                         Submit
@@ -258,7 +271,5 @@
 </div>
 <!-- / Layout wrapper -->
 <!--/ Layout Content -->
-
-
 
 @endsection

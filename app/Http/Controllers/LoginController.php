@@ -16,11 +16,9 @@ class LoginController extends Controller
             return redirect('dashboard');
         } else if (Auth::attempt(['email' => $request->email, 'role' => 'guest', 'password' => $request->password])) {
             return redirect('/');
-        }
-        else {
+        } else {
             return redirect()->back()->withErrors(['email' => 'Email Atau Password Anda Salah']);
         }
-
     }
 
     public function post_register(Request $request)

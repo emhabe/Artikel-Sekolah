@@ -188,11 +188,20 @@
                     <th>Name</th>
                     <th>Email</th>
                     <th>Date</th>
-                    <th>Salary</th>
-                    <th>Status</th>
-                    <th>Action</th>
+                    <th>Comment</th>
                   </tr>
                 </thead>
+                <tbody>
+                  @foreach($komentar as $komen)
+                  <tr>
+                    <th>{{$komen->user->name}}</th>
+                    <th>{{$komen->user->email}}</th>
+                    <th>{{Carbon\Carbon::parse($komen->created_at)->isoformat('D/MMMM/Y')}}</th>
+                    <th>{{$komen->nama}}</th>
+
+                  </tr>
+                  @endforeach
+                </tbody>
               </table>
             </div>
           </div>

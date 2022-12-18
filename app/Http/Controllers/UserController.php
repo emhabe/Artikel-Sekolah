@@ -7,24 +7,21 @@ use App\Models\Artikel;
 use App\Models\Foto;
 use App\Models\User;
 use App\Models\Kategori;
+use App\Models\Komentar;
 use Illuminate\Support\Facades\Auth;
 
 
 class UserController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('auth:web');
-    }
     public function dashboard()
     {
-        $terkirim=Artikel::where('status','=',1)->count();
-        $belum=Artikel::where('status','=',0)->count();
-        $pengguna=User::where('role','=','guest')->count();
+        $terkirim = Artikel::where('status', '=', 1)->count();
+        $belum = Artikel::where('status', '=', 0)->count();
+        $pengguna = User::where('role', '=', 'guest')->count();
         $user = auth()->user();
         $kategori = Kategori::all();
         $artikel = Artikel::where('status', '=', 0)->with('kategori')->latest('created_at')->get();
-        return view('demo-1.dashboard', compact('kategori', 'artikel','user','terkirim','belum','pengguna'));
+        return view('demo-1.dashboard', compact('kategori', 'artikel', 'user', 'terkirim', 'belum', 'pengguna'));
     }
 
     public function artikel(Request $request)
@@ -47,7 +44,8 @@ class UserController extends Controller
     public function user()
     {
         $kategori = Kategori::all();
-        return view('demo-1.user', compact('kategori'));
+        $komentar = Komentar::with('user')->get();
+        return view('demo-1.user', compact('kategori', 'komentar'));
     }
     public function buat_artikel()
     {
@@ -56,6 +54,13 @@ class UserController extends Controller
     }
     public function submit_artikel(Request $request)
     {
+        $this->validate($request, [
+            'judul' => 'required|min:7',
+            'detail_singkat' => 'required|min:10',
+            'deskripsi' => 'required|min:10',
+            'foto' => 'required',
+        ]);
+
         $data = Artikel::create([
             'judul' => $request->judul,
             'kategori_id' => $request->kategori,
@@ -68,7 +73,7 @@ class UserController extends Controller
             $data->foto = '' . date('YmdHis') . '.' . $request->file('foto')->getClientOriginalExtension();
             $data->save();
         }
-        return redirect('artikel')->with('success', 'Data Berhasil Dimasukkan');;
+        return redirect('artikel')->with('success', 'Data Berhasil Dimasukkan');
     }
     public function edit($id)
     {
@@ -78,6 +83,12 @@ class UserController extends Controller
     }
     public function update($id, Request $request)
     {
+        $this->validate($request, [
+            'judul' => 'required|min:7',
+            'detail_singkat' => 'required|min:10',
+            'deskripsi' => 'required|min:10',
+        ]);
+
         $data = Artikel::FindOrFail($id);
         $data->update([
             'judul' => $request->judul,
@@ -118,6 +129,10 @@ class UserController extends Controller
     }
     public function komen(Request $request)
     {
+        $this->validate($request, [
+            'nama' => 'required|max:100',
+        ]);
+
         if (Auth::check()) {
             $data = Komentar::create([
                 'nama' => $request->nama,
