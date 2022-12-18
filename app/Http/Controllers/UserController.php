@@ -56,11 +56,18 @@ class UserController extends Controller
         }
         return view('demo-1.kategori', compact('data', 'kategori', 'kategori2','user'));
     }
-    public function user()
+    public function user(Request $request)
     {
         $user = auth()->user();
-        $kategori = Kategori::all();
-        $komentar = Komentar::with('user')->get();
+        if($request->has('search')){
+            $kategori = Kategori::all();
+            $komentar = Komentar::with('user')->where('nama', 'LIKE', '%' . $request->search . '%')->paginate(10);
+        }
+        else{
+            $kategori = Kategori::all();
+            $komentar = Komentar::with('user')->paginate(10);
+        }
+      
         return view('demo-1.user', compact('kategori', 'komentar','user'));
     }
     public function buat_artikel()

@@ -103,6 +103,14 @@
         <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
 
           <!-- Search -->
+          <div class="navbar-nav align-items-center">
+            <div class="nav-item navbar-search-wrapper mb-0">
+              <a class="nav-item nav-link search-toggler px-0" href="javascript:void(0);">
+                <i class="bx bx-search bx-sm"></i>
+                <span class="d-none d-md-inline-block text-muted">Search (Ctrl+/)</span>
+              </a>
+            </div>
+          </div>
           <!-- /Search -->
 
           <ul class="navbar-nav flex-row align-items-center ms-auto">
@@ -165,8 +173,10 @@
 
         <!-- Search Small Screens -->
         <div class="navbar-search-wrapper search-input-wrapper  d-none">
-          <input type="text" class="form-control search-input container-xxl border-0" placeholder="Search..." aria-label="Search...">
-          <i class="bx bx-x bx-sm search-toggler cursor-pointer"></i>
+          <form action="/user" method="get">
+            <input type="search" name="search" class="form-control search-input container-xxl border-0" placeholder="Search..." aria-label="Search...">
+            <i class="bx bx-x bx-sm search-toggler cursor-pointer"></i>
+          </form>
         </div>
 
       </nav>
@@ -185,6 +195,7 @@
               <table class="table border-top data">
                 <thead>
                   <tr>
+                    <th>N0</th>
                     <th>Name</th>
                     <th>Email</th>
                     <th>Date</th>
@@ -192,8 +203,9 @@
                   </tr>
                 </thead>
                 <tbody>
-                  @foreach($komentar as $komen)
+                  @foreach($komentar as $index => $komen)
                   <tr>
+                    <th>{{$index+$komentar->FirstItem()}}</th>
                     <th>{{$komen->user->name}}</th>
                     <th>{{$komen->user->email}}</th>
                     <th>{{Carbon\Carbon::parse($komen->created_at)->isoformat('D/MMMM/Y')}}</th>
@@ -204,6 +216,7 @@
                 </tbody>
               </table>
             </div>
+            {{$komentar->links()}}
           </div>
 
         </div>
