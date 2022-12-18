@@ -82,7 +82,7 @@
 
         <p class="text-center">
           <span>Already have an account?</span>
-          <a href="login-cover.html">
+          <a href="/login">
             <span>Sign in instead</span>
           </a>
         </p>

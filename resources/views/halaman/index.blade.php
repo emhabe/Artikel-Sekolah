@@ -16,15 +16,15 @@
                             <a href="https://youtube.com/" title="Youtube" target="_blank"><i class="fa-brands fa-youtube fa-lg"></i></a>
                             <a href="https://linkedin.com/" title="Twitter" target="_blank"><i class="fa-brands fa-twitter"></i></a>
                         </div>
+
                         <div class="header-cart-box position-relative d-inline-block">
-                            <a class="cart-btn position-relative" href="/login" title="" data-kt-menu-trigger="click" data-kt-menu-attach="parent" data-kt-menu-placement="bottom-end"><b>Login</b> <i class="flaticon-user"></i></a>
+                            <a class="cart-btn position-relative" href="/login" title="" data-kt-menu-trigger="click" data-kt-menu-attach="parent" data-kt-menu-placement="bottom-end"><b>{{auth()->user()->name}}</b> <i class="flaticon-user"></i></a>
                             <div class="minicart-dropdown">
                                 <ul class="mb-0 list-unstyled w-100">
                                     <li>
                                         <div class="minicart-item d-flex flex-wrap w-60">
                                             <div class="minicart-info">
-                                                <h6 class="mb-0"><a href="shop-detail.html" title="">Guest1234</a></h6>
-                                                <span class="price">$254.00</span>
+                                                <h6 class="mb-0"><a href="shop-detail.html" title=""> TEST</a></h6>
                                             </div>
                                         </div>
                                     </li>
@@ -36,6 +36,7 @@
                                 </div>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -100,7 +101,7 @@
                         <li class="menu-item"><a href="#about" title="">Tentang</a>
                         </li>
                         <li><a href="#contact" title="">Kontak</a></li>
-                        
+
                     </ul>
                 </nav>
             </div>
@@ -253,8 +254,8 @@
                                 <div class="theiaStickySidebar">
                                     <aside class="sidebar-wrap w-100 position-relative">
                                         <div class="widget w-100">
-                                            <form class="searchform position-relative w-100">
-                                                <input type="text" placeholder="Search...">
+                                            <form class="searchform position-relative w-100" action="/" method="get">
+                                                <input type="search" name="search" placeholder="Search...">
                                                 <button type="submit"><i class="flaticon-magnifying-glass"></i></button>
                                             </form>
                                         </div>
@@ -271,7 +272,7 @@
                                                 </div>
                                                 @endforeach
                                             </div><!-- Recent Posts Wrap -->
-                                                
+
                                         </div>
                                         <div class="widget v2 w-100">
                                             <h3>Kategori</h3>
@@ -337,7 +338,7 @@
                         </div>
                     </div>
                     @endforeach
-                    {{$artikel->links()}}  
+                    {{$artikel->links()}}
                 </div>
                 <div class="scl-anlys-wrap position-relative w-100">
                     <div class="row align-items-center" id="about">
@@ -362,7 +363,7 @@
         <div class="w-100 pt-40 bg-color11 position-relative">
             <div class="container" id="contact">
                 <div class="contact-wrap position-relative w-100">
-                <div class="row mrg30">
+                    <div class="row mrg30">
                         <div class="col-md-5 col-sm-12 col-lg-4">
                             <div class="get-in-touch-wrap bg-color11 brd-rd20 mt-40 position-relative overflow-hidden w-100">
                                 <h2 class="mb-0">RadarPgriKu</h2>
@@ -436,26 +437,6 @@
                                         <div class="response w-100"></div>
                                     </div>
                                     <div class="row mrg10">
-                                        <div class="col-md-6 col-sm-6 col-lg-6">
-                                            <div class="field-box w-100">
-                                                <input class="fname" type="text" name="fname" placeholder="First Name *" required>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 col-sm-6 col-lg-6">
-                                            <div class="field-box w-100">
-                                                <input class="lname" type="text" name="lname" placeholder="Last Name *" required>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 col-sm-6 col-lg-6">
-                                            <div class="field-box w-100">
-                                                <input class="email" type="email" name="email" placeholder="Email *" required>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 col-sm-6 col-lg-6">
-                                            <div class="field-box w-100">
-                                                <input class="phone" type="tel" name="phone" placeholder="Phone" required>
-                                            </div>
-                                        </div>
                                         <div class="col-md-12 col-sm-12 col-lg-12">
                                             <div class="field-box w-100">
                                                 <textarea class="contact_message" name="contact_message" placeholder="Message" required></textarea>

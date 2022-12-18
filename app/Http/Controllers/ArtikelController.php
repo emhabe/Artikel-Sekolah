@@ -8,14 +8,27 @@ use App\Models\Kategori;
 
 class ArtikelController extends Controller
 {
-   public function index()
+   public function index(Request $request)
    {
+      if ($request->has('search')) {
+         $artikel3 = Artikel::where('status', '=', 1)->where('judul', 'LIKE', '%' . $request->search . '%');
+      } else {
+         $kategori = Kategori::all();
+         $artikel = Artikel::where('status', '=', 1)->with('kategori')->latest('created_at')->paginate(8);
+         $artikel2 = Artikel::where('status', '=', 1)->with('kategori')->paginate(5);
+         $artikelbesar = Artikel::where('status', '=', 1)->with('kategori')->latest('created_at')->first();
+         $artikelkecil1 = Artikel::where('status', '=', 1)->with('kategori')->latest('created_at')->skip(1)->take(1)->first();
+         $artikelkecil2 = Artikel::where('status', '=', 1)->with('kategori')->latest('created_at')->skip(2)->take(1)->first();
+      }
+
       $kategori = Kategori::all();
       $artikel = Artikel::where('status', '=', 1)->with('kategori')->latest('created_at')->paginate(8);
       $artikel2 = Artikel::where('status', '=', 1)->with('kategori')->paginate(5);
       $artikelbesar = Artikel::where('status', '=', 1)->with('kategori')->latest('created_at')->first();
       $artikelkecil1 = Artikel::where('status', '=', 1)->with('kategori')->latest('created_at')->skip(1)->take(1)->first();
       $artikelkecil2 = Artikel::where('status', '=', 1)->with('kategori')->latest('created_at')->skip(2)->take(1)->first();
+
+
       return view('halaman.index', compact('kategori', 'artikel', 'artikel2', 'artikelbesar', 'artikelkecil1', 'artikelkecil2'));
    }
    public function detail_berita($id)

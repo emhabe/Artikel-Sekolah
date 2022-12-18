@@ -175,10 +175,12 @@
         </div>
 
         <!-- Search Small Screens -->
-        <div class="navbar-search-wrapper search-input-wrapper  d-none">
-          <input type="text" class="form-control search-input container-xxl border-0" placeholder="Search..." aria-label="Search...">
-          <i class="bx bx-x bx-sm search-toggler cursor-pointer"></i>
-        </div>
+        <form action="/artikel" method="get">
+          <div class="navbar-search-wrapper search-input-wrapper  d-none">
+            <input type="search" name="search" class="form-control search-input container-xxl border-0" placeholder="Search..." aria-label="Search...">
+            <i class="bx bx-x bx-sm search-toggler cursor-pointer"></i>
+          </div>
+        </form>
 
       </nav>
       @if(Session::has('success'))

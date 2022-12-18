@@ -14,8 +14,8 @@ class LoginController extends Controller
     {
         if (Auth::attempt(['email' => $request->email, 'role' => 'admin', 'password' => $request->password])) {
             return redirect('dashboard');
-        } else {
-            return redirect('login');
+        } else if (Auth::attempt(['email' => $request->email, 'role' => 'guest', 'password' => $request->password])) {
+            return redirect('/');
         }
     }
 
@@ -28,7 +28,7 @@ class LoginController extends Controller
             'role' => 'guest',
             'remember_token' => Str::random(50),
         ]);
-        return redirect('login_admin');
+        return redirect('login');
     }
     public function registrasi()
     {

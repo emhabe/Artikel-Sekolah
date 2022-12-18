@@ -16,8 +16,11 @@ class UserController extends Controller
         return view('demo-1.dashboard', compact('kategori', 'artikel'));
     }
 
-    public function artikel()
+    public function artikel(Request $request)
     {
+        if ($request->has('search')) {
+            $data = Artikel::where('status', '=', 1)->where('judul', 'LIKE', '%' . $request->search . '%');
+        }
         $data = Artikel::all();
         $kategori = Kategori::all();
         return view('demo-1.artikel', compact('data', 'kategori'));
