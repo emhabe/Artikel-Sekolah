@@ -9,9 +9,9 @@
 
       <!-- ! Hide app brand if navbar-full -->
       <div class="app-brand demo">
-        <a href="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo-1" class="app-brand-link">
+        <a href="/" class="app-brand-link">
           <span class="app-brand-logo demo">
-          <img src="{{asset('assets/img/illustrations/logo1.png')}}" width="40" height="40">
+            <img src="{{asset('assets/img/illustrations/logo1.png')}}" width="40" height="40">
           </span>
           <span class="app-brand-text demo menu-text fw-bold ms-2"><img src="{{asset('assets/img/illustrations/logo2.png')}}" width="120" height="100"></span>
         </a>
@@ -101,7 +101,7 @@
               </a>
               <ul class="dropdown-menu dropdown-menu-end">
                 <li>
-                  <a class="dropdown-item" href="pages/profile-user.html">
+                  <a class="dropdown-item" href="#">
                     <div class="d-flex">
                       <div class="flex-shrink-0 me-3">
                         <div class="avatar avatar-online">
@@ -118,7 +118,7 @@
                   </a>
                 </li>
                 <li>
-                  <a class="dropdown-item logout" href="#"  data-id="{{$user->id}}" data-nama="{{$user->name}}">
+                  <a class="dropdown-item logout" href="#" data-id="{{$user->id}}" data-nama="{{$user->name}}">
                     <i class='bx bx-log-in me-2'></i>
                     <span class="align-middle">Logout</span>
                   </a>
@@ -153,12 +153,12 @@
                     <div class="content-left">
                       <span>Total Artikel</span>
                       <div class="d-flex align-items-end mt-2">
-                        <h4 class="mb-0 me-2">{{$terkirim}}</h4>  
+                        <h4 class="mb-0 me-2">{{$terkirim}}</h4>
                       </div>
                       <small>Artikel Di Publish</small>
                     </div>
                     <span class="badge bg-label-primary rounded p-2">
-                    <i class="fa-regular fa-newspaper bx-sm"></i>
+                      <i class="fa-regular fa-newspaper bx-sm"></i>
                     </span>
                   </div>
                 </div>
@@ -167,16 +167,16 @@
             <div class="col-sm-6 col-xl-3">
               <div class="card">
                 <div class="card-body">
-                <div class="d-flex align-items-start justify-content-between">
+                  <div class="d-flex align-items-start justify-content-between">
                     <div class="content-left">
                       <span>Total Artikel</span>
                       <div class="d-flex align-items-end mt-2">
-                        <h4 class="mb-0 me-2">{{$belum}}</h4>  
+                        <h4 class="mb-0 me-2">{{$belum}}</h4>
                       </div>
                       <small>Artikel Belum Di Publish</small>
                     </div>
                     <span class="badge bg-label-danger rounded p-2">
-                    <i class="fa-regular fa-newspaper bx-sm"></i>
+                      <i class="fa-regular fa-newspaper bx-sm"></i>
                     </span>
                   </div>
                 </div>
@@ -190,7 +190,7 @@
                       <span>Total Pengguna</span>
                       <div class="d-flex align-items-end mt-2">
                         <h4 class="mb-0 me-2">{{$pengguna}}</h4>
-                        
+
                       </div>
                       <small>Pengguna Website</small>
                     </div>
@@ -208,12 +208,12 @@
                     <div class="content-left">
                       <span>Total Komentar</span>
                       <div class="d-flex align-items-end mt-2">
-                        <h4 class="mb-0 me-2">237</h4>
+                        <h4 class="mb-0 me-2">{{$komentar}}</h4>
                       </div>
                       <small>Komentar Pengguna</small>
                     </div>
                     <span class="badge bg-label-warning rounded p-2">
-                    <i class="fa-solid fa-comments bx-sm"></i>
+                      <i class="fa-solid fa-comments bx-sm"></i>
                     </span>
                   </div>
                 </div>

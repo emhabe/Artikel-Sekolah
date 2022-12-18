@@ -10,7 +10,7 @@
 
       <!-- ! Hide app brand if navbar-full -->
       <div class="app-brand demo">
-        <a href="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo-1" class="app-brand-link">
+        <a href="/" class="app-brand-link">
           <span class="app-brand-logo demo">
             <img src="{{asset('assets/img/illustrations/logo1.png')}}" width="40" height="40">
           </span>
@@ -112,7 +112,7 @@
               </a>
               <ul class="dropdown-menu dropdown-menu-end">
                 <li>
-                  <a class="dropdown-item" href="pages/profile-user.html">
+                  <a class="dropdown-item" href="#">
                     <div class="d-flex">
                       <div class="flex-shrink-0 me-3">
                         <div class="avatar avatar-online">

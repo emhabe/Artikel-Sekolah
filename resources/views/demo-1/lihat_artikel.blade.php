@@ -9,7 +9,7 @@
 
       <!-- ! Hide app brand if navbar-full -->
       <div class="app-brand demo">
-        <a href="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo-1" class="app-brand-link">
+        <a href="/" class="app-brand-link">
           <span class="app-brand-logo demo">
             <svg width="25" viewBox="0 0 25 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
               <defs>
@@ -303,7 +303,7 @@
               </a>
               <ul class="dropdown-menu dropdown-menu-end">
                 <li>
-                  <a class="dropdown-item" href="pages/profile-user.html">
+                  <a class="dropdown-item" href="#">
                     <div class="d-flex">
                       <div class="flex-shrink-0 me-3">
                         <div class="avatar avatar-online">
@@ -354,16 +354,16 @@
           <div class="row invoice-preview">
             <!-- Invoice -->
             <div class="col-11">
-    <div class="card mb-3">
-    <img class="overflow-hidden position-relative border-radius-lg bg-cover h-100" src="{{asset('foto_artikel/'.$data->foto)}}" alt="" />
-      <div class="card-body">
-        <h5 class="card-title">{{$data->judul}}</h5>
-        <p class="card-text">
-          {!!   $data->deskripsi  !!}
-        </p>
-      </div>
-    </div>
-  </div>
+              <div class="card mb-3">
+                <img class="overflow-hidden position-relative border-radius-lg bg-cover h-100" src="{{asset('foto_artikel/'.$data->foto)}}" alt="" />
+                <div class="card-body">
+                  <h5 class="card-title">{{$data->judul}}</h5>
+                  <p class="card-text">
+                    {!! $data->deskripsi !!}
+                  </p>
+                </div>
+              </div>
+            </div>
             <!-- /Invoice -->
 
             <!-- Invoice Actions -->
