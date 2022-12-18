@@ -25,7 +25,7 @@ Route::get('/login', [LoginController::class, 'login'])->name('login');
 
 Route::post('/post_register', [LoginController::class, 'post_register']);
 Route::post('/postlogin', [LoginController::class, 'postlogin']);
-Route::post('/logout', [LoginController::class, 'logout']);
+Route::get('/logout', [LoginController::class, 'logout']);
 Route::post('/komen', [UserController::class, 'komen']);
 
 

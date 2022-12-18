@@ -10,7 +10,6 @@ use Ramsey\Uuid\Type\Integer;
 
 class LoginController extends Controller
 {
-
     public function postlogin(Request $request)
     {
         if (Auth::attempt(['email' => $request->email, 'role' => 'admin', 'password' => $request->password])) {
@@ -18,6 +17,10 @@ class LoginController extends Controller
         } else if (Auth::attempt(['email' => $request->email, 'role' => 'guest', 'password' => $request->password])) {
             return redirect('/');
         }
+        else {
+            return redirect()->back()->withErrors(['email' => 'Email Atau Password Anda Salah']);
+        }
+
     }
 
     public function post_register(Request $request)

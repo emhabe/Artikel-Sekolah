@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Artikel;
 use App\Models\Foto;
-use App\Models\Komentar;
+use App\Models\User;
 use App\Models\Kategori;
 use Illuminate\Support\Facades\Auth;
 
@@ -18,9 +18,13 @@ class UserController extends Controller
     }
     public function dashboard()
     {
+        $terkirim=Artikel::where('status','=',1)->count();
+        $belum=Artikel::where('status','=',0)->count();
+        $pengguna=User::where('role','=','guest')->count();
+        $user = auth()->user();
         $kategori = Kategori::all();
         $artikel = Artikel::where('status', '=', 0)->with('kategori')->latest('created_at')->get();
-        return view('demo-1.dashboard', compact('kategori', 'artikel'));
+        return view('demo-1.dashboard', compact('kategori', 'artikel','user','terkirim','belum','pengguna'));
     }
 
     public function artikel(Request $request)

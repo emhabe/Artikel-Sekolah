@@ -110,7 +110,7 @@
                   </a>
                 </li>
                 <li>
-                  <a class="dropdown-item" href="#">
+                  <a class="dropdown-item logout" href="#"  data-id="{{$user->id}}" data-nama="{{$user->name}}">
                     <i class='bx bx-log-in me-2'></i>
                     <span class="align-middle">Logout</span>
                   </a>
@@ -140,7 +140,7 @@
                     <div class="content-left">
                       <span>Total Artikel</span>
                       <div class="d-flex align-items-end mt-2">
-                        <h4 class="mb-0 me-2">21,459</h4>  
+                        <h4 class="mb-0 me-2">{{$terkirim}}</h4>  
                       </div>
                       <small>Artikel Di Publish</small>
                     </div>
@@ -158,7 +158,7 @@
                     <div class="content-left">
                       <span>Total Artikel</span>
                       <div class="d-flex align-items-end mt-2">
-                        <h4 class="mb-0 me-2">21,459</h4>  
+                        <h4 class="mb-0 me-2">{{$belum}}</h4>  
                       </div>
                       <small>Artikel Belum Di Publish</small>
                     </div>
@@ -176,7 +176,7 @@
                     <div class="content-left">
                       <span>Total Pengguna</span>
                       <div class="d-flex align-items-end mt-2">
-                        <h4 class="mb-0 me-2">19,860</h4>
+                        <h4 class="mb-0 me-2">{{$pengguna}}</h4>
                         
                       </div>
                       <small>Pengguna Website</small>

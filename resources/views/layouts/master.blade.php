@@ -700,6 +700,48 @@
     });
   </script>
   <script>
+    $('.logout').click(function() {
+      var iduser = $(this).attr('data-id');
+      var nama = $(this).attr('data-nama');
+
+      const swalWithBootstrapButtons = Swal.mixin({
+        customClass: {
+          confirmButton: 'btn btn-success',
+          cancelButton: 'btn btn-danger'
+        },
+        buttonsStyling: false
+      })
+
+      swalWithBootstrapButtons.fire({
+        title: "Apakah Anda Yakin ?",
+        text: "Anda akan Menghapus Berita Berjudul : " + nama + " !!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonText: 'Yes, delete it!',
+        cancelButtonText: 'No, cancel!',
+        reverseButtons: true
+      }).then((result) => {
+        if (result.isConfirmed) {
+          window.location = "/logout/" + "",
+            swalWithBootstrapButtons.fire(
+              'Terhapus!',
+              'Data Berita Telah Berhasil Dihapus',
+              'success'
+            )
+        } else if (
+          /* Read more about handling dismissals below */
+          result.dismiss === Swal.DismissReason.cancel
+        ) {
+          swalWithBootstrapButtons.fire(
+            'Penghapusan Data Dibatalkan',
+            'Data Berita Anda Aman  :)',
+            'error'
+          )
+        }
+      })
+    });
+  </script>
+  <script>
     $(function() {
       'use strict';
 
