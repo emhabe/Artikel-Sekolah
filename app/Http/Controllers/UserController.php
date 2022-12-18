@@ -12,7 +12,7 @@ class UserController extends Controller
     public function dashboard()
     {
         $kategori = Kategori::all();
-        $artikel = Artikel::latest('created_at')->first();
+        $artikel = Artikel::where('status', '=', 0)->with('kategori')->latest('created_at')->get();
         return view('demo-1.dashboard', compact('kategori', 'artikel'));
     }
 
@@ -52,7 +52,7 @@ class UserController extends Controller
             $data->foto = '' . date('YmdHis') . '.' . $request->file('foto')->getClientOriginalExtension();
             $data->save();
         }
-        return redirect('artikel')->with('success','Data Berhasil Dimasukkan');;
+        return redirect('artikel')->with('success', 'Data Berhasil Dimasukkan');;
     }
     public function edit($id)
     {
@@ -90,5 +90,14 @@ class UserController extends Controller
         $kategori = Kategori::all();
         $data = Artikel::findOrFail($id);
         return view('demo-1.lihat_artikel', compact('data', 'kategori'));
+    }
+
+    public function publish(Request $request)
+    {
+        $data = Artikel::findOrFail($request->id);
+        $data->update([
+            'status' => 1,
+        ]);
+        return redirect('artikel');
     }
 }

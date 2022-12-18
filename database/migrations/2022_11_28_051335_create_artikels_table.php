@@ -16,9 +16,10 @@ return new class extends Migration
         Schema::create('artikels', function (Blueprint $table) {
             $table->id();
             $table->string('judul');
-            $table->string('detail_singkat');
+            $table->text('detail_singkat');
             $table->string('foto');
             $table->text('deskripsi');
+            $table->integer('status')->default(0);
             $table->timestamps();
         });
     }

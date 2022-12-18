@@ -51,6 +51,7 @@ class DatabaseSeeder extends Seeder
             [
                 'judul' => 'Web RadarPgriKu',
                 'kategori_id' => '1',
+                'status' => '1',
                 'detail_singkat' => 'Web RadarPgriKu adalah web yang dikembangkan oleh 3 siswa SMK PGRI SINGOSARI',
                 'deskripsi' => 'Web RadarPgriKu adalah web tentang artikel,berita,dan acara dari siswa/siswi SMK PGRI SINGOSARI',
                 'foto' => '20200730_134035.jpg',
@@ -59,6 +60,7 @@ class DatabaseSeeder extends Seeder
             ], [
                 'judul' => 'Web RadarPgriKu',
                 'kategori_id' => '1',
+                'status' => '1',
                 'detail_singkat' => 'Web RadarPgriKu adalah web yang dikembangkan oleh 3 siswa SMK PGRI SINGOSARI',
                 'deskripsi' => 'Web RadarPgriKu adalah web tentang artikel,berita,dan acara dari siswa/siswi SMK PGRI SINGOSARI',
                 'foto' => '20200730_134035.jpg',
@@ -68,6 +70,7 @@ class DatabaseSeeder extends Seeder
             [
                 'judul' => 'Web RadarPgriKu',
                 'kategori_id' => '1',
+                'status' => '1',
                 'detail_singkat' => 'Web RadarPgriKu adalah web yang dikembangkan oleh 3 siswa SMK PGRI SINGOSARI',
                 'deskripsi' => 'Web RadarPgriKu adalah web tentang artikel,berita,dan acara dari siswa/siswi SMK PGRI SINGOSARI',
                 'foto' => '20200730_134035.jpg',

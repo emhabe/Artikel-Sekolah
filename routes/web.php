@@ -45,4 +45,5 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/delete/{id}', [UserController::class, 'delete']);
     Route::post('/submit_artikel', [UserController::class, 'submit_artikel']);
     Route::get('/lihat_artikel/{id}', [UserController::class, 'lihat_artikel']);
+    Route::post('/publish', [UserController::class, 'publish']);
 });

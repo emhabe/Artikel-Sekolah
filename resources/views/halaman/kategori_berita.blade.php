@@ -54,7 +54,7 @@
                             <li class="menu-item-has-children active satu"><a href="javascript:void(0);" title="">Kategori</a>
                                 <ul class="children mb-0 list-unstyled">
                                     @foreach($kategori as $kt)
-                                    <li><a href="seo-services.html" title="">{{$kt->nama}}</a></li>
+                                    <li><a href="/kategori_berita/{{$kt->id}}" title="">{{$kt->nama}}</a></li>
                                     @endforeach
 
                                 </ul>
@@ -155,16 +155,16 @@
                 </div>
             </div>
             <div class="sec-title text-center w-100 position-relative mb-4">
-                <h2 class="mb-0"><span>Postingan </span> Terbaru nama_kategori</h2>
+                <h2 class="mb-0"><span>Postingan </span> Terbaru {{$namakategori->nama}}</h2>
                 <i class="btm-ln bg-color28"></i>
             </div>
             <div class="col-lg-3 position-relative justify-content-between ">
-            <div class="widget w-90 ms-3">
-                <form class="searchform position-relative w-100">
-                    <input type="text" placeholder="Search...">
-                    <button type="submit"><i class="flaticon-magnifying-glass"></i></button>
-                </form>
-            </div>
+                <div class="widget w-90 ms-3">
+                    <form class="searchform position-relative w-100">
+                        <input type="text" placeholder="Search...">
+                        <button type="submit"><i class="flaticon-magnifying-glass"></i></button>
+                    </form>
+                </div>
             </div>
             <div class="blog-wrap blog-spac px-3 position-relative w-100">
                 <div class="row mrg30">

@@ -201,9 +201,14 @@
                     </p>
                     <a href="/lihat_artikel/{{$d->id}}" class="btn btn-outline-primary d-grid w-100 mb-3">Lihat Artikel</a>
                   </div>
-                  <button class="btn btn-primary d-grid w-100 mb-3" data-bs-toggle="offcanvas" data-bs-target="#sendInvoiceOffcanvas">
-                    <span class="d-flex align-items-center justify-content-center text-nowrap"><i class="bx bx-paper-plane bx-xs me-3"></i>Publish</span>
-                  </button>
+                  @if($d->status == 0)
+                  <form action="/publish" method="post" enctype="multipart/form-data">
+                    @csrf
+                    <button class="btn btn-primary d-grid w-100 mb-3" data-bs-toggle="offcanvas" data-bs-target="#sendInvoiceOffcanvas">
+                      <span class="d-flex align-items-center justify-content-center text-nowrap"><i class="bx bx-paper-plane bx-xs me-3"></i>Publish</span>
+                    </button>
+                  </form>
+                  @endif
                 </div>
               </div>
               @endforeach
