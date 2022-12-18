@@ -131,7 +131,7 @@
 
 
                 <li>
-                  <a class="dropdown-item" href="#">
+                  <a class="dropdown-item logout" data-id="{{auth()->user()->id}}" data-nama="{{auth()->user()->id}}">
                     <i class='bx bx-log-in me-2'></i>
                     <span class="align-middle">Logout</span>
                   </a>
@@ -151,7 +151,7 @@
             <input type="search" name="search" class="form-control search-input container-xxl border-0" placeholder="Search..." aria-label="Search...">
             <i class="bx bx-x bx-sm search-toggler cursor-pointer"></i>
         </div>
-
+        </form>
       </nav>
       @if(Session::has('success'))
       <div class="bs-toast toast toast-ex animate__animated my-2 fade bg-primary animate__tada show" role="alert" aria-live="assertive" aria-atomic="true">

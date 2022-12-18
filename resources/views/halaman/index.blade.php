@@ -253,7 +253,7 @@
                                 <div class="theiaStickySidebar">
                                     <aside class="sidebar-wrap w-100 position-relative">
                                         <div class="widget w-100">
-                                              <form action="/#berita" class="searchform position-relative w-100" method="get">
+                                            <form action="/#berita" class="searchform position-relative w-100" method="get">
                                                 <input type="search" name="search" placeholder="Search...">
                                                 <button type="submit"><i class="flaticon-magnifying-glass"></i></button>
                                             </form>
@@ -437,14 +437,16 @@
                                     <h2 class="mb-0 ">Kirim Sebuah Pesan</h2>
                                     <i class="btm-ln bg-color27"></i>
                                 </div><!-- Sec Title -->
-                                <form action="#" method="post" id="email-form">
+
+                                <form action="/komen" method="post" id="email-form">
+                                    @csrf
                                     <div class="form-group w-100">
                                         <div class="response w-100"></div>
                                     </div>
                                     <div class="row mrg10">
                                         <div class="col-md-12 col-sm-12 col-lg-12">
                                             <div class="field-box w-100">
-                                                <textarea class="contact_message" name="contact_message" placeholder="Message" required></textarea>
+                                                <textarea class="contact_message" name="nama" placeholder="Message" required></textarea>
                                             </div>
                                             <div class="field-btn w-100">
                                                 <button class="thm-btnbiru d-inline-block rounded-pill" id="submit" type="submit">Kirimkan</button>
@@ -452,6 +454,7 @@
                                         </div>
                                     </div>
                                 </form>
+
                             </div>
                         </div>
                     </div>

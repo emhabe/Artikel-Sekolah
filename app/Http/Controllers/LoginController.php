@@ -10,6 +10,7 @@ use Ramsey\Uuid\Type\Integer;
 
 class LoginController extends Controller
 {
+
     public function postlogin(Request $request)
     {
         if (Auth::attempt(['email' => $request->email, 'role' => 'admin', 'password' => $request->password])) {

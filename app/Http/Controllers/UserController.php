@@ -5,10 +5,17 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Artikel;
 use App\Models\Foto;
+use App\Models\Komentar;
 use App\Models\Kategori;
+use Illuminate\Support\Facades\Auth;
+
 
 class UserController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth:web');
+    }
     public function dashboard()
     {
         $kategori = Kategori::all();
@@ -104,5 +111,17 @@ class UserController extends Controller
             'status' => 1,
         ]);
         return redirect('artikel');
+    }
+    public function komen(Request $request)
+    {
+        if (Auth::check()) {
+            $data = Komentar::create([
+                'nama' => $request->nama,
+                'user_id' => Auth::user()->id,
+            ]);
+        } else {
+            return redirect('/login');
+        }
+        return redirect('/');
     }
 }
