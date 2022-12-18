@@ -15,19 +15,20 @@ class UserController extends Controller
 {
     public function dashboard(Request $request)
     {
+        $komentar = Komentar::all()->count();
         $terkirim = Artikel::where('status', '=', 1)->count();
         $belum = Artikel::where('status', '=', 0)->count();
         $pengguna = User::where('role', '=', 'guest')->count();
         $user = auth()->user();
         if ($request->has('search')) {
-        $kategori = Kategori::all();
-        $artikel = Artikel::where('status', '=', 0)->where('judul', 'LIKE', '%' . $request->search . '%')->with('kategori')->latest('created_at')->paginate(6);
-        }else{
             $kategori = Kategori::all();
-        $artikel = Artikel::where('status', '=', 0)->with('kategori')->latest('created_at')->paginate(6); 
+            $artikel = Artikel::where('status', '=', 0)->where('judul', 'LIKE', '%' . $request->search . '%')->with('kategori')->latest('created_at')->paginate(6);
+        } else {
+            $kategori = Kategori::all();
+            $artikel = Artikel::where('status', '=', 0)->with('kategori')->latest('created_at')->paginate(6);
         }
 
-        return view('demo-1.dashboard', compact('kategori', 'artikel', 'user', 'terkirim', 'belum', 'pengguna'));
+        return view('demo-1.dashboard', compact('kategori', 'artikel', 'user', 'terkirim', 'belum', 'pengguna', 'komentar'));
     }
 
     public function artikel(Request $request)
@@ -40,41 +41,38 @@ class UserController extends Controller
             $data = Artikel::all();
             $kategori = Kategori::all();
         }
-        return view('demo-1.artikel', compact('data', 'kategori','user'));
+        return view('demo-1.artikel', compact('data', 'kategori', 'user'));
     }
-    public function kategori(Request $request,$id)
+    public function kategori(Request $request, $id)
     {
         $user = auth()->user();
         $kategori2 = Kategori::all();
         $kategori = Kategori::findorFail($id);
-        if($request->has('search')){
+        if ($request->has('search')) {
             $data = Artikel::where('kategori_id', '=', $id)->where('judul', 'LIKE', '%' . $request->search . '%')->get();
-
-        }else{
+        } else {
             $data = Artikel::where('kategori_id', '=', $id)->get();
-
         }
-        return view('demo-1.kategori', compact('data', 'kategori', 'kategori2','user'));
+        return view('demo-1.kategori', compact('data', 'kategori', 'kategori2', 'user'));
     }
     public function user(Request $request)
     {
         $user = auth()->user();
-        if($request->has('search')){
+        if ($request->has('search')) {
             $kategori = Kategori::all();
             $komentar = Komentar::with('user')->where('nama', 'LIKE', '%' . $request->search . '%')->paginate(10);
-        }
-        else{
+        } else {
             $kategori = Kategori::all();
             $komentar = Komentar::with('user')->paginate(10);
         }
-      
-        return view('demo-1.user', compact('kategori', 'komentar','user'));
+
+        return view('demo-1.user', compact('kategori', 'komentar', 'user'));
     }
     public function buat_artikel()
     {
         $user = auth()->user();
         $kategori = Kategori::all();
-        return view('demo-1.buat_artikel', compact('kategori','user'));
+        return view('demo-1.buat_artikel', compact('kategori', 'user'));
     }
     public function submit_artikel(Request $request)
     {
@@ -104,7 +102,7 @@ class UserController extends Controller
         $user = auth()->user();
         $data = Artikel::FindOrFail($id);
         $kategori = Kategori::all();
-        return view('demo-1.edit', compact('data', 'kategori','user'));
+        return view('demo-1.edit', compact('data', 'kategori', 'user'));
     }
     public function update($id, Request $request)
     {
@@ -142,7 +140,7 @@ class UserController extends Controller
         $user = auth()->user();
         $kategori = Kategori::all();
         $data = Artikel::findOrFail($id);
-        return view('demo-1.lihat_artikel', compact('data', 'kategori','user'));
+        return view('demo-1.lihat_artikel', compact('data', 'kategori', 'user'));
     }
 
     public function publish(Request $request)

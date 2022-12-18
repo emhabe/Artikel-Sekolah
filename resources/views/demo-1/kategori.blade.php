@@ -9,9 +9,9 @@
 
       <!-- ! Hide app brand if navbar-full -->
       <div class="app-brand demo">
-        <a href="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo-1" class="app-brand-link">
+        <a href="/" class="app-brand-link">
           <span class="app-brand-logo demo">
-          <img src="{{asset('assets/img/illustrations/logo1.png')}}" width="40" height="40">
+            <img src="{{asset('assets/img/illustrations/logo1.png')}}" width="40" height="40">
           </span>
           <span class="app-brand-text demo menu-text fw-bold ms-2"><img src="{{asset('assets/img/illustrations/logo2.png')}}" width="120" height="100"></span>
         </a>
@@ -114,7 +114,7 @@
               </a>
               <ul class="dropdown-menu dropdown-menu-end">
                 <li>
-                  <a class="dropdown-item" href="pages/profile-user.html">
+                  <a class="dropdown-item" href="#">
                     <div class="d-flex">
                       <div class="flex-shrink-0 me-3">
                         <div class="avatar avatar-online">
@@ -133,7 +133,7 @@
 
 
                 <li>
-                <a class="dropdown-item logout" href="#"  data-id="{{$user->id}}" data-nama="{{$user->name}}">
+                  <a class="dropdown-item logout" href="#" data-id="{{$user->id}}" data-nama="{{$user->name}}">
                     <i class='bx bx-log-in me-2'></i>
                     <span class="align-middle">Logout</span>
                   </a>
@@ -194,9 +194,9 @@
 
             </div>
             @if(count($data))
-          @else
-          <img src="../assets/img/backgrounds/kosong.png" width="350" height="300" class="kosong2">
-          @endif
+            @else
+            <img src="../assets/img/backgrounds/kosong.png" width="350" height="300" class="kosong2">
+            @endif
           </div>
 
           <!-- / Content -->
