@@ -2628,6 +2628,7 @@ ul.fact-list > li:not(:first-child) {border-left: 1px solid #d6d6db;}
   -webkit-border-radius: 12px;
   border-radius: 12px;
   position: relative;
+  height: 250px;
 }
 .post-box:hover .post-img img {
   -webkit-transform: scale(1.05);

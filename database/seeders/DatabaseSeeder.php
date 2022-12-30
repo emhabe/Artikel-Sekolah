@@ -42,22 +42,16 @@ class DatabaseSeeder extends Seeder
                 'nama' => 'Event',
             ],
             [
-                'nama' => 'RPL',
+                'nama' => 'Elektronika',
             ],
             [
-                'nama' => 'TKJ',
+                'nama' => 'Otomotif',
             ],
             [
-                'nama' => 'TOI',
+                'nama' => 'Sport',
             ],
             [
-                'nama' => 'TEI',
-            ],
-            [
-                'nama' => 'TKR',
-            ],
-            [
-                'nama' => 'TBSM',
+                'nama' => 'Komputer',
             ],
         ];
         Kategori::insert($siu);

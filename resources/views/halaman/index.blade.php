@@ -32,21 +32,21 @@
                                 </ul>
                                 <div class="d-block btns-total w-100">
                                     <div class="btns-wrap d-flex flex-wrap w-100">
-                                    <a class="thm-btn sml-btn brd-btn d-inline-block rounded-pill logout" href="javascript:void(0);" title="" data-id="{{$user->id}}" data-nama="{{$user->name}}">Logout</a>
-                                    @if (Auth::user()->role=='admin')
-                                    <a class="thm-btn sml-btn brd-btn d-inline-block rounded-pill" href="/dashboard" title="">Dashboard</a>
-                                    @endif
-                                    </div>
+                                        <a class="thm-btn sml-btn brd-btn d-inline-block rounded-pill logout" href="javascript:void(0);" title="" data-id="{{$user->id}}" data-nama="{{$user->name}}">Logout</a>
+                                        @if (Auth::user()->role=='admin')
+                                        <a class="thm-btn sml-btn brd-btn d-inline-block rounded-pill" href="/dashboard" title="">Dashboard</a>
+                                        @endif
                                     </div>
                                 </div>
                             </div>
-                            @else
-                            <a class="cart-btn position-relative" href="/login" title=""><b>Login</b> <i class="flaticon-user"></i></a>
-                            @endif
                         </div>
+                        @else
+                        <a class="cart-btn position-relative" href="/login" title=""><b>Login</b> <i class="flaticon-user"></i></a>
+                        @endif
                     </div>
                 </div>
             </div>
+        </div>
         </div><!-- Topbar -->
         <div class="menubar w-100">
             <div class="container">
@@ -248,7 +248,7 @@
                                 <div class="col-md-6 col-lg-6 col-lg-3">
                                     <div class="post-box brd-rd15 w-100">
                                         <div class="post-img overflow-hidden position-relative w-100">
-                                            <a href="/detail_berita/{{$artikelkecil1->id}}" title=""><img class="img-fluid w-100" src="{{asset('foto_artikel/'.$artikelkecil1->foto)}}" alt="Post Image 1" height="250"></a>
+                                            <a href="/detail_berita/{{$artikelkecil1->id}}" title=""><img class="img-fluid w-100" src="{{asset('foto_artikel/'.$artikelkecil1->foto)}}" alt="Post Image 1"></a>
                                             <span class="post-date brd-rd15 text-center position-absolute text-uppercase"><i>{{Carbon\Carbon::parse($artikelkecil1->created_at)->isoformat('D')}}</i>{{Carbon\Carbon::parse($artikelkecil1->created_at)->isoformat('MMM')}}</span>
                                         </div>
                                         <div class="post-info w-100">
@@ -266,7 +266,7 @@
                                 <div class="col-md-6 col-lg-6 col-lg-3">
                                     <div class="post-box brd-rd15 w-100">
                                         <div class="post-img overflow-hidden position-relative w-100">
-                                            <a href="/detail_berita/{{$artikelkecil2->id}}" title=""><img class="img-fluid w-100" src="{{asset('foto_artikel/'.$artikelkecil2->foto)}}" alt="Post Image 1" height="250"></a>
+                                            <a href="/detail_berita/{{$artikelkecil2->id}}" title=""><img class="img-fluid w-100" src="{{asset('foto_artikel/'.$artikelkecil2->foto)}}" alt="Post Image 1"></a>
                                             <span class="post-date brd-rd15 text-center position-absolute text-uppercase"><i>{{Carbon\Carbon::parse($artikelkecil2->created_at)->isoformat('D')}}</i>{{Carbon\Carbon::parse($artikelkecil2->created_at)->isoformat('MMM')}}</span>
                                         </div>
                                         <div class="post-info w-100">
