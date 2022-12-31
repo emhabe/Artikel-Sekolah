@@ -33,17 +33,17 @@
                                 </ul>
                                 <div class="d-block btns-total w-100">
                                     <div class="btns-wrap d-flex flex-wrap w-100">
-                                    <a class="thm-btn sml-btn brd-btn d-inline-block rounded-pill logout" href="javascript:void(0);" title="" data-id="{{$user->id}}" data-nama="{{$user->name}}">Logout</a>
-                                    @if (Auth::user()->role=='admin')
-                                    <a class="thm-btn sml-btn brd-btn d-inline-block rounded-pill" href="/dashboard" title="">Dashboard</a>
-                                    @endif
+                                        <a class="thm-btn sml-btn brd-btn d-inline-block rounded-pill logout" href="javascript:void(0);" title="" data-id="{{$user->id}}" data-nama="{{$user->name}}">Logout</a>
+                                        @if (Auth::user()->role=='admin')
+                                        <a class="thm-btn sml-btn brd-btn d-inline-block rounded-pill" href="/dashboard" title="">Dashboard</a>
+                                        @endif
                                     </div>
                                 </div>
                             </div>
-                            @else
-                            <a class="cart-btn position-relative" href="/login" title=""><b>Login</b> <i class="flaticon-user"></i></a>
-                            @endif
                         </div>
+                        @else
+                        <a class="cart-btn position-relative" href="/login" title=""><b>Login</b> <i class="flaticon-user"></i></a>
+                        @endif
                     </div>
                 </div>
             </div>
@@ -53,23 +53,22 @@
             <div class="container">
                 <div class="menubar-inner d-flex flex-wrap align-items-center justify-content-between w-100">
                     <div class="logo">
-                        <h1 class="mb-0"><a href="index.html" title="Home"><img width="185" src="{{asset('landing/assets/images/logo%402x.png')}}" alt="Logo"></a></h1>
+                        <h1 class="mb-0"><a href="/" title="Home"><img width="185" src="{{asset('landing/assets/images/logo.png')}}" alt="Logo"></a></h1>
                     </div><!-- Logo -->
                     <nav>
                         <ul class="d-inline-flex flex-wrap align-items-center mb-0 list-unstyled">
-                            <li class="menu-item"><a href="/" title="">Beranda</a>
+                            <li class="menu-item "><a href="/" title="">Beranda</a>
                             </li>
                             <li class="menu-item-has-children active satu"><a href="javascript:void(0);" title="">Kategori</a>
                                 <ul class="children mb-0 list-unstyled">
-                                    @foreach($kategori as $kt)
-                                    <li><a href="/kategori_berita/{{$kt->id}}" title="">{{$kt->nama}}</a></li>
+                                    @foreach($kategori as $kate)
+                                    <li><a href="/kategori_berita/{{$kate->id}}" title="">{{$kate->nama}}</a></li>
                                     @endforeach
-
                                 </ul>
                             </li>
-                            <li class="menu-item"><a href="/#berita" title="">Daftar Berita</a>
+                            <li class="menu-item"><a href="#berita" title="">Daftar Berita</a>
                             </li>
-                            <li class="menu-item"><a href="javascript:void(0);" title="">Tentang</a>
+                            <li class="menu-item"><a href="#about" title="">Tentang</a>
                             </li>
                             <li><a href="#contact" title="">Kontak</a></li>
                         </ul>
@@ -90,7 +89,7 @@
         <div class="container">
             <div class="menubar-inner d-flex flex-wrap align-items-center justify-content-between w-100">
                 <div class="logo">
-                    <h1 class="mb-0"><a href="index.html" title="Home"><img width="185" src="{{asset('landing/assets/images/logo%402x.png')}}" alt="Logo"></a></h1>
+                    <h1 class="mb-0"><a href="/" title="Home"><img width="185" src="{{asset('landing/assets/images/logo.png')}}" alt="Logo"></a></h1>
                 </div><!-- Logo -->
                 <nav>
                     <ul class="d-inline-flex flex-wrap align-items-center mb-0 list-unstyled">
@@ -98,17 +97,19 @@
                         </li>
                         <li class="menu-item-has-children active satu"><a href="javascript:void(0);" title="">Kategori</a>
                             <ul class="children mb-0 list-unstyled">
-                                @foreach($kategori as $kt1)
-                                <li><a href="seo-services.html" title="">{{$kt1->nama}}</a></li>
+                                @foreach($kategori as $kate2)
+
+                                <li><a href="/kategori_berita/{{$kate2->id}}" title="">{{$kate2->nama}}</a></li>
                                 @endforeach
                             </ul>
                         </li>
-                        <li class="menu-item"><a href="/#berita" title="">Daftar Berita</a>
+                        <li class="menu-item"><a href="#berita" title="">Daftar Berita</a>
 
                         </li>
-                        <li class="menu-item"><a href="javascript:void(0);" title="">Tentang</a>
+                        <li class="menu-item"><a href="#about" title="">Tentang</a>
                         </li>
                         <li><a href="#contact" title="">Kontak</a></li>
+
                     </ul>
                 </nav>
             </div>
@@ -119,7 +120,7 @@
         <div class="responsive-topbar w-100">
             <div class="container d-flex flex-wrap align-items-center justify-content-between">
                 <div class="logo">
-                    <h1 class="mb-0"><a href="index.html" title="Home"><img class="img-fluid" src="{{asset('landing/assets/images/logo.png')}}" alt="Logo"></a></h1>
+                    <h1 class="mb-0"><a href="/" title="Home"><img class="img-fluid" src="{{asset('landing/assets/images/logo.png')}}" alt="Logo"></a></h1>
                 </div><!-- Logo -->
                 <div class="header-btns d-inline-flex flex-wrap align-items-center">
                     <a class="res-menu-btn d-inline-block" href="javascript:void(0);" title=""><i class="fas fa-align-justify"></i></a>
@@ -153,7 +154,7 @@
         </div><!-- Responsive Topbar -->
         <div class="responsive-menu w-100">
             <div class="logo">
-                <h1 class="mb-0"><a href="index.html" title="Home"><img class="img-fluid" src="{{asset('landing/assets/images/logo%402x.png')}}" alt="Logo"></a></h1>
+                <h1 class="mb-0"><a href="/" title="Home"><img class="img-fluid" src="{{asset('landing/assets/images/logo.png')}}" alt="Logo"></a></h1>
             </div><!-- Logo -->
             <ul class="mb-0 list-unstyled w-100">
                 <li class="menu-item"><a href="/" title="">Beranda</a>
@@ -161,13 +162,13 @@
                 </li>
                 <li class="menu-item-has-children active satu"><a href="javascript:void(0);" title="">Kategori</a>
                     <ul class="children mb-0 list-unstyled">
-                        @foreach($kategori as $kt3)
-                        <li><a href="seo-services.html" title="">{{$kt3->nama}}</a></li>
+                        @foreach($kategori as $kate4)
+                        <li><a href="/kategori_berita/{{$kate4->id}}" title="">{{$kate4->nama}}</a></li>
                         @endforeach
 
                     </ul>
                 </li>
-                <li class="menu-item"><a href="/#berita" title="">Daftar Berita</a>
+                <li class="menu-item"><a href="#berita" title="">Daftar Berita</a>
 
                 </li>
                 <li class="menu-item"><a href="#about" title="">Tentang</a>
@@ -213,14 +214,33 @@
                                 <span class="post-date brd-rd15 text-center position-absolute text-uppercase"><i>{{Carbon\Carbon::parse($ar5->created_at)->isoformat('D')}}</i>{{Carbon\Carbon::parse($ar5->created_at)->isoformat('MMM')}}</span>
                             </div>
                             <div class="post-info w-100">
-                                @if($ar5->kategori_id=1)
+                                @if($ar5->kategori_id==1)
                                 <span class="post-cate2 d-block text-uppercase">
-                                    @elseif($artikelbesar->kategori_id=2)
-                                    <span class="post-cate1 d-block text-uppercase">
-                                        @endif<a href="javascript:void(0);" title="">{{$ar5->kategori->nama}}</a></span>
-                                    <h3 class="mb-0"><a href="/detail_berita/{{$ar5->id}}" title="">{{$ar5->judul}}</a></h3>
-                                    <p class="mb-0">{{$ar5->detail_singkat}}</p>
-                                    <a class="simple-link d-inline-block text-uppercase" href="/detail_berita/{{$ar5->id}}" title="">Read More<i class="flaticon-right-arrow text-color3"></i></a>
+                                    @elseif($ar5->kategori_id==2)
+                                    <span class="post-cate d-block text-uppercase">
+                                        @elseif($ar5->kategori_id==3)
+                                        <span class="post-cate3 d-block text-uppercase">
+                                            @elseif($ar5->kategori_id==4)
+                                            <span class="post-cate4 d-block text-uppercase">
+                                                @elseif($ar5->kategori_id==5)
+                                                <span class="post-cate5 d-block text-uppercase">
+                                                    @endif<a href="javascript:void(0);" title="">{{$ar5->kategori->nama}}</a></span>
+                                                <h3 class="mb-0"><a href="/detail_berita/{{$ar5->id}}" title="">{{$ar5->judul}}</a></h3>
+                                                <p class="mb-0">{{$ar5->detail_singkat}}</p>
+                                                <a class="simple-link d-inline-block text-uppercase" href="/detail_berita/{{$ar5->id}}" title="">Read More
+                                                    @if($ar5->kategori_id==1)
+                                                    <i class="flaticon-right-arrow text-color27"></i>
+                                                    @elseif($ar5->kategori_id==2)
+                                                    <i class="flaticon-right-arrow text-color28"></i>
+                                                    @elseif($ar5->kategori_id==3)
+                                                    <i class="flaticon-right-arrow text-color26"></i>
+                                                    @elseif($ar5->kategori_id==4)
+                                                    <i class="flaticon-right-arrow text-color3"></i>
+                                                    @elseif($ar5->kategori_id==5)
+                                                    <i class="flaticon-right-arrow text-color29"></i>
+                                                    @endif
+                                                </a>
+                                            </span>
                             </div>
                         </div>
                     </div>

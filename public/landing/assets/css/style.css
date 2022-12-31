@@ -154,6 +154,10 @@
 .text-color23{color:var(--color23);}
 .text-color24{color:var(--color24);}
 .text-color25{color:var(--color25);}
+.text-color26{color:var(--color26);}
+.text-color27{color:var(--color27);}
+.text-color28{color:var(--color28);}
+.text-color29{color:var(--flickr);}
 
 strong {font-weight: 600;}
 
@@ -241,6 +245,9 @@ footer {
 @media screen and (min-width :1024px){
   section.atas{
     margin-top: 3.125rem;
+  }
+  section.atas2{
+    margin-top: 6.130rem;
   }
 }
 @media screen and (max-width: 900px){
@@ -2628,7 +2635,6 @@ ul.fact-list > li:not(:first-child) {border-left: 1px solid #d6d6db;}
   -webkit-border-radius: 12px;
   border-radius: 12px;
   position: relative;
-  height: 250px;
 }
 .post-box:hover .post-img img {
   -webkit-transform: scale(1.05);
@@ -2695,6 +2701,63 @@ ul.fact-list > li:not(:first-child) {border-left: 1px solid #d6d6db;}
 .post-cate2 > a:focus {
   background-color: var(--color10);
   color:var(--color27)
+}
+.post-cate3 > a {
+  border: 1px solid var(--color26);
+  font-size: 12px;
+  -webkit-border-radius: 50rem;
+  border-radius: 50rem;
+  font-weight: 600;
+  padding: 8px .9375rem;
+  line-height: initial;
+  display: inline-block;
+  margin-bottom: 5px;
+  background-color: var(--color26);
+  color: var(--color10);
+
+}
+.post-cate3 > a:hover,
+.post-cate3 > a:focus {
+  background-color: var(--color10);
+  color:var(--color26)
+}
+.post-cate4 > a {
+  border: 1px solid var(--color3);
+  font-size: 12px;
+  -webkit-border-radius: 50rem;
+  border-radius: 50rem;
+  font-weight: 600;
+  padding: 8px .9375rem;
+  line-height: initial;
+  display: inline-block;
+  margin-bottom: 5px;
+  background-color: var(--color3);
+  color: var(--color10);
+
+}
+.post-cate4 > a:hover,
+.post-cate4 > a:focus {
+  background-color: var(--color10);
+  color:var(--color3)
+}
+.post-cate5 > a {
+  border: 1px solid var( --flickr);
+  font-size: 12px;
+  -webkit-border-radius: 50rem;
+  border-radius: 50rem;
+  font-weight: 600;
+  padding: 8px .9375rem;
+  line-height: initial;
+  display: inline-block;
+  margin-bottom: 5px;
+  background-color: var( --flickr);
+  color: var(--color10);
+
+}
+.post-cate5 > a:hover,
+.post-cate5 > a:focus {
+  background-color: var(--color10);
+  color:var( --flickr)
 }
 .post-info > span + h3 {margin-top: .9375rem;}
 .container .col-lg-4 .post-info > h3 {font-size: 1.25rem;}
