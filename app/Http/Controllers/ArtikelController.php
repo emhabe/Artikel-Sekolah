@@ -14,7 +14,7 @@ class ArtikelController extends Controller
       if ($request->has('search')) {
          $kategori = Kategori::all();
          $artikel = Artikel::where('status', '=', 1)->where('judul', 'LIKE', '%' . $request->search . '%')->with('kategori')->latest('created_at')->paginate(8);
-         $artikel2 = Artikel::where('status', '=', 1)->with('kategori')->latest('created_at')->g(5);
+         $artikel2 = Artikel::where('status', '=', 1)->with('kategori')->latest('created_at')->paginate(5);
          $artikelbesar = Artikel::where('status', '=', 1)->with('kategori')->latest('created_at')->first();
          $artikelkecil1 = Artikel::where('status', '=', 1)->with('kategori')->latest('created_at')->skip(1)->take(1)->first();
          $artikelkecil2 = Artikel::where('status', '=', 1)->with('kategori')->latest('created_at')->skip(2)->take(1)->first();
