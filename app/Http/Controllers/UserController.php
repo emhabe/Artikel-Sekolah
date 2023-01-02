@@ -110,6 +110,7 @@ class UserController extends Controller
             'judul' => 'required|min:7',
             'detail_singkat' => 'required|min:10',
             'deskripsi' => 'required|min:10',
+            'kategori' => 'required',
         ]);
 
         $data = Artikel::FindOrFail($id);
@@ -117,6 +118,7 @@ class UserController extends Controller
             'judul' => $request->judul,
             'detail_singkat' => $request->detail_singkat,
             'deskripsi' => $request->deskripsi,
+            'kategori_id' => $request->kategori,
         ]);
         if ($request->hasfile('foto')) {
             $request->file('foto')->move(public_path('foto_artikel/'), '' . date('YmdHis') . '.' . $request->file('foto')->getClientOriginalExtension());

@@ -214,6 +214,15 @@
                       @error('judul')
                       <div class="error">{{ $message }}</div>
                       @enderror
+                      <div class="input-gropup mb-3">
+                        <label for="defaultFormControlInput" class="form-label">Kategori :</label>
+                        <select class="form-control" name="kategori">
+                          <option value="" disabled selected>Pilih Kategori</option>
+                          @foreach($kategori as $kt)
+                          <option value="{{$kt->id}}" {{$data->kategori_id == $kt->id ? 'selected' : ''}}>{{$kt->nama}}</option>
+                          @endforeach
+                        </select>
+                      </div>
                       <label class="form-label" for="basic-default-bio">Detail Singkat</label>
                       <textarea class="form-control" id="basic-default-bio" name="detail_singkat" rows="3" required>{{$data->detail_singkat}}</textarea>
                       @error('detail_singkat')
